@@ -1,0 +1,20 @@
+{
+  "methods": [
+    {
+      "index": 0,
+      "type": "config",
+      "args": [],
+      "metaData": {
+        "resultFileName": "Configuration",
+        "name": "configuration",
+        "groups": [],
+        "description": ""
+      },
+      "dependsOn": [],
+      "startTime": 1546611711685,
+      "duration": 6772,
+      "result": "pass",
+      "passPer": 0.0
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "methods": [
+    {
+      "index": 0,
+      "type": "config",
+      "args": [],
+      "metaData": {
+        "resultFileName": "Configuration",
+        "name": "configuration",
+        "groups": [],
+        "description": ""
+      },
+      "dependsOn": [],
+      "startTime": 1546582132125,
+      "duration": 6117,
+      "result": "pass",
+      "passPer": 0.0
+    },
+    {
+      "index": 1,
+      "type": "test",
+      "args": [],
+      "metaData": {
+        "resultFileName": "ValidateLogin",
+        "name": "validateLogin",
+        "groups": []
+      },
+      "dependsOn": [],
+      "startTime": 1546582138310,
+      "duration": 13757,
+      "result": "fail",
+      "passPer": 0.0
+    }
+  ]
+}

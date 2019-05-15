@@ -1,0 +1,13 @@
+{
+  "name": "Failed suite [Default suite]",
+  "status": "pass",
+  "tests": [
+    "Defaulttestfailed"
+  ],
+  "total": 1,
+  "pass": 1,
+  "fail": 0,
+  "skip": 0,
+  "startTime": 1546708594252,
+  "endTime": 1546708618168
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [SAPIOT]">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="PolicyService.Securitycheck">
+        <methods>
+          <include name="tearDown"/>
+          <include name="Securitycheck_Testcase"/>
+          <include name="beforeClass"/>
+          <include name="beforeSuite"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- PolicyService.Securitycheck -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [SAPIOT] -->

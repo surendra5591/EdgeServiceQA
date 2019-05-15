@@ -1,0 +1,164 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>17/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed May 08 11:40:04 IST 2019</td>
+</tr>
+<tr><td>Total time:</td><td>5111 seconds (5111683 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='StreamingService.Test_CreateSensorProfilewithActiontypeFieldmessageandRuletypeValuemonitoring.TC01_CreateSensorProfilewith_ActiontypeFieldmessageand_RuletypeValuemonitoring_Flow()'><b>TC01_CreateSensorProfilewith_ActiontypeFieldmessageand_RuletypeValuemonitoring_Flow</b><br>Test class: StreamingService.Test_CreateSensorProfilewithActiontypeFieldmessageandRuletypeValuemonitoring</td>
+<td></td>
+<td>176</td>
+<td>StreamingService.Test_CreateSensorProfilewithActiontypeFieldmessageandRuletypeValuemonitoring@b3d7190</td></tr>
+<tr>
+<td title='StreamingService.Test_Custom_Over_100.TC02_Custom_Over100()'><b>TC02_Custom_Over100</b><br>Test class: StreamingService.Test_Custom_Over_100</td>
+<td></td>
+<td>257</td>
+<td>StreamingService.Test_Custom_Over_100@4516af24</td></tr>
+<tr>
+<td title='StreamingService.Test_VM_tiered_warning.TC04_Test_VM_tiered_warning_Flow()'><b>TC04_Test_VM_tiered_warning_Flow</b><br>Test class: StreamingService.Test_VM_tiered_warning</td>
+<td></td>
+<td>396</td>
+<td>StreamingService.Test_VM_tiered_warning@35a50a4c</td></tr>
+<tr>
+<td title='StreamingService.Test_VM_Tiered_Critical_SensorTag.TC05_Test_VM_Tiered_Critical_SensorTag_Flow()'><b>TC05_Test_VM_Tiered_Critical_SensorTag_Flow</b><br>Test class: StreamingService.Test_VM_Tiered_Critical_SensorTag</td>
+<td></td>
+<td>384</td>
+<td>StreamingService.Test_VM_Tiered_Critical_SensorTag@68ceda24</td></tr>
+<tr>
+<td title='StreamingService.Test_VM_tieredcritical_sensorID.TC06_Test_VM_Tiered_Critical_SensorID_Flow()'><b>TC06_Test_VM_Tiered_Critical_SensorID_Flow</b><br>Test class: StreamingService.Test_VM_tieredcritical_sensorID</td>
+<td></td>
+<td>370</td>
+<td>StreamingService.Test_VM_tieredcritical_sensorID@1f021e6c</td></tr>
+<tr>
+<td title='StreamingService.Test_VM_Tiered_critical_devicetag.TC07_Test_VM_Tiered_Critical_Devicetag_Flow()'><b>TC07_Test_VM_Tiered_Critical_Devicetag_Flow</b><br>Test class: StreamingService.Test_VM_Tiered_critical_devicetag</td>
+<td></td>
+<td>408</td>
+<td>StreamingService.Test_VM_Tiered_critical_devicetag@24b1d79b</td></tr>
+<tr>
+<td title='StreamingService.Test_VM_Tiered_Critical_DeviceID_Flow.TC08_Test_VM_Tiered_Critical_DeviceID_Flow()'><b>TC08_Test_VM_Tiered_Critical_DeviceID_Flow</b><br>Test class: StreamingService.Test_VM_Tiered_Critical_DeviceID_Flow</td>
+<td></td>
+<td>355</td>
+<td>StreamingService.Test_VM_Tiered_Critical_DeviceID_Flow@3b94d659</td></tr>
+<tr>
+<td title='StreamingService.Test_VM_tiered_Critical.TC09_Test_VM_tiered_Critical()'><b>TC09_Test_VM_tiered_Critical</b><br>Test class: StreamingService.Test_VM_tiered_Critical</td>
+<td></td>
+<td>386</td>
+<td>StreamingService.Test_VM_tiered_Critical@281e3708</td></tr>
+<tr>
+<td title='StreamingService.Test_VM_Smallerthan_Deviceid.TC10_Test_VM_smallerthan_Deviceid()'><b>TC10_Test_VM_smallerthan_Deviceid</b><br>Test class: StreamingService.Test_VM_Smallerthan_Deviceid</td>
+<td></td>
+<td>225</td>
+<td>StreamingService.Test_VM_Smallerthan_Deviceid@5123a213</td></tr>
+<tr>
+<td title='StreamingService.Test_VM_smallerthan.TC11_Test_VM_smallerthan()'><b>TC11_Test_VM_smallerthan</b><br>Test class: StreamingService.Test_VM_smallerthan</td>
+<td></td>
+<td>225</td>
+<td>StreamingService.Test_VM_smallerthan@52525845</td></tr>
+<tr>
+<td title='StreamingService.Test_VM_equality_Tolerance_DeviceID.TC16_Test_VM_equality_Tolerance_DeviceID()'><b>TC16_Test_VM_equality_Tolerance_DeviceID</b><br>Test class: StreamingService.Test_VM_equality_Tolerance_DeviceID</td>
+<td></td>
+<td>228</td>
+<td>StreamingService.Test_VM_equality_Tolerance_DeviceID@fe18270</td></tr>
+<tr>
+<td title='StreamingService.Test_VM_equality_Tolerance.TC17_Test_VM_equality_Tolerance()'><b>TC17_Test_VM_equality_Tolerance</b><br>Test class: StreamingService.Test_VM_equality_Tolerance</td>
+<td></td>
+<td>222</td>
+<td>StreamingService.Test_VM_equality_Tolerance@6fb0d3ed</td></tr>
+<tr>
+<td title='StreamingService.Test_VM_equality_deviceid.TC18_Test_VM_equality_deviceid()'><b>TC18_Test_VM_equality_deviceid</b><br>Test class: StreamingService.Test_VM_equality_deviceid</td>
+<td></td>
+<td>239</td>
+<td>StreamingService.Test_VM_equality_deviceid@10d59286</td></tr>
+<tr>
+<td title='StreamingService.Test_VM_equality.TC19_Test_VM_equality()'><b>TC19_Test_VM_equality</b><br>Test class: StreamingService.Test_VM_equality</td>
+<td></td>
+<td>226</td>
+<td>StreamingService.Test_VM_equality@6dde5c8c</td></tr>
+<tr>
+<td title='StreamingService.Test_Valuemonitoring_deviceid.TC20_Test_Valuemonitoring_deviceid()'><b>TC20_Test_Valuemonitoring_deviceid</b><br>Test class: StreamingService.Test_Valuemonitoring_deviceid</td>
+<td></td>
+<td>231</td>
+<td>StreamingService.Test_Valuemonitoring_deviceid@5fdba6f9</td></tr>
+<tr>
+<td title='StreamingService.Test_timedstate_greatetha0_sensorTag.TC21_Test_timedstate_greatetha0_sensorTag()'><b>TC21_Test_timedstate_greatetha0_sensorTag</b><br>Test class: StreamingService.Test_timedstate_greatetha0_sensorTag</td>
+<td></td>
+<td>232</td>
+<td>StreamingService.Test_timedstate_greatetha0_sensorTag@587c290d</td></tr>
+<tr>
+<td title='StreamingService.Test_VMtwoSensors_SmallerThanGreaterThan.TC_03_TestVMtwoSensors_SmallerThanGreaterThan_Flow()'><b>TC_03_TestVMtwoSensors_SmallerThanGreaterThan_Flow</b><br>Test class: StreamingService.Test_VMtwoSensors_SmallerThanGreaterThan</td>
+<td></td>
+<td>434</td>
+<td>StreamingService.Test_VMtwoSensors_SmallerThanGreaterThan@103f852</td></tr>
+</table><p>
+</body>
+</html>

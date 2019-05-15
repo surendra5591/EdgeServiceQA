@@ -1,0 +1,20 @@
+{
+  "methods": [
+    {
+      "index": 0,
+      "type": "config",
+      "args": [],
+      "metaData": {
+        "resultFileName": "BeforeSuite",
+        "name": "beforeSuite",
+        "groups": [],
+        "description": ""
+      },
+      "dependsOn": [],
+      "startTime": 1546954617069,
+      "duration": 193,
+      "result": "pass",
+      "passPer": 0.0
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+NEW TEST
+BASIC OPERATION - CUSTOM OVER 100
+READINGS
+READING:
+{"readings":[{"sensorTag":"tag","sensorProfileId":"389cabf636d74227875996a4f364ce9f","context":"1","readingValue":"200","sensorId":"id"}],"deviceTag":"tag1","deviceId":"MH02"}
+WAIT FOR MS:
+1000
+READING:
+{"readings":[{"sensorTag":"tag","sensorProfileId":"389cabf636d74227875996a4f364ce9f","context":"1","readingValue":"200","sensorId":"id"}],"deviceTag":"tag1","deviceId":"MH02"}
+WAIT FOR MS:
+1000
+READING:
+{"readings":[{"sensorTag":"tag","sensorProfileId":"389cabf636d74227875996a4f364ce9f","context":"1","readingValue":"200","sensorId":"id"}],"deviceTag":"tag1","deviceId":"MH02"}
+WAIT FOR MS:
+1000
+READING:
+{"readings":[{"sensorTag":"tag","sensorProfileId":"389cabf636d74227875996a4f364ce9f","context":"1","readingValue":"200","sensorId":"id"}],"deviceTag":"tag1","deviceId":"MH02"}
+WAIT FOR MS:
+1000
+READING:
+{"readings":[{"sensorTag":"tag","sensorProfileId":"389cabf636d74227875996a4f364ce9f","context":"1","readingValue":"200","sensorId":"id"}],"deviceTag":"tag1","deviceId":"MH02"}
+WAIT FOR MS:
+1000
+READING:
+{"readings":[{"sensorTag":"tag","sensorProfileId":"389cabf636d74227875996a4f364ce9f","context":"1","readingValue":"200","sensorId":"id"}],"deviceTag":"tag1","deviceId":"MH02"}
+WAIT FOR MS:
+1000
+READING:
+{"readings":[{"sensorTag":"tag","sensorProfileId":"389cabf636d74227875996a4f364ce9f","context":"1","readingValue":"200","sensorId":"id"}],"deviceTag":"tag1","deviceId":"MH02"}
+WAIT FOR MS:
+1000
+READING:
+{"readings":[{"sensorTag":"tag","sensorProfileId":"389cabf636d74227875996a4f364ce9f","context":"1","readingValue":"200","sensorId":"id"}],"deviceTag":"tag1","deviceId":"MH02"}
+WAIT FOR MS:
+1000
+READING:
+{"readings":[{"sensorTag":"tag","sensorProfileId":"389cabf636d74227875996a4f364ce9f","context":"1","readingValue":"200","sensorId":"id"}],"deviceTag":"tag1","deviceId":"MH02"}
+WAIT FOR MS:
+1000
+END READINGS
+ASSERTION-SL
+{"stream":"fSendEventToEnterprise","deviceId":"MH02","deviceTag":"tag1","sensorProfileId":"389cabf636d74227875996a4f364ce9f","sensorId":"id","sensorTag":"tag","sourceRuleType":"Custom","sensorInformation":"200","sourceRuleId":"b8a68e16-9696-11e6-8000-abfb66ed55e1"}
+END ASSERTION-SL
+ASSERTION-DB
+{"ruleId":"B8A68E16-9696-11E6-8000-ABFB66ED55E1","deviceId":"MH02","deviceTag":"tag1"}
+END ASSERTION-DB
+END TEST

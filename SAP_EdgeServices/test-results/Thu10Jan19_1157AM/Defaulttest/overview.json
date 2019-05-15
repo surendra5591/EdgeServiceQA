@@ -1,0 +1,11 @@
+{
+  "total": 1,
+  "pass": 0,
+  "fail": 1,
+  "skip": 0,
+  "classes": [
+    "edgetestcases.TestCases"
+  ],
+  "startTime": 1547101667034,
+  "endTime": 1547101758958
+}
