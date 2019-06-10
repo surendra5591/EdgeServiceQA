@@ -40,32 +40,28 @@ public class Policyservicetestcase extends BaseTest {
 		 functionalcomponents.ClickOperation(properties.getProperty("settings"));
 		 functionalcomponents.WaitTillTime(5000);
 		 functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("iot_serviceurl"), 30); 
-		 String text1=driver.findElement(By.xpath(properties.getProperty("iot_serviceurl"))).getAttribute("value");
+		 String IotServiceUrl=driver.findElement(By.xpath(properties.getProperty("iot_serviceurl"))).getAttribute("value");
 		
-		 if(text1.equalsIgnoreCase("https://dep-test.canary.cp.iot.sap"))
+		 if(driver.findElement(By.xpath(properties.getProperty("cancel_button"))).isDisplayed())
 		 {
-			test.log(Status.PASS, "iot_Serviceurl"+" "+"https://dep-test.canary.cp.iot.sap"+" "+"is displayed in the feild");
+			test.log(Status.PASS, IotServiceUrl +"is displayed in the setting feild");
 		 }
 		 
-		 else if(text1.equalsIgnoreCase("https://dep-dev-spring.canary.cp.iot.sap")){
-			
-			 test.log(Status.PASS, "iot_Serviceurl"+" "+"https://dep-dev-spring.canary.cp.iot.sap"+" "+"is displayed in the feild"); 
-		 }
 		 else
 		 {
-			failedDescription("iot_Serviceurl is not displayed in the feild");
+			failedDescription("iot_Serviceurl is not displayed in the setting feild");
 		 }
 		
 		functionalcomponents.ClickOperation(properties.getProperty("cancel_button"));
 		functionalcomponents.WaitTillTime(5000);
 		test.log(Status.INFO, "click on the gateway management window");
-		functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("labelhome"), 50); 
+		functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("labelhome"), 90); 
 		functionalcomponents.WaitTillTime(2000);
 		functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("GatewayManagement"), 50);
 		functionalcomponents.WaitTillTime(5000);
 		functionalcomponents.ClickOperation(properties.getProperty("GatewayManagement"));
-		functionalcomponents.WaitTillTime(5000);
-		functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("Search_Gateway"), 70);
+		functionalcomponents.WaitTillTime(30000);
+		functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("Search_Gateway"), 90);
 		
 		if (driver.findElement(By.xpath(properties.getProperty("Search_Gateway"))).isDisplayed())
 		{
@@ -76,7 +72,7 @@ public class Policyservicetestcase extends BaseTest {
             failedDescription("gatewaymanagement is not opened");
 		} 
 		
-//search for the particular gateway
+       //search for the particular gateway
 		test.log(Status.INFO, "Search for the particular gateway and add the configuration");
 		functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("Search_Gateway"), 70); 
 		functionalcomponents.WaitTillTime(5000);	
@@ -93,14 +89,24 @@ public class Policyservicetestcase extends BaseTest {
 		{
               failedDescription("concerned gateway screen not opend");
         } 
-		
-//change the operating system
+		String operatingsytemtext = functionalcomponents.getdatafromsheet("Policyservice", "PolicyserviceTestcase1", "operatingsystem"); 
+      
+		String OperatingSystemvalue = driver.findElement(By.xpath("(//span[@class='sapMText sapMTextMaxWidth sapUiSelectable'])[2]")).getText();
+		System.out.println(OperatingSystemvalue);
+		if(OperatingSystemvalue.equalsIgnoreCase(operatingsytemtext))
+		{
+			test.log(Status.PASS, "operationg system is displaying  as :"+OperatingSystemvalue);
+			functionalcomponents.ClickOperation(properties.getProperty("GatewayConfiguration"));
+			functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("GatewayConfiguration"), 50); 
+		}
+		//change the operating system
+		else {
 		test.log(Status.INFO, "click on the edit button to change the operating system");
 		functionalcomponents.ClickOperation(properties.getProperty("Editbutton"));
 		functionalcomponents.WaitTillTime(2000);		
 		functionalcomponents.ClickOperation(properties.getProperty("operatinfsysem_dropdown"));
-		String opertingsystem  = functionalcomponents.getdatafromsheet("Policyservice", "PolicyserviceTestcase1", "operatingsystem"); 
-		functionalcomponents.JScriptExecutorClick(properties.getProperty("Widnows_os_part1")+opertingsystem+properties.getProperty("Windows_os_part2"));
+		
+		functionalcomponents.ClickOperation(properties.getProperty("Widnows_os_part1")+operatingsytemtext+properties.getProperty("Windows_os_part2"));
 		functionalcomponents.WaitTillTime(500);
 		if (driver.findElement(By.xpath(properties.getProperty("operting_system"))).isDisplayed())
 		{
@@ -109,8 +115,10 @@ public class Policyservicetestcase extends BaseTest {
 		{
           failedDescription("user cannot change the operating system as windows x64");
         } 
-	  
 		functionalcomponents.ClickOperation(properties.getProperty("Edit_gateway_savebutton"));
+		functionalcomponents.WaitTillTime(5000);
+		}
+		
 //Adding services to the gateway
 		/*test.log(Status.INFO, "click on the services to add the services");
 		functionalcomponents.WaitTillTime(5000);
@@ -132,8 +140,6 @@ public class Policyservicetestcase extends BaseTest {
  //Creating configuration to the gateway
 	  test.log(Status.INFO, "click on the Add configuration button i.e, + button in the work center");
 	  functionalcomponents.WaitTillTime(5000);
-	  functionalcomponents.ClickOperation(properties.getProperty("GatewayConfiguration"));
-	  functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("GatewayConfiguration"), 50); 
 	  functionalcomponents.ClickOperation(properties.getProperty("Add_config_button"));
 	  functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("Add_config_msg"), 50); 
 	  if( driver.findElement(By.xpath(properties.getProperty("services_dropdown"))).isDisplayed())
@@ -152,10 +158,10 @@ public class Policyservicetestcase extends BaseTest {
 	  functionalcomponents.ClickOperation(properties.getProperty("config_dropdonwn"));
 	  Thread.sleep(5000);
 	  String config_value1  = functionalcomponents.getdatafromsheet("Policyservice", "PolicyserviceTestcase1", "config_value");
-	  functionalcomponents.ClickOperation((properties.getProperty("config_value_part1") +config_value1+ properties.getProperty("config_value_part2")));
+	  functionalcomponents.ClickOperation((properties.getProperty("config_value_part1")+config_value1+properties.getProperty("config_value_part2")));
 	  functionalcomponents.WaitTillTime(5000);
 	  functionalcomponents.ClickOperation(properties.getProperty("config_savebtn"));	  
-	  functionalcomponents.WaitTillTime(5000);
+	  functionalcomponents.WaitTillTime(30000);
 	  functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("config_refresh_btn"), 50); 
 	  if(driver.findElement(By.xpath(properties.getProperty("config_refresh_btn"))).isDisplayed())
 	  {
@@ -166,26 +172,24 @@ public class Policyservicetestcase extends BaseTest {
 			 failedDescription("user is not able to select Streaming service "+config_value1+"as configuration successfully");
 		}
 	  test.log(Status.INFO, "click on the refresh button untill configuration gets Activated");
-	  functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("config_refresh_btn"), 50); 
+	  functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("config_refresh_btn"), 90); 
+	  functionalcomponents.WaitTillTime(8000);
 	  functionalcomponents.ClickOperation(properties.getProperty("config_refresh_btn"));
 	  functionalcomponents.WaitTillTime(30000);
 	  functionalcomponents.ClickAndSetValue(properties.getProperty("search_configname"),config_value1);
 	  functionalcomponents.WaitTillTime(3000);
 	  functionalcomponents.ClickOperation(properties.getProperty("config_search_button"));
-	  functionalcomponents.WaitTillTime(3000);
-	  functionalcomponents.ClickOperation(properties.getProperty("config_refresh_btn"));
 	  functionalcomponents.WaitTillTime(10000);
 	  functionalcomponents.ClickOperation(properties.getProperty("config_refresh_btn"));
-	  functionalcomponents.WaitTillTime(15000);
-	  functionalcomponents.ClickOperation(properties.getProperty("config_refresh_btn"));
-	  functionalcomponents.WaitTillTime(15000);
+	  functionalcomponents.WaitTillTime(10000);
 	  functionalcomponents.ClickOperation(properties.getProperty("config_refresh_btn"));
 	  functionalcomponents.WaitTillTime(15000);
 	  functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("Activate_link"), 50);
 	  functionalcomponents.WaitTillTime(5000);
 	  functionalcomponents.ClickOperation(properties.getProperty("Activate_link"));	
 	  functionalcomponents.WaitTillTime(20000);
-	  functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("config_refresh_btn"), 50); 
+	  functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("config_refresh_btn"), 90); 
+	  functionalcomponents.WaitTillTime(20000);
 	  for(int i=0; i<=20; i++) {
 		  functionalcomponents.ClickOperation(properties.getProperty("config_refresh_btn"));		  
 		  functionalcomponents.WaitTillTime(15000);
@@ -332,8 +336,7 @@ public class Policyservicetestcase extends BaseTest {
               failedDescription("Upgrade core services are not enabled");
           } 
 		 
-		
-				  
+					  
 //Remove the service
 		 test.log(Status.PASS, "check the remove of the service is working or not");
 		  functionalcomponents.ClickOperation(properties.getProperty("Remove"));
@@ -382,6 +385,29 @@ public class Policyservicetestcase extends BaseTest {
 			  failedDescription("persistence service not added successfully");
 		  }
 		  
+		  
+		//Adding EBF service to the group
+		  test.log(Status.INFO, "Add the Persistence service  to the group");
+		  functionalcomponents.ClickOperation(properties.getProperty("Add_service"));
+		  functionalcomponents.WaitTillTime(3000);
+		  functionalcomponents.ClickOperation(properties.getProperty("Service_dropdown1"));
+		  functionalcomponents.WaitTillTime(1000);
+		  functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("EssentialBusinessService"), 50);
+		  functionalcomponents.ClickOperation(properties.getProperty("EssentialBusinessService"));
+		  functionalcomponents.WaitTillTime(3000);
+		  functionalcomponents.ClickOperation(properties.getProperty("Addservicegroup_savebutton"));
+		  functionalcomponents.WaitTillTime(5000);
+		  if(Status1.equalsIgnoreCase("0"))
+		  {
+			  test.log(Status.PASS, "EBF service added successfully");
+			  
+		  }
+		  else
+		  {
+			  failedDescription("EBF service not added successfully");
+		  }	  
+		  
+		  
 //validations for services
 		  test.log(Status.INFO, "check whether the services are available in the list");
 		  functionalcomponents.WaitTillTime(3000);
@@ -417,7 +443,7 @@ public class Policyservicetestcase extends BaseTest {
 		  functionalcomponents.WaitTillTime(5000);
 	
 	  
-//Steaming service 
+//upload config file to Steaming service 
 		  test.log(Status.INFO, "click on the services icon in the left side of the workcenter");
 		  functionalcomponents.WaitTillTime(2000);
 		  functionalcomponents.ClickOperation(properties.getProperty("services_button"));
@@ -617,7 +643,8 @@ public class Policyservicetestcase extends BaseTest {
 		  functionalcomponents.ClickOperation((properties.getProperty("Configname_part1")+name1+properties.getProperty("configname_part2")));
 		  functionalcomponents.WaitTillTime(2000);
 		  functionalcomponents.ClickOperation(properties.getProperty("save_button4"));
-		  functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("Add_configurationgroup"), 50);
+		  functionalcomponents.WaitTillTime(30000);
+		  functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("Add_configurationgroup"), 90);
 		  functionalcomponents.ClickOperation((properties.getProperty("concerned_config_link1")+name1.trim()+properties.getProperty("concerned_config_link2")));
 		  functionalcomponents.WaitTillTime(10000);
 		 
@@ -647,7 +674,7 @@ public class Policyservicetestcase extends BaseTest {
 //check the navigation from gateway to service and configuration
 			test.log(Status.INFO, "check for the navigation from gateways to service to configuration");
 			functionalcomponents.ClickOperation(properties.getProperty("Groupname_link"));
-			functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("Gateways"),50);
+			functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("Gateways"),90);
 			functionalcomponents.ClickOperation(properties.getProperty("Gateways"));
 			functionalcomponents.WaitTillTime(2000);
 			//String gatewaynumber1=driver.findElement(By.xpath("//td[@id='gps_listtable-rows-row0-col1']")).getText();

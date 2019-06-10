@@ -332,10 +332,11 @@ public class Test_timedstate_greatetha0_sensorTag  extends EdgeServicecomponents
 			 functionalcomponents.ClickOperation(properties.getProperty("Rule_Save_btn"));
 			 functionalcomponents.WaitTillTime(3000);
 			 driver.navigate().refresh();
-			 functionalcomponents.WaitTillTime(5000);
+			 functionalcomponents.WaitTillTime(7000);
 			 functionalcomponents.ClickElementfromSectionlist(properties.getProperty("SensorProfile_List"), SensorProfileName);
 			 functionalcomponents.WaitTillTime(3000);
 			 String SavedRuleNameValue=driver.findElement(By.xpath(properties.getProperty("Saved_RuleName1")+RuleName+properties.getProperty("Saved_RuleName2"))).getText();	
+			 functionalcomponents.WaitTillTime(3000);
 			 if(RuleName.equalsIgnoreCase(SavedRuleNameValue))
 			 {	
 				 test.log(Status.PASS, "Clicked Save Rule button and verified Rule is created successfully with RuleName"+":"+RuleName+" "+"for Sensore Profile");

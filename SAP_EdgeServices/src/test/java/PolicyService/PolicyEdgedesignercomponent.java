@@ -38,7 +38,7 @@ public class PolicyEdgedesignercomponent extends BaseTest {
 		  functionalcomponents.WaitTillTime(500);
 		  functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("publish_msg"), 70);
 		  String publish_msg=driver.findElement(By.xpath(properties.getProperty("publish_msg"))).getText();
-		  System.out.println(publish_msg);
+		 // System.out.println(publish_msg);
 		  if (publish_msg.equalsIgnoreCase("Project published successfully"))
 		  {
             test.log(Status.PASS, "user is able to publish the project with configuration name as"+":"+configname+"successfully");
@@ -64,17 +64,16 @@ public class PolicyEdgedesignercomponent extends BaseTest {
               failedDescription("user is not able to click on the Gateway Management successully");
           }
 		  test.log(Status.INFO, "Search for the Gageway number  to add Streaming Service and Configuration");
-		 
 		  functionalcomponents.ClearAndSetValue(properties.getProperty("Search_Gateway"),Gatewayno);
 		  functionalcomponents.WaitTillTime(5000);
 		  functionalcomponents.ClickOperation(properties.getProperty("searchbutton"));
 		  functionalcomponents.WaitTillTime(7000);
 		  functionalcomponents.ClickOperation((properties.getProperty("IOT_gateway_Restpart1")+Gatewayno+properties.getProperty("IOT_gateway_Restpart2")));
-		  functionalcomponents.WaitTillTime(2000);
+		  functionalcomponents.WaitTillTime(5000);
 		  functionalcomponents.ClickOperation(properties.getProperty("Edge_configurations"));	
-		  functionalcomponents.WaitTillTime(2000);
+		  functionalcomponents.WaitTillTime(10000);
 		  functionalcomponents.ClickOperation(properties.getProperty("Config_Addbutton"));		
-		  functionalcomponents.WaitTillTime(2000);
+		  functionalcomponents.WaitTillTime(5000);
 		  functionalcomponents.ClickOperation(properties.getProperty("services_dropdown"));	
 		  functionalcomponents.WaitTillTime(2000);
 		  functionalcomponents.ClickOperation(properties.getProperty("Streaming_service"));
@@ -84,24 +83,25 @@ public class PolicyEdgedesignercomponent extends BaseTest {
 		  functionalcomponents.ClickOperation((properties.getProperty("config_value_part1")+configname+properties.getProperty("config_value_part2")));
 		  functionalcomponents.WaitTillTime(3000);
 		  functionalcomponents.ClickOperation(properties.getProperty("edge_config_save"));
-		  functionalcomponents.WaitTillTime(3000);	
+		  functionalcomponents.WaitTillTime(30000);	
 		  if(driver.findElement(By.xpath(properties.getProperty("config_refresh_btn"))).isDisplayed())
 		  {
 			  test.log(Status.PASS, "user should able to add the configuration with name as"+" "+configname+" "+"successfully");
-		  } else
+		  } 
+		  else
 		  {
               failedDescription("user should able to add the configuration with name as"+" "+configname+" "+"not successfully");
           }
 		  test.log(Status.INFO, "Click on the Refresh button untill status becomes Activated");
-		  functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("config_refresh_btn"), 50); 
-		  functionalcomponents.ClickAndSetValue(properties.getProperty("search_configname"),configname);
-		  functionalcomponents.WaitTillTime(5000);
+		  functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("config_refresh_btn"), 90); 
+		  functionalcomponents.ClearAndSetValue(properties.getProperty("search_configname"),configname);
+		  functionalcomponents.WaitTillTime(15000);
 		  functionalcomponents.ClickOperation(properties.getProperty("config_search_button"));
 		  functionalcomponents.WaitTillTime(5000);  
 		  functionalcomponents.ClickOperation(properties.getProperty("config_refresh_btn"));		  
 		  functionalcomponents.WaitTillTime(3000);
 		  //functionalcomponents.scrollToExact(properties.getProperty("Request_deploy"));
-		  functionalcomponents.WaitTillTime(30000);
+		  functionalcomponents.WaitTillTime(10000);
 		  functionalcomponents.ClickOperation(properties.getProperty("config_refresh_btn"));
 		  functionalcomponents.WaitTillTime(10000);
 		  functionalcomponents.ClickOperation(properties.getProperty("config_refresh_btn"));
@@ -113,7 +113,7 @@ public class PolicyEdgedesignercomponent extends BaseTest {
 		  functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("Activate_link"), 50);
 		  functionalcomponents.WaitTillTime(5000);
 		  functionalcomponents.ClickOperation(properties.getProperty("Activate_link"));	
-		  functionalcomponents.WaitTillTime(20000);
+		  functionalcomponents.WaitTillTime(70000);
 		  
 		  for(int i=0; i<=10; i++) {
 			  functionalcomponents.ClickOperation(properties.getProperty("config_refresh_btn"));		  
@@ -141,17 +141,17 @@ public class PolicyEdgedesignercomponent extends BaseTest {
 		  test.log(Status.INFO, "Click on the SAP logo>>Edge designer tile and search for the project");
 		  functionalcomponents.ClickOperation(properties.getProperty("SAP_logo"));	
 		  functionalcomponents.WaitTillTime(5000);
-		  functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("Edgedesigner_tile"), 70);
-		  functionalcomponents.ClickOperation(properties.getProperty("Edgedesigner_tile"));
-		  functionalcomponents.WaitTillTime(5000); 	
-		  functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("edge_search_input"), 70);
+		  functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("Edgedesigner_tile"), 90);
+		  functionalcomponents.ClickOperation(properties.getProperty("Edgedesigner_tile")); 	
+		  functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("edge_search_input"), 90);
+		  functionalcomponents.WaitTillTime(5000);
 		  functionalcomponents.ClickAndSetValue(properties.getProperty("edge_search_input"),Project_name);
 		  functionalcomponents.WaitTillTime(3000);
 		  functionalcomponents.ClickOperation(properties.getProperty("Project_search_button"));
-		  functionalcomponents.WaitTillTime(3000);
+		  functionalcomponents.WaitTillTime(15000);
 		  //String Projectname1=functionalcomponents.getdatafromsheet("EdgeDesigner", "EdgeDesignerTestcase", "project_name");
 		  functionalcomponents.ClickOperation((properties.getProperty("Project_title_part1")+Project_name+properties.getProperty("Project_title_part2")));
-		  functionalcomponents.WaitTillTime(3000);
+		  functionalcomponents.WaitTillTime(5000);
 		  if(driver.findElement(By.xpath(properties.getProperty("Sensor_Model"))).isDisplayed())
 		  {
 				 test.log(Status.PASS, "user should able to search the project successfully with name as"+" "+Project_name);
@@ -239,7 +239,7 @@ public class PolicyEdgedesignercomponent extends BaseTest {
 		  functionalcomponents.ClickOperation((properties.getProperty("config_value_part1")+configname+properties.getProperty("config_value_part2")));
 		  functionalcomponents.WaitTillTime(3000);
 		  functionalcomponents.ClickOperation(properties.getProperty("edge_config_save"));
-		  functionalcomponents.WaitTillTime(3000);	
+		  functionalcomponents.WaitTillTime(50000);	
 		  if(driver.findElement(By.xpath(properties.getProperty("config_refresh_btn"))).isDisplayed())
 		  {
 			  test.log(Status.PASS, "user should able to add the configuration with name as"+" "+configname+" "+"successfully");

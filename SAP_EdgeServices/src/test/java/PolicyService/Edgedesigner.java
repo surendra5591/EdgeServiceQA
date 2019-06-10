@@ -20,7 +20,6 @@ public class Edgedesigner extends PolicyEdgedesignercomponent {
 	String sensortype1  = functionalcomponents.getdatafromsheet("EdgeDesigner", "EdgeDesignerTestcase", "Sensortype");
 	String capablity1  = functionalcomponents.getdatafromsheet("EdgeDesigner", "EdgeDesignerTestcase", "capabilityname");
 	String Property=functionalcomponents.getdatafromsheet("EdgeDesigner", "EdgeDesignerTestcase", "Property");
-	String Sensor_model_name=functionalcomponents.getdatafromsheet("EdgeDesigner", "EdgeDesignerTestcase", "Sensor_model_name");
 	String Min_reading_value=functionalcomponents.getdatafromsheet("EdgeDesigner", "EdgeDesignerTestcase", "Min_reading_value");
 	String average_value  = functionalcomponents.getdatafromsheet("EdgeDesigner", "EdgeDesignerTestcase", "AverageReading_value");
 	String Minimum_output_frequency= functionalcomponents.getdatafromsheet("EdgeDesigner", "EdgeDesignerTestcase", "Minimum_output_frequency");
@@ -51,7 +50,6 @@ public class Edgedesigner extends PolicyEdgedesignercomponent {
     String protocol_plugin=functionalcomponents.getdatafromsheet("EdgeDesigner", "EdgeDesignerTestcase", "ProtocolPlugin");
     String Actionmsg=  functionalcomponents.getdatafromsheet("EdgeDesigner", "EdgeDesignerTestcase", "Action_Message");
     String Receipient_param= functionalcomponents.getdatafromsheet("EdgeDesigner", "EdgeDesignerTestcase", "Receipient_parameters");
-    String Actionsensor_model  = functionalcomponents.getdatafromsheet("EdgeDesigner", "EdgeDesignerTestcase", "Action_Sensor_modelname");
     String Scope_level  = functionalcomponents.getdatafromsheet("EdgeDesigner", "EdgeDesignerTestcase", "Scope_level");
     String Edge_Fedilityfreq  = functionalcomponents.getdatafromsheet("EdgeDesigner", "EdgeDesignerTestcase", "New_edgefedility_freq");
     String Edge_fedility_rollback = functionalcomponents.getdatafromsheet("EdgeDesigner", "EdgeDesignerTestcase", "edge_fedility_rollback");
@@ -74,8 +72,9 @@ public class Edgedesigner extends PolicyEdgedesignercomponent {
     String DB_Password=functionalcomponents.getdatafromsheet("EdgeDesigner", "EdgeDesignerTestcase", "DB_pwd");	  
     String Rule_configname=functionalcomponents.getdatafromsheet("EdgeDesigner", "EdgeDesignerTestcase", "Rule_configname");	
 	String Gatewayno=functionalcomponents.getdatafromsheet("Policyservice", "PolicyserviceTestcase1", "Gatewayno");		
-    @Test
-		 public void EdgeDesigner_Testcase() throws InterruptedException {
+
+     @Test
+    public void EdgeDesigner_Testcase() throws InterruptedException {
 			 // input data for Edge designer
 		 	
 		    //Prerequisite- Start the Policyservice  ( Could version ) with new tile EdgeDesigner
@@ -90,8 +89,8 @@ public class Edgedesigner extends PolicyEdgedesignercomponent {
 			 functionalcomponents.ClickAndSetValue(properties.getProperty("Edgedesigner_PassWord"), password);
 			 functionalcomponents.WaitTillTime(1000);
 			 functionalcomponents.ClickOperation(properties.getProperty("Edgedesigner_Logon"));
-			 functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("Edgedesigner_tile"), 70); 
-			 functionalcomponents.WaitTillTime(3000);
+			 functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("Edgedesigner_tile"), 100); 
+			 functionalcomponents.WaitTillTime(2000);
 			 if(driver.findElement(By.xpath(properties.getProperty("Edgedesigner_tile"))).isDisplayed())
 			 {
 				 test.log(Status.PASS, "user is able to enter into the HOME page successfully");
@@ -100,39 +99,40 @@ public class Edgedesigner extends PolicyEdgedesignercomponent {
 			 {
 				failedDescription("user is able to enter into the HOME page ");
 			 }
-			 test.log(Status.INFO, "Click on Edge designer tile of the Home Page and capture the version of the Edge Designer");
-			 //functionalcomponents.WaitTillTime(3000);
+			 test.log(Status.INFO, "Click on Edge designer tile of the Home Page");
 			 functionalcomponents.ClickOperation(properties.getProperty("Edgedesigner_tile"));
-			 functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("Edge_designer_version"), 90); 
-			 functionalcomponents.WaitTillTime(5000);
+			 functionalcomponents.WaitTillTime(40000);
+			 functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("Edge_designer_version"), 190); 
+			
 			 functionalcomponents.ClickOperation(properties.getProperty("Edge_designer_version"));
-			 functionalcomponents.WaitTillTime(2000);
-			 String Versionvalue=driver.findElement(By.xpath(properties.getProperty("Edge_Designer_versionvalue"))).getText();
-			 System.out.println(Versionvalue);
-			 functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("Project_Addbutton"), 20); 			 
+			 functionalcomponents.WaitTillTime(5000);
+			 String Versionvalue1=driver.findElement(By.xpath(properties.getProperty("Edge_Designer_versionvalue"))).getText();
+			 functionalcomponents.WaitTillTime(5000);
+			 functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("Project_Addbutton"), 90); 			 
 			 functionalcomponents.WaitTillTime(2000);
 			 if(driver.findElement(By.xpath(properties.getProperty("Project_Addbutton"))).isDisplayed())
 			 {	
-				test.log(Status.PASS, "Edge desinger tile window opens successfully and version of the Edge designer is"+Versionvalue);
+				test.log(Status.PASS, "Edge desinger tile window opens successfully and version of the Edge designer is"+Versionvalue1);
 			 }
 			 else 
 			 {
 				failedDescription("Edge designer tile is not opened successfully");
 			 }
 		 
-			
 			 //Project creation
 			 test.log(Status.INFO, "Click on the + Symbol in the bottom of the work center to add the project");
+			 functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("Project_Addbutton"), 90); 
 			 functionalcomponents.WaitTillTime(2000);
 			 functionalcomponents.ClickOperation(properties.getProperty("Project_Addbutton"));
-			 functionalcomponents.WaitTillTime(2000);
+			 functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("Create_project"), 90); 
+			 functionalcomponents.WaitTillTime(5000);
 			 if (driver.findElement(By.xpath(properties.getProperty("Create_project"))).isDisplayed())
 			  {
-	              test.log(Status.PASS, "user is able to see Add Prject window successfully");
+	             test.log(Status.PASS, "user is able to see Add Prject window successfully");
 			  } else
 			  {
-	              failedDescription("user is not able to see the Add Project window ");
-	          } 
+	             failedDescription("user is not able to see the Add Project window ");
+	         } 
 			 			 
 			  test.log(Status.INFO, "Enter the name of the project with special characters");			 
 			  functionalcomponents.ClickAndSetValue(properties.getProperty("Project_name"),Projectpname);	  
@@ -166,9 +166,7 @@ public class Edgedesigner extends PolicyEdgedesignercomponent {
 			  functionalcomponents.ClickOperation(properties.getProperty("Project_search_button"));
 			  functionalcomponents.WaitTillTime(3000);
 			  functionalcomponents.ClickOperation((properties.getProperty("Project_title_part1") +Projectpname+ properties.getProperty("Project_title_part2")));
-			  functionalcomponents.WaitTillTime(3000);
-			
-						
+			  functionalcomponents.WaitTillTime(3000);			
 			  //Edit project
 			  test.log(Status.INFO, "Click on the Edit button to edit the project name and description");
 			  functionalcomponents.ClickOperation(properties.getProperty("Edit_project"));
@@ -177,7 +175,7 @@ public class Edgedesigner extends PolicyEdgedesignercomponent {
 			  functionalcomponents.ClearAndSetValue(properties.getProperty("Project_name"), Edit_project);
 			  functionalcomponents.WaitTillTime(2000);
 			  functionalcomponents.ClickOperation(properties.getProperty("Create_project"));
-			  functionalcomponents.WaitTillTime(2000);
+			  functionalcomponents.WaitTillTime(5000);
 			  functionalcomponents.ClickAndSetValue(properties.getProperty("edge_search_input"),Edit_project);
 			  functionalcomponents.WaitTillTime(3000);
 			  functionalcomponents.ClickOperation(properties.getProperty("Project_search_button"));
@@ -194,7 +192,7 @@ public class Edgedesigner extends PolicyEdgedesignercomponent {
 			  functionalcomponents.ClickOperation(properties.getProperty("copy_project"));
 			  functionalcomponents.WaitTillTime(2000);
 			  String Copy_Project=driver.findElement(By.xpath(properties.getProperty("Project_name"))).getAttribute("value");
-			  System.out.println(Copy_Project);
+			//  System.out.println(Copy_Project);
 			  functionalcomponents.ClickOperation(properties.getProperty("Copy_project_save"));
 			  functionalcomponents.WaitTillTime(2000);
 			  String copy_project_msg=driver.findElement(By.xpath(properties.getProperty("copy_project_msg"))).getText();
@@ -218,7 +216,7 @@ public class Edgedesigner extends PolicyEdgedesignercomponent {
 			  functionalcomponents.ClickOperation(properties.getProperty("Create_project"));
 			  functionalcomponents.WaitTillTime(2000);
 			  String Project_failed_msg=driver.findElement(By.xpath(properties.getProperty("Project_failed_msg"))).getText();
-			  System.out.println(Project_failed_msg);
+			  //System.out.println(Project_failed_msg);
 			  if (Project_failed_msg.equalsIgnoreCase("Project is successfully added"))
               {
 		             test.log(Status.PASS, "user is able to create Project with name:"+""+Projectpname+""+"and Group Description:"+""+projectdesc+""+"successfully");
@@ -236,18 +234,18 @@ public class Edgedesigner extends PolicyEdgedesignercomponent {
 			  functionalcomponents.WaitTillTime(5000);		  
 			  ProjectValidatePublish_ConfigDeployment(Project_configname,Edit_project,Gatewayno);
 			  
-			  //creation of another sensor model
+			  //creation of  sensor model
 			  test.log(Status.INFO, "click on the Sensor Model tab and click on + button to add sensormodel to the project");	
 			  functionalcomponents.ClearAndSetValue(properties.getProperty("edge_search_input"),Edit_project);
 			  functionalcomponents.WaitTillTime(3000);
 			  functionalcomponents.ClickOperation(properties.getProperty("Project_search_button"));
 			  functionalcomponents.WaitTillTime(3000);
-			  functionalcomponents.ClickOperation((properties.getProperty("Project_title_part1") +Edit_project+ properties.getProperty("Project_title_part2")));
+			  functionalcomponents.ClickOperation((properties.getProperty("Project_title_part1")+Edit_project+ properties.getProperty("Project_title_part2")));
 			  functionalcomponents.WaitTillTime(3000);
 			  functionalcomponents.ClickOperation(properties.getProperty("Sensor_Model"));
 			  functionalcomponents.WaitTillTime(2000);				  
 			  functionalcomponents.ClickOperation(properties.getProperty("Sensormodel_add"));
-			  functionalcomponents.WaitTillTime(2000);
+			  functionalcomponents.WaitTillTime(20000);
 			  if(driver.findElement(By.xpath(properties.getProperty("Sensor_Typedropdown"))).isDisplayed())
 			  {
 				  test.log(Status.PASS, "user is able to see sensor model window successfullly");
@@ -436,23 +434,24 @@ public class Edgedesigner extends PolicyEdgedesignercomponent {
 		      }
 			  else if(Action_Type1.equalsIgnoreCase("Sensor Fidelity Change"))
 			  {
-				  test.log(Status.INFO, "Select Actiontype as Sensor fedility Change,sensor model name as MuthuStyp_CAT987_Cap_Battery and Scope_value as Device");
+				  test.log(Status.INFO, "Select Actiontype as Sensor fedility Change,sensor model name as and Scope_value as Device");
 				  functionalcomponents.ClickOperation(properties.getProperty("Action_Type_part1") +Action_Type1+ properties.getProperty("Action_Type_part2"));
 				  functionalcomponents.WaitTillTime(2000);
 				  functionalcomponents.ClickOperation(properties.getProperty("Action_sensormodel_dropdown"));
 				  functionalcomponents.WaitTillTime(2000);
-				  functionalcomponents.ClickOperation(properties.getProperty("Action_sensormodel_part1") +Actionsensor_model+ properties.getProperty("Action_sensormodel_part2"));
+				  functionalcomponents.ClickOperation(properties.getProperty("Action_sensormodel_part1")+sensor_modelname+properties.getProperty("Action_sensormodel_part2"));
 				  functionalcomponents.WaitTillTime(2000);
 				  functionalcomponents.ClickOperation(properties.getProperty("scope_leve_dropdown"));
 				  functionalcomponents.WaitTillTime(2000);
-				  functionalcomponents.ClickOperation(properties.getProperty("scope_level_part1") +Scope_level+ properties.getProperty("scope_level_part2"));
+				  functionalcomponents.ClickOperation(properties.getProperty("scope_level_part1")+Scope_level+properties.getProperty("scope_level_part2"));
 				  functionalcomponents.WaitTillTime(2000);
 				  if(driver.findElement(By.xpath(properties.getProperty("fedility_freqency"))).isDisplayed())
 				  {
-					  test.log(Status.PASS, "user is able to select the Action type as"+":"+Action_Type1+"sensor model name as"+":"+Actionsensor_model+":"+"and scope_value as"+":"+Scope_level);
-				  } else
+					  test.log(Status.PASS, "user is able to select the Action type as"+":"+Action_Type1+"sensor model name as"+":"+sensor_modelname+":"+"and scope_value as"+":"+Scope_level);
+				  } 
+				  else
 				  {
-		              failedDescription("user is able to select the Action type as"+":"+Action_Type1+"sensor model name as"+":"+Actionsensor_model+":"+"and scope_value as"+":"+Scope_level);	              		 
+		              failedDescription("user is able to select the Action type as"+":"+Action_Type1+"sensor model name as"+":"+sensor_modelname+":"+"and scope_value as"+":"+Scope_level);	              		 
 				  }
 				  test.log(Status.INFO, "Enter the fedility frequency,Fedility Rollback,Enterprise_Fedility and Enterprise_fedility_rollback");
 				  functionalcomponents.ClickAndSetValue(properties.getProperty("fedility_freqency"),Edge_Fedilityfreq);
@@ -626,7 +625,7 @@ public class Edgedesigner extends PolicyEdgedesignercomponent {
 				  functionalcomponents.ClickOperation((properties.getProperty("conditiontype_part1")+conditiontype+properties.getProperty("conditiontype_part2")));
 				  functionalcomponents.WaitTillTime(2000);				  	
 				  functionalcomponents.ClickOperation(properties.getProperty("Sensormodelname_Dropdown"));
-				  functionalcomponents.ClickOperation((properties.getProperty("Sensor_modelname_part1") +sensor_modelname+ properties.getProperty("Sensor_modelname_part2")));
+				  functionalcomponents.ClickOperation((properties.getProperty("Sensor_modelname_part1")+sensor_modelname+properties.getProperty("Sensor_modelname_part2")));
 				  functionalcomponents.WaitTillTime(2000);
 				  if(driver.findElement(By.xpath(properties.getProperty("Interval_withoutsensor"))).isDisplayed())
 				  {

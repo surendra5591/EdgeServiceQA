@@ -23,7 +23,8 @@ public class Driverfactory {
 		
 		testMachineOS=System.getProperty("os.name");
 		testMachineSystemType=System.getProperty("os.arch");
-		
+		System.out.println(testMachineOS);
+		System.out.println(testMachineSystemType);
 		if (browserName.equalsIgnoreCase("chrome")) {
 			ChromeDriverService service = null;
 			if(testMachineOS.contains("Windows"))
@@ -36,7 +37,7 @@ public class Driverfactory {
 			else if(testMachineSystemType.contains("64")){
 				File chromeDriver = new File(System.getProperty("user.dir")+"/driver/chromedriver_linux64");
 				chromeDriver.setExecutable(true);
-				System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/src/test/resources/chromedriver/chromedriver_linux64");
+				System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/driver/chromedriver_linux64");
 				service = new ChromeDriverService.Builder().usingDriverExecutable(chromeDriver).usingAnyFreePort().build();
 				try {
 					service.start();
@@ -50,13 +51,14 @@ public class Driverfactory {
 
 				boolean success = (new File(strDirectoy)).mkdir();
 				if (success) {
-					System.out.println("Directory: " + strDirectoy + " created");
+					System.out.println("Directory: "+ strDirectoy+ "created");
 				}
 
 				Map<String, Object> prefs = new HashMap<String, Object>();
-				prefs.put("download.default_directory", System.getProperty("user.dir") + File.separator + "ExportImportFolder");
+				prefs.put("download.default_directory", System.getProperty("user.dir")+File.separator+ "ExportImportFolder");
 
 				ChromeOptions options = new ChromeOptions();
+				//options.addArguments("headless");
 				options.setExperimentalOption("prefs", prefs);
 				driver = new ChromeDriver(options);
 				driver.manage().deleteAllCookies();

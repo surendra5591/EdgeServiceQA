@@ -49,6 +49,7 @@ public class SDSEnterprisePlugin extends PolicyEdgedesignercomponent {
 	String InputStream  = functionalcomponents.getdatafromsheet("1905", "SDSEnterprisePluginFlow", "InputStream");
     String Gatewayno=functionalcomponents.getdatafromsheet("1905", "SDSEnterprisePluginFlow", "Gatewayno");
     String configname=functionalcomponents.getdatafromsheet("1905", "SDSEnterprisePluginFlow", "Configname");
+    String MaximumQueueSize=functionalcomponents.getdatafromsheet("1905", "SDSEnterprisePluginFlow", "MaximumQueueSize");
 	@Test
 	 public void SDSEnterprisePluginFlow() throws InterruptedException  {
 		 driver.get(PolicyServiceURL);
@@ -188,8 +189,8 @@ public class SDSEnterprisePlugin extends PolicyEdgedesignercomponent {
              failedDescription("user is not able to add the Action name and Action Description");	              		 
 		  }		
 		 
-		  functionalcomponents.ClickOperation(properties.getProperty("Action_Type_Dropdown"));
-		  functionalcomponents.WaitTillTime(2000);
+		      functionalcomponents.ClickOperation(properties.getProperty("Action_Type_Dropdown"));
+		      functionalcomponents.WaitTillTime(2000);
 			  test.log(Status.INFO, "Select Actiontype as Field Message & ActionPlugin as httpprotocol plugin from dropdown button");
 			  functionalcomponents.WaitTillTime(2000);
 			  functionalcomponents.ClickOperation(properties.getProperty("Action_Type_part1") +Action_Type1+ properties.getProperty("Action_Type_part2"));
@@ -261,8 +262,8 @@ public class SDSEnterprisePlugin extends PolicyEdgedesignercomponent {
 	              failedDescription("user is not able to add the rulename and description");
 		 
 			  }
-			  // Add SDS Enterprise Plugin
-			  test.log(Status.INFO, "click on the Plugin tab to add the Rest plugins");
+			  // Add SDS Enterprise Plugin and validate Reliable message error
+			  test.log(Status.INFO, "click on the Plugin tab to add the SDS Enterprise plugins and Edit Maximum Queue and try to enter any value, save the Enterprise plugin created");
 			  functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("Security_plugin"), 70);
 			  functionalcomponents.ClickOperation(properties.getProperty("Security_plugin"));
 			  functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("Security_Plugin_Addimg"), 70);
@@ -273,46 +274,61 @@ public class SDSEnterprisePlugin extends PolicyEdgedesignercomponent {
 			  functionalcomponents.WaitTillTime(2000);			  		  
 			  functionalcomponents.ClickOperation(properties.getProperty("Security_plugin_arrow"));
 			  functionalcomponents.WaitTillTime(2000);
-			  functionalcomponents.ClickOperation(properties.getProperty("Security_Plugindropdownname_part1") +Class+ properties.getProperty("Security_Plugindropdownname_part2"));
+			  functionalcomponents.ClickOperation(properties.getProperty("Security_Plugindropdownname_part1")+Class+properties.getProperty("Security_Plugindropdownname_part2"));
 			  functionalcomponents.WaitTillTime(2000);
-			  functionalcomponents.ClearAndSetValue(properties.getProperty("MaximumQueueSize"), "1"); 
-			  functionalcomponents.WaitTillTime(2000);
+			  int MaximumQueueSizevalue=Integer.parseInt(MaximumQueueSize);
+			  functionalcomponents.ClearAndSetValue(properties.getProperty("MaximumQueueSize"), MaximumQueueSize); 
+			  functionalcomponents.WaitTillTime(2000); 
+			//validate Reliable messaging: Enterprise plugins creation
+			  if(MaximumQueueSizevalue<128) {
+				  
+				 failedDescription("user is able to edit Maximum Queue size but appropriate error message is displayed like enter a number greater than or equal to 128 and user can not create SDS Enterprise Plugin");  
+			  }
+			  else if(MaximumQueueSizevalue>=128)
+			  {
+				  test.log(Status.PASS, "user is able to edit Maximum Queue size and enter new vlue"+MaximumQueueSizevalue+" By default it should be in MB");
+			  } else
+			  {
+	              failedDescription("user is not able to edit Maximum Queue size");
+		 
+			  }
+			  test.log(Status.INFO, "Enter all SDS Enterprise plugin parameters field save the Enterprise plugin created");
 			  functionalcomponents.ClickOperation(properties.getProperty("LogerLevel_arrow"));
 			  functionalcomponents.WaitTillTime(2000);
 			  functionalcomponents.ClickOperation(properties.getProperty("LogerLevel_part1")+LoggerLevel+ properties.getProperty("LogerLevel_part2"));
 			  functionalcomponents.WaitTillTime(2000);
 			  functionalcomponents.ClickAndSetValue(properties.getProperty("WebSocketURI"), URI); 
 			  functionalcomponents.WaitTillTime(2000);
-			  
-			  functionalcomponents.ClickAndSetValue(properties.getProperty("SDSBasicAuthUsername"), URI); 
+			  functionalcomponents.ClickAndSetValue(properties.getProperty("SDSBasicAuthUsername"), BasicAuthUsername); 
 			  functionalcomponents.WaitTillTime(2000);
-			  functionalcomponents.ClickAndSetValue(properties.getProperty("SDSBasicAuthPassword"), URI); 
+			  functionalcomponents.ClickAndSetValue(properties.getProperty("SDSBasicAuthPassword"), BasicAuthPassword); 
 			  functionalcomponents.WaitTillTime(2000);
-			  functionalcomponents.ClickAndSetValue(properties.getProperty("SDSWorkSpace"), URI); 
+			  functionalcomponents.ClickAndSetValue(properties.getProperty("SDSWorkSpace"), Workspace); 
 			  functionalcomponents.WaitTillTime(2000);
-			  functionalcomponents.ClickAndSetValue(properties.getProperty("SDSProject"), URI); 
+			  functionalcomponents.ClickAndSetValue(properties.getProperty("SDSProject"), Project); 
 			  functionalcomponents.WaitTillTime(2000);
-			  functionalcomponents.ClickAndSetValue(properties.getProperty("SDSInputStream"), URI); 
+			  functionalcomponents.ClickAndSetValue(properties.getProperty("SDSInputStream"), InputStream); 
 			  functionalcomponents.WaitTillTime(2000);
-			  
 			  functionalcomponents.ClickOperation(properties.getProperty("Security_Create"));
-			  functionalcomponents.WaitTillTime(2000);
+			  functionalcomponents.WaitTillTime(5000);
+			 // functionalcomponents.ClearAndSetValue(properties.getProperty("MaximumQueueSize"), "130"); 
+			  functionalcomponents.WaitTillTime(2000); 
 			  functionalcomponents.ClickAndSetValue(properties.getProperty("Security_plugin_searchinput"), pluginName);
+			  functionalcomponents.WaitTillTime(2000); 
 			  functionalcomponents.ClickOperation(properties.getProperty("PluginSearch"));
 			  functionalcomponents.WaitTillTime(2000);
 			  String Pluginname=driver.findElement(By.xpath("//a[contains(text(),'"+pluginName+"')]")).getText();
 			  if(Pluginname.equalsIgnoreCase(pluginName))
 			  {
-				  test.log(Status.PASS, "user is able to create the Rest Plugin name in the project with:"+Pluginname);		  }
+				  test.log(Status.PASS, "user is able to create the SDS Enterprise Plugin name in the project with:"+Pluginname);		  }
 			  else
 			  {
-	              failedDescription("user is not able to create the plugin in the project ");
+	              failedDescription("user is not able to create the SDS Enterprise plugin in the project ");
 	          }	
 			  
 			  
-			  //validate project & publish
-			  ProjectValidatePublish_ConfigDeployment(configname,Projectpname, Gatewayno);
-			  
+			     //validate project & publish and config deployment
+			      ProjectValidatePublish_ConfigDeployment(configname,Projectpname, Gatewayno);
 				 //Prerequisite- Start the StreamingService Gateway service ( Could version )
 				 test.log(Status.INFO, "Open  URL https://localhost in Chrome browser");
 				 driver.get(properties.getProperty("StreamingService_URL"));
@@ -332,11 +348,21 @@ public class SDSEnterprisePlugin extends PolicyEdgedesignercomponent {
 				 functionalcomponents.ClearAndSetValue(properties.getProperty("Streaming_username"), Streamingusername);
 				 functionalcomponents.WaitTillTime(2000);
 				 functionalcomponents.ClearAndSetValue(properties.getProperty("Streaming_password"), Streamingpassword);
-				 functionalcomponents.WaitTillTime(5000);
-				 if(functionalcomponents.IsElementPresent(properties.getProperty("Streaming_Login_Btn")))
-				 {	 
+				 functionalcomponents.WaitTillTime(5000); 
 				 functionalcomponents.ClickOperation(properties.getProperty("Streaming_Login_Btn"));
 				 functionalcomponents.WaitTillTime(5000);
+				 functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("Settings_link"), 90);
+				 functionalcomponents.ClickOperation(properties.getProperty("Settings_link"));
+				 functionalcomponents.WaitTillTime(2000);
+				 functionalcomponents.ClickOperation(properties.getProperty("EnterprisePlugin_link"));
+				 functionalcomponents.waittillElementReadytoclickable(properties.getProperty("EnterprisePluginNewAdd_btn"), 20);
+				 if(driver.findElement(By.xpath(properties.getProperty("EnterprisePluginNewAdd_btn"))).isDisplayed())
+				 {	
+					test.log(Status.PASS, " Screen is loaded with Enterprise Plugins Page");
+				 }
+				 else 
+				 {
+					failedDescription("Screen is not loaded with Enterprise Plugins Page");
 				 }
 			  
 	
