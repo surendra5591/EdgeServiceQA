@@ -167,6 +167,29 @@ public String getdatafromsheet(String sheetName,String rowvalue,String colnumval
 	}
 	
 	
+	public void Stale_element_handler(WebElement element) throws Exception {
+		properties = getObjectProperties();
+
+		boolean breakIt = true;
+		while (true) {
+			breakIt = true;
+			try {
+				// write your code here
+				element.click();
+			} catch (Exception e) {
+				if (e.getMessage().contains("element is not attached")) {
+					breakIt = false;
+				}
+			}
+			if (breakIt) {
+				break;
+			}
+
+		}
+
+	}
+	
+	
 	public void Select_DropdownbyName(String Select_value, String Xpath) throws Exception {
 		WebElement mySelectElement = driver.findElement(By.xpath(Xpath));
 		Thread.sleep(2000);
@@ -531,7 +554,7 @@ public void JScriptExecutorClick(String ElementToClick)
 				   int columnsNumber = rsmd.getColumnCount();
 				  // System.out.println(res.toString());
 					     
-			  // Print the result untill all the records are printed
+			  // Print the result until all the records are printed
 			  // res.next() returns true if there is any next record else returns false
 while(res.next())	
 {	
@@ -585,7 +608,7 @@ try {
 		Statement stmt=null;
 		     
 	   // Constant for Database URL
-		String PersistanceDB_URL="jdbc:sqlanywhere:UserID=saap;Password=sql123;Host=inln50944437a.apj.global.corp.sap:5657;ServerName=DEP_QKD_INLN50944437A_1710;DatabaseName=DEP_rem_QKD_1710";
+		String PersistanceDB_URL="jdbc:sqlanywhere:UserID=saap;Password=sql123;Host=inln34409309a.apj.global.corp.sap:5667;ServerName=DEP_QKD_INLN34409309A_1710;DatabaseName=DEP_rem_QKD_1710";
 	    StringBuilder sb = new StringBuilder();
 
 	// sql anywhere data base connection
@@ -785,6 +808,8 @@ public String GetDatafromPersistenceDataBase(String sqlquery, String username, S
             if(webElement.getText().toString().equalsIgnoreCase(clickName))
             {
             	webElement.click();
+            	WaitTillTime(3000);
+            	webElement.click();
             	WaitTillTime(2000);
             	break;
             }
@@ -837,22 +862,21 @@ public String GetDatafromPersistenceDataBase(String sqlquery, String username, S
             salt.append(SALTCHARS.charAt(index));
         }
         String saltStr = salt.toString();
-        String salStr1 = "Auto_"+saltStr;
+        String salStr1 = "Random"+saltStr;
         return salStr1;
 	}
 	
-	public int GetRandomnumber()
+	public String GetRandomnumber()
 	{
         int size = 10000;
         Random rand = new Random();
-
         int number = rand.nextInt(size) + 1;
-        
-        return number;
+        return String.valueOf(number);
 	}
 	
-	public void UploadDocumentfile(String Docname) throws Exception{
-		StringSelection sPath1=new StringSelection(""+System.getProperty("user.dir")+"\\Documents\\"+Docname+".docx");
+	
+	public void UploadDocumentfile(String filepath) throws Exception{
+		StringSelection sPath1=new StringSelection(filepath);
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(sPath1, null);
 		Robot robot=new Robot();
 		robot.delay(4000);
@@ -892,8 +916,13 @@ public String GetDatafromPersistenceDataBase(String sqlquery, String username, S
 	
 	public String GetTodaysDateandTime() {
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd-MM-yyyy HH;mm;ss");  
-		LocalDateTime now = LocalDateTime.now();  
-		   
+		LocalDateTime now = LocalDateTime.now();    
+		return dtf.format(now); 
+		}
+	
+	public String GetCurrentDateandTime() {
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("ddMM_HHmm");  
+		LocalDateTime now = LocalDateTime.now();    
 		return dtf.format(now); 
 		}
 		

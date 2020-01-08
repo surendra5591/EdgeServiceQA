@@ -56,10 +56,8 @@ public class Test_VM_Tiered_Critical_SensorTag extends EdgeServicecomponents {
 		String SensorProfileName=functionalcomponents.getdatafromsheet("StreamingService", "TC05_Test_VM_Tiered_Critical_SensorTag_Flow", "SensorProfileName");
 		String ProductionParameters_Min=functionalcomponents.getdatafromsheet("StreamingService", "TC05_Test_VM_Tiered_Critical_SensorTag_Flow", "ProductionParameters_Min");
 		String ProductionParameters_Max=functionalcomponents.getdatafromsheet("StreamingService", "TC05_Test_VM_Tiered_Critical_SensorTag_Flow", "ProductionParameters_Max");
-		String windowParameters_Min=functionalcomponents.getdatafromsheet("StreamingService", "TC05_Test_VM_Tiered_Critical_SensorTag_Flow", "WindowParameters_Min");
-		String windowsize_averaging=functionalcomponents.getdatafromsheet("StreamingService", "TC05_Test_VM_Tiered_Critical_SensorTag_Flow", "windowSize_averaging");
-
-		CreateSensorProfile(SensorProfileName, ProductionParameters_Min, ProductionParameters_Max, windowParameters_Min, windowsize_averaging);
+		
+		CreateSensorProfile(SensorProfileName, ProductionParameters_Min, ProductionParameters_Max);
 		
 		 
 		 
@@ -81,7 +79,7 @@ public class Test_VM_Tiered_Critical_SensorTag extends EdgeServicecomponents {
 		 
 		 //Set Protocols & Create Enterprise Plugin
 		 
-		  String EnterprisePluginName = SetProtocolandCreateWebSocketPlugin1_StreamingService();
+		  String EnterprisePluginName = CreateWebSocketoutboundConnector_StreamingService();
 		 
 		 //Add Rule for Sensor Profile
 		 test.log(Status.INFO, "Navigate to Sesore Profile and Add rule for sensorprofile by clicking on the + symbol on the screen");

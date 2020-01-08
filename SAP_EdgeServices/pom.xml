@@ -13,16 +13,18 @@
 			<version>6.14.3</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+         <groupId>io.github.bonigarcia</groupId>
+         <artifactId>webdrivermanager</artifactId>
+         <version>3.6.2</version>
+         <scope>test</scope>
+  </dependency>
 		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
 			<version>3.141.59</version>
 		</dependency>
-
-
-		<!-- https://mvnrepository.com/artifact/com.qmetry/qaf-support -->
-
 		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
@@ -30,22 +32,17 @@
 			<version>4.0.0</version>
 		</dependency>
 		
-		<dependency>
+	<dependency>
     <groupId>com.googlecode.json-simple</groupId>
     <artifactId>json-simple</artifactId>
     <version>1.1.1</version>
       </dependency>
-		
-
 		<!-- https://mvnrepository.com/artifact/com.relevantcodes/extentreports -->
-
-
 		<dependency>
 			<groupId>com.aventstack</groupId>
 			<artifactId>extentreports</artifactId>
 			<version>3.1.5</version>
 		</dependency>
-
 		<dependency>
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>
@@ -74,14 +71,26 @@
                     <artifactId>maven-surefire-plugin</artifactId>
                     <version>3.0.0-M3</version>
                     <type>maven-plugin</type>
-             </dependency>     
-             <dependency>
+          </dependency>     
+          <dependency>
                       <groupId>org.apache.maven.plugins</groupId>
                       <artifactId>maven-compiler-plugin</artifactId>
                       <version>3.8.0</version>
                       <type>maven-plugin</type>
-             </dependency>
-             
+           </dependency>
+           <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>3.0.2</version>
+          </dependency>  
+          
+          <!-- https://mvnrepository.com/artifact/net.lingala.zip4j/zip4j -->
+        <dependency>
+        <groupId>net.lingala.zip4j</groupId>
+        <artifactId>zip4j</artifactId>
+        <version>2.0.3</version>
+       </dependency>
+                   
 	</dependencies>
 
 <build>

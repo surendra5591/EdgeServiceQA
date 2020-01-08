@@ -92,40 +92,7 @@ Properties properties = functionalcomponents.getObjectProperties();
 		 {
 			failedDescription("Numeric values for the Testing & Production Parameters for the minimum and maximum values are:"+ProductionParameters_Min+","+ProductionParameters_Max+"  saved and verified Maximum value is not exceed 2147483647.");
 		 }
-		 
-		 test.log(Status.INFO, "Enter numeric values for the Window Parameters for the minimum and window size averaging values");
-		 String windowParameters_Min=functionalcomponents.getdatafromsheet("StreamingService", "TC07_Test_VM_Tiered_Critical_Devicetag_Flow", "WindowParameters_Min");
-		 functionalcomponents.ClickAndSetValue(properties.getProperty("WindowParameters_Minimum"), windowParameters_Min);
-		 String windowsize_averaging=functionalcomponents.getdatafromsheet("StreamingService", "TC07_Test_VM_Tiered_Critical_Devicetag_Flow", "windowSize_averaging");
-		 int windowsizevalue=functionalcomponents.convertHourtoSecond(Integer.parseInt(windowsize_averaging));
-		 functionalcomponents.ClickOperation(properties.getProperty("Hour_toggle"));
-		 functionalcomponents.WaitTillTime(3000);
-		 functionalcomponents.ClickAndSetValue(properties.getProperty("WindowSize_Averaging"), windowsize_averaging);
-
-		 if(Integer.parseInt(windowsize_averaging)<2147483647)
-		 {	
-			test.log(Status.PASS, "Numeric values for the Window Parameters for the minimum:"+windowParameters_Min+" "+" and window size averaging value:"+windowsizevalue+" "+"Second are saved and verified window size averaging values is not exceed 2147483647 ");
-		 }
-		 else 
-		 {
-			failedDescription("Enter numeric values for the Window Parameters for the minimum and window size averaging values and verified window size averaging values is exceed 2147483647");
-		 }
-		 
-		 test.log(Status.INFO, "Check Enter value is changing to the toggling options between seconds, minutes and hours");
-		 functionalcomponents.ClickOperation(properties.getProperty("Minute_toggle"));
-		 functionalcomponents.WaitTillTime(3000);
-		
-		 functionalcomponents.ClickOperation(properties.getProperty("Second_toggle"));
-		 functionalcomponents.WaitTillTime(2000);
-		 if(driver.findElement(By.xpath(properties.getProperty("SensorProfile_Save_btn"))).isDisplayed())
-		 {	
-			test.log(Status.PASS, "Entered value is changing to the toggling options of seconds, minutes and hours properly");
-		 }
-		 else 
-		 {
-			failedDescription("Entered value is changing to the toggling options of seconds, minutes and hours properly");
-		 }
-		 	
+		 	 	
 		 test.log(Status.INFO, "Click Save sensor Profile button and verify sensor profile is created successfully with Profile Name");
 		 functionalcomponents.ClickOperation(properties.getProperty("SensorProfile_Save_btn"));
 		 functionalcomponents.WaitTillTime(3000);
@@ -237,8 +204,8 @@ Properties properties = functionalcomponents.getObjectProperties();
 		 test.log(Status.INFO, "Click Save Action button and verify Action is created successfully with Action Name");
 		 functionalcomponents.ClickOperation(properties.getProperty("ActionSave_btn"));
 		 functionalcomponents.WaitTillTime(2000);
-		 driver.navigate().refresh();
-		 functionalcomponents.WaitTillTime(7000);
+		// driver.navigate().refresh();
+		// functionalcomponents.WaitTillTime(7000);
 		 functionalcomponents.ClickElementfromSectionlist(properties.getProperty("ActionsName_List"), ActionName);
 	     
 		 functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("ActionName"), 20);
@@ -255,16 +222,17 @@ Properties properties = functionalcomponents.getObjectProperties();
 		 //New Action creation
 		 
 		 test.log(Status.INFO, "Click on Actions on the workcenter at left of the screen Configuration>>Actions");
-		 functionalcomponents.ClickOperation(properties.getProperty("Action_link"));
-		 functionalcomponents.waittillElementReadytoclickable(properties.getProperty("ActionNewAdd_btn"), 20);
-		 if(driver.findElement(By.xpath(properties.getProperty("ActionNewAdd_btn"))).isDisplayed())
-		 {	
-			test.log(Status.PASS, " Screen is loaded with option to add Actions");
-		 }
-		 else 
-		 {
-			failedDescription("Screen is not loaded with option to add Actions");
-		 }
+		
+		 
+		/*
+		 * functionalcomponents.ClickOperation(properties.getProperty("Action_link"));
+		 * functionalcomponents.waittillElementReadytoclickable(properties.getProperty(
+		 * "ActionNewAdd_btn"), 20);
+		 * if(driver.findElement(By.xpath(properties.getProperty("ActionNewAdd_btn"))).
+		 * isDisplayed()) { test.log(Status.PASS,
+		 * " Screen is loaded with option to add Actions"); } else {
+		 * failedDescription("Screen is not loaded with option to add Actions"); }
+		 */
 		 
 		 test.log(Status.INFO, "Click a new action by + symbol at the bottom of the screen");
 		 functionalcomponents.ClickOperation(properties.getProperty("ActionNewAdd_btn"));
@@ -362,7 +330,7 @@ Properties properties = functionalcomponents.getObjectProperties();
 		 
 		 //Set Protocols & Create Enterprise Plugin
 		 
-		  String EnterprisePluginName = SetProtocolandCreateWebSocketPlugin1_StreamingService();
+		  String EnterprisePluginName = CreateWebSocketoutboundConnector_StreamingService();
 		 
 		  //Add Rule for Sensor Profile
 			 test.log(Status.INFO, "Navigate to Sesore Profile and Add rule for sensorprofile by clicking on the + symbol on the screen");

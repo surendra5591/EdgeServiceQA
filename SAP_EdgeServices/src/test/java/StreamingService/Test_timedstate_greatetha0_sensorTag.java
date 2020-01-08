@@ -217,7 +217,7 @@ public class Test_timedstate_greatetha0_sensorTag  extends EdgeServicecomponents
 		 
 		 //Set Protocols & Create Enterprise Plugin
 		 
-		  String EnterprisePluginName = SetProtocolandCreateWebSocketPlugin1_StreamingService();
+		 String EnterprisePluginName = CreateWebSocketoutboundConnector_StreamingService();
 		  
 		  //Add Rule for Sensor Profile
 			 test.log(Status.INFO, "Navigate to Sesore Profile and Add rule for sensorprofile by clicking on the + symbol on the screen");
@@ -282,8 +282,7 @@ public class Test_timedstate_greatetha0_sensorTag  extends EdgeServicecomponents
 			 else 
 			 {
 				failedDescription("user is not able to select Ruletype as Value Monitoring & scope level as Sensorprofile from dropdown button");
-			 }
-			 
+			 } 
 			 functionalcomponents.ClickAndSetValue(properties.getProperty("ScopLeel_Value"), "sensor Tag");
 		     functionalcomponents.WaitTillTime(3000);
 			     test.log(Status.INFO, "verify user is able to select Target State and Time in State as well as Maximum Event Frequency value");
@@ -310,18 +309,13 @@ public class Test_timedstate_greatetha0_sensorTag  extends EdgeServicecomponents
 			    functionalcomponents.ClickOperation(properties.getProperty("SelectActionpart1")+ActionName.trim()+properties.getProperty("SelectActionpart2"));
 			    functionalcomponents.WaitTillTime(2000);
 			    functionalcomponents.ClickOperation(properties.getProperty("EnterprisePlugins"));
-			    functionalcomponents.WaitTillTime(2000);
-			    functionalcomponents.ClickOperation(properties.getProperty("SelectEnterprisePart1")+EnterprisePluginName+properties.getProperty("SelectEnterprisePart2"));
-			    functionalcomponents.WaitTillTime(2000);
-			 
-			   /* functionalcomponents.ClickOperation(properties.getProperty("EnterprisePlugins"));
-			    functionalcomponents.WaitTillTime(2000);
-			    functionalcomponents.ClickOperation(properties.getProperty("SelectEnterprisePart1")+EnterprisePluginName1+properties.getProperty("SelectEnterprisePart2"));
-			    functionalcomponents.WaitTillTime(2000);*/
+				functionalcomponents.WaitTillTime(2000);
+				functionalcomponents.ClickOperation(properties.getProperty("SelectEnterprisePart1")+EnterprisePluginName.trim()+properties.getProperty("SelectEnterprisePart2"));
+				functionalcomponents.WaitTillTime(2000);
 			 
 			 if(driver.findElement(By.xpath(properties.getProperty("Rule_Save_btn"))).isDisplayed())
 			 {	
-					test.log(Status.PASS, "verified user is able to enter Edgekeep Interval as: '7' and selecting Event actions as:"+ActionName+" "+ "from Action List as well as selecting Enterprise Plugins :"+EnterprisePluginName+", "+EnterprisePluginName+" "+ "from List");
+					test.log(Status.PASS, "verified user is able to enter Edgekeep Interval as: '7' and selecting Event actions as:"+ActionName+" "+ "from Action List as well as selecting Rest Outbound Connector");
 			 }
 			 else 
 			 {

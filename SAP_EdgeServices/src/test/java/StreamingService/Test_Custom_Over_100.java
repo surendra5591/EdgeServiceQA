@@ -55,10 +55,8 @@ public class Test_Custom_Over_100 extends EdgeServicecomponents {
 			String SensorProfileName=functionalcomponents.getdatafromsheet("StreamingService", "TC02_Custom_Over100", "SensorProfileName");
 			String ProductionParameters_Min=functionalcomponents.getdatafromsheet("StreamingService", "TC02_Custom_Over100", "ProductionParameters_Min");
 			String ProductionParameters_Max=functionalcomponents.getdatafromsheet("StreamingService", "TC02_Custom_Over100", "ProductionParameters_Max");
-			String windowParameters_Min=functionalcomponents.getdatafromsheet("StreamingService", "TC02_Custom_Over100", "WindowParameters_Min");
-			String windowsize_averaging=functionalcomponents.getdatafromsheet("StreamingService", "TC02_Custom_Over100", "windowSize_averaging");
-
-	    	CreateSensorProfile(SensorProfileName, ProductionParameters_Min, ProductionParameters_Max, windowParameters_Min, windowsize_averaging);
+			
+	    	CreateSensorProfile(SensorProfileName, ProductionParameters_Min, ProductionParameters_Max);
 			//System.out.println(SensorProfileID);
 	
  //Action Creation
@@ -71,7 +69,8 @@ public class Test_Custom_Over_100 extends EdgeServicecomponents {
 			
  //Set Protocols & Create Enterprise Plugin
 			
-			 String EnterprisePluginName = SetProtocolandCreateWebSocketPlugin1_StreamingService();			
+			 String EnterprisePluginName = CreateWebSocketoutboundConnector_StreamingService();	
+			 System.out.println(EnterprisePluginName);
 			
 	 //Add Rule for Sensor Profile
 	 test.log(Status.INFO, "Navigate to Sesore Profile and Add rule for sensorprofile by clicking on the + symbol on the screen");
@@ -223,63 +222,6 @@ else
 {
 	failedDescription("Screen is not loaded with option to add sensor profile");
 }
-
-/*
-test.log(Status.INFO, "Post Input PayLoad to server for connecting Live Sensor device");
-
-RESTPublisher RestPublisher = new RESTPublisher();
-RestPublisher.initialize("127.0.0.1");
-Date currentdate=functionalcomponents.GetTodaysDate();
-
-String Message= "{\"readings\":[{\"sensorTag\":\"tag\",\"sensorProfileId\":\""+SensorProfileID+"\",\"context\":\"1\",\"readingValue\":\"200\",\"sensorId\":\"id\"}],\"deviceTag\":\"tag1\",\"deviceId\":\"MH02\"}";
-boolean status = RestPublisher.sendInputMessage(Message, currentdate, true);
-functionalcomponents.WaitTillTime(10000);
-String Message1= "{\"readings\":[{\"sensorTag\":\"tag\",\"sensorProfileId\":\""+SensorProfileID+"\",\"context\":\"1\",\"readingValue\":\"200\",\"sensorId\":\"id\"}],\"deviceTag\":\"tag1\",\"deviceId\":\"MH02\"}";
-boolean status1 = RestPublisher.sendInputMessage(Message1, currentdate, true);
-functionalcomponents.WaitTillTime(20000);
-if(status1) {
-	successfulTests.add(Message1+" -------"+"Passed");
-}
-else {
-	failedTests.add(Message1+" -------"+"failed");
-}
-
-functionalcomponents.ClickOperation(properties.getProperty("Select_Device"));
-functionalcomponents.WaitTillTime(3000);
-
-String Message2= "{\"readings\":[{\"sensorTag\":\"tag\",\"sensorProfileId\":\""+SensorProfileID+"\",\"context\":\"1\",\"readingValue\":\"100\",\"sensorId\":\"id\"}],\"deviceTag\":\"tag1\",\"deviceId\":\"MH02\"}";
-boolean status2 = RestPublisher.sendInputMessage(Message2, currentdate, true);
-functionalcomponents.WaitTillTime(10000);
-if(status2) {
-	successfulTests.add(Message2+" -------"+"Passed");
-}
-else {
-	failedTests.add(Message2+" -------"+"failed");
-}
-
-String Message3= "{\"readings\":[{\"sensorTag\":\"tag\",\"sensorProfileId\":\""+SensorProfileID+"\",\"context\":\"1\",\"readingValue\":\"150\",\"sensorId\":\"id\"}],\"deviceTag\":\"tag1\",\"deviceId\":\"MH02\"}";
-boolean status3 = RestPublisher.sendInputMessage(Message3, currentdate, true);
-functionalcomponents.WaitTillTime(10000);
-if(status3) {
-	successfulTests.add(Message3+" -------"+"Passed");
-}
-else {
-	failedTests.add(Message3+" -------"+"failed");
-}
-
-String Message4= "{\"readings\":[{\"sensorTag\":\"tag\",\"sensorProfileId\":\""+SensorProfileID+"\",\"context\":\"1\",\"readingValue\":\"200\",\"sensorId\":\"id\"}],\"deviceTag\":\"tag1\",\"deviceId\":\"MH02\"}";
-boolean status4 = RestPublisher.sendInputMessage(Message4, currentdate, true);
-functionalcomponents.WaitTillTime(10000);
-if(status4) {
-	successfulTests.add(Message4+" -------"+"Passed");
-}
-else {
-	failedTests.add(Message4+" -------"+"failed");
-}
-
-test.log(Status.PASS, "Input PayLoad Posted to server successful PayLoad Tests are: "+successfulTests);
-*/
-
 
 //Prerequisite- Run SQL Server in current system	 
 //Getting Data from DATA Base

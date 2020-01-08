@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.Status;
 
-public class Test_Valuemonitoring_deviceid  extends EdgeServicecomponents{
+public class Test_Valuemonitoring_deviceid extends EdgeServicecomponents{
 	Properties properties = functionalcomponents.getObjectProperties();
 	   
 	 @Test
@@ -90,39 +90,7 @@ public class Test_Valuemonitoring_deviceid  extends EdgeServicecomponents{
 			failedDescription("Numeric values for the Testing & Production Parameters for the minimum and maximum values are:"+ProductionParameters_Min+","+ProductionParameters_Max+"  saved and verified Maximum value is not exceed 2147483647.");
 		 }
 		 
-		 test.log(Status.INFO, "Enter numeric values for the Window Parameters for the minimum and window size averaging values");
-		 String windowParameters_Min=functionalcomponents.getdatafromsheet("StreamingService", "TC20_Test_Valuemonitoring_deviceid", "WindowParameters_Min");
-		 functionalcomponents.ClickAndSetValue(properties.getProperty("WindowParameters_Minimum"), windowParameters_Min);
-		 String windowsize_averaging=functionalcomponents.getdatafromsheet("StreamingService", "TC20_Test_Valuemonitoring_deviceid", "windowSize_averaging");
-		 int windowsizevalue=functionalcomponents.convertHourtoSecond(Integer.parseInt(windowsize_averaging));
-		 functionalcomponents.ClickOperation(properties.getProperty("Hour_toggle"));
-		 functionalcomponents.WaitTillTime(3000);
-		 functionalcomponents.ClickAndSetValue(properties.getProperty("WindowSize_Averaging"), windowsize_averaging);
-
-		 if(Integer.parseInt(windowsize_averaging)<2147483647)
-		 {	
-			test.log(Status.PASS, "Numeric values for the Window Parameters for the minimum:"+windowParameters_Min+" "+" and window size averaging value:"+windowsizevalue+" "+"Second are saved and verified window size averaging values is not exceed 2147483647 ");
-		 }
-		 else 
-		 {
-			failedDescription("Enter numeric values for the Window Parameters for the minimum and window size averaging values and verified window size averaging values is exceed 2147483647");
-		 }
-		 
-		 test.log(Status.INFO, "Check Enter value is changing to the toggling options between seconds, minutes and hours");
-		 functionalcomponents.ClickOperation(properties.getProperty("Minute_toggle"));
-		 functionalcomponents.WaitTillTime(3000);
 		
-		 functionalcomponents.ClickOperation(properties.getProperty("Second_toggle"));
-		 functionalcomponents.WaitTillTime(2000);
-		 if(driver.findElement(By.xpath(properties.getProperty("SensorProfile_Save_btn"))).isDisplayed())
-		 {	
-			test.log(Status.PASS, "Entered value is changing to the toggling options of seconds, minutes and hours properly");
-		 }
-		 else 
-		 {
-			failedDescription("Entered value is changing to the toggling options of seconds, minutes and hours properly");
-		 }
-		 
 		 test.log(Status.INFO, "Click Save sensor Profile button and verify sensor profile is created successfully with Profile Name");
 		 functionalcomponents.ClickOperation(properties.getProperty("SensorProfile_Save_btn"));
 		 functionalcomponents.WaitTillTime(3000);
@@ -247,9 +215,9 @@ public class Test_Valuemonitoring_deviceid  extends EdgeServicecomponents{
 			failedDescription("Clicked Save Action button and verified Action is not created successfully with Action Name"+" "+ActionNameValue);
 		 }
 		 
-		 //Set Protocols & Create Enterprise Plugin
+		 //Create Enterprise Plugin
 		 
-		  String EnterprisePluginName = SetProtocolandCreateWebSocketPlugin1_StreamingService();
+		  String EnterprisePluginName = CreateWebSocketoutboundConnector_StreamingService();
 		  
 		  //Add Rule for Sensor Profile
 			 test.log(Status.INFO, "Navigate to Sesore Profile and Add rule for sensorprofile by clicking on the + symbol on the screen");
@@ -316,9 +284,9 @@ public class Test_Valuemonitoring_deviceid  extends EdgeServicecomponents{
 			 {
 				failedDescription("user is not able to select Ruletype as Value Monitoring & scope level as Sensorprofile from dropdown button");
 			 }
-			 functionalcomponents.ClearAndSetValue(properties.getProperty("ScopLeel_Value"), "VM1");
-		     functionalcomponents.WaitTillTime(2000);
-			 
+		
+		       functionalcomponents.ClearAndSetValue(properties.getProperty("ScopLeel_Value"), "VM1"); 
+		       functionalcomponents.WaitTillTime(2000);
 			     test.log(Status.INFO, "verify user is able to select thresholding operator and Thresholding value as well as Maximum Event Frequency value");
 			    // String ThresholdingValue=String.valueOf(functionalcomponents.GetRandomnumber());
 				 String ThresholdingValue=functionalcomponents.getdatafromsheet("Rule", "TC20_Test_Valuemonitoring_deviceid", "ThresholdingValue");
@@ -328,9 +296,6 @@ public class Test_Valuemonitoring_deviceid  extends EdgeServicecomponents{
 				 String ThersholdoperatorValue=functionalcomponents.getdatafromsheet("Rule", "TC20_Test_Valuemonitoring_deviceid", "ThresholdingOperator");
 				 functionalcomponents.ClickOperation(properties.getProperty("Thresholdoperatorpart1")+ThersholdoperatorValue+properties.getProperty("Thresholdoperatorpart2"));
 				 functionalcomponents.WaitTillTime(2000);
-				// functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("Equality_tolerance"),40); 
-			    // driver.findElement(By.xpath("//input[@value='0']")).clear();
-			     //driver.findElement(By.xpath("//input[@value='0']")).sendKeys("5");
 				 functionalcomponents.ClearAndSetValue(properties.getProperty("Max_EventFrequency"), "5000");
 				 functionalcomponents.WaitTillTime(1000);
 				 if(driver.findElement(By.xpath(properties.getProperty("EventActions"))).isDisplayed())
@@ -350,11 +315,6 @@ public class Test_Valuemonitoring_deviceid  extends EdgeServicecomponents{
 			    functionalcomponents.WaitTillTime(2000);
 			    functionalcomponents.ClickOperation(properties.getProperty("SelectEnterprisePart1")+EnterprisePluginName+properties.getProperty("SelectEnterprisePart2"));
 			    functionalcomponents.WaitTillTime(2000);
-			 
-			   /* functionalcomponents.ClickOperation(properties.getProperty("EnterprisePlugins"));
-			    functionalcomponents.WaitTillTime(2000);
-			    functionalcomponents.ClickOperation(properties.getProperty("SelectEnterprisePart1")+EnterprisePluginName1+properties.getProperty("SelectEnterprisePart2"));
-			    functionalcomponents.WaitTillTime(2000);*/
 			 
 			 if(driver.findElement(By.xpath(properties.getProperty("Rule_Save_btn"))).isDisplayed())
 			 {	

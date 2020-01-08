@@ -3,159 +3,17 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Regression]">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="StreamingService.Test_VM_Smallerthan_Deviceid">
-        <methods>
-          <include name="tearDown"/>
-          <include name="TC10_Test_VM_smallerthan_Deviceid"/>
-          <include name="beforeClass"/>
-          <include name="beforeMethod"/>
-          <include name="beforeSuite"/>
-        </methods>
-      </class> <!-- StreamingService.Test_VM_Smallerthan_Deviceid -->
-      <class name="StreamingService.Test_VM_tieredcritical_sensorID">
-        <methods>
-          <include name="tearDown"/>
-          <include name="beforeClass"/>
-          <include name="TC06_Test_VM_Tiered_Critical_SensorID_Flow"/>
-          <include name="beforeMethod"/>
-          <include name="beforeSuite"/>
-        </methods>
-      </class> <!-- StreamingService.Test_VM_tieredcritical_sensorID -->
-      <class name="StreamingService.Test_VMtwoSensors_SmallerThanGreaterThan">
-        <methods>
-          <include name="TC_03_TestVMtwoSensors_SmallerThanGreaterThan_Flow"/>
-          <include name="tearDown"/>
-          <include name="beforeClass"/>
-          <include name="beforeMethod"/>
-          <include name="beforeSuite"/>
-        </methods>
-      </class> <!-- StreamingService.Test_VMtwoSensors_SmallerThanGreaterThan -->
-      <class name="StreamingService.Test_Custom_Over_100">
-        <methods>
-          <include name="tearDown"/>
-          <include name="beforeClass"/>
-          <include name="TC02_Custom_Over100"/>
-          <include name="beforeMethod"/>
-          <include name="beforeSuite"/>
-        </methods>
-      </class> <!-- StreamingService.Test_Custom_Over_100 -->
-      <class name="StreamingService.Test_VM_smallerthan">
-        <methods>
-          <include name="tearDown"/>
-          <include name="beforeClass"/>
-          <include name="TC11_Test_VM_smallerthan"/>
-          <include name="beforeMethod"/>
-          <include name="beforeSuite"/>
-        </methods>
-      </class> <!-- StreamingService.Test_VM_smallerthan -->
-      <class name="StreamingService.Test_timedstate_greatetha0_sensorTag">
-        <methods>
-          <include name="tearDown"/>
-          <include name="TC21_Test_timedstate_greatetha0_sensorTag"/>
-          <include name="beforeClass"/>
-          <include name="beforeMethod"/>
-          <include name="beforeSuite"/>
-        </methods>
-      </class> <!-- StreamingService.Test_timedstate_greatetha0_sensorTag -->
-      <class name="StreamingService.Test_VM_equality">
-        <methods>
-          <include name="tearDown"/>
-          <include name="beforeClass"/>
-          <include name="TC19_Test_VM_equality"/>
-          <include name="beforeMethod"/>
-          <include name="beforeSuite"/>
-        </methods>
-      </class> <!-- StreamingService.Test_VM_equality -->
-      <class name="StreamingService.Test_VM_equality_deviceid">
-        <methods>
-          <include name="TC18_Test_VM_equality_deviceid"/>
-          <include name="tearDown"/>
-          <include name="beforeClass"/>
-          <include name="beforeMethod"/>
-          <include name="beforeSuite"/>
-        </methods>
-      </class> <!-- StreamingService.Test_VM_equality_deviceid -->
       <class name="StreamingService.Test_Valuemonitoring_deviceid">
         <methods>
           <include name="TC20_Test_Valuemonitoring_deviceid"/>
           <include name="tearDown"/>
+          <include name="AfterClass"/>
           <include name="beforeClass"/>
+          <include name="AfterSuite"/>
           <include name="beforeMethod"/>
           <include name="beforeSuite"/>
         </methods>
       </class> <!-- StreamingService.Test_Valuemonitoring_deviceid -->
-      <class name="StreamingService.Test_VM_equality_Tolerance_DeviceID">
-        <methods>
-          <include name="tearDown"/>
-          <include name="beforeClass"/>
-          <include name="TC16_Test_VM_equality_Tolerance_DeviceID"/>
-          <include name="beforeMethod"/>
-          <include name="beforeSuite"/>
-        </methods>
-      </class> <!-- StreamingService.Test_VM_equality_Tolerance_DeviceID -->
-      <class name="StreamingService.Test_VM_Tiered_Critical_DeviceID_Flow">
-        <methods>
-          <include name="tearDown"/>
-          <include name="beforeClass"/>
-          <include name="TC08_Test_VM_Tiered_Critical_DeviceID_Flow"/>
-          <include name="beforeMethod"/>
-          <include name="beforeSuite"/>
-        </methods>
-      </class> <!-- StreamingService.Test_VM_Tiered_Critical_DeviceID_Flow -->
-      <class name="StreamingService.Test_VM_equality_Tolerance">
-        <methods>
-          <include name="tearDown"/>
-          <include name="beforeClass"/>
-          <include name="TC17_Test_VM_equality_Tolerance"/>
-          <include name="beforeMethod"/>
-          <include name="beforeSuite"/>
-        </methods>
-      </class> <!-- StreamingService.Test_VM_equality_Tolerance -->
-      <class name="StreamingService.Test_CreateSensorProfilewithActiontypeFieldmessageandRuletypeValuemonitoring">
-        <methods>
-          <include name="TC01_CreateSensorProfilewith_ActiontypeFieldmessageand_RuletypeValuemonitoring_Flow"/>
-          <include name="tearDown"/>
-          <include name="beforeClass"/>
-          <include name="beforeMethod"/>
-          <include name="beforeSuite"/>
-        </methods>
-      </class> <!-- StreamingService.Test_CreateSensorProfilewithActiontypeFieldmessageandRuletypeValuemonitoring -->
-      <class name="StreamingService.Test_VM_tiered_Critical">
-        <methods>
-          <include name="TC09_Test_VM_tiered_Critical"/>
-          <include name="tearDown"/>
-          <include name="beforeClass"/>
-          <include name="beforeMethod"/>
-          <include name="beforeSuite"/>
-        </methods>
-      </class> <!-- StreamingService.Test_VM_tiered_Critical -->
-      <class name="StreamingService.Test_VM_Tiered_Critical_SensorTag">
-        <methods>
-          <include name="TC05_Test_VM_Tiered_Critical_SensorTag_Flow"/>
-          <include name="tearDown"/>
-          <include name="beforeClass"/>
-          <include name="beforeMethod"/>
-          <include name="beforeSuite"/>
-        </methods>
-      </class> <!-- StreamingService.Test_VM_Tiered_Critical_SensorTag -->
-      <class name="StreamingService.Test_VM_Tiered_critical_devicetag">
-        <methods>
-          <include name="tearDown"/>
-          <include name="beforeClass"/>
-          <include name="TC07_Test_VM_Tiered_Critical_Devicetag_Flow"/>
-          <include name="beforeMethod"/>
-          <include name="beforeSuite"/>
-        </methods>
-      </class> <!-- StreamingService.Test_VM_Tiered_critical_devicetag -->
-      <class name="StreamingService.Test_VM_tiered_warning">
-        <methods>
-          <include name="tearDown"/>
-          <include name="beforeClass"/>
-          <include name="beforeMethod"/>
-          <include name="TC04_Test_VM_tiered_warning_Flow"/>
-          <include name="beforeSuite"/>
-        </methods>
-      </class> <!-- StreamingService.Test_VM_tiered_warning -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Regression] -->

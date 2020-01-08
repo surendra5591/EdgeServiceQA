@@ -11,6 +11,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class Driverfactory {
 
@@ -23,8 +26,8 @@ public class Driverfactory {
 		
 		testMachineOS=System.getProperty("os.name");
 		testMachineSystemType=System.getProperty("os.arch");
-		System.out.println(testMachineOS);
-		System.out.println(testMachineSystemType);
+		//System.out.println(testMachineOS);
+		//System.out.println(testMachineSystemType);
 		if (browserName.equalsIgnoreCase("chrome")) {
 			ChromeDriverService service = null;
 			if(testMachineOS.contains("Windows"))
@@ -35,15 +38,19 @@ public class Driverfactory {
 				System.setProperty("webdriver.chrome.driver", chromeDriver.getAbsolutePath());
 			}
 			else if(testMachineSystemType.contains("64")){
-				File chromeDriver = new File(System.getProperty("user.dir")+"/driver/chromedriver_linux64");
+				File chromeDriver = new File("/driver/chromedriver");
+				System.out.println(chromeDriver);
 				chromeDriver.setExecutable(true);
-				System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/driver/chromedriver_linux64");
-				service = new ChromeDriverService.Builder().usingDriverExecutable(chromeDriver).usingAnyFreePort().build();
-				try {
-					service.start();
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
+				System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/driver/chromedriver");
+				//service = new ChromeDriverService.Builder().usingDriverExecutable(chromeDriver).usingAnyFreePort().build(); 
+				  //try { 
+				//	  service.start();
+				//  } 
+				//  catch (IOException e)
+				 // {
+				 //  e.printStackTrace(); 
+				 //  }
+				 
 			}
 			
 	    try { 
@@ -58,11 +65,16 @@ public class Driverfactory {
 				prefs.put("download.default_directory", System.getProperty("user.dir")+File.separator+ "ExportImportFolder");
 
 				ChromeOptions options = new ChromeOptions();
-				//options.addArguments("headless");
+			    // options.addArguments("headless");
+				options.addArguments("--no-sandbox");
+				options.addArguments("--disable-dev-shm-usage"); 
+				options.addArguments("--disable-extensions"); 
+				options.addArguments("start-maximized");
 				options.setExperimentalOption("prefs", prefs);
 				driver = new ChromeDriver(options);
 				driver.manage().deleteAllCookies();
-				driver.manage().window().maximize();
+				
+				//driver.manage().window().maximize();
 				Thread.sleep(1000);
 			} 
 	   catch (Exception e) {
@@ -75,6 +87,22 @@ public class Driverfactory {
 			try {
 				System.setProperty("webdriver.gecko.driver", "path");
 				driver = new FirefoxDriver();
+				driver.manage().window().maximize();
+				Thread.sleep(1000);
+			} catch (Exception e) {
+
+				e.printStackTrace();
+			}
+		}
+		
+		else if (browserName.equalsIgnoreCase("InternetExplorer")) {
+			try {
+				 
+				System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+"/driver/IEDriverServer.exe");
+				DesiredCapabilities caps = DesiredCapabilities.internetExplorer();
+				caps.setCapability("ignoreZoomSetting", true);
+				caps.setCapability("nativeEvents",false);
+				driver = new InternetExplorerDriver(caps);
 				driver.manage().window().maximize();
 				Thread.sleep(1000);
 			} catch (Exception e) {

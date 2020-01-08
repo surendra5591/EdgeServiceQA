@@ -59,7 +59,7 @@ public class Test_VM_tiered_warning extends EdgeServicecomponents {
 		String windowParameters_Min=functionalcomponents.getdatafromsheet("StreamingService", "TC04_Test_VM_tiered_warning_Flow", "WindowParameters_Min");
 		String windowsize_averaging=functionalcomponents.getdatafromsheet("StreamingService", "TC04_Test_VM_tiered_warning_Flow", "windowSize_averaging");
 
-		CreateSensorProfile(SensorProfileName, ProductionParameters_Min, ProductionParameters_Max, windowParameters_Min, windowsize_averaging);
+		CreateSensorProfile(SensorProfileName, ProductionParameters_Min, ProductionParameters_Max);
 			 
 	 
 	
@@ -71,10 +71,10 @@ public class Test_VM_tiered_warning extends EdgeServicecomponents {
 		 		
 	  
      //Set Protocols & Create Enterprise Plugin
-	  String EnterprisePluginName=SetProtocolandCreateWebSocketPlugin1_StreamingService();
+	  String EnterprisePluginName=CreateWebSocketoutboundConnector_StreamingService();
 	  functionalcomponents.ClickOperation(properties.getProperty("Settings_link"));
 	  functionalcomponents.WaitTillTime(5000);
-	  String EnterprisePluginName1=SetProtocolandCreateRESTPlugin1_StreamingService();
+	  String EnterprisePluginName1=CreateRESTOutboundConnector_StreamingService();
 	 
 	 //Add Rule for Sensor Profile
 	 test.log(Status.INFO, "Navigate to Sesore Profile and Add rule for sensorprofile by clicking on the + symbol on the screen");

@@ -12,185 +12,80 @@ import java.util.Properties;
 
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import com.aventstack.extentreports.Status;
+
+import functionalComponent.FunctionalComponents;
 
 public class EdgeServicecomponents extends BaseTest {
 	
 	
-	Properties properties = functionalcomponents.getObjectProperties();
+	   Properties properties = functionalcomponents.getObjectProperties();
+	   String Basic_AUTH_Password_input=functionalcomponents.getdatafromsheet("CockPit", "E2E_Edge_TestCases", "Basic_AUTH_Password_input");
+	    String AUTH_TYPE_input=functionalcomponents.getdatafromsheet("CockPit", "E2E_Edge_TestCases", "AUTH_TYPE_input");
+	    String Rest_URI_input=functionalcomponents.getdatafromsheet("CockPit", "E2E_Edge_TestCases", "URI_input");
+		String BASIC_AUTH_USERNAME_input=functionalcomponents.getdatafromsheet("CockPit", "E2E_Edge_TestCases", "BASIC_AUTH_USERNAME_input");
+		
 	
-	public  String SetProtocolandCreateWebSocketPlugin1_StreamingService()
+	public  String CreateWebSocketoutboundConnector_StreamingService()
 	{
 		
-		//Set Protocols & Create WebSocketEnterprise Plugin
-		 test.log(Status.INFO, "Click on Http Protocol Plugins on the workcenter at left of the screen Settings>>HttpProtocol Plugin");
+		 
+		 test.log(Status.INFO, "Click on OutboundConnector on the workcenter at left of the screen Settings");
+		 functionalcomponents.WaitTillTime(2000);
 		 functionalcomponents.ClickOperation(properties.getProperty("Settings_link"));
 		 functionalcomponents.WaitTillTime(2000);
-		 functionalcomponents.ClickOperation(properties.getProperty("ProtocolPlugin_link"));
-		 functionalcomponents.waittillElementReadytoclickable(properties.getProperty("Select_httpProtocolPlugin"), 20);
-		 if(driver.findElement(By.xpath(properties.getProperty("Select_httpProtocolPlugin"))).isDisplayed())
+		 functionalcomponents.ClickOperation(properties.getProperty("OutboundConnectors_link"));
+		 functionalcomponents.waittillElementReadytoclickable(properties.getProperty("OutboundConnectorsNewAdd_btn"), 20);
+		 if(driver.findElement(By.xpath(properties.getProperty("OutboundConnectorsNewAdd_btn"))).isDisplayed())
 		 {	
-			test.log(Status.PASS, " Screen is loaded with HttpProtocolPlugins Page");
-		 }
-		 else 
-		 {
-			failedDescription("Screen is not loaded with HttpProtocolPlugins Page");
-		 } 
-		 test.log(Status.INFO, "Select HttpProtocolPlugins on the screen");
-		 functionalcomponents.WaitTillTime(2000);
-		 functionalcomponents.ClickOperation(properties.getProperty("Select_httpProtocolPlugin"));
-		 if(driver.findElement(By.xpath(properties.getProperty("HttpprotocolSave_btn"))).isDisplayed())
-		 {	
-			test.log(Status.PASS, " Screen is loaded with option add Protocol Plugin Information");
-		 }
-		 else 
-		 {
-			failedDescription("Screen is not loaded with option add Protocol Plugin Information");
-		 }
-		 
-		 test.log(Status.INFO, "Set Option Setting 1. AUTHENTICATION_TYPE from Token to None ," + "2. SECURE_ONLY from true to false");
-		 List<WebElement> Name=new ArrayList<WebElement>();
-		 Name.addAll(driver.findElements(By.xpath(properties.getProperty("OptionalSettingName_List"))));
-		 int listsize=Name.size();
-		 for(WebElement ele: Name)
-		 {
-			 
-			 if(ele.getText().equalsIgnoreCase("AUTHENTICATION_TYPE"))
-			 {
-				 functionalcomponents.ClearAndSetValue(properties.getProperty("Authentication_Value"), "None");
-				 functionalcomponents.WaitTillTime(2000);
-				 break;
-			 }
-			 
-			 else 
-			 {
-				 functionalcomponents.ClickOperation(properties.getProperty("AddNewConfigSetting_btn"));
-				 functionalcomponents.WaitTillTime(3000);
-				 functionalcomponents.ClickOperation(properties.getProperty("ConfigSettingName_Dropdown1")+String.valueOf(listsize)+properties.getProperty("ConfigSettingName_Dropdown2"));
-				 functionalcomponents.WaitTillTime(2000);
-				 functionalcomponents.ClickOperation(properties.getProperty("Select_AuthentictypeName"));
-				 functionalcomponents.WaitTillTime(3000);
-				 functionalcomponents.ClickAndSetValue(properties.getProperty("Setconfigsetting_Value1")+String.valueOf(listsize)+properties.getProperty("Setconfigsetting_Value2"), "None");
-				 functionalcomponents.WaitTillTime(3000);
-				 listsize=listsize+1;
-				 break;
-			 }
-		 }
-			 
-		 for(int j=0; j<Name.size(); j++)
-		 {
-			 WebElement ele1 =Name.get(j);
-			  if(ele1.getText().equalsIgnoreCase("SECURE_ONLY"))
-			 {
-				 functionalcomponents.ClearAndSetValue(properties.getProperty("SecureOnly_Value"), "false");
-				 functionalcomponents.WaitTillTime(2000);
-				 break;
-			 }
-			 else if(ele1.getText()!="SECURE_ONLY" & j==Name.size())
-			 {
-				 functionalcomponents.ClickOperation(properties.getProperty("AddNewConfigSetting_btn"));
-				 functionalcomponents.WaitTillTime(3000);
-				 functionalcomponents.ClickOperation(properties.getProperty("ConfigSettingName_Dropdown1")+String.valueOf(listsize)+properties.getProperty("ConfigSettingName_Dropdown2"));
-				 functionalcomponents.WaitTillTime(2000);
-				 functionalcomponents.ClickOperation(properties.getProperty("Select_SecureOnlyName"));
-				 functionalcomponents.WaitTillTime(3000);
-				 functionalcomponents.ClickAndSetValue(properties.getProperty("Setconfigsetting_Value1")+String.valueOf(listsize)+properties.getProperty("Setconfigsetting_Value2"), "false");
-				 functionalcomponents.WaitTillTime(3000);
-			 }
-		 }
-		 if(driver.findElement(By.xpath(properties.getProperty("HttpprotocolSave_btn"))).isDisplayed())
-		 {	
-			test.log(Status.PASS, "user is able to Set Option Setting 1. AUTHENTICATION_TYPE from Token to None" + "2. SECURE_ONLY from true to false");
-		 }
-		 
-		 else 
-		  {
-			failedDescription("user is not able to Set Option Setting 1. AUTHENTICATION_TYPE from Token to None" + "2. SECURE_ONLY from true to false");
-		  }
-		 test.log(Status.INFO, "Click Save Http Protocol Plugin button and verify EnterprisePlugins is created successfully");
-		 functionalcomponents.ClickOperation(properties.getProperty("HttpprotocolSave_btn"));
-		 functionalcomponents.WaitTillTime(2000);
-		 driver.navigate().refresh();
-		 functionalcomponents.WaitTillTime(5000);
-		 functionalcomponents.ClickElementfromSectionlist(properties.getProperty("Protocol_List"), "HttpProtocolPlugin");
-		 functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("HttpProtocol_Name"), 20);
-		 String ProtocolPluginNameValue=driver.findElement(By.xpath(properties.getProperty("HttpProtocol_Name"))).getAttribute("value");
-		 if(ProtocolPluginNameValue.equalsIgnoreCase("HttpProtocolPlugin"))
-		 {	
-			test.log(Status.PASS, "Clicked Save HttpProtocol Plugin button and verified Http Protocol Plugins Set Successfully");
-		 }
-		 
-		 else 
-		  {
-			failedDescription("Clicked Save HttpProtocol Plugin button and verified Http Protocol Plugins does not Set Successfully");
-		  }
-		 
-		 test.log(Status.INFO, "Click on EnterprisePlugins on the workcenter at left of the screen Settings>>EnterprisePlugin");
-		 functionalcomponents.WaitTillTime(2000);
-		 functionalcomponents.ClickOperation(properties.getProperty("EnterprisePlugin_link"));
-		 functionalcomponents.waittillElementReadytoclickable(properties.getProperty("EnterprisePluginNewAdd_btn"), 20);
-		 if(driver.findElement(By.xpath(properties.getProperty("EnterprisePluginNewAdd_btn"))).isDisplayed())
-		 {	
-			test.log(Status.PASS, " Screen is loaded with Enterprise Plugins Page");
+			test.log(Status.PASS, " Screen is loaded with outbound conectors Page");
 		 }
 		 else 
 		 {
 			failedDescription("Screen is not loaded with Enterprise Plugins Page");
 		 }
-		 test.log(Status.INFO, "Click on add + Symbol to create New EnterprisePlugins");
-		 functionalcomponents.ClickOperation(properties.getProperty("EnterprisePluginNewAdd_btn"));
+		 test.log(Status.INFO, "Click on add + Symbol to create New outbound connector");
+		 functionalcomponents.ClickOperation(properties.getProperty("OutboundConnectorsNewAdd_btn"));
 		 functionalcomponents.waittillElementReadytoclickable(properties.getProperty("EnterprisePluginName"), 20);
 		 if(driver.findElement(By.xpath(properties.getProperty("EnterprisePluginName"))).isDisplayed())
 		 {	
-			test.log(Status.PASS, "EnterprisePlugins Name screen is opening successfully.");
+			test.log(Status.PASS, "Outbound Connectors Name screen is opening successfully.");
 		 }
 		 else 
 		 {
 			failedDescription("EnterprisePlugins Name screen is not opening successfully");
 		 }
-		 
-		 test.log(Status.INFO, "Enter a name of the Enterprise Plugin with the different possible options for the name with special characters and numbers");
-		// String EnterprisePluginsName=functionalcomponents.getdatafromsheet("StreamingService", "TC02_Custom_Over100", "EnterprisePluginName");
-		 functionalcomponents.ClearAndSetValue(properties.getProperty("EnterprisePluginName"), "WebSocketPlugin1");
+		 functionalcomponents.ClearAndSetValue(properties.getProperty("EnterprisePluginName"), "WebSocket Outbound Connector");
 		 functionalcomponents.waittillElementReadytoclickable(properties.getProperty("EnterprisePluginName"), 20);
 		 if(driver.findElement(By.xpath(properties.getProperty("ClassDropdown_btn"))).isDisplayed())
 		 {	
-			 test.log(Status.PASS, "user is able to enter a name of the EnterprisePlugins "+": WebSocketPlugin1");
+			 test.log(Status.PASS, "user is able to enter a name of the outbound connectors as: ");
 		 }
 		 else 
 		 {
 			failedDescription("user is not able to enter a name of the EnterprisePlugins with the different possible options for the name with special characters and numbers");
 		 }
-		  
-		 
-		 test.log(Status.INFO, "Select Enterprise Plugin Class as websocket.WebSocket from dropdown list");
+		 test.log(Status.INFO, "Select Enterprise Plugin Class as REST plugin from dropdown list");
 		 functionalcomponents.ClickOperation(properties.getProperty("ClassDropdown_btn"));
-		 functionalcomponents.WaitTillTime(4000);
-		 functionalcomponents.ClickOperation(properties.getProperty("SelectClassWebSocket"));
-		 functionalcomponents.WaitTillTime(4000);
-		 if(driver.findElement(By.xpath(properties.getProperty("EnterpriseSave_btn"))).isDisplayed())
-		 {	
-			 test.log(Status.PASS, "user is able to Select Enterprise Plugin Class as websocket.WebSocket from dropdown list");
-		 }
-		 else 
-		 {
-			failedDescription("user is not able to Select Enterprise Plugin Class as websocket.WebSocket from dropdown list");
-		 }
+		 functionalcomponents.WaitTillTime(2000);
+		 functionalcomponents.ClickOperation(properties.getProperty("WebSocket_OutboundConnector"));
+		 functionalcomponents.WaitTillTime(2000);
+		 functionalcomponents.ClearAndSetValue(properties.getProperty("Description_plugin"), "WebSocket OutboundConnectors");
+		 functionalcomponents.WaitTillTime(2000);
 		 
-		 test.log(Status.INFO, "Enter RequiredConfig Value of the EnterprisePlugin");
-		 functionalcomponents.WaitTillTime(4000);
-		 functionalcomponents.scrollToExact(properties.getProperty("Required_LoggerLevel"));
+		 functionalcomponents.ClearAndSetValue(properties.getProperty("Restoutbound_URI"), "http://localhost:9001/user" );
 		 functionalcomponents.WaitTillTime(2000);
-		 functionalcomponents.ClearAndSetValue(properties.getProperty("Required_LoggerLevel"), "INFO");
-		 functionalcomponents.WaitTillTime(2000);
-		 if(driver.findElement(By.xpath(properties.getProperty("EnterpriseSave_btn"))).isDisplayed())
+		 
+		 functionalcomponents.PageScrollDown();
+		 if(driver.findElement(By.xpath(properties.getProperty("Add_optionslsettings"))).isDisplayed())
 		 {	
-			 test.log(Status.PASS, "user is able to enter RequiredConfig Value of the EnterprisePlugin");
+			 test.log(Status.PASS, "user is able to select the Restoutbound connector");
 		 }
 		 else 
 		 {
-			failedDescription("user is not able to enter Message of the Actions Successfully");
+			failedDescription("user is not able to select the Restoutbound connector");
 		 }
 		 
 		 test.log(Status.INFO, "Click Save Enterprise Plugin button and verify EnterprisePlugins is created successfully with EnterprisePlugin Name");
@@ -198,10 +93,10 @@ public class EdgeServicecomponents extends BaseTest {
 		 functionalcomponents.WaitTillTime(2000);
 		 driver.navigate().refresh();
 		 functionalcomponents.WaitTillTime(5000);
-		 functionalcomponents.ClickElementfromSectionlist(properties.getProperty("EnterpriseName_List"), "WebSocketPlugin1");
+		 functionalcomponents.ClickElementfromSectionlist(properties.getProperty("EnterpriseName_List"), "WebSocket Outbound Connector");
 		 functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("EnterprisePluginName"), 20);
 		 String EnterprisePluginNameValue=driver.findElement(By.xpath(properties.getProperty("EnterprisePluginName"))).getAttribute("value");
-		 if(EnterprisePluginNameValue.equalsIgnoreCase("WebSocketPlugin1"))
+		 if(EnterprisePluginNameValue.equalsIgnoreCase("WebSocket Outbound Connector"))
 		 {	
 			test.log(Status.PASS, "Clicked Save Enterprise Plugin button and verify EnterprisePlugins is created successfully with EnterprisePlugin Name"+": "+EnterprisePluginNameValue);
 		 }
@@ -213,189 +108,109 @@ public class EdgeServicecomponents extends BaseTest {
 		 return EnterprisePluginNameValue;
 	}
 	
-	public String SetProtocolandCreateRESTPlugin1_StreamingService()
+	
+	public String CreateRESTOutboundConnector_StreamingService()
 	{
 		
 		//Set Protocols & Create REST Enterprise Plugin
 		 test.log(Status.INFO, "Click on Http Protocol Plugins on the workcenter at left of the screen Settings>>HttpProtocol Plugin");
 		 functionalcomponents.ClickOperation(properties.getProperty("Settings_link"));
 		 functionalcomponents.WaitTillTime(2000);
-		 functionalcomponents.ClickOperation(properties.getProperty("ProtocolPlugin_link"));
-		 functionalcomponents.waittillElementReadytoclickable(properties.getProperty("Select_httpProtocolPlugin"), 20);
-		 if(driver.findElement(By.xpath(properties.getProperty("Select_httpProtocolPlugin"))).isDisplayed())
-		 {	
-			test.log(Status.PASS, " Screen is loaded with HttpProtocolPlugins Page");
-		 }
-		 else 
-		 {
-			failedDescription("Screen is not loaded with HttpProtocolPlugins Page");
-		 } 
-		 test.log(Status.INFO, "Select HttpProtocolPlugins on the screen");
-		 functionalcomponents.WaitTillTime(2000);
-		 functionalcomponents.ClickOperation(properties.getProperty("Select_httpProtocolPlugin"));
-		 if(driver.findElement(By.xpath(properties.getProperty("HttpprotocolSave_btn"))).isDisplayed())
-		 {	
-			test.log(Status.PASS, " Screen is loaded with option add Protocol Plugin Information");
-		 }
-		 else 
-		 {
-			failedDescription("Screen is not loaded with option add Protocol Plugin Information");
-		 }
-		 
-		 test.log(Status.INFO, "Set Option Setting 1. AUTHENTICATION_TYPE from Token to None" + "2. SECURE_ONLY from true to false");
-		 List<WebElement> Name=new ArrayList<WebElement>();
-		 Name.addAll(driver.findElements(By.xpath(properties.getProperty("OptionalSettingName_List"))));
-		 int listsize=Name.size();
-		 for(WebElement ele: Name)
-		 {
-			 
-			 if(ele.getText().equalsIgnoreCase("AUTHENTICATION_TYPE"))
-			 {
-				 functionalcomponents.ClearAndSetValue(properties.getProperty("Authentication_Value"), "None");
-				 functionalcomponents.WaitTillTime(2000);
-				 break;
-			 }
-			 
-			 else 
-			 {
-				 functionalcomponents.ClickOperation(properties.getProperty("AddNewConfigSetting_btn"));
-				 functionalcomponents.WaitTillTime(3000);
-				 functionalcomponents.ClickOperation(properties.getProperty("ConfigSettingName_Dropdown1")+String.valueOf(listsize)+properties.getProperty("ConfigSettingName_Dropdown2"));
-				 functionalcomponents.WaitTillTime(2000);
-				 functionalcomponents.ClickOperation(properties.getProperty("Select_AuthentictypeName"));
-				 functionalcomponents.WaitTillTime(3000);
-				 functionalcomponents.ClickAndSetValue(properties.getProperty("Setconfigsetting_Value1")+String.valueOf(listsize)+properties.getProperty("Setconfigsetting_Value2"), "None");
-				 functionalcomponents.WaitTillTime(3000);
-				 listsize=listsize+1;
-				 break;
-			 }
-		 }
-			 
-		 for(int j=0; j<Name.size(); j++)
-		 {
-			 WebElement ele1 =Name.get(j);
-			  if(ele1.getText().equalsIgnoreCase("SECURE_ONLY"))
-			 {
-				 functionalcomponents.ClearAndSetValue(properties.getProperty("SecureOnly_Value"), "false");
-				 functionalcomponents.WaitTillTime(2000);
-				 break;
-			 }
-			 else if(ele1.getText()!="SECURE_ONLY" & j==Name.size())
-			 {
-				 functionalcomponents.ClickOperation(properties.getProperty("AddNewConfigSetting_btn"));
-				 functionalcomponents.WaitTillTime(3000);
-				 functionalcomponents.ClickOperation(properties.getProperty("ConfigSettingName_Dropdown1")+String.valueOf(listsize)+properties.getProperty("ConfigSettingName_Dropdown2"));
-				 functionalcomponents.WaitTillTime(2000);
-				 functionalcomponents.ClickOperation(properties.getProperty("Select_SecureOnlyName"));
-				 functionalcomponents.WaitTillTime(3000);
-				 functionalcomponents.ClickAndSetValue(properties.getProperty("Setconfigsetting_Value1")+String.valueOf(listsize)+properties.getProperty("Setconfigsetting_Value2"), "false");
-				 functionalcomponents.WaitTillTime(3000);
-			 }
-		 }
-		 
-		 if(driver.findElement(By.xpath(properties.getProperty("HttpprotocolSave_btn"))).isDisplayed())
-		 {	
-			test.log(Status.PASS, "user is able to Set Option Setting 1. AUTHENTICATION_TYPE from Token to None" + "2. SECURE_ONLY from true to false");
-		 }
-		 
-		 else 
-		  {
-			failedDescription("user is not able to Set Option Setting 1. AUTHENTICATION_TYPE from Token to None" + "2. SECURE_ONLY from true to false");
-		  }
-		 
-		 test.log(Status.INFO, "Click Save Http Protocol Plugin button and verify EnterprisePlugins is created successfully");
-		 functionalcomponents.ClickOperation(properties.getProperty("HttpprotocolSave_btn"));
-		 functionalcomponents.WaitTillTime(2000);
-		 driver.navigate().refresh();
-		 functionalcomponents.WaitTillTime(5000);
-		 functionalcomponents.ClickElementfromSectionlist(properties.getProperty("Protocol_List"), "HttpProtocolPlugin");
-		 functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("HttpProtocol_Name"), 20);
-		 String ProtocolPluginNameValue=driver.findElement(By.xpath(properties.getProperty("HttpProtocol_Name"))).getAttribute("value");
-		 if(ProtocolPluginNameValue.equalsIgnoreCase("HttpProtocolPlugin"))
-		 {	
-			test.log(Status.PASS, "Clicked Save HttpProtocol Plugin button and verified Http Protocol Plugins Set Successfully");
-		 }
-		 
-		 else 
-		  {
-			failedDescription("Clicked Save HttpProtocol Plugin button and verified Http Protocol Plugins does not Set Successfully");
-		  }
 		 
 		 test.log(Status.INFO, "Click on EnterprisePlugins on the workcenter at left of the screen Settings>>EnterprisePlugin");
 		 functionalcomponents.WaitTillTime(2000);
-		 functionalcomponents.ClickOperation(properties.getProperty("EnterprisePlugin_link"));
-		 functionalcomponents.waittillElementReadytoclickable(properties.getProperty("EnterprisePluginNewAdd_btn"), 20);
-		 if(driver.findElement(By.xpath(properties.getProperty("EnterprisePluginNewAdd_btn"))).isDisplayed())
+		 functionalcomponents.ClickOperation(properties.getProperty("OutboundConnectors_link"));
+		 functionalcomponents.waittillElementReadytoclickable(properties.getProperty("OutboundConnectorsNewAdd_btn"), 20);
+		 if(driver.findElement(By.xpath(properties.getProperty("OutboundConnectorsNewAdd_btn"))).isDisplayed())
 		 {	
-			test.log(Status.PASS, " Screen is loaded with Enterprise Plugins Page");
+			test.log(Status.PASS, " Screen is loaded with outbound conectors Page");
 		 }
 		 else 
 		 {
 			failedDescription("Screen is not loaded with Enterprise Plugins Page");
 		 }
 		 test.log(Status.INFO, "Click on add + Symbol to create New EnterprisePlugins");
-		 functionalcomponents.ClickOperation(properties.getProperty("EnterprisePluginNewAdd_btn"));
+		 functionalcomponents.ClickOperation(properties.getProperty("OutboundConnectorsNewAdd_btn"));
 		 functionalcomponents.waittillElementReadytoclickable(properties.getProperty("EnterprisePluginName"), 20);
 		 if(driver.findElement(By.xpath(properties.getProperty("EnterprisePluginName"))).isDisplayed())
 		 {	
-			test.log(Status.PASS, "EnterprisePlugins Name screen is opening successfully.");
+			test.log(Status.PASS, "Outbound Connectors Name screen is opening successfully.");
 		 }
 		 else 
 		 {
 			failedDescription("EnterprisePlugins Name screen is not opening successfully");
 		 }
-		 
-		 test.log(Status.INFO, "Enter a name of the Enterprise Plugin with the different possible options for the name with special characters and numbers");
-		// String EnterprisePluginsName=functionalcomponents.getdatafromsheet("StreamingService", "TC02_Custom_Over100", "EnterprisePluginName");
-		 functionalcomponents.ClearAndSetValue(properties.getProperty("EnterprisePluginName"), "RESTPlugin1");
+		 functionalcomponents.ClearAndSetValue(properties.getProperty("EnterprisePluginName"), "REST Outbound Connector");
 		 functionalcomponents.waittillElementReadytoclickable(properties.getProperty("EnterprisePluginName"), 20);
 		 if(driver.findElement(By.xpath(properties.getProperty("ClassDropdown_btn"))).isDisplayed())
 		 {	
-			 test.log(Status.PASS, "user is able to enter a name of the EnterprisePlugins "+": RESTPlugin1");
+			 test.log(Status.PASS, "user is able to enter a name of the EnterprisePlugins "+": RESTPlugin");
 		 }
 		 else 
 		 {
 			failedDescription("user is not able to enter a name of the EnterprisePlugins with the different possible options for the name with special characters and numbers");
 		 }
-		  
-		 
-		 test.log(Status.INFO, "Select Enterprise Plugin Class as websocket.WebSocket from dropdown list");
+		 test.log(Status.INFO, "Select Enterprise Plugin Class as REST plugin from dropdown list");
 		 functionalcomponents.ClickOperation(properties.getProperty("ClassDropdown_btn"));
 		 functionalcomponents.WaitTillTime(2000);
-		 functionalcomponents.ClickOperation(properties.getProperty("SelectClassWebSocket"));
+		 functionalcomponents.ClickOperation(properties.getProperty("Rest_OutboundConnector"));
 		 functionalcomponents.WaitTillTime(2000);
-		 if(driver.findElement(By.xpath(properties.getProperty("EnterpriseSave_btn"))).isDisplayed())
+		 functionalcomponents.ClearAndSetValue(properties.getProperty("Description_plugin"), "REST outbound connector");
+		 functionalcomponents.WaitTillTime(2000);
+		 
+		 functionalcomponents.ClearAndSetValue(properties.getProperty("Restoutbound_URI"), Rest_URI_input);
+		 functionalcomponents.WaitTillTime(2000);
+		 
+		 functionalcomponents.PageScrollDown();
+		 if(driver.findElement(By.xpath(properties.getProperty("Add_optionslsettings"))).isDisplayed())
 		 {	
-			 test.log(Status.PASS, "user is able to Select Enterprise Plugin Class as websocket.WebSocket from dropdown list");
+			 test.log(Status.PASS, "user is able to select the Restoutbound connector");
 		 }
 		 else 
 		 {
-			failedDescription("user is not able to Select Enterprise Plugin Class as websocket.WebSocket from dropdown list");
+			failedDescription("user is not able to select the Restoutbound connector");
 		 }
 		 
-		 test.log(Status.INFO, "Enter RequiredConfig Value of the EnterprisePlugin");
-		 functionalcomponents.scrollToExact(properties.getProperty("Required_LoggerLevel"));
+		 //1
+		 test.log(Status.INFO, "Click on add + Symbol to add the optional settings");
+		 functionalcomponents.ClickOperation(properties.getProperty("Add_optionslsettings"));
 		 functionalcomponents.WaitTillTime(2000);
-		 functionalcomponents.ClearAndSetValue(properties.getProperty("Required_LoggerLevel"), "INFO");
+		 functionalcomponents.ClickOperation(properties.getProperty("optionalsettings_dropdown1"));
 		 functionalcomponents.WaitTillTime(2000);
-		 if(driver.findElement(By.xpath(properties.getProperty("EnterpriseSave_btn"))).isDisplayed())
+		 functionalcomponents.ClickOperation(properties.getProperty("AUTH_TYPE"));
+		 functionalcomponents.ClearAndSetValue(properties.getProperty("AUTH_TYPE_input"), AUTH_TYPE_input);
+		 //2
+		 functionalcomponents.ClickOperation(properties.getProperty("Add_optionslsettings"));
+		 functionalcomponents.WaitTillTime(2000);
+		 functionalcomponents.ClickOperation(properties.getProperty("optionalsettings_dropdown2"));
+		 functionalcomponents.WaitTillTime(2000);
+		 functionalcomponents.ClickOperation(properties.getProperty("Basic_Auth_Password"));
+		 functionalcomponents.ClearAndSetValue(properties.getProperty("Basic_Auth_Password_input"), Basic_AUTH_Password_input);
+		 //3
+		 functionalcomponents.ClickOperation(properties.getProperty("Add_optionslsettings"));
+		 functionalcomponents.WaitTillTime(2000);
+		 functionalcomponents.ClickOperation(properties.getProperty("optionalsettings_dropdown3"));
+		 functionalcomponents.WaitTillTime(2000);
+		 functionalcomponents.ClickOperation(properties.getProperty("Basic_Auth_Username"));
+		 functionalcomponents.ClearAndSetValue(properties.getProperty("Basic_Auth_Username_input"), BASIC_AUTH_USERNAME_input);
+		 
+		 if(driver.findElement(By.xpath(properties.getProperty("Enterprise_savebtn"))).isDisplayed())
 		 {	
-			 test.log(Status.PASS, "user is able to enter RequiredConfig Value of the EnterprisePlugin");
+			 test.log(Status.PASS, "user is able to add the optional settings successfully");
 		 }
 		 else 
 		 {
-			failedDescription("user is not able to enter Message of the Actions Successfully");
+			failedDescription("user is not able to add the optional settings");
 		 }
-		 
 		 test.log(Status.INFO, "Click Save Enterprise Plugin button and verify EnterprisePlugins is created successfully with EnterprisePlugin Name");
 		 functionalcomponents.ClickOperation(properties.getProperty("EnterpriseSave_btn"));
 		 functionalcomponents.WaitTillTime(2000);
 		 driver.navigate().refresh();
 		 functionalcomponents.WaitTillTime(5000);
-		 functionalcomponents.ClickElementfromSectionlist(properties.getProperty("EnterpriseName_List"), "RESTPlugin1");
+		 functionalcomponents.ClickElementfromSectionlist(properties.getProperty("EnterpriseName_List"), "REST Outbound Connector");
 		 functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("EnterprisePluginName"), 20);
 		 String EnterprisePluginNameValue=driver.findElement(By.xpath(properties.getProperty("EnterprisePluginName"))).getAttribute("value");
-		 if(EnterprisePluginNameValue.equalsIgnoreCase("RESTPlugin1"))
+		 if(EnterprisePluginNameValue.equalsIgnoreCase("REST Outbound Connector"))
 		 {	
 			test.log(Status.PASS, "Clicked Save Enterprise Plugin button and verify EnterprisePlugins is created successfully with EnterprisePlugin Name"+": "+EnterprisePluginNameValue);
 		 }
@@ -409,7 +224,7 @@ public class EdgeServicecomponents extends BaseTest {
 	}
 
 	
-public void CreateSensorProfile(String SensorProfileName, String ProductionParameters_Min, String ProductionParameters_Max, String windowParameters_Min, String windowsize_averaging)
+public void CreateSensorProfile(String SensorProfileName, String ProductionParameters_Min, String ProductionParameters_Max)
 {
 	
 	 test.log(Status.INFO, "Click on Sensor profile on the workcenter at left of the screen and Create a new sensor profile by clicking on the + symbol at the bottom of the screen");
@@ -449,39 +264,8 @@ public void CreateSensorProfile(String SensorProfileName, String ProductionParam
 		failedDescription("Numeric values for the Testing & Production Parameters for the minimum and maximum values are:"+ProductionParameters_Min+","+ProductionParameters_Max+"  saved and verified Maximum value is not exceed 2147483647.");
 	 }
 	 
-	 test.log(Status.INFO, "Check Enter value is changing to the toggling options between seconds, minutes and hours");
-	 functionalcomponents.ClickOperation(properties.getProperty("Minute_toggle"));
-	 functionalcomponents.WaitTillTime(3000);	
-	 
-	 functionalcomponents.ClickOperation(properties.getProperty("Hour_toggle"));
-		 functionalcomponents.WaitTillTime(3000);
-		 functionalcomponents.ClickOperation(properties.getProperty("Second_toggle"));
-		 functionalcomponents.WaitTillTime(2000);
-	 if(driver.findElement(By.xpath(properties.getProperty("WindowParameters_Minimum"))).isDisplayed())
-	 {	
-		test.log(Status.PASS, "Entered value is changing to the toggling options of seconds, minutes and hours properly");
-	 }
-	 else 
-	 {
-		failedDescription("Entered value is changing to the toggling options of seconds, minutes and hours properly");
-	 }
-	 
-	 test.log(Status.INFO, "Enter numeric values for the Window Parameters for the minimum and window size averaging values");
-	 functionalcomponents.ClickAndSetValue(properties.getProperty("WindowParameters_Minimum"), windowParameters_Min);
-	 int windowsizevalue=functionalcomponents.convertHourtoSecond(Integer.parseInt(windowsize_averaging));
-	 functionalcomponents.ClickAndSetValue(properties.getProperty("WindowSize_Averaging"), windowsize_averaging);
-	 functionalcomponents.WaitTillTime(2000);
-	 if(Integer.parseInt(windowsize_averaging)<2147483647)
-	 {	
-		test.log(Status.PASS, "Numeric values for the Window Parameters for the minimum:"+windowParameters_Min+" "+" and window size averaging value:"+windowsizevalue+" "+" are saved and verified window size averaging values is not exceed 2147483647 ");
-	 }
-	 else 
-	 {
-		failedDescription("Enter numeric values for the Window Parameters for the minimum and window size averaging values and verified window size averaging values is exceed 2147483647");
-	 }
 	 
 	
-	 	
 	 test.log(Status.INFO, "Click Save sensor Profile button and verify sensor profile is created successfully with Profile Name");
 	 functionalcomponents.ClickOperation(properties.getProperty("SensorProfile_Save_btn"));
 	 functionalcomponents.WaitTillTime(3000);
@@ -603,8 +387,8 @@ public void CreateAction(String ActionName, String ActionDescription, String Act
 	 test.log(Status.INFO, "Click Save Action button and verify Action is created successfully with Action Name");
 	 functionalcomponents.ClickOperation(properties.getProperty("ActionSave_btn"));
 	 functionalcomponents.WaitTillTime(2000);
-	 driver.navigate().refresh();
-	 functionalcomponents.WaitTillTime(5000);
+	// driver.navigate().refresh();
+	// functionalcomponents.WaitTillTime(5000);
 	 functionalcomponents.ClickElementfromSectionlist(properties.getProperty("ActionsName_List"), ActionName);
     
 	 functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("ActionName"), 20);

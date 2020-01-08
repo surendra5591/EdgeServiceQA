@@ -1,0 +1,197 @@
+{
+  "SystemConfig" : {
+    "ConfigName" : "Default",
+    "ConfigVersion" : "1.1.0",
+    "Plugins" : {
+      "ProtocolPlugins" : {
+        "HttpProtocolPlugin" : {
+          "Name" : "HttpProtocolPlugin",
+          "Class" : "com.sap.dep.protocolplugin.http.HttpProtocolPlugin",
+          "FieldPlugin" : true,
+          "LoggerLevel" : "INFO",
+          "TargetEngines" : [ "StreamingLitePlugin" ],
+          "SourceEngines" : [ "StreamingLitePlugin" ],
+          "AuthenticationType" : "Token",
+          "CertAlias" : "httpprotocolplugin",
+          "ExcludeCipherSuites" : "SSL_RSA_WITH_DES_CBC_SHA,SSL_DHE_RSA_WITH_DES_CBC_SHA,SSL_DHE_DSS_WITH_DES_CBC_SHA,SSL_RSA_EXPORT_WITH_RC4_40_MD5,SSL_RSA_EXPORT_WITH_DES40_CBC_SHA,SSL_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA,SSL_DHE_DSS_EXPORT_WITH_DES40_CBC_SHA",
+          "KeyManagerAuthentication" : "\u001A\u001A\u001A\u001A\u001A\u001A",
+          "TrustStoreAuthentication" : "\u001A\u001A\u001A\u001A\u001A\u001A",
+          "Host" : "0.0.0.0",
+          "SecureHost" : "0.0.0.0",
+          "SecureOnly" : true,
+          "Port" : 6474,
+          "SecurePort" : 6443,
+          "PublishToPersistence" : false
+        },
+        "IOTServicesProtocolPlugin" : {
+          "Name" : "IotServicesPlugin",
+          "Class" : "com.sap.dep.protocolplugin.iotservices.IOTServicesPlugin",
+          "FieldPlugin" : false,
+          "LoggerLevel" : "INFO",
+          "TargetEngines" : [ "StreamingLitePlugin" ],
+          "SourceEngines" : [ "StreamingLitePlugin" ],
+          "ProfileDelimiter" : ">>>"
+        },
+        "CustomProtocolPlugins" : [ ]
+      },
+      "EnginePlugins" : {
+        "CustomPlugins" : [ ],
+        "StreamingLitePlugin" : {
+          "LoggerLevel" : "INFO",
+          "TargetEngines" : [ ],
+          "SourceEngines" : [ ],
+          "StreamingCommandPort" : 9230,
+          "PublishingCorePoolSize" : 20,
+          "PublishingMaxPoolSize" : 200,
+          "PublishingPoolKeepAliveTimeSeconds" : 10,
+          "PublishingWorkQueueCapacity" : 4096,
+          "PublishingWorkQueueFairness" : true,
+          "PublishingPublisherPoolSize" : 200,
+          "StreamingHost" : "localhost"
+        }
+      },
+      "EnterprisePlugins" : {
+        "IOTServiceEnterprisePlugins" : [ {
+          "Name" : "IOTServicesPlugin1",
+          "Class" : "com.sap.dep.enterpriseplugin.iotservices.IOTServicesEnterprisePlugin",
+          "PluginName" : "IoT Service Cloud Connector",
+          "Description" : "IOT Services Enterprise Plugin 1",
+          "ProcessInOrder" : false,
+          "Threads" : 1,
+          "RetryCount" : 1,
+          "RetryDelayInSeconds" : 1,
+          "LogMessagesOnFailure" : true,
+          "LoggerLevel" : "INFO",
+          "MaxBatchSize" : 1,
+          "MaxQueueSize" : 512,
+          "ProfileDelimiter" : ">>>"
+        } ],
+        "RESTEnterprisePlugins" : [ ],
+        "WebsocketEnterprisePlugins" : [ ],
+        "MQTTEnterprisePlugins" : [ ],
+        "CustomEnterprisePlugins" : [ ],
+        "HDFSEnterprisePlugins" : [ {
+          "Name" : "HDFSPlugin",
+          "Class" : "com.sap.dep.enterpriseplugin.hdfs.HDFSEnterprisePlugin",
+          "PluginName" : "HDFSPlugin",
+          "Description" : "",
+          "ProcessInOrder" : false,
+          "Threads" : 1,
+          "RetryCount" : 5,
+          "RetryDelayInSeconds" : 5,
+          "LogMessagesOnFailure" : true,
+          "LoggerLevel" : "INFO",
+          "MaxBatchSize" : 1,
+          "MaxQueueSize" : 512,
+          "Host" : "HDFSHost",
+          "Port" : "8080",
+          "Username" : "Anyvalue",
+          "FilePath" : "Anyvalue",
+          "ColumnValues" : "Anyvalue",
+          "DelegationToken" : "Test123",
+          "OAuth2Token" : "Test123"
+        } ],
+        "MQTTEnterprisePlugins2" : [ {
+          "Name" : "MQTT_plugin",
+          "Class" : "com.sap.dep.enterpriseplugin.mqtt.MQTTEnterprisePlugin2",
+          "PluginName" : "MQTT_plugin",
+          "Description" : "",
+          "ProcessInOrder" : true,
+          "Threads" : 1,
+          "RetryCount" : 5,
+          "RetryDelayInSeconds" : 5,
+          "LogMessagesOnFailure" : true,
+          "LoggerLevel" : "INFO",
+          "MaxBatchSize" : 1,
+          "MaxQueueSize" : 512,
+          "Host" : "MQTTHOST",
+          "Port" : "4040",
+          "ClientPassword" : "Test123",
+          "ClientId" : "a4e28662-6229-c56c-a646-6214844f2465",
+          "PublishingTopic" : "Anyvalue",
+          "KeyStorePassword" : "Test123",
+          "TrustStorePassword" : "Test123"
+        } ],
+        "RESTEnterprisePlugins2" : [ {
+          "Name" : "Rest_plugin",
+          "Class" : "com.sap.dep.enterpriseplugin.rest.RESTEnterprisePlugin2",
+          "PluginName" : "Rest_plugin",
+          "Description" : "",
+          "ProcessInOrder" : false,
+          "Threads" : 1,
+          "RetryCount" : 5,
+          "RetryDelayInSeconds" : 5,
+          "LogMessagesOnFailure" : true,
+          "LoggerLevel" : "INFO",
+          "MaxBatchSize" : 1,
+          "MaxQueueSize" : 512,
+          "BasicAuthPassword" : "Test123",
+          "KeyManagerPassword" : "Test123",
+          "KeyStorePassword" : "Test123",
+          "TrustStorePassword" : "Test123",
+          "URI" : "http"
+        } ],
+        "WebsocketEnterprisePlugins2" : [ {
+          "Name" : "WebSocketplugin",
+          "Class" : "com.sap.dep.enterpriseplugin.websocket.WebSocketEnterprisePlugin2",
+          "PluginName" : "WebSocketplugin",
+          "Description" : "",
+          "ProcessInOrder" : false,
+          "Threads" : 1,
+          "RetryCount" : 5,
+          "RetryDelayInSeconds" : 5,
+          "LogMessagesOnFailure" : true,
+          "LoggerLevel" : "INFO",
+          "MaxBatchSize" : 1,
+          "MaxQueueSize" : 512,
+          "URI" : "http",
+          "BasicAuthPassword" : "Test123",
+          "KeyStorePassword" : "Test123",
+          "TrustStorePassword" : "Test123",
+          "KeyManagerPassword" : "Test123"
+        } ],
+        "SDSEnterprisePlugins2" : [ ]
+      }
+    },
+    "NodeSettings" : {
+      "LogLevel" : "WARN",
+      "DatabaseAppenderLogThreshold" : "ERROR",
+      "MaxRemoteErrorLogSize" : 10000,
+      "ReconnectCheckIntervalinMinutes" : 3,
+      "PasswordHistoryCount" : 1,
+      "EnableInboundWhitelisting" : false,
+      "ServiceLogKeepDays" : 3,
+      "ValidateCertificate" : true,
+      "DatabaseMaxCache" : "40p"
+    },
+    "Tokens" : [ ]
+  },
+  "RuleConfig" : {
+    "ConfigName" : "Default",
+    "ConfigVersion" : "1.1.0",
+    "SystemConfigName" : "Default",
+    "SystemConfigVersion" : "1.1.0",
+    "Sensors" : {
+      "NumericSensors" : [ ],
+      "StatefulSensors" : [ ],
+      "AggregateSensors" : [ ]
+    },
+    "RuleDataSources" : [ ],
+    "Actions" : {
+      "FieldMessages" : [ ],
+      "SensorFidelityChanges" : [ ],
+      "BEFWorkOrders" : [ ],
+      "ServiceOrders" : [ ],
+      "WorkOrders" : [ ],
+      "IncidentReports" : [ ]
+    },
+    "Rules" : {
+      "ValueMonitoringRules" : [ ],
+      "TimedStateRules" : [ ],
+      "WatchdogRules" : [ ],
+      "CustomRules" : [ ],
+      "MultiConditionRules" : [ ]
+    }
+  },
+  "GrammarVersion" : "1.1.0"
+}

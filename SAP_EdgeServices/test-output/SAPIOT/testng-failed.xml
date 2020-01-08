@@ -1,17 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [SAPIOT]">
-  <test thread-count="5" name="Test(failed)">
+  <test name="Test(failed)">
     <classes>
-      <class name="PolicyService.Securitycheck">
+      <class name="EdgeServices.EBFConfigCreation_AddingCustomPropertiestoGW_EBFDeployedtoGW">
         <methods>
+          <include name="beforeMethod"/>
+          <include name="CreateUserTypeCustomPropertiesandDeleting"/>
           <include name="tearDown"/>
-          <include name="Securitycheck_Testcase"/>
+          <include name="AfterClass"/>
+          <include name="CreateEBFConfiguration"/>
+          <include name="AddingCustomPropertiestoGatewayandDeployEBFConfiguration"/>
           <include name="beforeClass"/>
+        </methods>
+      </class> <!-- EdgeServices.EBFConfigCreation_AddingCustomPropertiestoGW_EBFDeployedtoGW -->
+      <class name="EdgeServices.SDSEnterprisePlugin">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="tearDown"/>
+          <include name="AfterClass"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- EdgeServices.SDSEnterprisePlugin -->
+      <class name="EdgeServices.E2E_Cockpit_EdgeService_TestCase">
+        <methods>
+          <include name="AfterSuite"/>
           <include name="beforeSuite"/>
           <include name="beforeMethod"/>
+          <include name="tearDown"/>
+          <include name="AfterClass"/>
+          <include name="beforeClass"/>
         </methods>
-      </class> <!-- PolicyService.Securitycheck -->
+      </class> <!-- EdgeServices.E2E_Cockpit_EdgeService_TestCase -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [SAPIOT] -->

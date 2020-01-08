@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+  <test name="Default test(failed)">
     <classes>
-      <class name="PolicyService.AzureTestCase">
+      <class name="EdgeServices.InstallServices_RemoveSevice_ReinstallServices_Testcase">
         <methods>
-          <include name="tearDown"/>
-          <include name="beforeClass"/>
           <include name="beforeSuite"/>
-          <include name="AzureTestCase_Flow"/>
           <include name="beforeMethod"/>
+          <include name="tearDown"/>
+          <include name="Services_Install_Functionailty_Testcase"/>
+          <include name="beforeClass"/>
         </methods>
-      </class> <!-- PolicyService.AzureTestCase -->
+      </class> <!-- EdgeServices.InstallServices_RemoveSevice_ReinstallServices_Testcase -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

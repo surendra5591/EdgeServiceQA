@@ -1,0 +1,277 @@
+{
+  "SystemConfig" : {
+    "ConfigName" : "Default",
+    "ConfigVersion" : "1.1.0",
+    "Plugins" : {
+      "ProtocolPlugins" : {
+        "HttpProtocolPlugin" : {
+          "Name" : "HttpProtocolPlugin",
+          "Class" : "com.sap.dep.protocolplugin.http.HttpProtocolPlugin",
+          "FieldPlugin" : true,
+          "LoggerLevel" : "INFO",
+          "TargetEngines" : [ "StreamingLitePlugin" ],
+          "SourceEngines" : [ "StreamingLitePlugin" ],
+          "AuthenticationType" : "Token",
+          "CertAlias" : "httpprotocolplugin",
+          "ExcludeCipherSuites" : "SSL_RSA_WITH_DES_CBC_SHA,SSL_DHE_RSA_WITH_DES_CBC_SHA,SSL_DHE_DSS_WITH_DES_CBC_SHA,SSL_RSA_EXPORT_WITH_RC4_40_MD5,SSL_RSA_EXPORT_WITH_DES40_CBC_SHA,SSL_DHE_RSA_EXPORT_WITH_DES40_CBC_SHA,SSL_DHE_DSS_EXPORT_WITH_DES40_CBC_SHA",
+          "KeyManagerAuthentication" : "\u001A\u001A\u001A\u001A\u001A\u001A",
+          "TrustStoreAuthentication" : "\u001A\u001A\u001A\u001A\u001A\u001A",
+          "Host" : "0.0.0.0",
+          "SecureHost" : "0.0.0.0",
+          "SecureOnly" : true,
+          "Port" : 6474,
+          "SecurePort" : 6443,
+          "PublishToPersistence" : false
+        },
+        "IOTServicesProtocolPlugin" : {
+          "Name" : "IotServicesPlugin",
+          "Class" : "com.sap.dep.protocolplugin.iotservices.IOTServicesPlugin",
+          "FieldPlugin" : false,
+          "LoggerLevel" : "INFO",
+          "TargetEngines" : [ "StreamingLitePlugin" ],
+          "SourceEngines" : [ "StreamingLitePlugin" ],
+          "ProfileDelimiter" : ">>>"
+        },
+        "CustomProtocolPlugins" : [ ]
+      },
+      "EnginePlugins" : {
+        "CustomPlugins" : [ ],
+        "StreamingLitePlugin" : {
+          "LoggerLevel" : "INFO",
+          "TargetEngines" : [ ],
+          "SourceEngines" : [ ],
+          "StreamingCommandPort" : 9230,
+          "PublishingCorePoolSize" : 20,
+          "PublishingMaxPoolSize" : 200,
+          "PublishingPoolKeepAliveTimeSeconds" : 10,
+          "PublishingWorkQueueCapacity" : 4096,
+          "PublishingWorkQueueFairness" : true,
+          "PublishingPublisherPoolSize" : 200,
+          "StreamingHost" : "localhost"
+        }
+      },
+      "EnterprisePlugins" : {
+        "IOTServiceEnterprisePlugins" : [ {
+          "Name" : "IOTServicesPlugin1",
+          "Class" : "com.sap.dep.enterpriseplugin.iotservices.IOTServicesEnterprisePlugin",
+          "PluginName" : "IoT Service Cloud Connector",
+          "Description" : "IOT Services Enterprise Plugin 1",
+          "ProcessInOrder" : false,
+          "Threads" : 1,
+          "RetryCount" : 1,
+          "RetryDelayInSeconds" : 1,
+          "LogMessagesOnFailure" : true,
+          "LoggerLevel" : "INFO",
+          "MaxBatchSize" : 1,
+          "MaxQueueSize" : 512,
+          "ProfileDelimiter" : ">>>"
+        } ],
+        "RESTEnterprisePlugins" : [ ],
+        "WebsocketEnterprisePlugins" : [ ],
+        "MQTTEnterprisePlugins" : [ ],
+        "CustomEnterprisePlugins" : [ ],
+        "HDFSEnterprisePlugins" : [ ],
+        "MQTTEnterprisePlugins2" : [ ],
+        "RESTEnterprisePlugins2" : [ ],
+        "WebsocketEnterprisePlugins2" : [ ],
+        "SDSEnterprisePlugins2" : [ ]
+      }
+    },
+    "NodeSettings" : {
+      "LogLevel" : "WARN",
+      "DatabaseAppenderLogThreshold" : "ERROR",
+      "MaxRemoteErrorLogSize" : 10000,
+      "ReconnectCheckIntervalinMinutes" : 3,
+      "PasswordHistoryCount" : 1,
+      "EnableInboundWhitelisting" : false,
+      "ServiceLogKeepDays" : 3,
+      "ValidateCertificate" : true,
+      "DatabaseMaxCache" : "40p"
+    },
+    "Tokens" : [ ]
+  },
+  "RuleConfig" : {
+    "ConfigName" : "Default",
+    "ConfigVersion" : "1.1.0",
+    "SystemConfigName" : "Default",
+    "SystemConfigVersion" : "1.1.0",
+    "Sensors" : {
+      "NumericSensors" : [ {
+        "SensorName" : "Cap1911_1428>>>9972>>>Capalt1911_1428>>>Lattitude",
+        "EnableMonitor" : false,
+        "Fidelity" : {
+          "Name" : "Cap1911_1428>>>9972>>>Capalt1911_1428>>>Lattitude",
+          "Scope" : "Sensor",
+          "ScopeValue" : "7ebce61c-d55d-44a4-b75c-8333fc4704fb",
+          "EdgeFidelity" : {
+            "FrequencyMilliseconds" : 20,
+            "KeepIntervalDays" : 7,
+            "MaximumReadings" : 20,
+            "EdgeStorage" : true
+          },
+          "EnterpriseFidelity" : {
+            "FrequencyMilliseconds" : 40,
+            "EnterpriseEndpoints" : [ "IOTServicesPlugin1" ]
+          }
+        },
+        "MaximumValue" : 100,
+        "MinimumValue" : 1,
+        "AverageKeepIntervalSeconds" : 0,
+        "AverageMinimumReadings" : 0
+      }, {
+        "SensorName" : "Cap1911_1428>>>9972>>>Capalt1911_1428>>>Longitude",
+        "EnableMonitor" : false,
+        "Fidelity" : {
+          "Name" : "Cap1911_1428>>>9972>>>Capalt1911_1428>>>Longitude",
+          "Scope" : "Sensor",
+          "ScopeValue" : "f9b245a4-8525-4f36-847f-4086136f62ba",
+          "EdgeFidelity" : {
+            "FrequencyMilliseconds" : 20,
+            "KeepIntervalDays" : 7,
+            "MaximumReadings" : 20,
+            "EdgeStorage" : true
+          },
+          "EnterpriseFidelity" : {
+            "FrequencyMilliseconds" : 40,
+            "EnterpriseEndpoints" : [ "IOTServicesPlugin1" ]
+          }
+        },
+        "MaximumValue" : 100,
+        "MinimumValue" : 1,
+        "AverageKeepIntervalSeconds" : 0,
+        "AverageMinimumReadings" : 0
+      } ],
+      "StatefulSensors" : [ ],
+      "AggregateSensors" : [ {
+        "SensorName" : "SensorDataModel_Lattitude_Largest",
+        "EnableMonitor" : false,
+        "Fidelity" : {
+          "Name" : "SensorDataModel_Lattitude_Largest",
+          "Scope" : "Sensor",
+          "ScopeValue" : "8423d67f-8caf-4f2e-98ed-ae219dc427f2",
+          "EdgeFidelity" : {
+            "FrequencyMilliseconds" : 20,
+            "KeepIntervalDays" : 7,
+            "MaximumReadings" : 20,
+            "EdgeStorage" : true
+          },
+          "EnterpriseFidelity" : {
+            "FrequencyMilliseconds" : 40,
+            "EnterpriseEndpoints" : [ "IOTServicesPlugin1" ]
+          }
+        },
+        "MaximumValue" : 0,
+        "MinimumValue" : 0,
+        "AverageKeepIntervalSeconds" : 0,
+        "AverageMinimumReadings" : 0,
+        "SourceSensorName" : "Cap1911_1428>>>9972>>>Capalt1911_1428>>>Lattitude",
+        "AggregateFunction" : "COUNT",
+        "KeepIntervalSeconds" : 60,
+        "Parameters" : [ {
+          "ParamName" : "USL",
+          "ParamValue" : ""
+        }, {
+          "ParamName" : "LSL",
+          "ParamValue" : ""
+        } ]
+      }, {
+        "SensorName" : "SensorDataModel_Longitude_Largest",
+        "EnableMonitor" : false,
+        "Fidelity" : {
+          "Name" : "SensorDataModel_Longitude_Largest",
+          "Scope" : "Sensor",
+          "ScopeValue" : "fc252f61-bdbf-4c71-9c8e-62d2a8384b7b",
+          "EdgeFidelity" : {
+            "FrequencyMilliseconds" : 20,
+            "KeepIntervalDays" : 7,
+            "MaximumReadings" : 20,
+            "EdgeStorage" : true
+          },
+          "EnterpriseFidelity" : {
+            "FrequencyMilliseconds" : 40,
+            "EnterpriseEndpoints" : [ "IOTServicesPlugin1" ]
+          }
+        },
+        "MaximumValue" : 0,
+        "MinimumValue" : 0,
+        "AverageKeepIntervalSeconds" : 0,
+        "AverageMinimumReadings" : 0,
+        "SourceSensorName" : "Cap1911_1428>>>9972>>>Capalt1911_1428>>>Longitude",
+        "AggregateFunction" : "COUNT",
+        "KeepIntervalSeconds" : 60,
+        "Parameters" : [ {
+          "ParamName" : "USL",
+          "ParamValue" : ""
+        }, {
+          "ParamName" : "LSL",
+          "ParamValue" : ""
+        } ]
+      } ]
+    },
+    "RuleDataSources" : [ ],
+    "Actions" : {
+      "FieldMessages" : [ ],
+      "SensorFidelityChanges" : [ {
+        "ActionName" : "ActionLatitude",
+        "Description" : "Action_Latitude",
+        "TargetSensorName" : "Cap1911_1428>>>9972>>>Capalt1911_1428>>>Lattitude",
+        "Scope" : "sensorprofile",
+        "NewEdgeFrequencyMilliseconds" : 10,
+        "EdgeRollbackSeconds" : 30,
+        "NewEnterpriseFrequencyMilliseconds" : 10,
+        "EnterpriseRollbackSeconds" : 30
+      }, {
+        "ActionName" : "ActionLongtitude",
+        "Description" : "Longtitude",
+        "TargetSensorName" : "Cap1911_1428>>>9972>>>Capalt1911_1428>>>Longitude",
+        "Scope" : "sensorprofile",
+        "NewEdgeFrequencyMilliseconds" : 10,
+        "EdgeRollbackSeconds" : 30,
+        "NewEnterpriseFrequencyMilliseconds" : 10,
+        "EnterpriseRollbackSeconds" : 30
+      } ],
+      "BEFWorkOrders" : [ ],
+      "ServiceOrders" : [ ],
+      "WorkOrders" : [ ],
+      "IncidentReports" : [ ]
+    },
+    "Rules" : {
+      "ValueMonitoringRules" : [ {
+        "RuleName" : "Cap1911_1428LattitudeRule_Latitude",
+        "Description" : "Lattitude Rule",
+        "SensorName" : "Cap1911_1428>>>9972>>>Capalt1911_1428>>>Lattitude",
+        "Scope" : "Sensor",
+        "ScopeValue" : "7ebce61c-d55d-44a4-b75c-8333fc4704fb",
+        "EventFrequencyMilliseconds" : 20,
+        "Actions" : [ "ActionLatitude" ],
+        "EnterpriseEndpoints" : [ ],
+        "EdgeStorage" : true,
+        "EdgeKeepIntervalDays" : 7,
+        "Chainable" : true,
+        "Enabled" : true,
+        "ThresholdOperator" : "GT",
+        "ThresholdValue" : 21.000
+      }, {
+        "RuleName" : "Cap1911_1428LongitudeRuleLongtitude",
+        "Description" : "check demo",
+        "SensorName" : "Cap1911_1428>>>9972>>>Capalt1911_1428>>>Longitude",
+        "Scope" : "Sensor",
+        "ScopeValue" : "f9b245a4-8525-4f36-847f-4086136f62ba",
+        "EventFrequencyMilliseconds" : 20,
+        "Actions" : [ "ActionLongtitude" ],
+        "EnterpriseEndpoints" : [ ],
+        "EdgeStorage" : true,
+        "EdgeKeepIntervalDays" : 7,
+        "Chainable" : true,
+        "Enabled" : true,
+        "ThresholdOperator" : "GT",
+        "ThresholdValue" : 21.000
+      } ],
+      "TimedStateRules" : [ ],
+      "WatchdogRules" : [ ],
+      "CustomRules" : [ ],
+      "MultiConditionRules" : [ ]
+    }
+  },
+  "GrammarVersion" : "1.1.0"
+}

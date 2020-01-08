@@ -34,7 +34,6 @@ public class BaseTest {
 	  String stepScreenShot;
 	  String failedScreenshot;
 	  Properties properties;
-	 // FunctionalComponents functionalcomponents;
 	  
 	 FunctionalComponents functionalcomponents= new FunctionalComponents(driver);
 	  
@@ -43,7 +42,7 @@ public class BaseTest {
 	
 	 @BeforeSuite
 	 public void beforeSuite() {
-			ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter("./ExtentReports/EdgeReport"+" "+functionalcomponents.GetTodaysDateandTime()+".html");
+			ExtentHtmlReporter htmlReporter = new ExtentHtmlReporter("./ExtentReports/StreamingServiceEdgeReport"+" "+functionalcomponents.GetTodaysDateandTime()+".html");
 			htmlReporter.config().setTestViewChartLocation(ChartLocation.BOTTOM);
 			htmlReporter.config().setChartVisibilityOnOpen(true);
 			htmlReporter.config().setTheme(Theme.STANDARD);
@@ -51,7 +50,8 @@ public class BaseTest {
 			htmlReporter.config().setEncoding("utf-8");
 			htmlReporter.config().setReportName("Automation Report");
 			extent = new ExtentReports();
-			extent.attachReporter(htmlReporter);		
+			extent.attachReporter(htmlReporter);	
+		
 
 		} 
 	 	 
@@ -59,17 +59,18 @@ public class BaseTest {
 	public void beforeClass() {
 
 		test = extent.createTest(getClass().getName());
+		properties =functionalcomponents.getObjectProperties();
+        this.driver= factory.getBrowser(properties.getProperty("BrowserName"));
+        functionalcomponents = new FunctionalComponents(driver);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 	}
 	
 	@BeforeMethod
 	public void beforeMethod(Method method) {
 		softAssertion= new SoftAssert();
-		test.log(Status.INFO,"*******"+ method.getName()+" "+"test case started**********");	
-		properties =functionalcomponents.getObjectProperties();
-        this.driver= factory.getBrowser(properties.getProperty("BrowserName"));
-        functionalcomponents = new FunctionalComponents(driver);
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		test.log(Status.INFO,"*******"+ method.getName()+" "+"started**********");	
+		
 }
 	
 	@AfterMethod
@@ -80,6 +81,7 @@ public class BaseTest {
 			//test.log(Status.FAIL, result.getThrowable());
 			failedScreenshot=functionalcomponents.getScreenshot(driver);
 			test.fail(result.getThrowable(), MediaEntityBuilder.createScreenCaptureFromPath(failedScreenshot).build());
+			test.log(Status.FAIL, result.getName()+" is Failed");
 		}	
 		else if(result.getStatus()==ITestResult.SUCCESS)
 		{
@@ -89,10 +91,19 @@ public class BaseTest {
 		{
 			test.log(Status.SKIP, result.getThrowable());
 		}
-		test.log(Status.INFO,"**********test case completed**********");	
-		extent.flush();
-	    driver.close(); 
 		
+	}
+	
+	@org.testng.annotations.AfterClass
+	public void AfterClass() {
+		softAssertion= new SoftAssert();
+		extent.flush();
+	    driver.close();
+		
+}
+	@org.testng.annotations.AfterSuite
+	public void AfterSuite() {
+		driver.quit();
 	}
  
 //failed	

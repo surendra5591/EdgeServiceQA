@@ -48,9 +48,7 @@ public class Test_VM_equality_deviceid extends EdgeServicecomponents{
 		 {
 			failedDescription("Screen is not loaded with option to add sensor profile");
 		 }
-		 
-		
-		 
+		  
 		 test.log(Status.INFO, "Click on Sensor profile on the workcenter at left of the screen and Create a new sensor profile by clicking on the + symbol at the bottom of the screen");
 		 functionalcomponents.ClickOperation(properties.getProperty("Add_Symbol_btn"));
 		 functionalcomponents.waittillElementReadytoclickable(properties.getProperty("Sensorprofile_Name"), 20);
@@ -91,39 +89,7 @@ public class Test_VM_equality_deviceid extends EdgeServicecomponents{
 			failedDescription("Numeric values for the Testing & Production Parameters for the minimum and maximum values are:"+ProductionParameters_Min+","+ProductionParameters_Max+"  saved and verified Maximum value is not exceed 2147483647.");
 		 }
 		 
-		 test.log(Status.INFO, "Enter numeric values for the Window Parameters for the minimum and window size averaging values");
-		 String windowParameters_Min=functionalcomponents.getdatafromsheet("StreamingService", "TC18_Test_VM_equality_deviceid", "WindowParameters_Min");
-		 functionalcomponents.ClickAndSetValue(properties.getProperty("WindowParameters_Minimum"), windowParameters_Min);
-		 String windowsize_averaging=functionalcomponents.getdatafromsheet("StreamingService", "TC18_Test_VM_equality_deviceid", "windowSize_averaging");
-		 int windowsizevalue=functionalcomponents.convertHourtoSecond(Integer.parseInt(windowsize_averaging));
-		 functionalcomponents.ClickOperation(properties.getProperty("Hour_toggle"));
-		 functionalcomponents.WaitTillTime(3000);
-		 functionalcomponents.ClickAndSetValue(properties.getProperty("WindowSize_Averaging"), windowsize_averaging);
-
-		 if(Integer.parseInt(windowsize_averaging)<2147483647)
-		 {	
-			test.log(Status.PASS, "Numeric values for the Window Parameters for the minimum:"+windowParameters_Min+" "+" and window size averaging value:"+windowsizevalue+" "+"Second are saved and verified window size averaging values is not exceed 2147483647 ");
-		 }
-		 else 
-		 {
-			failedDescription("Enter numeric values for the Window Parameters for the minimum and window size averaging values and verified window size averaging values is exceed 2147483647");
-		 }
-		 
-		 test.log(Status.INFO, "Check Enter value is changing to the toggling options between seconds, minutes and hours");
-		 functionalcomponents.ClickOperation(properties.getProperty("Minute_toggle"));
-		 functionalcomponents.WaitTillTime(3000);
 		
-		 functionalcomponents.ClickOperation(properties.getProperty("Second_toggle"));
-		 functionalcomponents.WaitTillTime(2000);
-		 if(driver.findElement(By.xpath(properties.getProperty("SensorProfile_Save_btn"))).isDisplayed())
-		 {	
-			test.log(Status.PASS, "Entered value is changing to the toggling options of seconds, minutes and hours properly");
-		 }
-		 else 
-		 {
-			failedDescription("Entered value is changing to the toggling options of seconds, minutes and hours properly");
-		 }
-		 
 		 test.log(Status.INFO, "Click Save sensor Profile button and verify sensor profile is created successfully with Profile Name");
 		 functionalcomponents.ClickOperation(properties.getProperty("SensorProfile_Save_btn"));
 		 functionalcomponents.WaitTillTime(3000);
@@ -250,7 +216,7 @@ public class Test_VM_equality_deviceid extends EdgeServicecomponents{
 		 
 		 //Set Protocols & Create Enterprise Plugin
 		 
-		  String EnterprisePluginName = SetProtocolandCreateWebSocketPlugin1_StreamingService();
+		  String EnterprisePluginName = CreateWebSocketoutboundConnector_StreamingService();
 		  
 		  //Add Rule for Sensor Profile
 			 test.log(Status.INFO, "Navigate to Sesore Profile and Add rule for sensorprofile by clicking on the + symbol on the screen");
@@ -308,6 +274,7 @@ public class Test_VM_equality_deviceid extends EdgeServicecomponents{
 			 String ScopLevelvalue=functionalcomponents.getdatafromsheet("Rule", "TC18_Test_VM_equality_deviceid", "ScopLevel");
 			 functionalcomponents.ClickOperation(properties.getProperty("ScopLevelPart1")+ScopLevelvalue+properties.getProperty("ScopLevelPart2"));
 			 functionalcomponents.WaitTillTime(2000);
+			 functionalcomponents.scrollToExact(properties.getProperty("Thresholding_Value"));
 			 if(driver.findElement(By.xpath(properties.getProperty("Thresholding_Value"))).isDisplayed())
 			 {	
 				test.log(Status.PASS, "user is able to select Ruletype as"+":"+Ruletypevalue+" "+" & scope level as"+":"+ScopLevelvalue+" "+" from dropdown button");
@@ -328,9 +295,6 @@ public class Test_VM_equality_deviceid extends EdgeServicecomponents{
 				 String ThersholdoperatorValue=functionalcomponents.getdatafromsheet("Rule", "TC17_Test_VM_equality_Tolerance", "ThresholdingOperator");
 				 functionalcomponents.ClickOperation(properties.getProperty("Thresholdoperatorpart1")+ThersholdoperatorValue+properties.getProperty("Thresholdoperatorpart2"));
 				 functionalcomponents.WaitTillTime(2000);
-				 functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("Equality_tolerance"),40); 
-			    // driver.findElement(By.xpath("//input[@value='0']")).clear();
-			     //driver.findElement(By.xpath("//input[@value='0']")).sendKeys("5");
 				 functionalcomponents.ClearAndSetValue(properties.getProperty("Max_EventFrequency"), "2000");
 				 functionalcomponents.WaitTillTime(1000);
 				 if(driver.findElement(By.xpath(properties.getProperty("EventActions"))).isDisplayed())
