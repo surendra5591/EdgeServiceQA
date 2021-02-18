@@ -5,8 +5,9 @@
   <meta charset='utf-8'>
   <title>TestNG reports</title>
 
-    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
-    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <link type="text/css" href="testng-reports1.css" rel="stylesheet" id="ultra" />
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" id="retro" disabled="false"/>
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="testng-reports.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type='text/javascript'>
@@ -23,22 +24,23 @@
   <body>
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
+      <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
       <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
         <span>All suites</span>
-        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
-          <img class="collapse-all-icon" src="collapseall.gif">
+        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
+          <img src="collapseall.gif" class="collapse-all-icon">
           </img> <!-- collapse-all-icon -->
         </a> <!-- collapse-all-link -->
       </div> <!-- navigator-suite-header -->
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" class="navigator-link" panel-name="suite-Default_suite">
-              <span class="suite-name border-failed">Default suite</span>
+            <a href="#" panel-name="suite-EdgeServiceSmoke" class="navigator-link">
+              <span class="suite-name border-failed">EdgeServiceSmoke</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -48,37 +50,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>C:\Users\c5282967\AppData\Local\Temp\testng-eclipse--1084195593\testng-customsuite.xml</span>
+                  <a href="#" panel-name="test-xml-EdgeServiceSmoke" class="navigator-link ">
+                    <span>C:\Users\C5282967\Documents\AutomationProject\EdgeServicesQA\SAP_EdgeServices\Smoke.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="testlist-Default_suite">
+                  <a href="#" panel-name="testlist-EdgeServiceSmoke" class="navigator-link ">
                     <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="group-Default_suite">
+                  <a href="#" panel-name="group-EdgeServiceSmoke" class="navigator-link ">
                     <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="times-Default_suite">
+                  <a href="#" panel-name="times-EdgeServiceSmoke" class="navigator-link ">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="reporter-Default_suite">
+                  <a href="#" panel-name="reporter-EdgeServiceSmoke" class="navigator-link ">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="ignored-methods-Default_suite">
+                  <a href="#" panel-name="ignored-methods-EdgeServiceSmoke" class="navigator-link ">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="chronological-Default_suite">
+                  <a href="#" panel-name="chronological-EdgeServiceSmoke" class="navigator-link ">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -91,21 +93,80 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">11 methods, 1 failed,   10 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
                     <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
+                      <a href="#" panel-name="suite-EdgeServiceSmoke" class="hide-methods failed suite-EdgeServiceSmoke"> (hide)</a> <!-- hide-methods failed suite-EdgeServiceSmoke -->
+                      <a href="#" panel-name="suite-EdgeServiceSmoke" class="show-methods failed suite-EdgeServiceSmoke"> (show)</a> <!-- show-methods failed suite-EdgeServiceSmoke -->
                     </span>
-                    <div class="method-list-content failed suite-Default_suite">
+                    <div class="method-list-content failed suite-EdgeServiceSmoke">
                       <span>
-                        <img width="3%" src="failed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="EdgeServices.InstallServices_RemoveSevice_ReinstallServices_Testcase" hash-for-method="Services_Install_Functionailty_Testcase">Services_Install_Functionailty_Testcase</a> <!-- method navigator-link -->
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-EdgeServiceSmoke" title="EdgeServices.PersistenceServiceConfigurationCreationByDataRetensionandDeployedtoGateway" class="method navigator-link" hash-for-method="PersistenceService_DataRetension_flow">PersistenceService_DataRetension_flow</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-Default_suite -->
+                    </div> <!-- method-list-content failed suite-EdgeServiceSmoke -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-EdgeServiceSmoke" class="hide-methods passed suite-EdgeServiceSmoke"> (hide)</a> <!-- hide-methods passed suite-EdgeServiceSmoke -->
+                      <a href="#" panel-name="suite-EdgeServiceSmoke" class="show-methods passed suite-EdgeServiceSmoke"> (show)</a> <!-- show-methods passed suite-EdgeServiceSmoke -->
+                    </span>
+                    <div class="method-list-content passed suite-EdgeServiceSmoke">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-EdgeServiceSmoke" title="EdgeServices.EBFServiceConfigCreationwithFSMandPSM_PlantActivation_ConfigDeploytoGatewaywithPlantID" class="method navigator-link" hash-for-method="AddPlantstoEBFCloudSyncService">AddPlantstoEBFCloudSyncService</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-EdgeServiceSmoke" title="EdgeServices.CustomPropertyCreation_AddingUserCustomPropertytoGateWay_EditUpdateDeleteProperty" class="method navigator-link" hash-for-method="AddingCustomPropertiestoGateway">AddingCustomPropertiestoGateway</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-EdgeServiceSmoke" title="EdgeServices.CustomServiceCreation_CustomConfigCreation_DeployConfigstoGateway_DeleteServiceandConfig" class="method navigator-link" hash-for-method="CreateCustomServicewithConfigsandDeployed">CreateCustomServicewithConfigsandDeployed</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-EdgeServiceSmoke" title="EdgeServices.EBFServiceConfigCreationwithFSMandPSM_PlantActivation_ConfigDeploytoGatewaywithPlantID" class="method navigator-link" hash-for-method="CreateEBFConfigurationwithFieldsmaintenceBuisnessModule">CreateEBFConfigurationwithFieldsmaintenceBuisnessModule</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-EdgeServiceSmoke" title="EdgeServices.EBFServiceConfigCreationwithFSMandPSM_PlantActivation_ConfigDeploytoGatewaywithPlantID" class="method navigator-link" hash-for-method="CreateEBFConfigurationwithPlantmaintenceBuisnessModule_DeplyedtoGW">CreateEBFConfigurationwithPlantmaintenceBuisnessModule_DeplyedtoGW</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-EdgeServiceSmoke" title="EdgeServices.CreateGroup_AddingGateway_AddingServices_CombineStreamingConfigs_DeployConfigs" class="method navigator-link" hash-for-method="PolicyServiceGroupandGatewayfunctionality">PolicyServiceGroupandGatewayfunctionality</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-EdgeServiceSmoke" title="EdgeServices.CustomPropertyCreation_AddingUserCustomPropertytoGateWay_EditUpdateDeleteProperty" class="method navigator-link" hash-for-method="RemovepropertyfromgatewayandDeleteUserConfigProperty">RemovepropertyfromgatewayandDeleteUserConfigProperty</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-EdgeServiceSmoke" title="EdgeServices.RemoveCoreSevicesfromGateway_ReinstallCoreServicestoGateway" class="method navigator-link" hash-for-method="Services_Reinstall_Functionailty_Testcase">Services_Reinstall_Functionailty_Testcase</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-EdgeServiceSmoke" title="EdgeServices.SettingIOTInstance_SetEdgeConsolePasswordandBackendtimeZonePropertytoGatewaylevel_InstallCoreServicestoGateway" class="method navigator-link" hash-for-method="SetEdgeIOTServicePlatform_SetEdgeConsolePasswordandAddCoreServicestoGateway">SetEdgeIOTServicePlatform_SetEdgeConsolePasswordandAddCoreServicestoGateway</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-EdgeServiceSmoke" title="EdgeServices.CustomPropertyCreation_AddingUserCustomPropertytoGateWay_EditUpdateDeleteProperty" class="method navigator-link" hash-for-method="UserTypeCustomPropertiesCreateUpdateandDeleting">UserTypeCustomPropertiesCreateUpdateandDeleting</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-EdgeServiceSmoke -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -116,187 +177,558 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
-        <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-failed">
+        <div panel-name="suite-EdgeServiceSmoke" class="panel EdgeServiceSmoke">
+          <div class="suite-EdgeServiceSmoke-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">EdgeServices.InstallServices_RemoveSevice_ReinstallServices_Testcase</span>
+              <span class="class-name">EdgeServices.PersistenceServiceConfigurationCreationByDataRetensionandDeployedtoGateway</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="Services_Install_Functionailty_Testcase">
-                  </a> <!-- Services_Install_Functionailty_Testcase -->
-                  <span class="method-name">Services_Install_Functionailty_Testcase</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: chrome not reachable
-  (Session info: chrome=79.0.3945.88)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;INLN56593756A&apos;, ip: &apos;10.136.227.22&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_231&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\c5282967\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:57548}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: dca9aa3b54bfcf5a06b2fdb0ee556fda
-*** Element info: {Using=xpath, value=//bdi[text()=&apos;Streaming Service&apos;]//ancestor::tr}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at EdgeServices.InstallServices_RemoveSevice_ReinstallServices_Testcase.Services_Install_Functionailty_Testcase(InstallServices_RemoveSevice_ReinstallServices_Testcase.java:229)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:756)
-	at org.testng.TestRunner.run(TestRunner.java:610)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
-	at org.testng.TestNG.runSuites(TestNG.java:1133)
-	at org.testng.TestNG.run(TestNG.java:1104)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-
+                  <a name="PersistenceService_DataRetension_flow">
+                  </a> <!-- PersistenceService_DataRetension_flow -->
+                  <span class="method-name">PersistenceService_DataRetension_flow</span>
+                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;UtilityComponent.FunctionalComponents.getScreenshot()&quot; because &quot;this.functionalcomponents&quot; is null
+	at BaseComponent.BaseTest.failedDescription(BaseTest.java:111)
+	at EdgeServiceComponents.EdgeServiceFunctions.PersistenceConfigDeploymenttoGateway(EdgeServiceFunctions.java:245)
+	at EdgeServices.PersistenceServiceConfigurationCreationByDataRetensionandDeployedtoGateway.PersistenceService_DataRetension_flow(PersistenceServiceConfigurationCreationByDataRetensionandDeployedtoGateway.java:114)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-failed -->
-        </div> <!-- panel Default_suite -->
-        <div panel-name="test-xml-Default_suite" class="panel">
+          </div> <!-- suite-EdgeServiceSmoke-class-failed -->
+          <div class="suite-EdgeServiceSmoke-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">EdgeServices.CreateGroup_AddingGateway_AddingServices_CombineStreamingConfigs_DeployConfigs</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="PolicyServiceGroupandGatewayfunctionality">
+                  </a> <!-- PolicyServiceGroupandGatewayfunctionality -->
+                  <span class="method-name">PolicyServiceGroupandGatewayfunctionality</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-EdgeServiceSmoke-class-passed -->
+          <div class="suite-EdgeServiceSmoke-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">EdgeServices.EBFServiceConfigCreationwithFSMandPSM_PlantActivation_ConfigDeploytoGatewaywithPlantID</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="AddPlantstoEBFCloudSyncService">
+                  </a> <!-- AddPlantstoEBFCloudSyncService -->
+                  <span class="method-name">AddPlantstoEBFCloudSyncService</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="CreateEBFConfigurationwithFieldsmaintenceBuisnessModule">
+                  </a> <!-- CreateEBFConfigurationwithFieldsmaintenceBuisnessModule -->
+                  <span class="method-name">CreateEBFConfigurationwithFieldsmaintenceBuisnessModule</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="CreateEBFConfigurationwithPlantmaintenceBuisnessModule_DeplyedtoGW">
+                  </a> <!-- CreateEBFConfigurationwithPlantmaintenceBuisnessModule_DeplyedtoGW -->
+                  <span class="method-name">CreateEBFConfigurationwithPlantmaintenceBuisnessModule_DeplyedtoGW</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-EdgeServiceSmoke-class-passed -->
+          <div class="suite-EdgeServiceSmoke-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">EdgeServices.CustomServiceCreation_CustomConfigCreation_DeployConfigstoGateway_DeleteServiceandConfig</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="CreateCustomServicewithConfigsandDeployed">
+                  </a> <!-- CreateCustomServicewithConfigsandDeployed -->
+                  <span class="method-name">CreateCustomServicewithConfigsandDeployed</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-EdgeServiceSmoke-class-passed -->
+          <div class="suite-EdgeServiceSmoke-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">EdgeServices.RemoveCoreSevicesfromGateway_ReinstallCoreServicestoGateway</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Services_Reinstall_Functionailty_Testcase">
+                  </a> <!-- Services_Reinstall_Functionailty_Testcase -->
+                  <span class="method-name">Services_Reinstall_Functionailty_Testcase</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-EdgeServiceSmoke-class-passed -->
+          <div class="suite-EdgeServiceSmoke-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">EdgeServices.SettingIOTInstance_SetEdgeConsolePasswordandBackendtimeZonePropertytoGatewaylevel_InstallCoreServicestoGateway</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="SetEdgeIOTServicePlatform_SetEdgeConsolePasswordandAddCoreServicestoGateway">
+                  </a> <!-- SetEdgeIOTServicePlatform_SetEdgeConsolePasswordandAddCoreServicestoGateway -->
+                  <span class="method-name">SetEdgeIOTServicePlatform_SetEdgeConsolePasswordandAddCoreServicestoGateway</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-EdgeServiceSmoke-class-passed -->
+          <div class="suite-EdgeServiceSmoke-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">EdgeServices.CustomPropertyCreation_AddingUserCustomPropertytoGateWay_EditUpdateDeleteProperty</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="AddingCustomPropertiestoGateway">
+                  </a> <!-- AddingCustomPropertiestoGateway -->
+                  <span class="method-name">AddingCustomPropertiestoGateway</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="RemovepropertyfromgatewayandDeleteUserConfigProperty">
+                  </a> <!-- RemovepropertyfromgatewayandDeleteUserConfigProperty -->
+                  <span class="method-name">RemovepropertyfromgatewayandDeleteUserConfigProperty</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="UserTypeCustomPropertiesCreateUpdateandDeleting">
+                  </a> <!-- UserTypeCustomPropertiesCreateUpdateandDeleting -->
+                  <span class="method-name">UserTypeCustomPropertiesCreateUpdateandDeleting</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-EdgeServiceSmoke-class-passed -->
+        </div> <!-- panel EdgeServiceSmoke -->
+        <div panel-name="test-xml-EdgeServiceSmoke" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\c5282967\AppData\Local\Temp\testng-eclipse--1084195593\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\C5282967\Documents\AutomationProject\EdgeServicesQA\SAP_EdgeServices\Smoke.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
-  &lt;test verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite name=&quot;EdgeServiceSmoke&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;test thread-count=&quot;1&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;EdgeServices.InstallServices_RemoveSevice_ReinstallServices_Testcase&quot;/&gt;
+      &lt;class name=&quot;EdgeServices.SettingIOTInstance_SetEdgeConsolePasswordandBackendtimeZonePropertytoGatewaylevel_InstallCoreServicestoGateway&quot;/&gt;
+      &lt;class name=&quot;EdgeServices.PersistenceServiceConfigurationCreationByDataRetensionandDeployedtoGateway&quot;/&gt;
+      &lt;class name=&quot;EdgeServices.CustomServiceCreation_CustomConfigCreation_DeployConfigstoGateway_DeleteServiceandConfig&quot;/&gt;
+      &lt;class name=&quot;EdgeServices.EBFServiceConfigCreationwithFSMandPSM_PlantActivation_ConfigDeploytoGatewaywithPlantID&quot;/&gt;
+      &lt;class name=&quot;EdgeServices.CustomPropertyCreation_AddingUserCustomPropertytoGateWay_EditUpdateDeleteProperty&quot;/&gt;
+      &lt;class name=&quot;EdgeServices.CreateGroup_AddingGateway_AddingServices_CombineStreamingConfigs_DeployConfigs&quot;/&gt;
+      &lt;class name=&quot;EdgeServices.RemoveCoreSevicesfromGateway_ReinstallCoreServicestoGateway&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Default test --&gt;
-&lt;/suite&gt; &lt;!-- Default suite --&gt;
+  &lt;/test&gt; &lt;!-- Test --&gt;
+&lt;/suite&gt; &lt;!-- EdgeServiceSmoke --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="testlist-Default_suite" class="panel">
+        <div panel-name="testlist-EdgeServiceSmoke" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for Default suite</span>
+            <span class="header-content">Tests for EdgeServiceSmoke</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Default test (1 class)</span>
+                <span class="test-name">Test (7 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="group-Default_suite" class="panel">
+        <div panel-name="group-EdgeServiceSmoke" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for Default suite</span>
+            <span class="header-content">Groups for EdgeServiceSmoke</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="times-Default_suite" class="panel">
+        <div panel-name="times-EdgeServiceSmoke" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for Default suite</span>
+            <span class="header-content">Times for EdgeServiceSmoke</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="times-div">
               <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_Default_suite');
-function tableData_Default_suite() {
+suiteTableInitFunctions.push('tableData_EdgeServiceSmoke');
+function tableData_EdgeServiceSmoke() {
 var data = new google.visualization.DataTable();
 data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(11);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'Services_Install_Functionailty_Testcase')
-data.setCell(0, 2, 'EdgeServices.InstallServices_RemoveSevice_ReinstallServices_Testcase')
-data.setCell(0, 3, 1839789);
-window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
+data.setCell(0, 1, 'Services_Reinstall_Functionailty_Testcase')
+data.setCell(0, 2, 'EdgeServices.RemoveCoreSevicesfromGateway_ReinstallCoreServicestoGateway')
+data.setCell(0, 3, 2411570);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'PolicyServiceGroupandGatewayfunctionality')
+data.setCell(1, 2, 'EdgeServices.CreateGroup_AddingGateway_AddingServices_CombineStreamingConfigs_DeployConfigs')
+data.setCell(1, 3, 821709);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'PersistenceService_DataRetension_flow')
+data.setCell(2, 2, 'EdgeServices.PersistenceServiceConfigurationCreationByDataRetensionandDeployedtoGateway')
+data.setCell(2, 3, 802042);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'CreateCustomServicewithConfigsandDeployed')
+data.setCell(3, 2, 'EdgeServices.CustomServiceCreation_CustomConfigCreation_DeployConfigstoGateway_DeleteServiceandConfig')
+data.setCell(3, 3, 777197);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'CreateEBFConfigurationwithPlantmaintenceBuisnessModule_DeplyedtoGW')
+data.setCell(4, 2, 'EdgeServices.EBFServiceConfigCreationwithFSMandPSM_PlantActivation_ConfigDeploytoGatewaywithPlantID')
+data.setCell(4, 3, 598399);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'SetEdgeIOTServicePlatform_SetEdgeConsolePasswordandAddCoreServicestoGateway')
+data.setCell(5, 2, 'EdgeServices.SettingIOTInstance_SetEdgeConsolePasswordandBackendtimeZonePropertytoGatewaylevel_InstallCoreServicestoGateway')
+data.setCell(5, 3, 487137);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'CreateEBFConfigurationwithFieldsmaintenceBuisnessModule')
+data.setCell(6, 2, 'EdgeServices.EBFServiceConfigCreationwithFSMandPSM_PlantActivation_ConfigDeploytoGatewaywithPlantID')
+data.setCell(6, 3, 374363);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'RemovepropertyfromgatewayandDeleteUserConfigProperty')
+data.setCell(7, 2, 'EdgeServices.CustomPropertyCreation_AddingUserCustomPropertytoGateWay_EditUpdateDeleteProperty')
+data.setCell(7, 3, 202789);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'UserTypeCustomPropertiesCreateUpdateandDeleting')
+data.setCell(8, 2, 'EdgeServices.CustomPropertyCreation_AddingUserCustomPropertytoGateWay_EditUpdateDeleteProperty')
+data.setCell(8, 3, 135520);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'AddingCustomPropertiestoGateway')
+data.setCell(9, 2, 'EdgeServices.CustomPropertyCreation_AddingUserCustomPropertytoGateWay_EditUpdateDeleteProperty')
+data.setCell(9, 3, 46381);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'AddPlantstoEBFCloudSyncService')
+data.setCell(10, 2, 'EdgeServices.EBFServiceConfigCreationwithFSMandPSM_PlantActivation_ConfigDeploytoGatewaywithPlantID')
+data.setCell(10, 3, 21956);
+window.suiteTableData['EdgeServiceSmoke']= { tableData: data, tableDiv: 'times-div-EdgeServiceSmoke'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 30 minutes</span>
-              <div id="times-div-Default_suite">
-              </div> <!-- times-div-Default_suite -->
+              <span class="suite-total-time">Total running time: 1 hours</span>
+              <div id="times-div-EdgeServiceSmoke">
+              </div> <!-- times-div-EdgeServiceSmoke -->
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="reporter-Default_suite" class="panel">
+        <div panel-name="reporter-EdgeServiceSmoke" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Reporter output for Default suite</span>
+            <span class="header-content">Reporter output for EdgeServiceSmoke</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="ignored-methods-Default_suite" class="panel">
+        <div panel-name="ignored-methods-EdgeServiceSmoke" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">12 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">EdgeServices.CreateGroup_AddingGateway_AddingServices_CombineStreamingConfigs_DeployConfigs</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">beforeSuite</span>
+                <br/>
+                <span class="ignored-method-name">AfterSuite</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">EdgeServices.PersistenceServiceConfigurationCreationByDataRetensionandDeployedtoGateway</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">beforeSuite</span>
+                <br/>
+                <span class="ignored-method-name">AfterSuite</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">EdgeServices.EBFServiceConfigCreationwithFSMandPSM_PlantActivation_ConfigDeploytoGatewaywithPlantID</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">beforeSuite</span>
+                <br/>
+                <span class="ignored-method-name">AfterSuite</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">EdgeServices.CustomServiceCreation_CustomConfigCreation_DeployConfigstoGateway_DeleteServiceandConfig</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">beforeSuite</span>
+                <br/>
+                <span class="ignored-method-name">AfterSuite</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">EdgeServices.RemoveCoreSevicesfromGateway_ReinstallCoreServicestoGateway</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">beforeSuite</span>
+                <br/>
+                <span class="ignored-method-name">AfterSuite</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">EdgeServices.CustomPropertyCreation_AddingUserCustomPropertytoGateWay_EditUpdateDeleteProperty</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">beforeSuite</span>
+                <br/>
+                <span class="ignored-method-name">AfterSuite</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="chronological-Default_suite" class="panel">
+        <div panel-name="chronological-EdgeServiceSmoke" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">EdgeServices.InstallServices_RemoveSevice_ReinstallServices_Testcase</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">EdgeServices.SettingIOTInstance_SetEdgeConsolePasswordandBackendtimeZonePropertytoGatewaylevel_InstallCoreServicestoGateway</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">beforeSuite</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
                 <span class="method-name">beforeClass</span>
-                <span class="method-start">214 ms</span>
+                <span class="method-start">255 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod(public void EdgeServices.InstallServices_RemoveSevice_ReinstallServices_Testcase.Services_Install_Fu...)</span>
-                <span class="method-start">4703 ms</span>
+                <span class="method-name">beforeMethod(public void EdgeServices.SettingIOTInstance_SetEdgeConsolePasswordandBackendtimeZonePropertytoGatewa...)</span>
+                <span class="method-start">9079 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">SetEdgeIOTServicePlatform_SetEdgeConsolePasswordandAddCoreServicestoGateway</span>
+                <span class="method-start">9094 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=SetEdgeIOTServicePlatform_SetEdgeConsolePasswordandAddCoreServicestoGateway status=...)</span>
+                <span class="method-start">496234 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">AfterClass</span>
+                <span class="method-start">496236 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">EdgeServices.PersistenceServiceConfigurationCreationByDataRetensionandDeployedtoGateway</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">beforeClass</span>
+                <span class="method-start">497501 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void EdgeServices.PersistenceServiceConfigurationCreationByDataRetensionandDeployedtoGateway....)</span>
+                <span class="method-start">503735 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">Services_Install_Functionailty_Testcase</span>
-                <span class="method-start">4709 ms</span>
+                <span class="method-name">PersistenceService_DataRetension_flow</span>
+                <span class="method-start">503735 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">tearDown([TestResult name=Services_Install_Functionailty_Testcase status=FAILURE method=InstallServices_Remov...)</span>
-                <span class="method-start">1844501 ms</span>
+                <span class="method-name">tearDown([TestResult name=PersistenceService_DataRetension_flow status=FAILURE method=PersistenceServiceConfi...)</span>
+                <span class="method-start">1305780 ms</span>
               </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">AfterClass</span>
+                <span class="method-start">1306450 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">EdgeServices.CustomServiceCreation_CustomConfigCreation_DeployConfigstoGateway_DeleteServiceandConfig</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">beforeClass</span>
+                <span class="method-start">1307204 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void EdgeServices.CustomServiceCreation_CustomConfigCreation_DeployConfigstoGateway_DeleteSer...)</span>
+                <span class="method-start">1312173 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">CreateCustomServicewithConfigsandDeployed</span>
+                <span class="method-start">1312173 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=CreateCustomServicewithConfigsandDeployed status=SUCCESS method=CustomServiceCreati...)</span>
+                <span class="method-start">2089371 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">AfterClass</span>
+                <span class="method-start">2089371 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">EdgeServices.EBFServiceConfigCreationwithFSMandPSM_PlantActivation_ConfigDeploytoGatewaywithPlantID</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">beforeClass</span>
+                <span class="method-start">2090336 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void EdgeServices.EBFServiceConfigCreationwithFSMandPSM_PlantActivation_ConfigDeploytoGateway...)</span>
+                <span class="method-start">2095979 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">CreateEBFConfigurationwithFieldsmaintenceBuisnessModule</span>
+                <span class="method-start">2095979 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=CreateEBFConfigurationwithFieldsmaintenceBuisnessModule status=SUCCESS method=EBFSe...)</span>
+                <span class="method-start">2470343 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void EdgeServices.EBFServiceConfigCreationwithFSMandPSM_PlantActivation_ConfigDeploytoGateway...)</span>
+                <span class="method-start">2470345 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">AddPlantstoEBFCloudSyncService</span>
+                <span class="method-start">2470346 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=AddPlantstoEBFCloudSyncService status=SUCCESS method=EBFServiceConfigCreationwithFS...)</span>
+                <span class="method-start">2492303 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void EdgeServices.EBFServiceConfigCreationwithFSMandPSM_PlantActivation_ConfigDeploytoGateway...)</span>
+                <span class="method-start">2492304 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">CreateEBFConfigurationwithPlantmaintenceBuisnessModule_DeplyedtoGW</span>
+                <span class="method-start">2492305 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=CreateEBFConfigurationwithPlantmaintenceBuisnessModule_DeplyedtoGW status=SUCCESS m...)</span>
+                <span class="method-start">3090706 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">AfterClass</span>
+                <span class="method-start">3090706 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">EdgeServices.CustomPropertyCreation_AddingUserCustomPropertytoGateWay_EditUpdateDeleteProperty</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">beforeClass</span>
+                <span class="method-start">3108768 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void EdgeServices.CustomPropertyCreation_AddingUserCustomPropertytoGateWay_EditUpdateDeletePr...)</span>
+                <span class="method-start">3115321 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">UserTypeCustomPropertiesCreateUpdateandDeleting</span>
+                <span class="method-start">3115322 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=UserTypeCustomPropertiesCreateUpdateandDeleting status=SUCCESS method=CustomPropert...)</span>
+                <span class="method-start">3250843 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void EdgeServices.CustomPropertyCreation_AddingUserCustomPropertytoGateWay_EditUpdateDeletePr...)</span>
+                <span class="method-start">3250844 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">AddingCustomPropertiestoGateway</span>
+                <span class="method-start">3250844 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=AddingCustomPropertiestoGateway status=SUCCESS method=CustomPropertyCreation_Adding...)</span>
+                <span class="method-start">3297226 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void EdgeServices.CustomPropertyCreation_AddingUserCustomPropertytoGateWay_EditUpdateDeletePr...)</span>
+                <span class="method-start">3297227 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">RemovepropertyfromgatewayandDeleteUserConfigProperty</span>
+                <span class="method-start">3297228 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=RemovepropertyfromgatewayandDeleteUserConfigProperty status=SUCCESS method=CustomPr...)</span>
+                <span class="method-start">3500019 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">AfterClass</span>
+                <span class="method-start">3500019 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">EdgeServices.CreateGroup_AddingGateway_AddingServices_CombineStreamingConfigs_DeployConfigs</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">beforeClass</span>
+                <span class="method-start">3501738 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void EdgeServices.CreateGroup_AddingGateway_AddingServices_CombineStreamingConfigs_DeployConf...)</span>
+                <span class="method-start">3506593 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">PolicyServiceGroupandGatewayfunctionality</span>
+                <span class="method-start">3506593 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=PolicyServiceGroupandGatewayfunctionality status=SUCCESS method=CreateGroup_AddingG...)</span>
+                <span class="method-start">4328303 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">AfterClass</span>
+                <span class="method-start">4328304 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">EdgeServices.RemoveCoreSevicesfromGateway_ReinstallCoreServicestoGateway</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">beforeClass</span>
+                <span class="method-start">4329932 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod(public void EdgeServices.RemoveCoreSevicesfromGateway_ReinstallCoreServicestoGateway.Services_Reinst...)</span>
+                <span class="method-start">4334901 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">Services_Reinstall_Functionailty_Testcase</span>
+                <span class="method-start">4334902 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=Services_Reinstall_Functionailty_Testcase status=SUCCESS method=RemoveCoreSevicesfr...)</span>
+                <span class="method-start">6746477 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">AfterClass</span>
+                <span class="method-start">6746479 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">EdgeServices.SettingIOTInstance_SetEdgeConsolePasswordandBackendtimeZonePropertytoGatewaylevel_InstallCoreServicestoGateway</div> <!-- chronological-class-name -->
+              <div class="configuration-suite after">
+                <span class="method-name">AfterSuite</span>
+                <span class="method-start">6747557 ms</span>
+              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
     </div> <!-- wrapper -->
   </body>
+<script type="text/javascript" src="testng-reports2.js"></script>
 </html>

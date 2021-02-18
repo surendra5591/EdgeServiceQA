@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">	
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">	
+<suite name="EdgeServiceTests">
+  <test thread-count="1" name="Test">
+    <classes >
+      <class name="EdgeServices.GLobalActionCreationandDelete"/>  
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
 
-<suite name="SAPIOT">
-<suite-files>
-   
-    <suite-file path="C:\Users\c5282967\Documents\AutomationProject\EdgeServicesQA\SAP_EdgeServices\StreamingServiceRegression.xml">
- 
- </suite-file>
-</suite-files>
-</suite>
+

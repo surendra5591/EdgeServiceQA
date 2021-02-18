@@ -1,98 +1,33 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><head><title>TestNG Report</title><style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}</style></head><body><table><tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr><tr><th colspan="7">Default suite</th></tr><tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">1,850,331</td><td></td><td></td></tr></table><table><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">EdgeServices.InstallServices_RemoveSevice_ReinstallServices_Testcase</td><td><a href="#m0">tearDown</a></td><td rowspan="1">1578308576256</td><td rowspan="1">0</td></tr><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">EdgeServices.InstallServices_RemoveSevice_ReinstallServices_Testcase</td><td><a href="#m1">Services_Install_Functionailty_Testcase</a></td><td rowspan="1">1578306736464</td><td rowspan="1">1839789</td></tr><tr><th colspan="4">Default test &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="2">EdgeServices.InstallServices_RemoveSevice_ReinstallServices_Testcase</td><td><a href="#m2">AfterClass</a></td><td rowspan="1">1578308582293</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m3">AfterSuite</a></td><td rowspan="1">1578308582362</td><td rowspan="1">0</td></tr></tbody></table><h2>Default test</h2><h3 id="m0">EdgeServices.InstallServices_RemoveSevice_ReinstallServices_Testcase#tearDown</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>[TestResult name=Services_Install_Functionailty_Testcase status=FAILURE method=InstallServices_RemoveSevice_ReinstallServices_Testcase.Services_Install_Functionailty_Testcase()[pri:0, instance:EdgeServices.InstallServices_RemoveSevice_ReinstallServices_Testcase@5f058f00] output={null}]</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.WebDriverException: chrome not reachable
-  (Session info: chrome=79.0.3945.88)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;INLN56593756A&apos;, ip: &apos;10.136.227.22&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_231&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\c5282967\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:57548}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: dca9aa3b54bfcf5a06b2fdb0ee556fda
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
-	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:295)
-	at functionalComponent.FunctionalComponents.getScreenshot(FunctionalComponents.java:87)
-	at EdgeServices.BaseTest.tearDown(BaseTest.java:81)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
-	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:515)
-	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:217)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:712)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:756)
-	at org.testng.TestRunner.run(TestRunner.java:610)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
-	at org.testng.TestNG.runSuites(TestNG.java:1133)
-	at org.testng.TestNG.run(TestNG.java:1104)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m1">EdgeServices.InstallServices_RemoveSevice_ReinstallServices_Testcase#Services_Install_Functionailty_Testcase</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.WebDriverException: chrome not reachable
-  (Session info: chrome=79.0.3945.88)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;INLN56593756A&apos;, ip: &apos;10.136.227.22&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_231&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.88, chrome: {chromedriverVersion: 78.0.3904.70 (edb9c9f3de024..., userDataDir: C:\Users\c5282967\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:57548}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: dca9aa3b54bfcf5a06b2fdb0ee556fda
-*** Element info: {Using=xpath, value=//bdi[text()=&apos;Streaming Service&apos;]//ancestor::tr}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-	at java.lang.reflect.Constructor.newInstance(Unknown Source)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at EdgeServices.InstallServices_RemoveSevice_ReinstallServices_Testcase.Services_Install_Functionailty_Testcase(InstallServices_RemoveSevice_ReinstallServices_Testcase.java:229)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:756)
-	at org.testng.TestRunner.run(TestRunner.java:610)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
-	at org.testng.TestNG.runSuites(TestNG.java:1133)
-	at org.testng.TestNG.run(TestNG.java:1104)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m2">EdgeServices.InstallServices_RemoveSevice_ReinstallServices_Testcase#AfterClass</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p><h3 id="m3">EdgeServices.InstallServices_RemoveSevice_ReinstallServices_Testcase#AfterSuite</h3><table class="result"></table><p class="totop"><a href="#summary">back to summary</a></p></body></html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="8">EdgeServiceSmoke</th></tr>
+<tr><td><a href="#t0">Test</a></td><td class="num">10</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">6,747,242</td><td></td><td></td></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">EdgeServiceSmoke</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">EdgeServices.PersistenceServiceConfigurationCreationByDataRetensionandDeployedtoGateway</td><td><a href="#m0">PersistenceService_DataRetension_flow</a></td><td rowspan="1">1613020550026</td><td rowspan="1">802042</td></tr><tr><th colspan="4">Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">EdgeServices.CreateGroup_AddingGateway_AddingServices_CombineStreamingConfigs_DeployConfigs</td><td><a href="#m1">PolicyServiceGroupandGatewayfunctionality</a></td><td rowspan="1">1613023552884</td><td rowspan="1">821709</td></tr><tr class="passedodd"><td rowspan="3">EdgeServices.CustomPropertyCreation_AddingUserCustomPropertytoGateWay_EditUpdateDeleteProperty</td><td><a href="#m2">AddingCustomPropertiestoGateway</a></td><td rowspan="1">1613023297135</td><td rowspan="1">46381</td></tr><tr class="passedodd"><td><a href="#m3">RemovepropertyfromgatewayandDeleteUserConfigProperty</a></td><td rowspan="1">1613023343519</td><td rowspan="1">202789</td></tr><tr class="passedodd"><td><a href="#m4">UserTypeCustomPropertiesCreateUpdateandDeleting</a></td><td rowspan="1">1613023161613</td><td rowspan="1">135520</td></tr><tr class="passedeven"><td rowspan="1">EdgeServices.CustomServiceCreation_CustomConfigCreation_DeployConfigstoGateway_DeleteServiceandConfig</td><td><a href="#m5">CreateCustomServicewithConfigsandDeployed</a></td><td rowspan="1">1613021358464</td><td rowspan="1">777197</td></tr><tr class="passedodd"><td rowspan="3">EdgeServices.EBFServiceConfigCreationwithFSMandPSM_PlantActivation_ConfigDeploytoGatewaywithPlantID</td><td><a href="#m6">AddPlantstoEBFCloudSyncService</a></td><td rowspan="1">1613022516637</td><td rowspan="1">21956</td></tr><tr class="passedodd"><td><a href="#m7">CreateEBFConfigurationwithFieldsmaintenceBuisnessModule</a></td><td rowspan="1">1613022142270</td><td rowspan="1">374363</td></tr><tr class="passedodd"><td><a href="#m8">CreateEBFConfigurationwithPlantmaintenceBuisnessModule_DeplyedtoGW</a></td><td rowspan="1">1613022538596</td><td rowspan="1">598399</td></tr><tr class="passedeven"><td rowspan="1">EdgeServices.RemoveCoreSevicesfromGateway_ReinstallCoreServicestoGateway</td><td><a href="#m9">Services_Reinstall_Functionailty_Testcase</a></td><td rowspan="1">1613024381193</td><td rowspan="1">2411570</td></tr><tr class="passedodd"><td rowspan="1">EdgeServices.SettingIOTInstance_SetEdgeConsolePasswordandBackendtimeZonePropertytoGatewaylevel_InstallCoreServicestoGateway</td><td><a href="#m10">SetEdgeIOTServicePlatform_SetEdgeConsolePasswordandAddCoreServicestoGateway</a></td><td rowspan="1">1613020055385</td><td rowspan="1">487137</td></tr></tbody>
+</table>
+<h2>Test</h2><h3 id="m0">EdgeServices.PersistenceServiceConfigurationCreationByDataRetensionandDeployedtoGateway#PersistenceService_DataRetension_flow</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;UtilityComponent.FunctionalComponents.getScreenshot()&quot; because &quot;this.functionalcomponents&quot; is null
+	at BaseComponent.BaseTest.failedDescription(BaseTest.java:111)
+	at EdgeServiceComponents.EdgeServiceFunctions.PersistenceConfigDeploymenttoGateway(EdgeServiceFunctions.java:245)
+	at EdgeServices.PersistenceServiceConfigurationCreationByDataRetensionandDeployedtoGateway.PersistenceService_DataRetension_flow(PersistenceServiceConfigurationCreationByDataRetensionandDeployedtoGateway.java:114)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">EdgeServices.CreateGroup_AddingGateway_AddingServices_CombineStreamingConfigs_DeployConfigs#PolicyServiceGroupandGatewayfunctionality</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">EdgeServices.CustomPropertyCreation_AddingUserCustomPropertytoGateWay_EditUpdateDeleteProperty#AddingCustomPropertiestoGateway</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">EdgeServices.CustomPropertyCreation_AddingUserCustomPropertytoGateWay_EditUpdateDeleteProperty#RemovepropertyfromgatewayandDeleteUserConfigProperty</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">EdgeServices.CustomPropertyCreation_AddingUserCustomPropertytoGateWay_EditUpdateDeleteProperty#UserTypeCustomPropertiesCreateUpdateandDeleting</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">EdgeServices.CustomServiceCreation_CustomConfigCreation_DeployConfigstoGateway_DeleteServiceandConfig#CreateCustomServicewithConfigsandDeployed</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">EdgeServices.EBFServiceConfigCreationwithFSMandPSM_PlantActivation_ConfigDeploytoGatewaywithPlantID#AddPlantstoEBFCloudSyncService</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">EdgeServices.EBFServiceConfigCreationwithFSMandPSM_PlantActivation_ConfigDeploytoGatewaywithPlantID#CreateEBFConfigurationwithFieldsmaintenceBuisnessModule</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">EdgeServices.EBFServiceConfigCreationwithFSMandPSM_PlantActivation_ConfigDeploytoGatewaywithPlantID#CreateEBFConfigurationwithPlantmaintenceBuisnessModule_DeplyedtoGW</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">EdgeServices.RemoveCoreSevicesfromGateway_ReinstallCoreServicestoGateway#Services_Reinstall_Functionailty_Testcase</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">EdgeServices.SettingIOTInstance_SetEdgeConsolePasswordandBackendtimeZonePropertytoGatewaylevel_InstallCoreServicestoGateway#SetEdgeIOTServicePlatform_SetEdgeConsolePasswordandAddCoreServicestoGateway</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>
