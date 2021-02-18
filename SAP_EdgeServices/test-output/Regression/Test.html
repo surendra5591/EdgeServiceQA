@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>16/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>2/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Sep 02 10:36:11 IST 2019</td>
+<td>Started on:</td><td>Wed Feb 12 15:55:44 IST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>4376 seconds (4376910 ms)</td>
+<tr><td>Total time:</td><td>297 seconds (297113 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,83 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='StreamingService.Test_Valuemonitoring_deviceid.TC20_Test_Valuemonitoring_deviceid()'><b>TC20_Test_Valuemonitoring_deviceid</b><br>Test class: StreamingService.Test_Valuemonitoring_deviceid</td>
-<td><div><pre>org.openqa.selenium.InvalidElementStateException: invalid element state: Element is not currently interactable and may not be manipulated
-  (Session info: chrome=76.0.3809.100)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;INLN56593756A&apos;, ip: &apos;192.168.136.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.100, chrome: {chromedriverVersion: 76.0.3809.126 (d80a294506b4..., userDataDir: C:\Users\c5282967\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55153}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: aaada64c041c374dbad03e1bfde1abaa
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:124)
-	at functionalComponent.FunctionalComponents.ClearAndSetValue(FunctionalComponents.java:414)
-	at StreamingService.Test_Valuemonitoring_deviceid.TC20_Test_Valuemonitoring_deviceid(Test_Valuemonitoring_deviceid.java:288)
-... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1890097328", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1890097328'><pre>org.openqa.selenium.InvalidElementStateException: invalid element state: Element is not currently interactable and may not be manipulated
-  (Session info: chrome=76.0.3809.100)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;INLN56593756A&apos;, ip: &apos;192.168.136.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 76.0.3809.100, chrome: {chromedriverVersion: 76.0.3809.126 (d80a294506b4..., userDataDir: C:\Users\c5282967\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:55153}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: aaada64c041c374dbad03e1bfde1abaa
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-	at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:124)
-	at functionalComponent.FunctionalComponents.ClearAndSetValue(FunctionalComponents.java:414)
-	at StreamingService.Test_Valuemonitoring_deviceid.TC20_Test_Valuemonitoring_deviceid(Test_Valuemonitoring_deviceid.java:288)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:988)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-	at org.testng.TestRunner.privateRun(TestRunner.java:648)
-	at org.testng.TestRunner.run(TestRunner.java:505)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-	at org.testng.TestNG.runSuites(TestNG.java:1049)
-	at org.testng.TestNG.run(TestNG.java:1017)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>101</td>
-<td>StreamingService.Test_Valuemonitoring_deviceid@ae13544</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -152,85 +75,15 @@ Session ID: aaada64c041c374dbad03e1bfde1abaa
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='StreamingService.Test_CreateSensorProfilewithActiontypeFieldmessageandRuletypeValuemonitoring.TC01_CreateSensorProfilewith_ActiontypeFieldmessageand_RuletypeValuemonitoring_Flow()'><b>TC01_CreateSensorProfilewith_ActiontypeFieldmessageand_RuletypeValuemonitoring_Flow</b><br>Test class: StreamingService.Test_CreateSensorProfilewithActiontypeFieldmessageandRuletypeValuemonitoring</td>
+<td title='EdgeServices.GlobalCustomOutBoundConnectortypeCreationandDelete.CreateCustomoutboundConnectortypeandDeleting()'><b>CreateCustomoutboundConnectortypeandDeleting</b><br>Test class: EdgeServices.GlobalCustomOutBoundConnectortypeCreationandDelete</td>
 <td></td>
-<td>172</td>
-<td>StreamingService.Test_CreateSensorProfilewithActiontypeFieldmessageandRuletypeValuemonitoring@6f4a47c7</td></tr>
+<td>177</td>
+<td>EdgeServices.GlobalCustomOutBoundConnectortypeCreationandDelete@3023df74</td></tr>
 <tr>
-<td title='StreamingService.Test_Custom_Over_100.TC02_Custom_Over100()'><b>TC02_Custom_Over100</b><br>Test class: StreamingService.Test_Custom_Over_100</td>
+<td title='EdgeServices.GlobalRuleExtensionTypeCreationandDelete.CreateRuleExtensionTypeandDeleting()'><b>CreateRuleExtensionTypeandDeleting</b><br>Test class: EdgeServices.GlobalRuleExtensionTypeCreationandDelete</td>
 <td></td>
-<td>212</td>
-<td>StreamingService.Test_Custom_Over_100@66d18979</td></tr>
-<tr>
-<td title='StreamingService.Test_VM_tiered_warning.TC04_Test_VM_tiered_warning_Flow()'><b>TC04_Test_VM_tiered_warning_Flow</b><br>Test class: StreamingService.Test_VM_tiered_warning</td>
-<td></td>
-<td>336</td>
-<td>StreamingService.Test_VM_tiered_warning@c0c2f8d</td></tr>
-<tr>
-<td title='StreamingService.Test_VM_Tiered_Critical_SensorTag.TC05_Test_VM_Tiered_Critical_SensorTag_Flow()'><b>TC05_Test_VM_Tiered_Critical_SensorTag_Flow</b><br>Test class: StreamingService.Test_VM_Tiered_Critical_SensorTag</td>
-<td></td>
-<td>310</td>
-<td>StreamingService.Test_VM_Tiered_Critical_SensorTag@63475ace</td></tr>
-<tr>
-<td title='StreamingService.Test_VM_tieredcritical_sensorID.TC06_Test_VM_Tiered_Critical_SensorID_Flow()'><b>TC06_Test_VM_Tiered_Critical_SensorID_Flow</b><br>Test class: StreamingService.Test_VM_tieredcritical_sensorID</td>
-<td></td>
-<td>310</td>
-<td>StreamingService.Test_VM_tieredcritical_sensorID@609cd4d8</td></tr>
-<tr>
-<td title='StreamingService.Test_VM_Tiered_critical_devicetag.TC07_Test_VM_Tiered_Critical_Devicetag_Flow()'><b>TC07_Test_VM_Tiered_Critical_Devicetag_Flow</b><br>Test class: StreamingService.Test_VM_Tiered_critical_devicetag</td>
-<td></td>
-<td>349</td>
-<td>StreamingService.Test_VM_Tiered_critical_devicetag@bccb269</td></tr>
-<tr>
-<td title='StreamingService.Test_VM_Tiered_Critical_DeviceID_Flow.TC08_Test_VM_Tiered_Critical_DeviceID_Flow()'><b>TC08_Test_VM_Tiered_Critical_DeviceID_Flow</b><br>Test class: StreamingService.Test_VM_Tiered_Critical_DeviceID_Flow</td>
-<td></td>
-<td>336</td>
-<td>StreamingService.Test_VM_Tiered_Critical_DeviceID_Flow@2de23121</td></tr>
-<tr>
-<td title='StreamingService.Test_VM_tiered_Critical.TC09_Test_VM_tiered_Critical()'><b>TC09_Test_VM_tiered_Critical</b><br>Test class: StreamingService.Test_VM_tiered_Critical</td>
-<td></td>
-<td>328</td>
-<td>StreamingService.Test_VM_tiered_Critical@4988d8b8</td></tr>
-<tr>
-<td title='StreamingService.Test_VM_Smallerthan_Deviceid.TC10_Test_VM_smallerthan_Deviceid()'><b>TC10_Test_VM_smallerthan_Deviceid</b><br>Test class: StreamingService.Test_VM_Smallerthan_Deviceid</td>
-<td></td>
-<td>198</td>
-<td>StreamingService.Test_VM_Smallerthan_Deviceid@587e5365</td></tr>
-<tr>
-<td title='StreamingService.Test_VM_smallerthan.TC11_Test_VM_smallerthan()'><b>TC11_Test_VM_smallerthan</b><br>Test class: StreamingService.Test_VM_smallerthan</td>
-<td></td>
-<td>192</td>
-<td>StreamingService.Test_VM_smallerthan@22fcf7ab</td></tr>
-<tr>
-<td title='StreamingService.Test_VM_equality_Tolerance_DeviceID.TC16_Test_VM_equality_Tolerance_DeviceID()'><b>TC16_Test_VM_equality_Tolerance_DeviceID</b><br>Test class: StreamingService.Test_VM_equality_Tolerance_DeviceID</td>
-<td></td>
-<td>196</td>
-<td>StreamingService.Test_VM_equality_Tolerance_DeviceID@7dc0f706</td></tr>
-<tr>
-<td title='StreamingService.Test_VM_equality_Tolerance.TC17_Test_VM_equality_Tolerance()'><b>TC17_Test_VM_equality_Tolerance</b><br>Test class: StreamingService.Test_VM_equality_Tolerance</td>
-<td></td>
-<td>197</td>
-<td>StreamingService.Test_VM_equality_Tolerance@4009e306</td></tr>
-<tr>
-<td title='StreamingService.Test_VM_equality_deviceid.TC18_Test_VM_equality_deviceid()'><b>TC18_Test_VM_equality_deviceid</b><br>Test class: StreamingService.Test_VM_equality_deviceid</td>
-<td></td>
-<td>212</td>
-<td>StreamingService.Test_VM_equality_deviceid@3d34d211</td></tr>
-<tr>
-<td title='StreamingService.Test_VM_equality.TC19_Test_VM_equality()'><b>TC19_Test_VM_equality</b><br>Test class: StreamingService.Test_VM_equality</td>
-<td></td>
-<td>197</td>
-<td>StreamingService.Test_VM_equality@43c1b556</td></tr>
-<tr>
-<td title='StreamingService.Test_timedstate_greatetha0_sensorTag.TC21_Test_timedstate_greatetha0_sensorTag()'><b>TC21_Test_timedstate_greatetha0_sensorTag</b><br>Test class: StreamingService.Test_timedstate_greatetha0_sensorTag</td>
-<td></td>
-<td>212</td>
-<td>StreamingService.Test_timedstate_greatetha0_sensorTag@6913c1fb</td></tr>
-<tr>
-<td title='StreamingService.Test_VMtwoSensors_SmallerThanGreaterThan.TC_03_TestVMtwoSensors_SmallerThanGreaterThan_Flow()'><b>TC_03_TestVMtwoSensors_SmallerThanGreaterThan_Flow</b><br>Test class: StreamingService.Test_VMtwoSensors_SmallerThanGreaterThan</td>
-<td></td>
-<td>379</td>
-<td>StreamingService.Test_VMtwoSensors_SmallerThanGreaterThan@305b7c14</td></tr>
+<td>106</td>
+<td>EdgeServices.GlobalRuleExtensionTypeCreationandDelete@313ac989</td></tr>
 </table><p>
 </body>
 </html>

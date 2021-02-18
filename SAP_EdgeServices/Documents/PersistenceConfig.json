@@ -1,0 +1,42 @@
+{
+          "IDPConfig": {
+                    "activeProfile": null,
+                    "response": "DEFAULT_SUCCESS",
+                    "status": "success",
+                    "profiles": []
+          },
+          "ResourceRoleMap": {
+                    "resourceMappings": [
+                              {
+                                        "resourceName": "measurementData",
+                                        "validateAuthentication": true,
+                                        "validateAuthorization": false,
+                                        "roles": []
+                              },
+                              {
+                                        "resourceName": "deviceData",
+                                        "validateAuthentication": true,
+                                        "validateAuthorization": false,
+                                        "roles": []
+                              }
+                    ],
+                    "response": null,
+                    "status": "update",
+                    "sessionTimeoutMinutes": 30
+          },
+          "DataRetention": {
+                    "RetentionConfig": {
+                              "defaultSettings": {
+                                        "size": 50000,
+                                        "age": 7,
+                                        "persist": true
+                              },
+                              "status": "update"
+                    }
+          },
+          "SystemConfig": {
+                    "DatabaseConfig": {
+                         "maxCache": "40p"
+                    }
+          }
+}

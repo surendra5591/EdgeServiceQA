@@ -2,6 +2,7 @@
   "SystemConfig" : {
     "ConfigName" : "Default",
     "ConfigVersion" : "1.1.0",
+    "EdgeConsolePassword" : "#{Edge_Console_Password}",
     "Plugins" : {
       "ProtocolPlugins" : {
         "HttpProtocolPlugin" : {
@@ -97,12 +98,12 @@
     "SystemConfigVersion" : "1.1.0",
     "Sensors" : {
       "NumericSensors" : [ {
-        "SensorName" : "Cap1911_1428>>>9972>>>Capalt1911_1428>>>Lattitude",
+        "SensorName" : "Cap2105_1430>>>4532>>>Capalt2105_1430>>>Lattitude",
         "EnableMonitor" : false,
         "Fidelity" : {
-          "Name" : "Cap1911_1428>>>9972>>>Capalt1911_1428>>>Lattitude",
+          "Name" : "Cap2105_1430>>>4532>>>Capalt2105_1430>>>Lattitude",
           "Scope" : "Sensor",
-          "ScopeValue" : "7ebce61c-d55d-44a4-b75c-8333fc4704fb",
+          "ScopeValue" : "77d80eaf-a43c-4335-a819-07f7db9dfab0",
           "EdgeFidelity" : {
             "FrequencyMilliseconds" : 20,
             "KeepIntervalDays" : 7,
@@ -119,12 +120,12 @@
         "AverageKeepIntervalSeconds" : 0,
         "AverageMinimumReadings" : 0
       }, {
-        "SensorName" : "Cap1911_1428>>>9972>>>Capalt1911_1428>>>Longitude",
+        "SensorName" : "Cap2105_1430>>>4532>>>Capalt2105_1430>>>Longitude",
         "EnableMonitor" : false,
         "Fidelity" : {
-          "Name" : "Cap1911_1428>>>9972>>>Capalt1911_1428>>>Longitude",
+          "Name" : "Cap2105_1430>>>4532>>>Capalt2105_1430>>>Longitude",
           "Scope" : "Sensor",
-          "ScopeValue" : "f9b245a4-8525-4f36-847f-4086136f62ba",
+          "ScopeValue" : "6ec0989e-4d1c-44c3-906b-b360eaa8d33a",
           "EdgeFidelity" : {
             "FrequencyMilliseconds" : 20,
             "KeepIntervalDays" : 7,
@@ -148,7 +149,7 @@
         "Fidelity" : {
           "Name" : "SensorDataModel_Lattitude_Largest",
           "Scope" : "Sensor",
-          "ScopeValue" : "8423d67f-8caf-4f2e-98ed-ae219dc427f2",
+          "ScopeValue" : "765499e6-35ee-4f3e-a560-b473c20e7886",
           "EdgeFidelity" : {
             "FrequencyMilliseconds" : 20,
             "KeepIntervalDays" : 7,
@@ -164,39 +165,7 @@
         "MinimumValue" : 0,
         "AverageKeepIntervalSeconds" : 0,
         "AverageMinimumReadings" : 0,
-        "SourceSensorName" : "Cap1911_1428>>>9972>>>Capalt1911_1428>>>Lattitude",
-        "AggregateFunction" : "COUNT",
-        "KeepIntervalSeconds" : 60,
-        "Parameters" : [ {
-          "ParamName" : "USL",
-          "ParamValue" : ""
-        }, {
-          "ParamName" : "LSL",
-          "ParamValue" : ""
-        } ]
-      }, {
-        "SensorName" : "SensorDataModel_Longitude_Largest",
-        "EnableMonitor" : false,
-        "Fidelity" : {
-          "Name" : "SensorDataModel_Longitude_Largest",
-          "Scope" : "Sensor",
-          "ScopeValue" : "fc252f61-bdbf-4c71-9c8e-62d2a8384b7b",
-          "EdgeFidelity" : {
-            "FrequencyMilliseconds" : 20,
-            "KeepIntervalDays" : 7,
-            "MaximumReadings" : 20,
-            "EdgeStorage" : true
-          },
-          "EnterpriseFidelity" : {
-            "FrequencyMilliseconds" : 40,
-            "EnterpriseEndpoints" : [ "IOTServicesPlugin1" ]
-          }
-        },
-        "MaximumValue" : 0,
-        "MinimumValue" : 0,
-        "AverageKeepIntervalSeconds" : 0,
-        "AverageMinimumReadings" : 0,
-        "SourceSensorName" : "Cap1911_1428>>>9972>>>Capalt1911_1428>>>Longitude",
+        "SourceSensorName" : "Cap2105_1430>>>4532>>>Capalt2105_1430>>>Lattitude",
         "AggregateFunction" : "COUNT",
         "KeepIntervalSeconds" : 60,
         "Parameters" : [ {
@@ -208,13 +177,32 @@
         } ]
       } ]
     },
-    "RuleDataSources" : [ ],
+    "RuleDataSources" : [ {
+      "Name" : "RuleDataSource",
+      "Description" : "RDSTesting",
+      "EndpointUrl" : "https://sdsss.com:818",
+      "RequestMethod" : "GET",
+      "AuthenticationType" : "NONE",
+      "Username" : "",
+      "Authentication" : "",
+      "UpdateFrequencyInMinutes" : 20,
+      "CustomHeaders" : "RDSTesting",
+      "DateFormat" : "RDS",
+      "ResponseType" : "BUILT_IN_SCHEMA",
+      "ODataMemberNames" : [ {
+        "Name" : "thresholdingValue",
+        "Value" : ""
+      } ],
+      "OAuthToken" : "",
+      "ContentTypeHeader" : "",
+      "RequestBodyTemplate" : ""
+    } ],
     "Actions" : {
       "FieldMessages" : [ ],
       "SensorFidelityChanges" : [ {
         "ActionName" : "ActionLatitude",
         "Description" : "Action_Latitude",
-        "TargetSensorName" : "Cap1911_1428>>>9972>>>Capalt1911_1428>>>Lattitude",
+        "TargetSensorName" : "Cap2105_1430>>>4532>>>Capalt2105_1430>>>Lattitude",
         "Scope" : "sensorprofile",
         "NewEdgeFrequencyMilliseconds" : 10,
         "EdgeRollbackSeconds" : 30,
@@ -223,7 +211,7 @@
       }, {
         "ActionName" : "ActionLongtitude",
         "Description" : "Longtitude",
-        "TargetSensorName" : "Cap1911_1428>>>9972>>>Capalt1911_1428>>>Longitude",
+        "TargetSensorName" : "Cap2105_1430>>>4532>>>Capalt2105_1430>>>Longitude",
         "Scope" : "sensorprofile",
         "NewEdgeFrequencyMilliseconds" : 10,
         "EdgeRollbackSeconds" : 30,
@@ -237,11 +225,11 @@
     },
     "Rules" : {
       "ValueMonitoringRules" : [ {
-        "RuleName" : "Cap1911_1428LattitudeRule_Latitude",
+        "RuleName" : "Cap2105_1430LattitudeRule_Latitude",
         "Description" : "Lattitude Rule",
-        "SensorName" : "Cap1911_1428>>>9972>>>Capalt1911_1428>>>Lattitude",
+        "SensorName" : "Cap2105_1430>>>4532>>>Capalt2105_1430>>>Lattitude",
         "Scope" : "Sensor",
-        "ScopeValue" : "7ebce61c-d55d-44a4-b75c-8333fc4704fb",
+        "ScopeValue" : "77d80eaf-a43c-4335-a819-07f7db9dfab0",
         "EventFrequencyMilliseconds" : 20,
         "Actions" : [ "ActionLatitude" ],
         "EnterpriseEndpoints" : [ ],
@@ -252,11 +240,11 @@
         "ThresholdOperator" : "GT",
         "ThresholdValue" : 21.000
       }, {
-        "RuleName" : "Cap1911_1428LongitudeRuleLongtitude",
+        "RuleName" : "Cap2105_1430LongitudeRuleLongtitude",
         "Description" : "check demo",
-        "SensorName" : "Cap1911_1428>>>9972>>>Capalt1911_1428>>>Longitude",
+        "SensorName" : "Cap2105_1430>>>4532>>>Capalt2105_1430>>>Longitude",
         "Scope" : "Sensor",
-        "ScopeValue" : "f9b245a4-8525-4f36-847f-4086136f62ba",
+        "ScopeValue" : "6ec0989e-4d1c-44c3-906b-b360eaa8d33a",
         "EventFrequencyMilliseconds" : 20,
         "Actions" : [ "ActionLongtitude" ],
         "EnterpriseEndpoints" : [ ],

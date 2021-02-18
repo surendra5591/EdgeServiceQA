@@ -1,17 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="EdgeServices.InstallServices_RemoveSevice_ReinstallServices_Testcase">
+      <class name="EdgeServices.E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolevalidation">
         <methods>
-          <include name="beforeSuite"/>
-          <include name="beforeMethod"/>
+          <include name="SensorProfilevalidation"/>
           <include name="tearDown"/>
-          <include name="Services_Install_Functionailty_Testcase"/>
+          <include name="AfterClass"/>
+          <include name="beforeSuite"/>
+          <include name="ProjectPublishandDeploymentConfig"/>
+          <include name="beforeMethod"/>
+          <include name="ProjectCreation"/>
+          <include name="AfterSuite"/>
           <include name="beforeClass"/>
+          <include name="GetIOTDataRespectiveGatewayID"/>
         </methods>
-      </class> <!-- EdgeServices.InstallServices_RemoveSevice_ReinstallServices_Testcase -->
+      </class> <!-- EdgeServices.E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolevalidation -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

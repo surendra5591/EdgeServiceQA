@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [EdgeServiceRegression]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="EdgeServices.RestrictPassword_UIMaskingwithAllOutboundconnectortypes">
+        <methods>
+          <include name="tearDown"/>
+          <include name="AfterClass"/>
+          <include name="RestrictPassword_UIMasking_Testcase"/>
+          <include name="beforeSuite"/>
+          <include name="beforeMethod"/>
+          <include name="AfterSuite"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- EdgeServices.RestrictPassword_UIMaskingwithAllOutboundconnectortypes -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [EdgeServiceRegression] -->

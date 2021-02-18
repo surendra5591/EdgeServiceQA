@@ -1,0 +1,1204 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/b4a58fcfd1e137bd9287244035a7c80d3d73b3af/dist/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>./Reports/Edgereport.html</title>
+
+	<style type='text/css'>
+	</style>
+</head>
+
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo blue darken-3">Extent</a>
+
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+		</ul>
+
+		<!-- report name -->
+		<span class='report-name'>Automation Report</span>
+		
+		<!-- report headline -->
+		<span class='report-headline'></span>
+
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<li>
+                <a href='#!'>
+                    <span class='label suite-start-time blue darken-3'>Feb 5, 2021 12:30:35 PM</span>
+				</a>
+			</li>
+			<li>
+                <a href='#!'>
+                    <span class='label blue darken-3'>3.1.5</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+		<!-- container -->
+		<div class='container'>
+
+<div id='test-view' class='view'>
+				
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+
+			<!-- category toggle -->
+			<!-- category toggle -->
+
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+					<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+					<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Tests</h5>
+			<ul id='test-collection' class='test-collection'>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>EdgeServices.GLobalActionCreationandDelete</span>
+						<span class='test-time'>Feb 5, 2021 12:30:35 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 5, 2021 12:30:35 PM</span>
+	<span class='label end-time'>Feb 5, 2021 12:33:43 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 3m 7s+897ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:30:41 PM</td>
+					<td class='step-details'>*******CreateGlobalActionupdateDelete started**********</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:30:41 PM</td>
+					<td class='step-details'>open URL: https://qa6-aws.edge-svc-qa-aws.cfapps.sap.hana.ondemand.com Login successfully into the policyservice and click on the  Edge Designer Tile</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:31:25 PM</td>
+					<td class='step-details'>user is able to enter into the HOME page successfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:31:25 PM</td>
+					<td class='step-details'>click on the edge designer tile window</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:32:13 PM</td>
+					<td class='step-details'>EdgeDesigner tile is opened successfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:32:13 PM</td>
+					<td class='step-details'>Click on the + Symbol in the bottom of the work center to add the Global Action</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:32:32 PM</td>
+					<td class='step-details'>user is able to see the Add Action window successfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:32:32 PM</td>
+					<td class='step-details'>Enter the Action name and description with special characters</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:32:41 PM</td>
+					<td class='step-details'>user is able to add the Global Action name:ActionLatitude0102_1230 successfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:32:47 PM</td>
+					<td class='step-details'>Select Actiontype as Sensor fedility Change,sensor model name as MuthuStyp_CAT987_Cap_Battery and Scope_value as Device</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:33:05 PM</td>
+					<td class='step-details'>user is able to select the Action type as:Sensor Fidelity Changesensor model name and scope_value as:Sensor Profile</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:33:05 PM</td>
+					<td class='step-details'>Enter the fedility frequency,Fedility Rollback,Enterprise_Fedility and Enterprise_fedility_rollback</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:33:16 PM</td>
+					<td class='step-details'>user is able to Enter the fedility frequency as10Fedility Rollback as30Enterprise fedility as10Enterprise fedility rollback as30</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:33:16 PM</td>
+					<td class='step-details'>Click Create Action button and verify Action is created successfully with Action Name</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:33:22 PM</td>
+					<td class='step-details'>Clicked Save Action button and verified Action is created successfully with Action Name as:ActionLatitude0102_1230</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:33:22 PM</td>
+					<td class='step-details'>Click Copy Action button and verify user is able to copay action</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:33:31 PM</td>
+					<td class='step-details'>Clicked Copy Action button and verified user is able to copay action</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:33:31 PM</td>
+					<td class='step-details'>Click on Delete Action button and verify user is not able to Delete Global action</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:33:43 PM</td>
+					<td class='step-details'>Clicked on Delete Action button and verified user is able to Delete Global action</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:33:43 PM</td>
+					<td class='step-details'>CreateGlobalActionupdateDelete is passed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
+					<div class='test-heading'>
+						<span class='test-name'>EdgeServices.GlobalRDSCreationAndDelete</span>
+						<span class='test-time'>Feb 5, 2021 12:33:44 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 5, 2021 12:33:44 PM</span>
+	<span class='label end-time'>Feb 5, 2021 12:38:59 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 5m 14s+484ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:33:50 PM</td>
+					<td class='step-details'>*******CreateRDSwithGetMethod started**********</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:33:50 PM</td>
+					<td class='step-details'>open URL: https://qa6-aws.edge-svc-qa-aws.cfapps.sap.hana.ondemand.com Login successfully into the policyservice and click on the  Edge Designer Tile</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:34:36 PM</td>
+					<td class='step-details'>user is able to enter into the HOME page successfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:34:36 PM</td>
+					<td class='step-details'>click on the edge designer tile window</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:35:24 PM</td>
+					<td class='step-details'>EdgeDesigner tile is opened successfully</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:35:40 PM</td>
+					<td class='step-details'>user is move to add the Rule data source page successfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:35:40 PM</td>
+					<td class='step-details'>Enter the Rule name and description with special characters</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:35:45 PM</td>
+					<td class='step-details'>user is able to enter the Rule name as:RuleDataSourceGET0102_1230 successfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:35:45 PM</td>
+					<td class='step-details'>Enter the HTTP_Endpoint url and select the Request method from dropdown</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:35:59 PM</td>
+					<td class='step-details'>user is able to enter the HTTP_EndPoint url as https://sdsss.com:818: and select the request medhtod as GET</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:35:59 PM</td>
+					<td class='step-details'>Select the Authentication type and enter the value for update freqency</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:36:12 PM</td>
+					<td class='step-details'>user is able to select the Authentication type as:None:and entered the update frequency as:20</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:36:12 PM</td>
+					<td class='step-details'>Enter the value for Custom Headers and Date format in the Rule datasoruce window</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:36:17 PM</td>
+					<td class='step-details'>user is able to enter the custom_Headers as:RDSTesting:and date format as:RDS</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:36:17 PM</td>
+					<td class='step-details'>Select the Resonse type and click on the Create button to save the Rule data source successfully</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:36:32 PM</td>
+					<td class='step-details'>user is able to select the Respnse type as:Built-in Schemaand successfully saved the Rule data source as:Built-in Schema</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:36:32 PM</td>
+					<td class='step-details'>CreateRDSwithGetMethod is passed</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:36:32 PM</td>
+					<td class='step-details'>*******Copy_Edit_Update_Save_DeleteGetMethodRDS started**********</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:36:32 PM</td>
+					<td class='step-details'>Copy RDS and Edit Created RDS Description field and click save button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:36:38 PM</td>
+					<td class='step-details'>Clicked Copy RDS button and verified user is able to copay RDS</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:36:58 PM</td>
+					<td class='step-details'>user is able to Update the Global RDS name as:RuleDataSourceGET0102_1230</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:36:58 PM</td>
+					<td class='step-details'>Select Created RDS and click delete button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:37:11 PM</td>
+					<td class='step-details'>user is able to Delete Global RDS:RuleDataSourceGET0102_1230</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:37:11 PM</td>
+					<td class='step-details'>Copy_Edit_Update_Save_DeleteGetMethodRDS is passed</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:37:11 PM</td>
+					<td class='step-details'>*******CreateRDSwithPostMethod started**********</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:37:11 PM</td>
+					<td class='step-details'>Create RDS with post method request and Enter the name and description</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:37:22 PM</td>
+					<td class='step-details'>user is able to enter the Rule data source name as:RuleDataSourcePOST0102_1230 successfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:37:22 PM</td>
+					<td class='step-details'>Enter the HTTP_Endpoint url and select the Request method from dropdown</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:37:36 PM</td>
+					<td class='step-details'>user is able to enter the HTTP_EndPoint url as https://sdsss.com:818: and select the request medhtod as POST</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:37:36 PM</td>
+					<td class='step-details'>Enter the values for content_type header and Request body Template</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:37:44 PM</td>
+					<td class='step-details'>user is able to enter the content type Header value as:RDSHeader and Enter the Request body Template asRDSTemplate</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:37:44 PM</td>
+					<td class='step-details'>Select the Authentication type and enter the value for update freqency</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:38:00 PM</td>
+					<td class='step-details'>user is able to select the Authentication type as:None:and entered the update frequency as:20</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:38:00 PM</td>
+					<td class='step-details'>Enter the value for Custom Headers and Date format in the Rule datasoruce window</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:38:09 PM</td>
+					<td class='step-details'>user is able to enter the custom_Headers as:RDSTesting:and date format as:RDS</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:38:09 PM</td>
+					<td class='step-details'>Select the Resonse type and click on the Create button to save the Rule data source successfully</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:38:29 PM</td>
+					<td class='step-details'>user is able to select the Respnse type as:Built-in Schemaand successfully saved the Rule data source as:Built-in Schema</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:38:29 PM</td>
+					<td class='step-details'>CreateRDSwithPostMethod is passed</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:38:29 PM</td>
+					<td class='step-details'>*******Edit_Update_Save_DeletePostMethodRDS started**********</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:38:29 PM</td>
+					<td class='step-details'>Edit Created RDS Description field and click save button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:38:47 PM</td>
+					<td class='step-details'>user is able to Update the Global RDS name as:RuleDataSourcePOST0102_1230</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:38:47 PM</td>
+					<td class='step-details'>Select Created RDS and click delete button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:38:59 PM</td>
+					<td class='step-details'>user is able to Delete Global RDS:RuleDataSourcePOST0102_1230</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:38:59 PM</td>
+					<td class='step-details'>Edit_Update_Save_DeletePostMethodRDS is passed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>EdgeServices.InboundConnectorTypeslistandOutBoundConnectortypeCreateUpdateandDelete</span>
+						<span class='test-time'>Feb 5, 2021 12:39:00 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 5, 2021 12:39:00 PM</span>
+	<span class='label end-time'>Feb 5, 2021 12:43:47 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 4m 47s+607ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:39:05 PM</td>
+					<td class='step-details'>*******TC01_ViewList_InboundConnectorstypes started**********</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:39:05 PM</td>
+					<td class='step-details'>open URL: https://qa6-aws.edge-svc-qa-aws.cfapps.sap.hana.ondemand.com Login successfully into the policyservice and click on the  Edge Designer Tile</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:39:50 PM</td>
+					<td class='step-details'>user is able to enter into the HOME page successfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:39:50 PM</td>
+					<td class='step-details'>click on the edge designer tile window</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:40:36 PM</td>
+					<td class='step-details'>EdgeDesigner tile is opened successfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:40:36 PM</td>
+					<td class='step-details'>Click on custom setting on left side and Click on Inbound connectors types link and verify the view list of default connectors</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:41:03 PM</td>
+					<td class='step-details'>User is able to see the view list of default connectors with HTTPInboundConnector and IoTServiceEdgeConnector</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:41:03 PM</td>
+					<td class='step-details'>TC01_ViewList_InboundConnectorstypes is passed</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:41:03 PM</td>
+					<td class='step-details'>*******TC02_GlobaloutboundConnectortypeandDeleting started**********</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:41:03 PM</td>
+					<td class='step-details'>Click on Outbound connectors types link and Add Custom Outbound connector types</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:42:05 PM</td>
+					<td class='step-details'>user is able to add custom outboundconnector type successfully as:ConnectortypeName0102_1230</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:42:05 PM</td>
+					<td class='step-details'>user is adding parameters for custom outboundconnector type</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:42:56 PM</td>
+					<td class='step-details'>user is able to add parameter for custom outboundconnector type successfully as: DispalyparameterName</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:42:56 PM</td>
+					<td class='step-details'>Check wheather user is able click on outbound connector type link and able  to Delete outbound connector types successfully</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:43:47 PM</td>
+					<td class='step-details'>user is able to Delete outbound connector types successfully :ConnectortypeName0102_1230</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:43:47 PM</td>
+					<td class='step-details'>TC02_GlobaloutboundConnectortypeandDeleting is passed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>EdgeServices.RestrictPassword_UIMaskingwithAllOutboundconnectortypes</span>
+						<span class='test-time'>Feb 5, 2021 12:43:48 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Feb 5, 2021 12:43:48 PM</span>
+	<span class='label end-time'>Feb 5, 2021 01:02:11 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 18m 23s+271ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:43:53 PM</td>
+					<td class='step-details'>*******RestrictPassword_UIMasking_Testcase started**********</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:43:53 PM</td>
+					<td class='step-details'>open URL: https://qa6-aws.edge-svc-qa-aws.cfapps.sap.hana.ondemand.com Login successfully into the policyservice and click on the  Edge Designer Tile</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:44:41 PM</td>
+					<td class='step-details'>user is able to enter into the HOME page successfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:44:41 PM</td>
+					<td class='step-details'>click on the edge designer tile window</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:45:32 PM</td>
+					<td class='step-details'>EdgeDesigner tile is opened successfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:45:32 PM</td>
+					<td class='step-details'>Click on the + Symbol in the bottom of the work center to add the project</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:45:45 PM</td>
+					<td class='step-details'>user is able to see Add Prject pop up successfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:45:45 PM</td>
+					<td class='step-details'>Enter the name of the project and Enter description of the project and click on the create button</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:46:13 PM</td>
+					<td class='step-details'>user is able to create Project with name:RestrictPasswordProject0102_1230and Group Description:Securitychecksuccessfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:46:13 PM</td>
+					<td class='step-details'>click on the Rune time setting tab to project and click to save after editing</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:46:24 PM</td>
+					<td class='step-details'>Runtime Settings updated successfully with a toast: Runtime Settings updated successfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:46:24 PM</td>
+					<td class='step-details'>click on the Connector tab to add the Rest Outbound connector</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:46:59 PM</td>
+					<td class='step-details'>user is able to create the Rest Plugin name in the project with:Rest_outbound</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:46:59 PM</td>
+					<td class='step-details'>click on the Rest Plugin and add the optional parameter Basic Auth Password</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:47:32 PM</td>
+					<td class='step-details'>Basic Auth password is masked as*****</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:47:32 PM</td>
+					<td class='step-details'>click on + add to the optional parameter KeyManager Password</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:47:56 PM</td>
+					<td class='step-details'>Key Manager password is masked as*****</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:47:56 PM</td>
+					<td class='step-details'>click on the +add to the optional parameter KeyStore Password</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:48:20 PM</td>
+					<td class='step-details'>Key store password is masked as*****</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:48:20 PM</td>
+					<td class='step-details'>click on the + add to the optional parameter Truststore Password</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:48:44 PM</td>
+					<td class='step-details'>Truststore password is masked as*****</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:48:44 PM</td>
+					<td class='step-details'>click on the connector tab to add the MQTT Outbound Connector</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:49:23 PM</td>
+					<td class='step-details'>user is able to create the MQTT outbound connector name in the project with:MQTT_Outbound</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:49:23 PM</td>
+					<td class='step-details'>click on the MQTT outbound connector and add the Basic Client Password optional parameters</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:49:56 PM</td>
+					<td class='step-details'>Client Password is masked as*****</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:49:56 PM</td>
+					<td class='step-details'>click on the MQTT outbound connector and add the optional parameter KeyStore Password</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:50:19 PM</td>
+					<td class='step-details'>Key store password is masked as*****</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:50:19 PM</td>
+					<td class='step-details'>click on the MQTT outbound connector and add the optional parameter Truststore Password</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:50:43 PM</td>
+					<td class='step-details'>Truststore password is masked as*****</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:50:43 PM</td>
+					<td class='step-details'>click on the connector tab and add the WebSocket outbound connector</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:51:22 PM</td>
+					<td class='step-details'>user is able to create the Websocket outbound connector name in the project with:WebSocketoutbound</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:51:22 PM</td>
+					<td class='step-details'>click on the Websocket outbound connector and add the optional parameter Basic Auth Password</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:51:52 PM</td>
+					<td class='step-details'>Basic Auth password is masked as*****</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:51:52 PM</td>
+					<td class='step-details'>click on Websocket outbound connector and add the optional parameter KeyManager Password</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:52:16 PM</td>
+					<td class='step-details'>Key Manager password is masked as*****</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:52:16 PM</td>
+					<td class='step-details'>click on the Websocket outbound connector and add the optional parameter KeyStore Password</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:52:40 PM</td>
+					<td class='step-details'>Key store password is masked as*****</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:52:40 PM</td>
+					<td class='step-details'>click on the Websocket outbound connector and add the optional parameter Truststore Password</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:53:04 PM</td>
+					<td class='step-details'>Truststore password is masked as*****</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:53:04 PM</td>
+					<td class='step-details'>click on the connector tab to add the HDFS Outbound Connector</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:53:50 PM</td>
+					<td class='step-details'>user is able to create the HDFS Outbound Connector name in the project with:HDFSPoutbound</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:53:50 PM</td>
+					<td class='step-details'>click on the HDFS Outbound Connector and add the optional parameter Delegation Token</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:54:23 PM</td>
+					<td class='step-details'>Delegation Token is masked as*****</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:54:23 PM</td>
+					<td class='step-details'>click the HDFS Outbound Connector and add the optional parameter Oauth2Token</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:54:47 PM</td>
+					<td class='step-details'>Oauth2Token password is masked as*****</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:54:47 PM</td>
+					<td class='step-details'>Delete optional paramenter from outbound connector validation</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:55:00 PM</td>
+					<td class='step-details'>user is able to Delete optional parameter succeffully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:55:00 PM</td>
+					<td class='step-details'>click on the connector tab to add the SDS outbound connector and Edit Maximum Queue and try to enter any value, save the outbound connector created</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:55:31 PM</td>
+					<td class='step-details'>user is able to edit Maximum Queue size and enter new vlue129 By default it should be in MB</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:55:31 PM</td>
+					<td class='step-details'>Enter all SDS outbound connector parameters field save the outbound connector created</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:55:52 PM</td>
+					<td class='step-details'>user is able to create the SDS outbound connector name in the project with:SDS_plugin</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:55:52 PM</td>
+					<td class='step-details'>Export Project outbound connetor to Global validation</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:56:02 PM</td>
+					<td class='step-details'>user is able to export the SDS outbound connector as global</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:56:02 PM</td>
+					<td class='step-details'>click on the outbound connector link and update field validation</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:56:16 PM</td>
+					<td class='step-details'>user is able to update the SDS outbound connector name in the projet</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:56:16 PM</td>
+					<td class='step-details'>click on the Plugin tab to add the SDS outbound connector with dupicate name validation</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:56:42 PM</td>
+					<td class='step-details'>user can not create the outbound connector in the project with invalid name as: $%#>.#@$<@</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:57:38 PM</td>
+					<td class='step-details'>user can not create the outbound connector with duplicate name in the project with:EVENTDATA</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:57:52 PM</td>
+					<td class='step-details'>Click on the validate button on top right corner of the work center</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:58:07 PM</td>
+					<td class='step-details'>user is able to validate the project:RestrictPasswordProject0102_1230successfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:58:07 PM</td>
+					<td class='step-details'>Click on the publish button on top right corner of the work center</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:58:57 PM</td>
+					<td class='step-details'>user is able to publish the project with configuration name as:RestricpasswordConfig0102_1230successfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:58:57 PM</td>
+					<td class='step-details'>Search  the project and delete selected project from list</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:00:24 PM</td>
+					<td class='step-details'>project successfully deleted from list with name was RestrictPasswordProject0102_1230</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:00:24 PM</td>
+					<td class='step-details'>Click on the SAP logo>> and move to home page and click on edge service managment tile</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:01:17 PM</td>
+					<td class='step-details'>user is able to click on the Gateway management tile successully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:01:17 PM</td>
+					<td class='step-details'>Move to Service page</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:01:30 PM</td>
+					<td class='step-details'>user is able to move service page successfully</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:01:42 PM</td>
+					<td class='step-details'>user is able to see the Steaming services window opened in the work center</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:01:42 PM</td>
+					<td class='step-details'>Downloaded json file is successfully store in th foloder</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:02:11 PM</td>
+					<td class='step-details'>user is able to see the json file as well as able to download successfully in the UI</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:02:11 PM</td>
+					<td class='step-details'>Validate json file with Stored value password for all enterprise plugins</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:02:11 PM</td>
+					<td class='step-details'>user is able to see the password value as unmasked in downloaded json fileBasicAuthPassword :Test123</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:02:11 PM</td>
+					<td class='step-details'>user is able to see the password value as unmasked in downloaded json fileKeyManagerPassword :Test123</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:02:11 PM</td>
+					<td class='step-details'>user is able to see the password value as unmasked in downloaded json fileKeyStorePassword :Test123</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:02:11 PM</td>
+					<td class='step-details'>user is able to see the password value as unmasked in downloaded json fileTrustStorePassword :Test123</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:02:11 PM</td>
+					<td class='step-details'>user is able to see the password value as unmasked in downloaded json fileBasicAuthPassword :Test123</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:02:11 PM</td>
+					<td class='step-details'>user is able to see the password value as unmasked in downloaded json fileKeyManagerPassword :Test123</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:02:11 PM</td>
+					<td class='step-details'>user is able to see the password value as unmasked in downloaded json fileKeyStorePassword :Test123</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:02:11 PM</td>
+					<td class='step-details'>user is able to see the password value as unmasked in downloaded json fileTrustStorePassword :Test123</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:02:11 PM</td>
+					<td class='step-details'>user is able to see the password value as unmasked in downloaded json fileClientPassword :Test123</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:02:11 PM</td>
+					<td class='step-details'>user is able to see the password value as unmasked in downloaded json fileKeyStorePassword :Test123</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:02:11 PM</td>
+					<td class='step-details'>user is able to see the password value as unmasked in downloaded json fileTrustStorePassword :Test123</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:02:11 PM</td>
+					<td class='step-details'>user is able to see the password value as unmasked in downloaded json fileDelegationToken :Test123</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:02:11 PM</td>
+					<td class='step-details'>RestrictPassword_UIMasking_Testcase is passed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='test-name'></h5>
+
+			<div id='step-filters' class="right">
+				<span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
+				<span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
+				<span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
+				<span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
+				<span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
+				<span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
+				<span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
+				<span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
+			</div>
+		</div>
+	</div>
+	<!-- subview right -->
+
+
+<div id='test-view-charts' class='subview-full'>
+	<div id='charts-row' class='row nm-v nm-h'>
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Tests</div>
+				<div class='chart-box'>
+					<canvas id='parent-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>4</span> test(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Steps</div>
+				<div class='chart-box'>
+					<canvas id='child-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='54.545%'><span class='strong'>90</span> step(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='45.455%'>75</span> others
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+</div>
+<!-- test view -->
+<!-- category view -->
+<!-- exception view -->
+<div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>4</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>165</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Feb 5, 2021 12:30:35 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Feb 5, 2021 01:02:11 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>0h 31m 35s+739ms</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->
+		</div>
+		<!-- container -->
+
+		<script>
+			var statusGroup = {
+				passParent: 4,
+				failParent: 0,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 0,
+				
+				passChild: 90,
+				failChild: 0,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 75,
+				exceptionsChild: 0,
+				
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		
+			<script src='https://cdn.rawgit.com/anshooarora/extentreports-java/fca20fb7653aade98810546ab96a2a4360e3e712/dist/js/extent.js' type='text/javascript'></script>
+		
+		
+ 		<script type='text/javascript'>
+ 		</script>
+	</body>
+	
+</html>
