@@ -1,109 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="12" total="23" passed="10" failed="1" skipped="0">
+<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-02-11T10:37:26 IST" name="EdgeServiceSmoke" finished-at="2021-02-11T12:29:53 IST" duration-ms="6747242">
+  <suite started-at="2021-03-15T13:46:57 IST" name="Default suite" finished-at="2021-03-15T14:39:31 IST" duration-ms="3153471">
     <groups>
     </groups>
-    <test started-at="2021-02-11T10:37:26 IST" name="Test" finished-at="2021-02-11T12:29:53 IST" duration-ms="6747242">
-      <class name="EdgeServices.RemoveCoreSevicesfromGateway_ReinstallCoreServicestoGateway">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:EdgeServices.RemoveCoreSevicesfromGateway_ReinstallCoreServicestoGateway@12bd8a64]" started-at="2021-02-11T11:49:36 IST" name="beforeClass" finished-at="2021-02-11T11:49:41 IST" duration-ms="4969" status="PASS">
+    <test started-at="2021-03-15T13:46:57 IST" name="Default test" finished-at="2021-03-15T14:39:31 IST" duration-ms="3153471">
+      <class name="EdgeServices.E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolevalidation">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:EdgeServices.E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolevalidation@25a6944c]" started-at="2021-03-15T13:46:57 IST" name="beforeSuite" finished-at="2021-03-15T13:46:57 IST" duration-ms="208" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="beforeClass()[pri:0, instance:EdgeServices.E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolevalidation@25a6944c]" started-at="2021-03-15T13:46:57 IST" name="beforeClass" finished-at="2021-03-15T13:47:02 IST" duration-ms="4168" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:EdgeServices.RemoveCoreSevicesfromGateway_ReinstallCoreServicestoGateway@12bd8a64]" started-at="2021-02-11T11:49:41 IST" name="beforeMethod" finished-at="2021-02-11T11:49:41 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:EdgeServices.E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolevalidation@25a6944c]" started-at="2021-03-15T13:47:02 IST" name="beforeMethod" finished-at="2021-03-15T13:47:02 IST" duration-ms="7" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void EdgeServices.RemoveCoreSevicesfromGateway_ReinstallCoreServicestoGateway.Services_Reinstall_Functionailty_Testcase()]]>
+                <![CDATA[public void EdgeServices.E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolevalidation.GetIOTDataRespectiveGatewayID() throws java.lang.Exception]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="Services_Reinstall_Functionailty_Testcase()[pri:0, instance:EdgeServices.RemoveCoreSevicesfromGateway_ReinstallCoreServicestoGateway@12bd8a64]" started-at="2021-02-11T11:49:41 IST" name="Services_Reinstall_Functionailty_Testcase" finished-at="2021-02-11T12:29:52 IST" duration-ms="2411570" status="PASS">
+        <test-method signature="GetIOTDataRespectiveGatewayID()[pri:0, instance:EdgeServices.E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolevalidation@25a6944c]" started-at="2021-03-15T13:47:02 IST" name="GetIOTDataRespectiveGatewayID" finished-at="2021-03-15T13:49:11 IST" duration-ms="129223" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Services_Reinstall_Functionailty_Testcase -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:EdgeServices.RemoveCoreSevicesfromGateway_ReinstallCoreServicestoGateway@12bd8a64]" started-at="2021-02-11T12:29:52 IST" name="tearDown" finished-at="2021-02-11T12:29:52 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- GetIOTDataRespectiveGatewayID -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:EdgeServices.E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolevalidation@25a6944c]" started-at="2021-03-15T13:49:11 IST" name="tearDown" finished-at="2021-03-15T13:49:11 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Services_Reinstall_Functionailty_Testcase status=SUCCESS method=RemoveCoreSevicesfromGateway_ReinstallCoreServicestoGateway.Services_Reinstall_Functionailty_Testcase()[pri:0, instance:EdgeServices.RemoveCoreSevicesfromGateway_ReinstallCoreServicestoGateway@12bd8a64] output={null}]]]>
+                <![CDATA[[TestResult name=GetIOTDataRespectiveGatewayID status=SUCCESS method=E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolevalidation.GetIOTDataRespectiveGatewayID()[pri:0, instance:EdgeServices.E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolevalidation@25a6944c] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="AfterClass()[pri:0, instance:EdgeServices.RemoveCoreSevicesfromGateway_ReinstallCoreServicestoGateway@12bd8a64]" started-at="2021-02-11T12:29:52 IST" name="AfterClass" finished-at="2021-02-11T12:29:53 IST" duration-ms="999" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterClass -->
-      </class> <!-- EdgeServices.RemoveCoreSevicesfromGateway_ReinstallCoreServicestoGateway -->
-      <class name="EdgeServices.CreateGroup_AddingGateway_AddingServices_CombineStreamingConfigs_DeployConfigs">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:EdgeServices.CreateGroup_AddingGateway_AddingServices_CombineStreamingConfigs_DeployConfigs@19648c40]" started-at="2021-02-11T11:35:48 IST" name="beforeClass" finished-at="2021-02-11T11:35:52 IST" duration-ms="4855" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:EdgeServices.CreateGroup_AddingGateway_AddingServices_CombineStreamingConfigs_DeployConfigs@19648c40]" started-at="2021-02-11T11:35:52 IST" name="beforeMethod" finished-at="2021-02-11T11:35:52 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:EdgeServices.E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolevalidation@25a6944c]" started-at="2021-03-15T13:49:11 IST" name="beforeMethod" finished-at="2021-03-15T13:49:11 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void EdgeServices.CreateGroup_AddingGateway_AddingServices_CombineStreamingConfigs_DeployConfigs.PolicyServiceGroupandGatewayfunctionality() throws java.lang.InterruptedException]]>
+                <![CDATA[public void EdgeServices.E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolevalidation.ProjectCreation()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="PolicyServiceGroupandGatewayfunctionality()[pri:0, instance:EdgeServices.CreateGroup_AddingGateway_AddingServices_CombineStreamingConfigs_DeployConfigs@19648c40]" started-at="2021-02-11T11:35:52 IST" name="PolicyServiceGroupandGatewayfunctionality" finished-at="2021-02-11T11:49:34 IST" duration-ms="821709" status="PASS">
+        <test-method signature="ProjectCreation()[pri:0, instance:EdgeServices.E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolevalidation@25a6944c]" started-at="2021-03-15T13:49:11 IST" name="ProjectCreation" finished-at="2021-03-15T14:16:18 IST" depends-on-methods="EdgeServices.E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolevalidation.GetIOTDataRespectiveGatewayID" duration-ms="1627295" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- PolicyServiceGroupandGatewayfunctionality -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:EdgeServices.CreateGroup_AddingGateway_AddingServices_CombineStreamingConfigs_DeployConfigs@19648c40]" started-at="2021-02-11T11:49:34 IST" name="tearDown" finished-at="2021-02-11T11:49:34 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- ProjectCreation -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:EdgeServices.E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolevalidation@25a6944c]" started-at="2021-03-15T14:16:18 IST" name="tearDown" finished-at="2021-03-15T14:16:18 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=PolicyServiceGroupandGatewayfunctionality status=SUCCESS method=CreateGroup_AddingGateway_AddingServices_CombineStreamingConfigs_DeployConfigs.PolicyServiceGroupandGatewayfunctionality()[pri:0, instance:EdgeServices.CreateGroup_AddingGateway_AddingServices_CombineStreamingConfigs_DeployConfigs@19648c40] output={null}]]]>
+                <![CDATA[[TestResult name=ProjectCreation status=SUCCESS method=E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolevalidation.ProjectCreation()[pri:0, instance:EdgeServices.E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolevalidation@25a6944c] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="AfterClass()[pri:0, instance:EdgeServices.CreateGroup_AddingGateway_AddingServices_CombineStreamingConfigs_DeployConfigs@19648c40]" started-at="2021-02-11T11:49:34 IST" name="AfterClass" finished-at="2021-02-11T11:49:36 IST" duration-ms="1628" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterClass -->
-      </class> <!-- EdgeServices.CreateGroup_AddingGateway_AddingServices_CombineStreamingConfigs_DeployConfigs -->
-      <class name="EdgeServices.PersistenceServiceConfigurationCreationByDataRetensionandDeployedtoGateway">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:EdgeServices.PersistenceServiceConfigurationCreationByDataRetensionandDeployedtoGateway@4fce136b]" started-at="2021-02-11T10:45:43 IST" name="beforeClass" finished-at="2021-02-11T10:45:50 IST" duration-ms="6234" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:EdgeServices.PersistenceServiceConfigurationCreationByDataRetensionandDeployedtoGateway@4fce136b]" started-at="2021-02-11T10:45:50 IST" name="beforeMethod" finished-at="2021-02-11T10:45:50 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:EdgeServices.E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolevalidation@25a6944c]" started-at="2021-03-15T14:16:18 IST" name="beforeMethod" finished-at="2021-03-15T14:16:18 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void EdgeServices.PersistenceServiceConfigurationCreationByDataRetensionandDeployedtoGateway.PersistenceService_DataRetension_flow() throws java.lang.Exception]]>
+                <![CDATA[public void EdgeServices.E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolevalidation.ProjectPublishandDeploymentConfig()]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="PersistenceService_DataRetension_flow()[pri:0, instance:EdgeServices.PersistenceServiceConfigurationCreationByDataRetensionandDeployedtoGateway@4fce136b]" started-at="2021-02-11T10:45:50 IST" name="PersistenceService_DataRetension_flow" finished-at="2021-02-11T10:59:12 IST" duration-ms="802042" status="FAIL">
-          <exception class="java.lang.NullPointerException">
+        <test-method signature="ProjectPublishandDeploymentConfig()[pri:0, instance:EdgeServices.E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolevalidation@25a6944c]" started-at="2021-03-15T14:16:18 IST" name="ProjectPublishandDeploymentConfig" finished-at="2021-03-15T14:22:23 IST" depends-on-methods="EdgeServices.E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolevalidation.ProjectCreation" duration-ms="365085" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ProjectPublishandDeploymentConfig -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:EdgeServices.E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolevalidation@25a6944c]" started-at="2021-03-15T14:22:23 IST" name="tearDown" finished-at="2021-03-15T14:22:23 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=ProjectPublishandDeploymentConfig status=SUCCESS method=E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolevalidation.ProjectPublishandDeploymentConfig()[pri:0, instance:EdgeServices.E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolevalidation@25a6944c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:EdgeServices.E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolevalidation@25a6944c]" started-at="2021-03-15T14:22:23 IST" name="beforeMethod" finished-at="2021-03-15T14:22:23 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void EdgeServices.E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolevalidation.SensorProfilevalidation()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="SensorProfilevalidation()[pri:0, instance:EdgeServices.E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolevalidation@25a6944c]" started-at="2021-03-15T14:22:23 IST" name="SensorProfilevalidation" finished-at="2021-03-15T14:39:26 IST" depends-on-methods="EdgeServices.E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolevalidation.ProjectPublishandDeploymentConfig" duration-ms="1022783" status="FAIL">
+          <exception class="java.lang.IllegalArgumentException">
             <message>
-              <![CDATA[Cannot invoke "UtilityComponent.FunctionalComponents.getScreenshot()" because "this.functionalcomponents" is null]]>
+              <![CDATA[Cannot find elements when the XPath is null.]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "UtilityComponent.FunctionalComponents.getScreenshot()" because "this.functionalcomponents" is null
-at BaseComponent.BaseTest.failedDescription(BaseTest.java:111)
-at EdgeServiceComponents.EdgeServiceFunctions.PersistenceConfigDeploymenttoGateway(EdgeServiceFunctions.java:245)
-at EdgeServices.PersistenceServiceConfigurationCreationByDataRetensionandDeployedtoGateway.PersistenceService_DataRetension_flow(PersistenceServiceConfigurationCreationByDataRetensionandDeployedtoGateway.java:114)
+              <![CDATA[java.lang.IllegalArgumentException: Cannot find elements when the XPath is null.
+at org.openqa.selenium.By$ByXPath.<init>(By.java:339)
+at org.openqa.selenium.By.xpath(By.java:92)
+at UtilityComponent.FunctionalComponents.scrollToExact(FunctionalComponents.java:357)
+at EdgeServices.E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolevalidation.SensorProfilevalidation(E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolevalidation.java:1821)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -134,282 +145,30 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- java.lang.IllegalArgumentException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- PersistenceService_DataRetension_flow -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:EdgeServices.PersistenceServiceConfigurationCreationByDataRetensionandDeployedtoGateway@4fce136b]" started-at="2021-02-11T10:59:12 IST" name="tearDown" finished-at="2021-02-11T10:59:12 IST" duration-ms="670" status="PASS">
+        </test-method> <!-- SensorProfilevalidation -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:EdgeServices.E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolevalidation@25a6944c]" started-at="2021-03-15T14:39:26 IST" name="tearDown" finished-at="2021-03-15T14:39:26 IST" duration-ms="327" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=PersistenceService_DataRetension_flow status=FAILURE method=PersistenceServiceConfigurationCreationByDataRetensionandDeployedtoGateway.PersistenceService_DataRetension_flow()[pri:0, instance:EdgeServices.PersistenceServiceConfigurationCreationByDataRetensionandDeployedtoGateway@4fce136b] output={null}]]]>
+                <![CDATA[[TestResult name=SensorProfilevalidation status=FAILURE method=E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolevalidation.SensorProfilevalidation()[pri:0, instance:EdgeServices.E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolevalidation@25a6944c] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="AfterClass()[pri:0, instance:EdgeServices.PersistenceServiceConfigurationCreationByDataRetensionandDeployedtoGateway@4fce136b]" started-at="2021-02-11T10:59:12 IST" name="AfterClass" finished-at="2021-02-11T10:59:13 IST" duration-ms="754" status="PASS">
+        <test-method is-config="true" signature="AfterClass()[pri:0, instance:EdgeServices.E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolevalidation@25a6944c]" started-at="2021-03-15T14:39:26 IST" name="AfterClass" finished-at="2021-03-15T14:39:31 IST" duration-ms="4535" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterClass -->
-      </class> <!-- EdgeServices.PersistenceServiceConfigurationCreationByDataRetensionandDeployedtoGateway -->
-      <class name="EdgeServices.CustomServiceCreation_CustomConfigCreation_DeployConfigstoGateway_DeleteServiceandConfig">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:EdgeServices.CustomServiceCreation_CustomConfigCreation_DeployConfigstoGateway_DeleteServiceandConfig@4aa83f4f]" started-at="2021-02-11T10:59:13 IST" name="beforeClass" finished-at="2021-02-11T10:59:18 IST" duration-ms="4969" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method signature="CreateCustomServicewithConfigsandDeployed()[pri:0, instance:EdgeServices.CustomServiceCreation_CustomConfigCreation_DeployConfigstoGateway_DeleteServiceandConfig@4aa83f4f]" started-at="2021-02-11T10:59:18 IST" name="CreateCustomServicewithConfigsandDeployed" finished-at="2021-02-11T11:12:15 IST" duration-ms="777197" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CreateCustomServicewithConfigsandDeployed -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:EdgeServices.CustomServiceCreation_CustomConfigCreation_DeployConfigstoGateway_DeleteServiceandConfig@4aa83f4f]" started-at="2021-02-11T10:59:18 IST" name="beforeMethod" finished-at="2021-02-11T10:59:18 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void EdgeServices.CustomServiceCreation_CustomConfigCreation_DeployConfigstoGateway_DeleteServiceandConfig.CreateCustomServicewithConfigsandDeployed()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method is-config="true" signature="AfterClass()[pri:0, instance:EdgeServices.CustomServiceCreation_CustomConfigCreation_DeployConfigstoGateway_DeleteServiceandConfig@4aa83f4f]" started-at="2021-02-11T11:12:15 IST" name="AfterClass" finished-at="2021-02-11T11:12:16 IST" duration-ms="964" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterClass -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:EdgeServices.CustomServiceCreation_CustomConfigCreation_DeployConfigstoGateway_DeleteServiceandConfig@4aa83f4f]" started-at="2021-02-11T11:12:15 IST" name="tearDown" finished-at="2021-02-11T11:12:15 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=CreateCustomServicewithConfigsandDeployed status=SUCCESS method=CustomServiceCreation_CustomConfigCreation_DeployConfigstoGateway_DeleteServiceandConfig.CreateCustomServicewithConfigsandDeployed()[pri:0, instance:EdgeServices.CustomServiceCreation_CustomConfigCreation_DeployConfigstoGateway_DeleteServiceandConfig@4aa83f4f] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- EdgeServices.CustomServiceCreation_CustomConfigCreation_DeployConfigstoGateway_DeleteServiceandConfig -->
-      <class name="EdgeServices.SettingIOTInstance_SetEdgeConsolePasswordandBackendtimeZonePropertytoGatewaylevel_InstallCoreServicestoGateway">
-        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:EdgeServices.SettingIOTInstance_SetEdgeConsolePasswordandBackendtimeZonePropertytoGatewaylevel_InstallCoreServicestoGateway@615091b8]" started-at="2021-02-11T10:37:26 IST" name="beforeSuite" finished-at="2021-02-11T10:37:26 IST" duration-ms="235" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeSuite -->
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:EdgeServices.SettingIOTInstance_SetEdgeConsolePasswordandBackendtimeZonePropertytoGatewaylevel_InstallCoreServicestoGateway@615091b8]" started-at="2021-02-11T10:37:26 IST" name="beforeClass" finished-at="2021-02-11T10:37:35 IST" duration-ms="8811" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:EdgeServices.SettingIOTInstance_SetEdgeConsolePasswordandBackendtimeZonePropertytoGatewaylevel_InstallCoreServicestoGateway@615091b8]" started-at="2021-02-11T10:37:35 IST" name="beforeMethod" finished-at="2021-02-11T10:37:35 IST" duration-ms="15" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void EdgeServices.SettingIOTInstance_SetEdgeConsolePasswordandBackendtimeZonePropertytoGatewaylevel_InstallCoreServicestoGateway.SetEdgeIOTServicePlatform_SetEdgeConsolePasswordandAddCoreServicestoGateway()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="SetEdgeIOTServicePlatform_SetEdgeConsolePasswordandAddCoreServicestoGateway()[pri:0, instance:EdgeServices.SettingIOTInstance_SetEdgeConsolePasswordandBackendtimeZonePropertytoGatewaylevel_InstallCoreServicestoGateway@615091b8]" started-at="2021-02-11T10:37:35 IST" name="SetEdgeIOTServicePlatform_SetEdgeConsolePasswordandAddCoreServicestoGateway" finished-at="2021-02-11T10:45:42 IST" duration-ms="487137" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- SetEdgeIOTServicePlatform_SetEdgeConsolePasswordandAddCoreServicestoGateway -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:EdgeServices.SettingIOTInstance_SetEdgeConsolePasswordandBackendtimeZonePropertytoGatewaylevel_InstallCoreServicestoGateway@615091b8]" started-at="2021-02-11T10:45:42 IST" name="tearDown" finished-at="2021-02-11T10:45:42 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=SetEdgeIOTServicePlatform_SetEdgeConsolePasswordandAddCoreServicestoGateway status=SUCCESS method=SettingIOTInstance_SetEdgeConsolePasswordandBackendtimeZonePropertytoGatewaylevel_InstallCoreServicestoGateway.SetEdgeIOTServicePlatform_SetEdgeConsolePasswordandAddCoreServicestoGateway()[pri:0, instance:EdgeServices.SettingIOTInstance_SetEdgeConsolePasswordandBackendtimeZonePropertytoGatewaylevel_InstallCoreServicestoGateway@615091b8] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="AfterClass()[pri:0, instance:EdgeServices.SettingIOTInstance_SetEdgeConsolePasswordandBackendtimeZonePropertytoGatewaylevel_InstallCoreServicestoGateway@615091b8]" started-at="2021-02-11T10:45:42 IST" name="AfterClass" finished-at="2021-02-11T10:45:43 IST" duration-ms="1263" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterClass -->
-        <test-method is-config="true" signature="AfterSuite()[pri:0, instance:EdgeServices.SettingIOTInstance_SetEdgeConsolePasswordandBackendtimeZonePropertytoGatewaylevel_InstallCoreServicestoGateway@615091b8]" started-at="2021-02-11T12:29:53 IST" name="AfterSuite" finished-at="2021-02-11T12:29:54 IST" duration-ms="1046" status="PASS">
+        <test-method is-config="true" signature="AfterSuite()[pri:0, instance:EdgeServices.E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolevalidation@25a6944c]" started-at="2021-03-15T14:39:31 IST" name="AfterSuite" finished-at="2021-03-15T14:39:32 IST" duration-ms="1364" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterSuite -->
-      </class> <!-- EdgeServices.SettingIOTInstance_SetEdgeConsolePasswordandBackendtimeZonePropertytoGatewaylevel_InstallCoreServicestoGateway -->
-      <class name="EdgeServices.EBFServiceConfigCreationwithFSMandPSM_PlantActivation_ConfigDeploytoGatewaywithPlantID">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:EdgeServices.EBFServiceConfigCreationwithFSMandPSM_PlantActivation_ConfigDeploytoGatewaywithPlantID@43b6123e]" started-at="2021-02-11T11:12:16 IST" name="beforeClass" finished-at="2021-02-11T11:12:22 IST" duration-ms="5642" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:EdgeServices.EBFServiceConfigCreationwithFSMandPSM_PlantActivation_ConfigDeploytoGatewaywithPlantID@43b6123e]" started-at="2021-02-11T11:12:22 IST" name="beforeMethod" finished-at="2021-02-11T11:12:22 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void EdgeServices.EBFServiceConfigCreationwithFSMandPSM_PlantActivation_ConfigDeploytoGatewaywithPlantID.CreateEBFConfigurationwithFieldsmaintenceBuisnessModule()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="CreateEBFConfigurationwithFieldsmaintenceBuisnessModule()[pri:0, instance:EdgeServices.EBFServiceConfigCreationwithFSMandPSM_PlantActivation_ConfigDeploytoGatewaywithPlantID@43b6123e]" started-at="2021-02-11T11:12:22 IST" name="CreateEBFConfigurationwithFieldsmaintenceBuisnessModule" finished-at="2021-02-11T11:18:36 IST" duration-ms="374363" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CreateEBFConfigurationwithFieldsmaintenceBuisnessModule -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:EdgeServices.EBFServiceConfigCreationwithFSMandPSM_PlantActivation_ConfigDeploytoGatewaywithPlantID@43b6123e]" started-at="2021-02-11T11:18:36 IST" name="tearDown" finished-at="2021-02-11T11:18:36 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=CreateEBFConfigurationwithFieldsmaintenceBuisnessModule status=SUCCESS method=EBFServiceConfigCreationwithFSMandPSM_PlantActivation_ConfigDeploytoGatewaywithPlantID.CreateEBFConfigurationwithFieldsmaintenceBuisnessModule()[pri:0, instance:EdgeServices.EBFServiceConfigCreationwithFSMandPSM_PlantActivation_ConfigDeploytoGatewaywithPlantID@43b6123e] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:EdgeServices.EBFServiceConfigCreationwithFSMandPSM_PlantActivation_ConfigDeploytoGatewaywithPlantID@43b6123e]" started-at="2021-02-11T11:18:36 IST" name="beforeMethod" finished-at="2021-02-11T11:18:36 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void EdgeServices.EBFServiceConfigCreationwithFSMandPSM_PlantActivation_ConfigDeploytoGatewaywithPlantID.AddPlantstoEBFCloudSyncService()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="AddPlantstoEBFCloudSyncService()[pri:0, instance:EdgeServices.EBFServiceConfigCreationwithFSMandPSM_PlantActivation_ConfigDeploytoGatewaywithPlantID@43b6123e]" started-at="2021-02-11T11:18:36 IST" name="AddPlantstoEBFCloudSyncService" finished-at="2021-02-11T11:18:58 IST" depends-on-methods="EdgeServices.EBFServiceConfigCreationwithFSMandPSM_PlantActivation_ConfigDeploytoGatewaywithPlantID.CreateEBFConfigurationwithFieldsmaintenceBuisnessModule" duration-ms="21956" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AddPlantstoEBFCloudSyncService -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:EdgeServices.EBFServiceConfigCreationwithFSMandPSM_PlantActivation_ConfigDeploytoGatewaywithPlantID@43b6123e]" started-at="2021-02-11T11:18:58 IST" name="tearDown" finished-at="2021-02-11T11:18:58 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=AddPlantstoEBFCloudSyncService status=SUCCESS method=EBFServiceConfigCreationwithFSMandPSM_PlantActivation_ConfigDeploytoGatewaywithPlantID.AddPlantstoEBFCloudSyncService()[pri:0, instance:EdgeServices.EBFServiceConfigCreationwithFSMandPSM_PlantActivation_ConfigDeploytoGatewaywithPlantID@43b6123e] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:EdgeServices.EBFServiceConfigCreationwithFSMandPSM_PlantActivation_ConfigDeploytoGatewaywithPlantID@43b6123e]" started-at="2021-02-11T11:18:58 IST" name="beforeMethod" finished-at="2021-02-11T11:18:58 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void EdgeServices.EBFServiceConfigCreationwithFSMandPSM_PlantActivation_ConfigDeploytoGatewaywithPlantID.CreateEBFConfigurationwithPlantmaintenceBuisnessModule_DeplyedtoGW()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="CreateEBFConfigurationwithPlantmaintenceBuisnessModule_DeplyedtoGW()[pri:0, instance:EdgeServices.EBFServiceConfigCreationwithFSMandPSM_PlantActivation_ConfigDeploytoGatewaywithPlantID@43b6123e]" started-at="2021-02-11T11:18:58 IST" name="CreateEBFConfigurationwithPlantmaintenceBuisnessModule_DeplyedtoGW" finished-at="2021-02-11T11:28:56 IST" depends-on-methods="EdgeServices.EBFServiceConfigCreationwithFSMandPSM_PlantActivation_ConfigDeploytoGatewaywithPlantID.AddPlantstoEBFCloudSyncService" duration-ms="598399" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- CreateEBFConfigurationwithPlantmaintenceBuisnessModule_DeplyedtoGW -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:EdgeServices.EBFServiceConfigCreationwithFSMandPSM_PlantActivation_ConfigDeploytoGatewaywithPlantID@43b6123e]" started-at="2021-02-11T11:28:56 IST" name="tearDown" finished-at="2021-02-11T11:28:56 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=CreateEBFConfigurationwithPlantmaintenceBuisnessModule_DeplyedtoGW status=SUCCESS method=EBFServiceConfigCreationwithFSMandPSM_PlantActivation_ConfigDeploytoGatewaywithPlantID.CreateEBFConfigurationwithPlantmaintenceBuisnessModule_DeplyedtoGW()[pri:0, instance:EdgeServices.EBFServiceConfigCreationwithFSMandPSM_PlantActivation_ConfigDeploytoGatewaywithPlantID@43b6123e] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="AfterClass()[pri:0, instance:EdgeServices.EBFServiceConfigCreationwithFSMandPSM_PlantActivation_ConfigDeploytoGatewaywithPlantID@43b6123e]" started-at="2021-02-11T11:28:56 IST" name="AfterClass" finished-at="2021-02-11T11:29:15 IST" duration-ms="18062" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterClass -->
-      </class> <!-- EdgeServices.EBFServiceConfigCreationwithFSMandPSM_PlantActivation_ConfigDeploytoGatewaywithPlantID -->
-      <class name="EdgeServices.CustomPropertyCreation_AddingUserCustomPropertytoGateWay_EditUpdateDeleteProperty">
-        <test-method is-config="true" signature="beforeClass()[pri:0, instance:EdgeServices.CustomPropertyCreation_AddingUserCustomPropertytoGateWay_EditUpdateDeleteProperty@260e86a1]" started-at="2021-02-11T11:29:15 IST" name="beforeClass" finished-at="2021-02-11T11:29:21 IST" duration-ms="6553" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:EdgeServices.CustomPropertyCreation_AddingUserCustomPropertytoGateWay_EditUpdateDeleteProperty@260e86a1]" started-at="2021-02-11T11:29:21 IST" name="beforeMethod" finished-at="2021-02-11T11:29:21 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void EdgeServices.CustomPropertyCreation_AddingUserCustomPropertytoGateWay_EditUpdateDeleteProperty.UserTypeCustomPropertiesCreateUpdateandDeleting()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="UserTypeCustomPropertiesCreateUpdateandDeleting()[pri:0, instance:EdgeServices.CustomPropertyCreation_AddingUserCustomPropertytoGateWay_EditUpdateDeleteProperty@260e86a1]" started-at="2021-02-11T11:29:21 IST" name="UserTypeCustomPropertiesCreateUpdateandDeleting" finished-at="2021-02-11T11:31:37 IST" duration-ms="135520" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- UserTypeCustomPropertiesCreateUpdateandDeleting -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:EdgeServices.CustomPropertyCreation_AddingUserCustomPropertytoGateWay_EditUpdateDeleteProperty@260e86a1]" started-at="2021-02-11T11:31:37 IST" name="tearDown" finished-at="2021-02-11T11:31:37 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=UserTypeCustomPropertiesCreateUpdateandDeleting status=SUCCESS method=CustomPropertyCreation_AddingUserCustomPropertytoGateWay_EditUpdateDeleteProperty.UserTypeCustomPropertiesCreateUpdateandDeleting()[pri:0, instance:EdgeServices.CustomPropertyCreation_AddingUserCustomPropertytoGateWay_EditUpdateDeleteProperty@260e86a1] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method signature="AddingCustomPropertiestoGateway()[pri:0, instance:EdgeServices.CustomPropertyCreation_AddingUserCustomPropertytoGateWay_EditUpdateDeleteProperty@260e86a1]" started-at="2021-02-11T11:31:37 IST" name="AddingCustomPropertiestoGateway" finished-at="2021-02-11T11:32:23 IST" depends-on-methods="EdgeServices.CustomPropertyCreation_AddingUserCustomPropertytoGateWay_EditUpdateDeleteProperty.UserTypeCustomPropertiesCreateUpdateandDeleting" duration-ms="46381" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AddingCustomPropertiestoGateway -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:EdgeServices.CustomPropertyCreation_AddingUserCustomPropertytoGateWay_EditUpdateDeleteProperty@260e86a1]" started-at="2021-02-11T11:31:37 IST" name="beforeMethod" finished-at="2021-02-11T11:31:37 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void EdgeServices.CustomPropertyCreation_AddingUserCustomPropertytoGateWay_EditUpdateDeleteProperty.AddingCustomPropertiestoGateway()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:EdgeServices.CustomPropertyCreation_AddingUserCustomPropertytoGateWay_EditUpdateDeleteProperty@260e86a1]" started-at="2021-02-11T11:32:23 IST" name="tearDown" finished-at="2021-02-11T11:32:23 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=AddingCustomPropertiestoGateway status=SUCCESS method=CustomPropertyCreation_AddingUserCustomPropertytoGateWay_EditUpdateDeleteProperty.AddingCustomPropertiestoGateway()[pri:0, instance:EdgeServices.CustomPropertyCreation_AddingUserCustomPropertytoGateWay_EditUpdateDeleteProperty@260e86a1] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:EdgeServices.CustomPropertyCreation_AddingUserCustomPropertytoGateWay_EditUpdateDeleteProperty@260e86a1]" started-at="2021-02-11T11:32:23 IST" name="beforeMethod" finished-at="2021-02-11T11:32:23 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void EdgeServices.CustomPropertyCreation_AddingUserCustomPropertytoGateWay_EditUpdateDeleteProperty.RemovepropertyfromgatewayandDeleteUserConfigProperty()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method signature="RemovepropertyfromgatewayandDeleteUserConfigProperty()[pri:0, instance:EdgeServices.CustomPropertyCreation_AddingUserCustomPropertytoGateWay_EditUpdateDeleteProperty@260e86a1]" started-at="2021-02-11T11:32:23 IST" name="RemovepropertyfromgatewayandDeleteUserConfigProperty" finished-at="2021-02-11T11:35:46 IST" depends-on-methods="EdgeServices.CustomPropertyCreation_AddingUserCustomPropertytoGateWay_EditUpdateDeleteProperty.AddingCustomPropertiestoGateway" duration-ms="202789" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- RemovepropertyfromgatewayandDeleteUserConfigProperty -->
-        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:EdgeServices.CustomPropertyCreation_AddingUserCustomPropertytoGateWay_EditUpdateDeleteProperty@260e86a1]" started-at="2021-02-11T11:35:46 IST" name="tearDown" finished-at="2021-02-11T11:35:46 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=RemovepropertyfromgatewayandDeleteUserConfigProperty status=SUCCESS method=CustomPropertyCreation_AddingUserCustomPropertytoGateWay_EditUpdateDeleteProperty.RemovepropertyfromgatewayandDeleteUserConfigProperty()[pri:0, instance:EdgeServices.CustomPropertyCreation_AddingUserCustomPropertytoGateWay_EditUpdateDeleteProperty@260e86a1] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="AfterClass()[pri:0, instance:EdgeServices.CustomPropertyCreation_AddingUserCustomPropertytoGateWay_EditUpdateDeleteProperty@260e86a1]" started-at="2021-02-11T11:35:46 IST" name="AfterClass" finished-at="2021-02-11T11:35:48 IST" duration-ms="1719" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AfterClass -->
-      </class> <!-- EdgeServices.CustomPropertyCreation_AddingUserCustomPropertytoGateWay_EditUpdateDeleteProperty -->
-    </test> <!-- Test -->
-  </suite> <!-- EdgeServiceSmoke -->
+      </class> <!-- EdgeServices.E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolevalidation -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

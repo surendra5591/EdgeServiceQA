@@ -33,8 +33,7 @@
 		<!-- slideout menu -->
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
-						<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
-			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
 		</ul>
 
 		<!-- report name -->
@@ -47,7 +46,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Feb 11, 2021 10:37:26 AM</span>
+                    <span class='label suite-start-time blue darken-3'>Mar 15, 2021 11:48:14 AM</span>
 				</a>
 			</li>
 			<li>
@@ -73,7 +72,6 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
-						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -125,14 +123,14 @@
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>EdgeServices.SettingIOTInstance_SetEdgeConsolePasswordandBackendtimeZonePropertytoGatewaylevel_InstallCoreServicestoGateway</span>
-						<span class='test-time'>Feb 11, 2021 10:37:26 AM</span>
+						<span class='test-time'>Mar 15, 2021 11:48:14 AM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Feb 11, 2021 10:37:26 AM</span>
-	<span class='label end-time'>Feb 11, 2021 10:45:42 AM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 8m 15s+977ms</span>
+	<span class='label start-time'>Mar 15, 2021 11:48:14 AM</span>
+	<span class='label end-time'>Mar 15, 2021 12:26:50 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 38m 36s+114ms</span>
 </div>
 	<div class='test-steps'>
 		<table class='bordered table-results'>
@@ -146,93 +144,357 @@
 			<tbody>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>10:37:35 AM</td>
+					<td class='timestamp'>11:48:20 AM</td>
 					<td class='step-details'>*******SetEdgeIOTServicePlatform_SetEdgeConsolePasswordandAddCoreServicestoGateway started**********</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>10:37:35 AM</td>
-					<td class='step-details'>open URL: https://qa1-aws.edge-svc-qa-aws.cfapps.sap.hana.ondemand.com Login successfully into the policyservice and click on the Settings tile</td>
+					<td class='timestamp'>11:48:20 AM</td>
+					<td class='step-details'>open URL: https://qa6-aws.edge-svc-qa-aws.cfapps.sap.hana.ondemand.com Login successfully into the policyservice and click on the Settings tile</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>10:39:19 AM</td>
+					<td class='timestamp'>11:49:15 AM</td>
 					<td class='step-details'>user is able to enter into the HOME page successfully</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>10:39:19 AM</td>
+					<td class='timestamp'>11:49:15 AM</td>
 					<td class='step-details'>click on the Settings tile</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>10:39:40 AM</td>
-					<td class='step-details'>click on the Settings tile and Set IOT instance to policy service with valid credentials</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>10:39:49 AM</td>
-					<td class='step-details'>user is able to Set IOT instance to policy service with valid credentials</td>
+					<td class='timestamp'>11:49:18 AM</td>
+					<td class='step-details'>user is not required to settings for one product policy service URL-https://qa6-aws.edge-svc-qa-aws.cfapps.sap.hana.ondemand.com</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>10:39:54 AM</td>
+					<td class='timestamp'>11:49:18 AM</td>
 					<td class='step-details'>Click on Gateway managment tile and serach gateway verify status of gateway</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>10:41:49 AM</td>
+					<td class='timestamp'>11:50:29 AM</td>
 					<td class='step-details'>Verify Gateway is online</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>10:41:52 AM</td>
+					<td class='timestamp'>11:50:32 AM</td>
 					<td class='step-details'>Gateway Status is Online</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>10:41:52 AM</td>
+					<td class='timestamp'>11:50:32 AM</td>
 					<td class='step-details'>add the Edge Console Password configuration Property to Gateway</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>10:42:49 AM</td>
+					<td class='timestamp'>11:51:37 AM</td>
 					<td class='step-details'>user is able to add the Edge Console Password configuration Property to Gateway as: Test1234 successfully</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>10:42:49 AM</td>
+					<td class='timestamp'>11:51:37 AM</td>
 					<td class='step-details'>Serach gateway and add the Backend_Timezone_Offset_Minutes Configuration property to gateway</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>10:44:38 AM</td>
+					<td class='timestamp'>11:53:30 AM</td>
 					<td class='step-details'>user is able to enter the value for Backend_Timezone_Offset_Minutes Configuration property</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>10:44:51 AM</td>
+					<td class='timestamp'>11:53:43 AM</td>
 					<td class='step-details'>user is able to add the Backend_Timezone_Offset_Minutes configuration Property to Gateway successfully</td>
 				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>10:45:42 AM</td>
-					<td class='step-details'>EBF service is already installed to gateway:264792540</td>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>11:54:46 AM</td>
+					<td class='step-details'>Add the services to the group by clicking the + button</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>10:45:42 AM</td>
-					<td class='step-details'>Streaming service is already installed to gateway:264792540</td>
+					<td class='timestamp'>12:14:55 PM</td>
+					<td class='step-details'>Streaming service installed successfully to gateway:234528234</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:15:57 PM</td>
+					<td class='step-details'>Add the services to the group by clicking the + button</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>10:45:42 AM</td>
-					<td class='step-details'>Persistence service is already installed to gateway:264792540</td>
+					<td class='timestamp'>12:22:17 PM</td>
+					<td class='step-details'>EBF service installed successfully to gateway:234528234</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:23:19 PM</td>
+					<td class='step-details'>Add the services to the group by clicking the + button</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>10:45:42 AM</td>
+					<td class='timestamp'>12:26:50 PM</td>
+					<td class='step-details'>Persistence service installed successfully to gateway:234528234</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:26:50 PM</td>
 					<td class='step-details'>SetEdgeIOTServicePlatform_SetEdgeConsolePasswordandAddCoreServicestoGateway is passed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
+					<div class='test-heading'>
+						<span class='test-name'>EdgeServices.PersistenceServiceConfigurationCreationByDataRetensionandDeployedtoGateway</span>
+						<span class='test-time'>Mar 15, 2021 12:26:52 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Mar 15, 2021 12:26:52 PM</span>
+	<span class='label end-time'>Mar 15, 2021 12:38:31 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 11m 39s+412ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:26:57 PM</td>
+					<td class='step-details'>*******PersistenceService_DataRetension_flow started**********</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:26:57 PM</td>
+					<td class='step-details'>open URL:https://qa6-aws.edge-svc-qa-aws.cfapps.sap.hana.ondemand.comLogin successfully into the policyservice and click on the  Edge Service Management Tile</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:27:49 PM</td>
+					<td class='step-details'>user is able to enter into the HOME page successfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:27:49 PM</td>
+					<td class='step-details'>click on the Edge Service management Tile</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:28:17 PM</td>
+					<td class='step-details'>Edge Service manaagement Tile is opened successfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:28:17 PM</td>
+					<td class='step-details'>Select services and navigate to persistence Services page</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:28:43 PM</td>
+					<td class='step-details'>persistence service screen is opened successfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:28:43 PM</td>
+					<td class='step-details'>Click on the Add configuration button i.e, + button in the work center</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:29:37 PM</td>
+					<td class='step-details'>user is able to creat persistence configuration successfullyfirstConfigpersitence1503_1148</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:29:37 PM</td>
+					<td class='step-details'>click on creted Persistence configuration link and edit save succeffully</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:30:07 PM</td>
+					<td class='step-details'>user is able to click on created persistence config and edit save successfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:30:07 PM</td>
+					<td class='step-details'>verify Persistence configuration can not be created with same name from copy content exit config</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:30:25 PM</td>
+					<td class='step-details'>user can not create persistence config with already exist config name</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:30:25 PM</td>
+					<td class='step-details'>verify Persistence configuration can not be created with invalid name</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:30:42 PM</td>
+					<td class='step-details'>user can not create persistence config with invalid config name</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:30:42 PM</td>
+					<td class='step-details'>verify Persistence configuration can not be created without entering mandatory fields</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:30:51 PM</td>
+					<td class='step-details'>user can not create persistence config without entering mandatory fields</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:30:54 PM</td>
+					<td class='step-details'>Click on the SAP logo>>Edge managment tile and search for the gateway</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:31:07 PM</td>
+					<td class='step-details'>user should able to click on the Gateway management successully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:31:07 PM</td>
+					<td class='step-details'>Search for the Gageway number  to add Service and Configuration</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:31:34 PM</td>
+					<td class='step-details'>user should able to search the gateway successfully as 234528234</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:31:34 PM</td>
+					<td class='step-details'>Click on Gateway configuration tab and  add the configuration to gateway</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:32:58 PM</td>
+					<td class='step-details'>user is able to add the configuration with name as firstConfigpersitence1503_1148 successfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:32:58 PM</td>
+					<td class='step-details'>Click on the Refresh button untill status becomes Applied</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:33:25 PM</td>
+					<td class='step-details'>configuration Applied successfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:33:25 PM</td>
+					<td class='step-details'>Enter the configuration name and upload the json file to create persistence config</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:34:03 PM</td>
+					<td class='step-details'>user is successfully added the configruation as:PersistenceConfig1503_1148 to the Persistence service</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:34:03 PM</td>
+					<td class='step-details'>switch between tabs of persistence Service and verify the group and gateways of persistence service</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:34:18 PM</td>
+					<td class='step-details'>user is able to switch to Groups tabs of persistence service and move to first group details page</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:34:18 PM</td>
+					<td class='step-details'>switch to Gateways tabs of persistence service and move to first gateway details page</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:34:34 PM</td>
+					<td class='step-details'>user is able to switch to Gateways tabs of persistence service and move to first gateway details page</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:34:34 PM</td>
+					<td class='step-details'>Click on the SAP logo>>Edge managment tile and search for the gateway</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:34:46 PM</td>
+					<td class='step-details'>user should able to click on the Gateway management successully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:34:46 PM</td>
+					<td class='step-details'>Search for the Gageway number  to add Service and Configuration</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:35:13 PM</td>
+					<td class='step-details'>user should able to search the gateway successfully as 234528234</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:35:13 PM</td>
+					<td class='step-details'>Click on Gateway configuration tab and  add the configuration to gateway</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:36:37 PM</td>
+					<td class='step-details'>user is able to add the configuration with name as PersistenceConfig1503_1148 successfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:36:37 PM</td>
+					<td class='step-details'>Click on the Refresh button untill status becomes Applied</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:37:04 PM</td>
+					<td class='step-details'>configuration Applied successfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:37:04 PM</td>
+					<td class='step-details'>Select services and navigate to persistence Services page</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:37:29 PM</td>
+					<td class='step-details'>persistence service screen is opened successfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:37:29 PM</td>
+					<td class='step-details'>Click on the Add configuration button i.e, + button in the work center</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:38:22 PM</td>
+					<td class='step-details'>user is able to creat persistence configuration successfullysecondConfigpersitence1503_1148</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:38:31 PM</td>
+					<td class='step-details'>user is able to switch to Gateways tabs of persistence service and move to first gateway details page</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:38:31 PM</td>
+					<td class='step-details'>PersistenceService_DataRetension_flow is passed</td>
 				</tr>
 			</tbody>
 		</table>
@@ -243,15 +505,15 @@
 				
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='3'>
 					<div class='test-heading'>
-						<span class='test-name'>EdgeServices.CustomServiceCreation_CustomConfigCreation_DeployConfigstoGateway_DeleteServiceandConfig</span>
-						<span class='test-time'>Feb 11, 2021 10:59:13 AM</span>
+						<span class='test-name'>EdgeServices.EBFServiceConfigCreationwithFSMandPSM_PlantActivation_ConfigDeploytoGatewaywithPlantID</span>
+						<span class='test-time'>Mar 15, 2021 12:38:32 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Feb 11, 2021 10:59:13 AM</span>
-	<span class='label end-time'>Feb 11, 2021 11:12:15 AM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 13m 2s+166ms</span>
+	<span class='label start-time'>Mar 15, 2021 12:38:32 PM</span>
+	<span class='label end-time'>Mar 15, 2021 12:55:21 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 16m 48s+905ms</span>
 </div>
 	<div class='test-steps'>
 		<table class='bordered table-results'>
@@ -265,148 +527,358 @@
 			<tbody>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>10:59:18 AM</td>
-					<td class='step-details'>*******CreateCustomServicewithConfigsandDeployed started**********</td>
+					<td class='timestamp'>12:38:36 PM</td>
+					<td class='step-details'>*******CreateEBFConfigurationwithFieldsmaintenceBuisnessModule started**********</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>10:59:18 AM</td>
-					<td class='step-details'>open URL:https://qa1-aws.edge-svc-qa-aws.cfapps.sap.hana.ondemand.comLogin successfully into the policyservice and click on the  Edge Service Management Tile</td>
+					<td class='timestamp'>12:38:36 PM</td>
+					<td class='step-details'>open URL:https://qa6-aws.edge-svc-qa-aws.cfapps.sap.hana.ondemand.comLogin successfully into the policyservice and click on the  Edge Service Management Tile</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:00:18 AM</td>
+					<td class='timestamp'>12:39:32 PM</td>
 					<td class='step-details'>user is able to enter into the HOME page successfully</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:00:18 AM</td>
+					<td class='timestamp'>12:39:32 PM</td>
 					<td class='step-details'>click on the Edge Service management Tile</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:03:28 AM</td>
+					<td class='timestamp'>12:40:21 PM</td>
 					<td class='step-details'>Edge Service manaagement Tile is opened successfully</td>
 				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:03:28 AM</td>
-					<td class='step-details'>Click on the  Services from left side bar and Add Cutoma service</td>
-				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:04:02 AM</td>
-					<td class='step-details'>user is able to Create CustomService successfully with Name:-CustomServiceName1102_1037</td>
+					<td class='timestamp'>12:40:36 PM</td>
+					<td class='step-details'>user is able to see the EBF services window opened in the work center</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:04:02 AM</td>
-					<td class='step-details'>Click on the  Service Configuration tab and Create Streaming Custom Config for custom service</td>
+					<td class='timestamp'>12:40:36 PM</td>
+					<td class='step-details'>click on the configuration add the configuration to the group by clicking on the + button</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:04:12 AM</td>
+					<td class='timestamp'>12:40:46 PM</td>
 					<td class='step-details'>user is able to see the window opened with the options of name and content file from content file</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:04:12 AM</td>
-					<td class='step-details'>Enter the Custom service configuration name and upload the json file</td>
+					<td class='timestamp'>12:40:46 PM</td>
+					<td class='step-details'>Check wheather Without configuration name user is able to create config</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:40:58 PM</td>
+					<td class='step-details'>user can not add config without entering config name to the EBF service</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:04:15 AM</td>
-					<td class='step-details'>create Custom Service config with invalid/Blank config name</td>
+					<td class='timestamp'>12:40:58 PM</td>
+					<td class='step-details'>Enter the invalid configuration name and validate to create config</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:04:26 AM</td>
-					<td class='step-details'>user can not create Custom Service config with invalid/Blank config name</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:04:38 AM</td>
-					<td class='step-details'>user is successfully added the configruation as:CustomServiceConfig1102_1037 to the Custom service</td>
+					<td class='timestamp'>12:41:09 PM</td>
+					<td class='step-details'>user can not add config with invalide name to the EBF service</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:04:38 AM</td>
-					<td class='step-details'>switch between Group tab and Gateways tab verify the group and gateways of custom service</td>
+					<td class='timestamp'>12:41:09 PM</td>
+					<td class='step-details'>Enter the configuration name and upload the json file</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:04:48 AM</td>
-					<td class='step-details'>user is able to switch to Groups tabs and gateway tabs of Custom Service service</td>
+					<td class='timestamp'>12:41:22 PM</td>
+					<td class='step-details'>user can not create the configruation with invalid file format to the EBF service</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:41:40 PM</td>
+					<td class='step-details'>user is successfully added the configruation as:FSMConfig1503_1148 to the EBF service</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:04:48 AM</td>
-					<td class='step-details'>Install the Custom Service to the gateway and do the deployement</td>
+					<td class='timestamp'>12:41:40 PM</td>
+					<td class='step-details'>verify EBF configuration can not be created with same name</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:41:56 PM</td>
+					<td class='step-details'>user can not create config with already exist config name</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:05:11 AM</td>
-					<td class='step-details'>Add the  Custom service to the gateway by clicking the + button and installed</td>
+					<td class='timestamp'>12:42:02 PM</td>
+					<td class='step-details'>Search EBF Config and move to bussince module tab by clicking on EBF Config</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:06:09 AM</td>
-					<td class='step-details'>Custom service installed successfully to gateway:264792540as nameCustomServiceName1102_1037</td>
+					<td class='timestamp'>12:42:14 PM</td>
+					<td class='step-details'>user is able to Search EBF Config and move to bussince module tab by clicking on EBF Config</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:06:09 AM</td>
-					<td class='step-details'>Add the  Custom configuration to the gateway and do the deployement</td>
+					<td class='timestamp'>12:42:24 PM</td>
+					<td class='step-details'>Click on the SAP logo>>Gageway management to add the configuration</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:06:37 AM</td>
-					<td class='step-details'>user is able to add the configuration with name as CustomServiceConfig1102_1037 successfully</td>
+					<td class='timestamp'>12:42:42 PM</td>
+					<td class='step-details'>user should able to click on the Gateway management successully</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:06:37 AM</td>
-					<td class='step-details'>Click on the Refresh button until status becomes Applied</td>
+					<td class='timestamp'>12:42:42 PM</td>
+					<td class='step-details'>Search for the Gageway number  to Click Gateway Configuration tab and  add the configuration to gateway</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:07:55 AM</td>
-					<td class='step-details'>CustomServiceConfig1102_1037 configuration Applied successfully</td>
+					<td class='timestamp'>12:43:30 PM</td>
+					<td class='step-details'>user should able to add the configuration with name as FSMConfig1503_1148 successfully</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:07:55 AM</td>
-					<td class='step-details'>switch between tabs of Custom Service and gateways of service</td>
+					<td class='timestamp'>12:43:30 PM</td>
+					<td class='step-details'>Click on the Refresh button untill status becomes Applied</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:08:23 AM</td>
-					<td class='step-details'>user is able to switch to Gateways tabs of Custom service and move to first gateway details page</td>
+					<td class='timestamp'>12:44:42 PM</td>
+					<td class='step-details'>configuration Applied successfully</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:08:23 AM</td>
-					<td class='step-details'>UnInstalling  custom service from gateway</td>
+					<td class='timestamp'>12:44:42 PM</td>
+					<td class='step-details'>CreateEBFConfigurationwithFieldsmaintenceBuisnessModule is passed</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:44:42 PM</td>
+					<td class='step-details'>*******AddPlantstoEBFCloudSyncService started**********</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:44:42 PM</td>
+					<td class='step-details'>Verify EBF Sync Service is intialized as cloud based Synchronization service</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:10:42 AM</td>
-					<td class='step-details'>user is able to UnInstalle custom service sucessfully with name as CustomServiceName1102_1037</td>
+					<td class='timestamp'>12:44:48 PM</td>
+					<td class='step-details'>EBF Sync Service is intialized as cloud based Synchronization service</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:45:01 PM</td>
+					<td class='step-details'>Verify the  EBF Cloud SYnc Service Deploymnet status and  backend connection</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:12:03 AM</td>
-					<td class='step-details'>user is able to delete the configuration with name as CustomServiceConfig1102_1037 successfully</td>
+					<td class='timestamp'>12:45:01 PM</td>
+					<td class='step-details'>EBF Cloud SYnc Service Deployment status is deployed  and  backend connection is connected sucessfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:45:01 PM</td>
+					<td class='step-details'>move to Plants tab of synchronization service and add plants to cloud based sync service</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:12:15 AM</td>
-					<td class='step-details'>user is able to delete the configuration with name as CustomServiceConfig1102_1037 successfully</td>
+					<td class='timestamp'>12:45:05 PM</td>
+					<td class='step-details'>1710-Plant is already added and staus is Activated to EBF Cloud Sync Service</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:12:15 AM</td>
-					<td class='step-details'>CreateCustomServicewithConfigsandDeployed is passed</td>
+					<td class='timestamp'>12:45:05 PM</td>
+					<td class='step-details'>AddPlantstoEBFCloudSyncService is passed</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:45:05 PM</td>
+					<td class='step-details'>*******CreateEBFConfigurationwithPlantmaintenceBuisnessModule_DeplyedtoGW started**********</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:45:08 PM</td>
+					<td class='step-details'>verify EBF configuration can be created by copy exist configuration</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:45:24 PM</td>
+					<td class='step-details'>user is able to see the window opened with the options of name and content file from content file</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:45:41 PM</td>
+					<td class='step-details'>user is able to create config by uploading EBF config with plant maintence business module json file</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:45:41 PM</td>
+					<td class='step-details'>Adding Plant maintenance business module to Configuration</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:46:03 PM</td>
+					<td class='step-details'>user is able move to bussince module tab and clicked on add new buisness module</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:46:19 PM</td>
+					<td class='step-details'>user is able to edit EBF service plant maintence buisness module and save successfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:46:19 PM</td>
+					<td class='step-details'>switch between tabs of EBF Service and verify the groups and gateways of EBF service</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:46:34 PM</td>
+					<td class='step-details'>user is able to switch to Groups tabs of EBF service and move to first group details page</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:46:34 PM</td>
+					<td class='step-details'>switch between tabs of EBF Service and gateways of EBF service</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:46:55 PM</td>
+					<td class='step-details'>user is able to switch to Gateways tabs of persistence service and move to first gateway details page</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:48:43 PM</td>
+					<td class='step-details'>user can not add the configuration with name as PMSConfig1503_1148 without adding plant id configuration property</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:49:16 PM</td>
+					<td class='step-details'>user is able to select value for plant default storage location property</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:49:26 PM</td>
+					<td class='step-details'>user is able to select value for Plant_Default_Main_Work_Center property</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:49:35 PM</td>
+					<td class='step-details'>user is able to select value for Plant_Freight_Storage_Location property</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:49:45 PM</td>
+					<td class='step-details'>user is able to select value for Plant_Main_Work_Center_For_Work_Order property</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:49:49 PM</td>
+					<td class='step-details'>user is able to enter the value for LDPA Host Configuration property</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:49:53 PM</td>
+					<td class='step-details'>user is able to enter the value for LDAP_Match_Attribute Configuration property</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:49:58 PM</td>
+					<td class='step-details'>user is able to enter the value for LDAP_Organizational_Unit Configuration property</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:50:16 PM</td>
+					<td class='step-details'>Backend_Timezone_Offset_Minutes Configuration property already added to gateway level</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:50:16 PM</td>
+					<td class='step-details'>Deploy EBF Configuration with Plant maintenance business to Gateway after adding all plant properties</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:50:47 PM</td>
+					<td class='step-details'>user is able to add the configuration with name as PMSConfig1503_1148 successfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:50:47 PM</td>
+					<td class='step-details'>Click on the Refresh button untill status becomes Applied</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:51:59 PM</td>
+					<td class='step-details'>PMSConfig1503_1148Configuration is Applied successfully to Gateway with all Plant ID properties</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:51:59 PM</td>
+					<td class='step-details'>Click on the SAP logo>> and move to home page and click on edge service managment tile</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:52:52 PM</td>
+					<td class='step-details'>user is able to click on the Gateway management tile successully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:52:52 PM</td>
+					<td class='step-details'>Move to Service page</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:53:06 PM</td>
+					<td class='step-details'>user is able to move service page successfully</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:53:18 PM</td>
+					<td class='step-details'>user is not able to see delete icon button for deployed EBF Configuration file</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:53:35 PM</td>
+					<td class='step-details'>user is able to see the config json file as well as able to download successfully in the UI</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:53:35 PM</td>
+					<td class='step-details'>Click on the SAP logo>>Edge managment tile and search for the gateway</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:53:49 PM</td>
+					<td class='step-details'>user should able to click on the Gateway management successully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:53:49 PM</td>
+					<td class='step-details'>Search for the Gageway number  to add Service and Configuration</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:54:15 PM</td>
+					<td class='step-details'>user should able to search the gateway successfully as 234528234</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:54:15 PM</td>
+					<td class='step-details'>Delete Plant ID system Properties from gateway for Deploy EBF Configuration without adding Plant maintenance business module</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:55:21 PM</td>
+					<td class='step-details'>user is able to Delete Plant ID system Properties from gateway:234528234</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:55:21 PM</td>
+					<td class='step-details'>CreateEBFConfigurationwithPlantmaintenceBuisnessModule_DeplyedtoGW is passed</td>
 				</tr>
 			</tbody>
 		</table>
@@ -417,15 +889,15 @@
 				
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='4'>
 					<div class='test-heading'>
-						<span class='test-name'>EdgeServices.EBFServiceConfigCreationwithFSMandPSM_PlantActivation_ConfigDeploytoGatewaywithPlantID</span>
-						<span class='test-time'>Feb 11, 2021 11:12:16 AM</span>
+						<span class='test-name'>EdgeServices.CustomPropertyCreation_AddingUserCustomPropertytoGateWay_EditUpdateDeleteProperty</span>
+						<span class='test-time'>Mar 15, 2021 12:55:22 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Feb 11, 2021 11:12:16 AM</span>
-	<span class='label end-time'>Feb 11, 2021 11:28:56 AM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 16m 40s+370ms</span>
+	<span class='label start-time'>Mar 15, 2021 12:55:22 PM</span>
+	<span class='label end-time'>Mar 15, 2021 01:02:14 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 6m 52s+378ms</span>
 </div>
 	<div class='test-steps'>
 		<table class='bordered table-results'>
@@ -439,353 +911,133 @@
 			<tbody>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:12:22 AM</td>
-					<td class='step-details'>*******CreateEBFConfigurationwithFieldsmaintenceBuisnessModule started**********</td>
+					<td class='timestamp'>12:55:27 PM</td>
+					<td class='step-details'>*******UserTypeCustomPropertiesCreateUpdateandDeleting started**********</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:12:22 AM</td>
-					<td class='step-details'>open URL:https://qa1-aws.edge-svc-qa-aws.cfapps.sap.hana.ondemand.comLogin successfully into the policyservice and click on the  Edge Service Management Tile</td>
+					<td class='timestamp'>12:55:27 PM</td>
+					<td class='step-details'>open URL:https://qa6-aws.edge-svc-qa-aws.cfapps.sap.hana.ondemand.comLogin successfully into the policyservice and click on the  Edge Service Management Tile</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:13:32 AM</td>
+					<td class='timestamp'>12:56:30 PM</td>
 					<td class='step-details'>user is able to enter into the HOME page successfully</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:13:32 AM</td>
+					<td class='timestamp'>12:56:30 PM</td>
 					<td class='step-details'>click on the Edge Service management Tile</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:14:08 AM</td>
+					<td class='timestamp'>12:56:59 PM</td>
 					<td class='step-details'>Edge Service manaagement Tile is opened successfully</td>
 				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>12:56:59 PM</td>
+					<td class='step-details'>Check Default System Configuration properties is displayed</td>
+				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:14:24 AM</td>
-					<td class='step-details'>user is able to see the EBF services window opened in the work center</td>
+					<td class='timestamp'>12:57:06 PM</td>
+					<td class='step-details'>user can see Two System Custom Properties namely 'Business Partner ID' and 'Plant ID' present by default</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:14:24 AM</td>
-					<td class='step-details'>click on the configuration add the configuration to the group by clicking on the + button</td>
+					<td class='timestamp'>12:57:15 PM</td>
+					<td class='step-details'>Creating Global Custom property with invalid Name</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:14:34 AM</td>
-					<td class='step-details'>user is able to see the window opened with the options of name and content file from content file</td>
+					<td class='timestamp'>12:57:25 PM</td>
+					<td class='step-details'>user can not Create Global Custom Properties with invalid name please enter valid value</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:14:34 AM</td>
-					<td class='step-details'>Check wheather Without configuration name user is able to create config</td>
+					<td class='timestamp'>12:57:25 PM</td>
+					<td class='step-details'>Creating Global Custom property without entering Name</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:14:45 AM</td>
-					<td class='step-details'>user can not add config without entering config name to the EBF service</td>
+					<td class='timestamp'>12:57:39 PM</td>
+					<td class='step-details'>user can not Create Global Custom Properties without entering name please enter valid value</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:14:45 AM</td>
-					<td class='step-details'>Enter the invalid configuration name and validate to create config</td>
+					<td class='timestamp'>12:57:39 PM</td>
+					<td class='step-details'>Creating Global Custom property with Valid Name</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:14:57 AM</td>
-					<td class='step-details'>user can not add config with invalide name to the EBF service</td>
+					<td class='timestamp'>12:57:43 PM</td>
+					<td class='step-details'>user is able to Create Global Custom Properties as:UserProperty1503_1148</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:57:43 PM</td>
+					<td class='step-details'>UserTypeCustomPropertiesCreateUpdateandDeleting is passed</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:14:57 AM</td>
-					<td class='step-details'>Enter the configuration name and upload the json file</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:15:09 AM</td>
-					<td class='step-details'>user can not create the configruation with invalid file format to the EBF service</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:15:28 AM</td>
-					<td class='step-details'>user is successfully added the configruation as:FSMConfig1102_1037 to the EBF service</td>
+					<td class='timestamp'>12:57:43 PM</td>
+					<td class='step-details'>*******AddingCustomPropertiestoGateway started**********</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:15:28 AM</td>
-					<td class='step-details'>verify EBF configuration can not be created with same name</td>
+					<td class='timestamp'>12:57:43 PM</td>
+					<td class='step-details'>Adding User Custom property to the Gateway</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:15:44 AM</td>
-					<td class='step-details'>user can not create config with already exist config name</td>
+					<td class='timestamp'>12:58:24 PM</td>
+					<td class='step-details'>user is able to add the Custom configuration Property to Gateway as: UserProperty1503_1148 successfully</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:58:24 PM</td>
+					<td class='step-details'>AddingCustomPropertiestoGateway is passed</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:15:50 AM</td>
-					<td class='step-details'>Search EBF Config and move to bussince module tab by clicking on EBF Config</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:16:03 AM</td>
-					<td class='step-details'>user is able to Search EBF Config and move to bussince module tab by clicking on EBF Config</td>
+					<td class='timestamp'>12:58:24 PM</td>
+					<td class='step-details'>*******RemovepropertyfromgatewayandDeleteUserConfigProperty started**********</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:16:13 AM</td>
-					<td class='step-details'>Click on the SAP logo>>Gageway management to add the configuration</td>
+					<td class='timestamp'>12:58:24 PM</td>
+					<td class='step-details'>Verify to delete Custom property when property already added to Gateway</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:16:36 AM</td>
-					<td class='step-details'>user should able to click on the Gateway management successully</td>
+					<td class='timestamp'>12:59:31 PM</td>
+					<td class='step-details'>when property added to gateway, user can not Delete Global Custom Properties:UserProperty1503_1148</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:16:36 AM</td>
-					<td class='step-details'>Search for the Gageway number  to Click Gateway Configuration tab and  add the configuration to gateway</td>
+					<td class='timestamp'>12:59:31 PM</td>
+					<td class='step-details'>Remove Custom property already added to Gateway</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:17:24 AM</td>
-					<td class='step-details'>user should able to add the configuration with name as FSMConfig1102_1037 successfully</td>
+					<td class='timestamp'>1:00:52 PM</td>
+					<td class='step-details'>user is able to Delete Global Custom Properties from gateway:UserProperty1503_1148</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:17:24 AM</td>
-					<td class='step-details'>Click on the Refresh button untill status becomes Applied</td>
+					<td class='timestamp'>1:00:52 PM</td>
+					<td class='step-details'>Verify to delete Custom property when property is not added to Gateway</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:18:36 AM</td>
-					<td class='step-details'>configuration Applied successfully</td>
+					<td class='timestamp'>1:02:14 PM</td>
+					<td class='step-details'>user is able to Delete Global Custom Properties:UserProperty1503_1148</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:18:36 AM</td>
-					<td class='step-details'>CreateEBFConfigurationwithFieldsmaintenceBuisnessModule is passed</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:18:36 AM</td>
-					<td class='step-details'>*******AddPlantstoEBFCloudSyncService started**********</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:18:36 AM</td>
-					<td class='step-details'>Verify EBF Sync Service is intialized as cloud based Synchronization service</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:18:42 AM</td>
-					<td class='step-details'>EBF Sync Service is intialized as cloud based Synchronization service</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:18:55 AM</td>
-					<td class='step-details'>Verify the  EBF Cloud SYnc Service Deploymnet status and  backend connection</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:18:55 AM</td>
-					<td class='step-details'>EBF Cloud SYnc Service Deployment status is deployed  and  backend connection is connected sucessfully</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:18:55 AM</td>
-					<td class='step-details'>move to Plants tab of synchronization service and add plants to cloud based sync service</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:18:58 AM</td>
-					<td class='step-details'>1710-Plant is already added and staus is Activated to EBF Cloud Sync Service</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:18:58 AM</td>
-					<td class='step-details'>AddPlantstoEBFCloudSyncService is passed</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:18:58 AM</td>
-					<td class='step-details'>*******CreateEBFConfigurationwithPlantmaintenceBuisnessModule_DeplyedtoGW started**********</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:19:01 AM</td>
-					<td class='step-details'>verify EBF configuration can be created by copy exist configuration</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:19:17 AM</td>
-					<td class='step-details'>user is able to see the window opened with the options of name and content file from content file</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:19:33 AM</td>
-					<td class='step-details'>user is able to create config by uploading EBF config with plant maintence business module json file</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:19:33 AM</td>
-					<td class='step-details'>Adding Plant maintenance business module to Configuration</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:19:56 AM</td>
-					<td class='step-details'>user is able move to bussince module tab and clicked on add new buisness module</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:20:12 AM</td>
-					<td class='step-details'>user is able to edit EBF service plant maintence buisness module and save successfully</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:20:12 AM</td>
-					<td class='step-details'>switch between tabs of EBF Service and verify the groups and gateways of EBF service</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:20:48 AM</td>
-					<td class='step-details'>switch between tabs of EBF Service and gateways of EBF service</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:21:08 AM</td>
-					<td class='step-details'>user is able to switch to Gateways tabs of persistence service and move to first gateway details page</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:22:38 AM</td>
-					<td class='step-details'>user can not add the configuration with name as PMSConfig1102_1037 without adding plant id configuration property</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:23:13 AM</td>
-					<td class='step-details'>user is able to select value for plant default storage location property</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:23:23 AM</td>
-					<td class='step-details'>user is able to select value for Plant_Default_Main_Work_Center property</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:23:32 AM</td>
-					<td class='step-details'>user is able to select value for Plant_Freight_Storage_Location property</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:23:41 AM</td>
-					<td class='step-details'>user is able to select value for Plant_Main_Work_Center_For_Work_Order property</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:23:46 AM</td>
-					<td class='step-details'>user is able to enter the value for LDPA Host Configuration property</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:23:50 AM</td>
-					<td class='step-details'>user is able to enter the value for LDAP_Match_Attribute Configuration property</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:23:55 AM</td>
-					<td class='step-details'>user is able to enter the value for LDAP_Organizational_Unit Configuration property</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:24:13 AM</td>
-					<td class='step-details'>Backend_Timezone_Offset_Minutes Configuration property already added to gateway level</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:24:13 AM</td>
-					<td class='step-details'>Deploy EBF Configuration with Plant maintenance business to Gateway after adding all plant properties</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:24:44 AM</td>
-					<td class='step-details'>user is able to add the configuration with name as PMSConfig1102_1037 successfully</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:24:44 AM</td>
-					<td class='step-details'>Click on the Refresh button untill status becomes Applied</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:25:40 AM</td>
-					<td class='step-details'>PMSConfig1102_1037Configuration is Applied successfully to Gateway with all Plant ID properties</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:25:40 AM</td>
-					<td class='step-details'>Click on the SAP logo>> and move to home page and click on edge service managment tile</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:26:34 AM</td>
-					<td class='step-details'>user is able to click on the Gateway management tile successully</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:26:34 AM</td>
-					<td class='step-details'>Move to Service page</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:26:49 AM</td>
-					<td class='step-details'>user is able to move service page successfully</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:27:02 AM</td>
-					<td class='step-details'>user is not able to see delete icon button for deployed EBF Configuration file</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:27:19 AM</td>
-					<td class='step-details'>user is able to see the config json file as well as able to download successfully in the UI</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:27:19 AM</td>
-					<td class='step-details'>Click on the SAP logo>>Edge managment tile and search for the gateway</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:27:34 AM</td>
-					<td class='step-details'>user should able to click on the Gateway management successully</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:27:34 AM</td>
-					<td class='step-details'>Search for the Gageway number  to add Service and Configuration</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:28:01 AM</td>
-					<td class='step-details'>user should able to search the gateway successfully as 264792540</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:28:01 AM</td>
-					<td class='step-details'>Delete Plant ID system Properties from gateway for Deploy EBF Configuration without adding Plant maintenance business module</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:28:56 AM</td>
-					<td class='step-details'>user is able to Delete Plant ID system Properties from gateway:264792540</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:28:56 AM</td>
-					<td class='step-details'>CreateEBFConfigurationwithPlantmaintenceBuisnessModule_DeplyedtoGW is passed</td>
+					<td class='timestamp'>1:02:14 PM</td>
+					<td class='step-details'>RemovepropertyfromgatewayandDeleteUserConfigProperty is passed</td>
 				</tr>
 			</tbody>
 		</table>
@@ -796,15 +1048,15 @@
 				
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='5'>
 					<div class='test-heading'>
-						<span class='test-name'>EdgeServices.CustomPropertyCreation_AddingUserCustomPropertytoGateWay_EditUpdateDeleteProperty</span>
-						<span class='test-time'>Feb 11, 2021 11:29:15 AM</span>
+						<span class='test-name'>EdgeServices.CustomServiceCreation_CustomConfigCreation_DeployConfigstoGateway_DeleteServiceandConfig</span>
+						<span class='test-time'>Mar 15, 2021 01:02:15 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Feb 11, 2021 11:29:15 AM</span>
-	<span class='label end-time'>Feb 11, 2021 11:35:46 AM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 6m 31s+250ms</span>
+	<span class='label start-time'>Mar 15, 2021 01:02:15 PM</span>
+	<span class='label end-time'>Mar 15, 2021 01:12:05 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 9m 49s+706ms</span>
 </div>
 	<div class='test-steps'>
 		<table class='bordered table-results'>
@@ -818,133 +1070,148 @@
 			<tbody>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:29:21 AM</td>
-					<td class='step-details'>*******UserTypeCustomPropertiesCreateUpdateandDeleting started**********</td>
+					<td class='timestamp'>1:02:19 PM</td>
+					<td class='step-details'>*******CreateCustomServicewithConfigsandDeployed started**********</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:29:21 AM</td>
-					<td class='step-details'>open URL:https://qa1-aws.edge-svc-qa-aws.cfapps.sap.hana.ondemand.comLogin successfully into the policyservice and click on the  Edge Service Management Tile</td>
+					<td class='timestamp'>1:02:19 PM</td>
+					<td class='step-details'>open URL:https://qa6-aws.edge-svc-qa-aws.cfapps.sap.hana.ondemand.comLogin successfully into the policyservice and click on the  Edge Service Management Tile</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:30:23 AM</td>
+					<td class='timestamp'>1:03:16 PM</td>
 					<td class='step-details'>user is able to enter into the HOME page successfully</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:30:23 AM</td>
+					<td class='timestamp'>1:03:16 PM</td>
 					<td class='step-details'>click on the Edge Service management Tile</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:30:51 AM</td>
+					<td class='timestamp'>1:04:00 PM</td>
 					<td class='step-details'>Edge Service manaagement Tile is opened successfully</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:30:51 AM</td>
-					<td class='step-details'>Check Default System Configuration properties is displayed</td>
+					<td class='timestamp'>1:04:00 PM</td>
+					<td class='step-details'>Click on the  Services from left side bar and Add Cutoma service</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:30:58 AM</td>
-					<td class='step-details'>user can see Two System Custom Properties namely 'Business Partner ID' and 'Plant ID' present by default</td>
+					<td class='timestamp'>1:04:33 PM</td>
+					<td class='step-details'>user is able to Create CustomService successfully with Name:-CustomServiceName1503_1148</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:31:08 AM</td>
-					<td class='step-details'>Creating Global Custom property with invalid Name</td>
+					<td class='timestamp'>1:04:33 PM</td>
+					<td class='step-details'>Click on the  Service Configuration tab and Create Streaming Custom Config for custom service</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:31:18 AM</td>
-					<td class='step-details'>user can not Create Global Custom Properties with invalid name please enter valid value</td>
+					<td class='timestamp'>1:04:43 PM</td>
+					<td class='step-details'>user is able to see the window opened with the options of name and content file from content file</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:31:18 AM</td>
-					<td class='step-details'>Creating Global Custom property without entering Name</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:31:31 AM</td>
-					<td class='step-details'>user can not Create Global Custom Properties without entering name please enter valid value</td>
+					<td class='timestamp'>1:04:43 PM</td>
+					<td class='step-details'>Enter the Custom service configuration name and upload the json file</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:31:31 AM</td>
-					<td class='step-details'>Creating Global Custom property with Valid Name</td>
+					<td class='timestamp'>1:04:46 PM</td>
+					<td class='step-details'>create Custom Service config with invalid/Blank config name</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:31:37 AM</td>
-					<td class='step-details'>user is able to Create Global Custom Properties as:UserProperty1102_1037</td>
+					<td class='timestamp'>1:04:57 PM</td>
+					<td class='step-details'>user can not create Custom Service config with invalid/Blank config name</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:31:37 AM</td>
-					<td class='step-details'>UserTypeCustomPropertiesCreateUpdateandDeleting is passed</td>
+					<td class='timestamp'>1:05:09 PM</td>
+					<td class='step-details'>user is successfully added the configruation as:CustomServiceConfig1503_1148 to the Custom service</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:31:37 AM</td>
-					<td class='step-details'>*******AddingCustomPropertiestoGateway started**********</td>
+					<td class='timestamp'>1:05:09 PM</td>
+					<td class='step-details'>switch between Group tab and Gateways tab verify the group and gateways of custom service</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:05:18 PM</td>
+					<td class='step-details'>user is able to switch to Groups tabs and gateway tabs of Custom Service service</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:31:37 AM</td>
-					<td class='step-details'>Adding User Custom property to the Gateway</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:32:23 AM</td>
-					<td class='step-details'>user is able to add the Custom configuration Property to Gateway as: UserProperty1102_1037 successfully</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:32:23 AM</td>
-					<td class='step-details'>AddingCustomPropertiestoGateway is passed</td>
+					<td class='timestamp'>1:05:18 PM</td>
+					<td class='step-details'>Install the Custom Service to the gateway and do the deployement</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:32:23 AM</td>
-					<td class='step-details'>*******RemovepropertyfromgatewayandDeleteUserConfigProperty started**********</td>
+					<td class='timestamp'>1:05:41 PM</td>
+					<td class='step-details'>Add the  Custom service to the gateway by clicking the + button and installed</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:06:40 PM</td>
+					<td class='step-details'>Custom service installed successfully to gateway:234528234as nameCustomServiceName1503_1148</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:32:23 AM</td>
-					<td class='step-details'>Verify to delete Custom property when property already added to Gateway</td>
+					<td class='timestamp'>1:06:40 PM</td>
+					<td class='step-details'>Add the  Custom configuration to the gateway and do the deployement</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:33:25 AM</td>
-					<td class='step-details'>when property added to gateway, user can not Delete Global Custom Properties:UserProperty1102_1037</td>
+					<td class='timestamp'>1:07:08 PM</td>
+					<td class='step-details'>user is able to add the configuration with name as CustomServiceConfig1503_1148 successfully</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:33:25 AM</td>
-					<td class='step-details'>Remove Custom property already added to Gateway</td>
+					<td class='timestamp'>1:07:08 PM</td>
+					<td class='step-details'>Click on the Refresh button until status becomes Applied</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:34:36 AM</td>
-					<td class='step-details'>user is able to Delete Global Custom Properties from gateway:UserProperty1102_1037</td>
+					<td class='timestamp'>1:08:26 PM</td>
+					<td class='step-details'>CustomServiceConfig1503_1148 configuration Applied successfully</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:34:36 AM</td>
-					<td class='step-details'>Verify to delete Custom property when property is not added to Gateway</td>
+					<td class='timestamp'>1:08:26 PM</td>
+					<td class='step-details'>switch between tabs of Custom Service and gateways of service</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:35:46 AM</td>
-					<td class='step-details'>user is able to Delete Global Custom Properties:UserProperty1102_1037</td>
+					<td class='timestamp'>1:08:54 PM</td>
+					<td class='step-details'>user is able to switch to Gateways tabs of Custom service and move to first gateway details page</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:35:46 AM</td>
-					<td class='step-details'>RemovepropertyfromgatewayandDeleteUserConfigProperty is passed</td>
+					<td class='timestamp'>1:08:54 PM</td>
+					<td class='step-details'>UnInstalling  custom service from gateway</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:11:23 PM</td>
+					<td class='step-details'>user is able to UnInstalle custom service sucessfully with name as CustomServiceName1503_1148</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:11:53 PM</td>
+					<td class='step-details'>user is able to delete the configuration with name as CustomServiceConfig1503_1148 successfully</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:12:05 PM</td>
+					<td class='step-details'>user is able to delete the configuration with name as CustomServiceConfig1503_1148 successfully</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:12:05 PM</td>
+					<td class='step-details'>CreateCustomServicewithConfigsandDeployed is passed</td>
 				</tr>
 			</tbody>
 		</table>
@@ -956,14 +1223,14 @@
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='6'>
 					<div class='test-heading'>
 						<span class='test-name'>EdgeServices.CreateGroup_AddingGateway_AddingServices_CombineStreamingConfigs_DeployConfigs</span>
-						<span class='test-time'>Feb 11, 2021 11:35:48 AM</span>
+						<span class='test-time'>Mar 15, 2021 01:12:06 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Feb 11, 2021 11:35:48 AM</span>
-	<span class='label end-time'>Feb 11, 2021 11:49:34 AM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 13m 46s+565ms</span>
+	<span class='label start-time'>Mar 15, 2021 01:12:06 PM</span>
+	<span class='label end-time'>Mar 15, 2021 01:23:32 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 11m 25s+801ms</span>
 </div>
 	<div class='test-steps'>
 		<table class='bordered table-results'>
@@ -977,422 +1244,303 @@
 			<tbody>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:35:52 AM</td>
+					<td class='timestamp'>1:12:12 PM</td>
 					<td class='step-details'>*******PolicyServiceGroupandGatewayfunctionality started**********</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:35:52 AM</td>
-					<td class='step-details'>open URL:https://qa1-aws.edge-svc-qa-aws.cfapps.sap.hana.ondemand.comLogin successfully into the policyservice and click on the  Edge Service Management Tile</td>
+					<td class='timestamp'>1:12:12 PM</td>
+					<td class='step-details'>open URL:https://qa6-aws.edge-svc-qa-aws.cfapps.sap.hana.ondemand.comLogin successfully into the policyservice and click on the  Edge Service Management Tile</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:37:06 AM</td>
+					<td class='timestamp'>1:13:00 PM</td>
 					<td class='step-details'>user is able to enter into the HOME page successfully</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:37:06 AM</td>
+					<td class='timestamp'>1:13:00 PM</td>
 					<td class='step-details'>click on the Edge Service management Tile</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:37:45 AM</td>
+					<td class='timestamp'>1:13:31 PM</td>
 					<td class='step-details'>Edge Service manaagement Tile is opened successfully</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:37:45 AM</td>
+					<td class='timestamp'>1:13:31 PM</td>
 					<td class='step-details'>Click on the + button of the bottom right corner to add the group</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:37:54 AM</td>
+					<td class='timestamp'>1:13:40 PM</td>
 					<td class='step-details'>User is able to see the Group window successfully</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:38:06 AM</td>
+					<td class='timestamp'>1:13:52 PM</td>
 					<td class='step-details'>User can not create Group with invalid value of name</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:38:06 AM</td>
+					<td class='timestamp'>1:13:52 PM</td>
 					<td class='step-details'>Enter the name and description of the group with valid value</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:38:14 AM</td>
-					<td class='step-details'>user is able to create Group with name:Group1102_1037and Group Description successfully</td>
+					<td class='timestamp'>1:14:01 PM</td>
+					<td class='step-details'>user is able to create Group with name:Group1503_1148and Group Description successfully</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:38:14 AM</td>
+					<td class='timestamp'>1:14:01 PM</td>
 					<td class='step-details'>Add the services to the group by clicking the + button</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:38:36 AM</td>
+					<td class='timestamp'>1:14:22 PM</td>
 					<td class='step-details'>Streaming service added successfully</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:38:36 AM</td>
+					<td class='timestamp'>1:14:22 PM</td>
 					<td class='step-details'>Check the remove of the service is working or not</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:38:46 AM</td>
+					<td class='timestamp'>1:14:32 PM</td>
 					<td class='step-details'>Streaming services is deleted successfully</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:38:46 AM</td>
+					<td class='timestamp'>1:14:32 PM</td>
 					<td class='step-details'>check whether the services are available in the list</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:38:55 AM</td>
+					<td class='timestamp'>1:14:41 PM</td>
 					<td class='step-details'>Service name is required to add</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:39:23 AM</td>
+					<td class='timestamp'>1:15:09 PM</td>
 					<td class='step-details'>Streaming service again added successfully</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:39:23 AM</td>
+					<td class='timestamp'>1:15:09 PM</td>
 					<td class='step-details'>Add the Persistence service  to the group</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:39:45 AM</td>
+					<td class='timestamp'>1:15:31 PM</td>
 					<td class='step-details'>persistence service added successfully</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:39:45 AM</td>
+					<td class='timestamp'>1:15:31 PM</td>
 					<td class='step-details'>Add the EBF service  to the group</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:40:10 AM</td>
+					<td class='timestamp'>1:15:55 PM</td>
 					<td class='step-details'>EBF service added successfully</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:40:10 AM</td>
+					<td class='timestamp'>1:15:55 PM</td>
 					<td class='step-details'>Add Gateway to the group</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:40:38 AM</td>
-					<td class='step-details'>user is able to add the gateway of264792540to the group and status of the gateway is OK</td>
+					<td class='timestamp'>1:16:22 PM</td>
+					<td class='step-details'>user is able to add the gateway of234528234to the group and status of the gateway is OK</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:40:38 AM</td>
+					<td class='timestamp'>1:16:22 PM</td>
 					<td class='step-details'>Click on the services icon in the left side of the workcenter</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:40:47 AM</td>
+					<td class='timestamp'>1:16:31 PM</td>
 					<td class='step-details'>User is able to see the Steaming services window opened in the work center</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:40:47 AM</td>
+					<td class='timestamp'>1:16:31 PM</td>
 					<td class='step-details'>Click on the configuration add the configuration to the group by clicking on the + button</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:41:00 AM</td>
+					<td class='timestamp'>1:16:44 PM</td>
 					<td class='step-details'>User is able to see the window opened with the options of name and content file from content file</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:41:00 AM</td>
+					<td class='timestamp'>1:16:44 PM</td>
 					<td class='step-details'>Enter the configuration name and upload the json file</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:41:16 AM</td>
-					<td class='step-details'>User is successfully added the configruation as:GroupStreamConfig1102_1037 to the steaming service</td>
+					<td class='timestamp'>1:16:59 PM</td>
+					<td class='step-details'>User is successfully added the configruation as:GroupStreamConfig1503_1148 to the steaming service</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:41:20 AM</td>
+					<td class='timestamp'>1:17:04 PM</td>
 					<td class='step-details'>Configname list is sorted as acending</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:41:24 AM</td>
+					<td class='timestamp'>1:17:08 PM</td>
 					<td class='step-details'>configname list is sorted in descending order</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:41:24 AM</td>
+					<td class='timestamp'>1:17:08 PM</td>
 					<td class='step-details'>Combine two Streaming Configurations without entering new configuration name</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:41:39 AM</td>
+					<td class='timestamp'>1:17:23 PM</td>
 					<td class='step-details'>User can not Combine two Streaming Configurations without entering new configuration name</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:41:39 AM</td>
+					<td class='timestamp'>1:17:23 PM</td>
 					<td class='step-details'>Combine two Streaming Configurations with entering new configuration name</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:41:47 AM</td>
-					<td class='step-details'>User is able to Combine two Streaming Configurations with entering new configuration nameCombineConfigName1102_1037</td>
+					<td class='timestamp'>1:17:31 PM</td>
+					<td class='step-details'>User is able to Combine two Streaming Configurations with entering new configuration nameCombineConfigName1503_1148</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:41:47 AM</td>
+					<td class='timestamp'>1:17:31 PM</td>
 					<td class='step-details'>Check whether the configuration search  is working or not</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:41:51 AM</td>
+					<td class='timestamp'>1:17:35 PM</td>
 					<td class='step-details'>Search option in the streaming service is working</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:41:51 AM</td>
+					<td class='timestamp'>1:17:35 PM</td>
 					<td class='step-details'>Click on the groups and gateways and Adding the cofiguration to the group</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:42:07 AM</td>
-					<td class='step-details'>User is able to see the group:Group1102_1037sucessfully</td>
+					<td class='timestamp'>1:17:50 PM</td>
+					<td class='step-details'>User is able to see the group:Group1503_1148sucessfully</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:42:07 AM</td>
+					<td class='timestamp'>1:17:50 PM</td>
 					<td class='step-details'>Add the service and configuration to the group</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:45:16 AM</td>
+					<td class='timestamp'>1:19:38 PM</td>
 					<td class='step-details'>Configuration Applied in the group successfully</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:45:16 AM</td>
+					<td class='timestamp'>1:19:38 PM</td>
 					<td class='step-details'>Check for the navigation from gateways to service to configuration</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:45:29 AM</td>
+					<td class='timestamp'>1:19:50 PM</td>
 					<td class='step-details'>User is able to navigate the gateway window successfully</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:45:35 AM</td>
+					<td class='timestamp'>1:19:57 PM</td>
 					<td class='step-details'>User is able to move from the gateways to services successfully</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:45:41 AM</td>
+					<td class='timestamp'>1:20:03 PM</td>
 					<td class='step-details'>User is able to move from services to the configurarion successfully</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:45:41 AM</td>
+					<td class='timestamp'>1:20:03 PM</td>
 					<td class='step-details'>Click on the EBF services in the left side of the workcenter</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:45:54 AM</td>
+					<td class='timestamp'>1:20:15 PM</td>
 					<td class='step-details'>User is able to see the EBF services window opened in the work center</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:45:54 AM</td>
+					<td class='timestamp'>1:20:15 PM</td>
 					<td class='step-details'>Click on the configuration add the configuration to the group by clicking on the + button</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:46:03 AM</td>
+					<td class='timestamp'>1:20:25 PM</td>
 					<td class='step-details'>User is able to see the window opened with the options of name and content file from content file</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:46:04 AM</td>
+					<td class='timestamp'>1:20:25 PM</td>
 					<td class='step-details'>Enter the configuration name and upload the json file</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:46:19 AM</td>
-					<td class='step-details'>user is successfully added the configruation as:GroupEBFConfig1102_1037 to the EBF service</td>
+					<td class='timestamp'>1:20:41 PM</td>
+					<td class='step-details'>user is successfully added the configruation as:GroupEBFConfig1503_1148 to the EBF service</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:46:19 AM</td>
+					<td class='timestamp'>1:20:41 PM</td>
 					<td class='step-details'>click on the groups and gateways and Adding the cofiguration to the group</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:46:32 AM</td>
-					<td class='step-details'>User is able to see the group:Group1102_1037sucessfully</td>
+					<td class='timestamp'>1:20:53 PM</td>
+					<td class='step-details'>User is able to see the group:Group1503_1148sucessfully</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:46:32 AM</td>
+					<td class='timestamp'>1:20:53 PM</td>
 					<td class='step-details'>Add the EBF configuration to the group</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:48:31 AM</td>
+					<td class='timestamp'>1:22:37 PM</td>
 					<td class='step-details'>EBF configuration Applied in the group successfully</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:48:31 AM</td>
+					<td class='timestamp'>1:22:37 PM</td>
 					<td class='step-details'>First Remove the Gateway  from  the group</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:49:03 AM</td>
-					<td class='step-details'>Gateway:264792540is deleted sucessfully from the group</td>
+					<td class='timestamp'>1:23:06 PM</td>
+					<td class='step-details'>Gateway:234528234is deleted sucessfully from the group</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:49:03 AM</td>
+					<td class='timestamp'>1:23:06 PM</td>
 					<td class='step-details'>Remove the group from policyservice</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:49:34 AM</td>
-					<td class='step-details'>User is able to delete the groupGroup1102_1037is deleted sucessfully from the group</td>
+					<td class='timestamp'>1:23:32 PM</td>
+					<td class='step-details'>User is able to delete the groupGroup1503_1148is deleted sucessfully from the group</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:49:34 AM</td>
+					<td class='timestamp'>1:23:32 PM</td>
 					<td class='step-details'>PolicyServiceGroupandGatewayfunctionality is passed</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-					</div>
-				</li>
-				
-				
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='7'>
-					<div class='test-heading'>
-						<span class='test-name'>EdgeServices.RemoveCoreSevicesfromGateway_ReinstallCoreServicestoGateway</span>
-						<span class='test-time'>Feb 11, 2021 11:49:36 AM</span>
-						<span class='test-status right pass'>pass</span>
-					</div>
-					<div class='test-content hide'>
-<div class='test-time-info'>
-	<span class='label start-time'>Feb 11, 2021 11:49:36 AM</span>
-	<span class='label end-time'>Feb 11, 2021 12:29:52 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 40m 16s+546ms</span>
-</div>
-	<div class='test-steps'>
-		<table class='bordered table-results'>
-			<thead>
-				<tr>
-					<th>Status</th>
-					<th>Timestamp</th>
-					<th>Details</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:49:41 AM</td>
-					<td class='step-details'>*******Services_Reinstall_Functionailty_Testcase started**********</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:49:41 AM</td>
-					<td class='step-details'>open URL:https://qa1-aws.edge-svc-qa-aws.cfapps.sap.hana.ondemand.comLogin successfully into the policyservice and click on the  Edge Service Management Tile</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:50:57 AM</td>
-					<td class='step-details'>user is able to enter into the HOME page successfully</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:50:57 AM</td>
-					<td class='step-details'>click on the Edge Service management Tile</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:51:43 AM</td>
-					<td class='step-details'>Edge Service manaagement Tile is opened successfully</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:51:43 AM</td>
-					<td class='step-details'>Search for the Gageway number to Remove already installed services</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:52:08 AM</td>
-					<td class='step-details'>Click to remove services from gateway</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:56:37 AM</td>
-					<td class='step-details'>EBF service is uninstalled successfully from gateway:264792540</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:57:07 AM</td>
-					<td class='step-details'>Persistence service is uninstalled successfully from gateway:264792540</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>11:57:37 AM</td>
-					<td class='step-details'>Streaming service is uninstalled successfully from gateway:264792540</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:57:37 AM</td>
-					<td class='step-details'>reinstall the Core services to the gateway by clicking the + button</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>11:58:58 AM</td>
-					<td class='step-details'>Add the services to the group by clicking the + button</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>12:17:58 PM</td>
-					<td class='step-details'>EBF service installed successfully to gateway:264792540</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>12:18:28 PM</td>
-					<td class='step-details'>Add the services to the group by clicking the + button</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>12:25:51 PM</td>
-					<td class='step-details'>Streaming service installed successfully to gateway:264792540</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>12:26:21 PM</td>
-					<td class='step-details'>Add the services to the group by clicking the + button</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>12:29:52 PM</td>
-					<td class='step-details'>Persistence service installed successfully to gateway:264792540</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>12:29:52 PM</td>
-					<td class='step-details'>Services_Reinstall_Functionailty_Testcase is passed</td>
 				</tr>
 			</tbody>
 		</table>
@@ -1432,10 +1580,10 @@
 					<canvas id='parent-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='85.714%'><span class='strong'>6</span> test(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>6</span> test(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='14.286%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
 				</div>
 			</div>
 		</div>
@@ -1447,10 +1595,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='55.466%'><span class='strong'>137</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='56.175%'><span class='strong'>141</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='0.81%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='43.725%'>108</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='43.825%'>110</span> others
 				</div>
 			</div>
 		</div>
@@ -1460,99 +1608,6 @@
 </div>
 <!-- test view -->
 <!-- category view -->
-<div id='exception-view' class='view hide'>
-
-    <section id='controls'>
-        <div class='controls grey lighten-4'>
-            <!-- search -->
-            <div class='chip transparent' alt='Search Tests' title='Search Tests'>
-                <a href="#" class='search-div'>
-                    <i class='material-icons'>search</i> Search
-                </a>
-
-                <div class='input-field left hide'>
-                    <input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
-                </div>
-
-            </div>
-            <!-- search -->
-        </div>
-    </section>
-
-    <div class='subview-left left'>
-
-        <div class='view-summary'>
-            <h5>Exceptions</h3>
-                <ul id='exception-collection' class='exception-collection'>
-
-                        <li class='exception displayed active'>
-                            <div class='exception-heading'>
-                                <span class='exception-name'>java.lang.NullPointerException</span>
-                                <span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
-                            </div>
-                            <div class='exception-content hide'>
-                                <div class='exception-tests'>
-                                    <table class='bordered table-results'>
-                                        <thead>
-                                        <tr>
-                                            <th>Timestamp</th>
-                                            <th>TestName</th>
-                                            <th>Status</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                                    <tr>
-                                                        <td>Feb 11, 2021 10:45:43 AM</td>
-                                                        <td class='linked' test-id='2'>EdgeServices.PersistenceServiceConfigurationCreationByDataRetensionandDeployedtoGateway</td>
-                                                        <td><pre><pre>java.lang.NullPointerException: Cannot invoke "UtilityComponent.FunctionalComponents.getScreenshot()" because "this.functionalcomponents" is null
-	at BaseComponent.BaseTest.failedDescription(BaseTest.java:111)
-	at EdgeServiceComponents.EdgeServiceFunctions.PersistenceConfigDeploymenttoGateway(EdgeServiceFunctions.java:245)
-	at EdgeServices.PersistenceServiceConfigurationCreationByDataRetensionandDeployedtoGateway.PersistenceService_DataRetension_flow(PersistenceServiceConfigurationCreationByDataRetensionandDeployedtoGateway.java:114)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:764)
-	at org.testng.TestRunner.run(TestRunner.java:585)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
-	at org.testng.TestNG.runSuites(TestNG.java:1069)
-	at org.testng.TestNG.run(TestNG.java:1037)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></pre></td>
-                                                    </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </li>
-                </ul>
-        </div>
-    </div>
-
-    <div class='subview-right left'>
-        <div class='view-summary'>
-            <h5 class='exception-name'></h5>
-        </div>
-    </div>
-</div>
 <!-- exception view -->
 <div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
@@ -1562,31 +1617,31 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Tests
-					<div class='panel-lead'>7</div>
+					<div class='panel-lead'>6</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>247</div>
+					<div class='panel-lead'>251</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Feb 11, 2021 10:37:26 AM</div>
+					<div class='panel-lead'>Mar 15, 2021 11:48:14 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Feb 11, 2021 12:29:52 PM</div>
+			 		<div class='panel-lead'>Mar 15, 2021 01:23:32 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>1h 52m 26s+411ms</div>
+					<div class='panel-lead'>1h 35m 17s+511ms</div>
 				</div>
 			</div>
 		</div>
@@ -1607,13 +1662,13 @@
 				skipParent: 0,
 				exceptionsParent: 0,
 				
-				passChild: 137,
+				passChild: 141,
 				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
-				infoChild: 108,
+				infoChild: 110,
 				exceptionsChild: 0,
 				
 				passGrandChild: 0,

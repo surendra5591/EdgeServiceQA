@@ -3,17 +3,19 @@
 <suite name="Failed suite [EdgeServiceSmoke]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="EdgeServices.PersistenceServiceConfigurationCreationByDataRetensionandDeployedtoGateway">
+      <class name="EdgeServices.EBFServiceConfigCreationwithFSMandPSM_PlantActivation_ConfigDeploytoGatewaywithPlantID">
         <methods>
+          <include name="AddPlantstoEBFCloudSyncService"/>
+          <include name="CreateEBFConfigurationwithFieldsmaintenceBuisnessModule"/>
           <include name="tearDown"/>
           <include name="AfterClass"/>
           <include name="beforeSuite"/>
           <include name="beforeMethod"/>
+          <include name="CreateEBFConfigurationwithPlantmaintenceBuisnessModule_DeplyedtoGW"/>
           <include name="AfterSuite"/>
           <include name="beforeClass"/>
-          <include name="PersistenceService_DataRetension_flow"/>
         </methods>
-      </class> <!-- EdgeServices.PersistenceServiceConfigurationCreationByDataRetensionandDeployedtoGateway -->
+      </class> <!-- EdgeServices.EBFServiceConfigCreationwithFSMandPSM_PlantActivation_ConfigDeploytoGatewaywithPlantID -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [EdgeServiceSmoke] -->

@@ -81,7 +81,9 @@ public class RemoveCoreSevicesfromGateway_ReinstallCoreServicestoGateway extends
 			  }
 			  // Reinstall Streaming service to gateway
 			  test.log(Status.INFO, "reinstall the Core services to the gateway by clicking the + button");
-			  edgeservicefunctions.InstalledAllCoreServicestoGateway(GateWayNo);
+			  edgeservicefunctions.EBFServiceInstallationtoGateway(GateWayNo);
+			  edgeservicefunctions.StreamingServiceInstallationtoGateway(GateWayNo);
+			  edgeservicefunctions.PersistenceServiceInstallationtoGateway(GateWayNo);
 			  
 			  
 

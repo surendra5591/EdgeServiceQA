@@ -3,6 +3,7 @@ package EdgeServices;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.Status;
@@ -29,12 +30,13 @@ public class GLobalActionCreationandDelete extends BaseTest{
 	    String enterprise_fedility = functionalcomponents.getdatafromsheet("EdgeDesigner", "E2E_Edge_TestCases", "Enterprise_fedility");
 	    String enterprise_rollback  = functionalcomponents.getdatafromsheet("EdgeDesigner", "E2E_Edge_TestCases", "Enterprise_rollback");
 	 
-	@Test 
+	    
+	 @Test 
 	public void CreateGlobalActionupdateDelete()
 	{
-		  GlobalActionName=GlobalActionName+CurrentDateandTime;
 		  EdgeServiceFunctions edgeservicefunctions = new  EdgeServiceFunctions();
-	   	  edgeservicefunctions.LoginPolicyservice_MovetoEdgeDesignerTile(PolicyServiceURL,username,password);
+		  edgeservicefunctions.LoginPolicyservice_MovetoEdgeDesignerTile(PolicyServiceURL,username,password);
+		  GlobalActionName=GlobalActionName+CurrentDateandTime;
 	      test.log(Status.INFO, "Click on the + Symbol in the bottom of the work center to add the Global Action");
 	      functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("GlobalActionslink"), 90);
 	      functionalcomponents.ClickOperation(properties.getProperty("GlobalActionslink"));

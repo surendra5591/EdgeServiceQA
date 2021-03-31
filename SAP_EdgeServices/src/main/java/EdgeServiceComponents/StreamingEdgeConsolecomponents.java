@@ -248,8 +248,6 @@ public void CreateSensorProfile(String SensorProfileName, String ProductionParam
 		failedDescription("Numeric values for the Testing & Production Parameters for the minimum and maximum values are:"+ProductionParameters_Min+","+ProductionParameters_Max+"  saved and verified Maximum value is not exceed 2147483647.");
 	 }
 	 
-	 
-	
 	 test.log(Status.INFO, "Click Save sensor Profile button and verify sensor profile is created successfully with Profile Name");
 	 functionalcomponents.ClickOperation(properties.getProperty("SensorProfile_Save_btn"));
 	 functionalcomponents.WaitTillTime(3000);
@@ -270,8 +268,7 @@ public void CreateSensorProfile(String SensorProfileName, String ProductionParam
 	
 }
 	
-	
-		
+			
 	
 public void CreateAction(String ActionName, String ActionDescription, String Actiontypevalue, String Actionmessage, String Actionparameter) {
 	

@@ -24,7 +24,7 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 
 import UtilityComponent.FunctionalComponents;
 
-
+// Author Surendra Singh
 
 public class BaseTest {
 	
@@ -57,9 +57,8 @@ public class BaseTest {
 		properties =FunctionalComponents.getObjectProperties();
         Driverfactory.getBrowser(properties.getProperty("BrowserName"));
         driver=Driverfactory.getDriver();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
         functionalcomponents = new FunctionalComponents(driver);
-
 	}
 	
 	@BeforeMethod

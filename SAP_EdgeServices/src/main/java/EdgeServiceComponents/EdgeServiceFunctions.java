@@ -2,6 +2,9 @@ package EdgeServiceComponents;
 
 import java.util.Properties;
 
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
@@ -9,6 +12,7 @@ import com.aventstack.extentreports.Status;
 
 import BaseComponent.BaseTest;
 import UtilityComponent.FunctionalComponents;
+import UtilityComponent.RestAssuredComponents;
 
 public class EdgeServiceFunctions extends BaseTest {
 	
@@ -47,7 +51,6 @@ public class EdgeServiceFunctions extends BaseTest {
            failedDescription("Edge Service manaagement Tile is not opened");
 		} 
 	}
-	
 	public void LoginPolicyservice_MovetoEdgeDesignerTile(String PolicyServiceURL, String username, String password)
 	{
 		 test.log(Status.INFO, "open URL: "+PolicyServiceURL+" Login successfully into the policyservice and click on the  Edge Designer Tile");
@@ -410,54 +413,16 @@ public class EdgeServiceFunctions extends BaseTest {
 		  functionalcomponents.ClickOperation((properties.getProperty("Project_title_part1")+ProjectName+properties.getProperty("Project_title_part2")));
 		  functionalcomponents.WaitTillTime(10000);	
      }
-      public void InstalledAllCoreServicestoGateway(String GateWayNo){
+      
+      public void StreamingServiceInstallationtoGateway(String GateWayNo){
     	  String Rownumber="";
     	  String Servicestatus=""; 
     	  functionalcomponents.ClickOperation(properties.getProperty("Gateway_Services_tab"));	
-    	  functionalcomponents.WaitTillTime(15000);
+    	  functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("Service_refresh_btn"), 90);
     	  functionalcomponents.ClickOperation(properties.getProperty("Service_refresh_btn"));
-    	  functionalcomponents.WaitTillTime(30000); 
-    	  //Adding EBF service to gateway if not installed
-    	  if (!functionalcomponents.IsElementPresent(properties.getProperty("EBFServiceinstaledRow") ))
-    	{	 
-    	  test.log(Status.INFO, "Add the services to the group by clicking the + button");
-    	  functionalcomponents.WaitTillTime(1000);
-    	  functionalcomponents.ClickOperation(properties.getProperty("Add_ServicetoGW"));
-    	  functionalcomponents.WaitTillTime(2000);
-    	  functionalcomponents.ClickOperation(properties.getProperty("services_dropdown"));
-    	  functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("EBF_Service"), 50);		  
-    	  functionalcomponents.ClickOperation(properties.getProperty("EBF_Service"));
-    	  functionalcomponents.WaitTillTime(2000);			  
-    	  functionalcomponents.ClickOperation(properties.getProperty("Addservicegroup_savebutton"));
-    	  functionalcomponents.WaitTillTime(25000);
-    	  for(int i=1; i<40; i++)
-    	  {
-    	  functionalcomponents.ClickOperation(properties.getProperty("Service_refresh_btn"));
-    	  functionalcomponents.WaitTillTime(30000);  
-    	  Rownumber=driver.findElement(By.xpath(properties.getProperty("EBFServiceinstaledRow"))).getAttribute("data-sap-ui-rowindex");
-    	  Servicestatus=driver.findElement(By.xpath("//td[@id='ps_bundletable-rows-row"+Rownumber+"-col2']//span[@class='sapMLabelTextWrapper']//bdi")).getText();
-    	  if(Servicestatus.equalsIgnoreCase("Installed"))
-    		  break;
-    	  }
-    	   if(Servicestatus.equalsIgnoreCase("Installed"))
-    		  {
-    			  test.log(Status.PASS, "EBF service installed successfully to gateway:"+GateWayNo);
-    			  
-    		  }
-    	   else if(Servicestatus.equalsIgnoreCase("Error")){
-    		     failedDescription("EBF service status is Error");
-    		   }
-    		  else
-    		  {
-    			  failedDescription("EBF service is not installled");
-    		  }
-    	}
-       else
-		  {
-    	   test.log(Status.PASS, "EBF service is already installed to gateway:"+GateWayNo);
-		  }
-    	  
-    	  //Adding Streaming service if not installed to gateway
+    	  functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("Service_refresh_btn"), 90);
+    	  functionalcomponents.WaitTillTime(10000); 
+    	//Adding Streaming service if not installed to gateway
     	  if (!functionalcomponents.IsElementPresent(properties.getProperty("StreamingServiceinstalledRow") ))
     		  {	 
     	  test.log(Status.INFO, "Add the services to the group by clicking the + button");
@@ -497,6 +462,17 @@ public class EdgeServiceFunctions extends BaseTest {
     	   test.log(Status.PASS, "Streaming service is already installed to gateway:"+GateWayNo);
 		  }
     	  
+    	  
+      }
+      
+      public void PersistenceServiceInstallationtoGateway(String GateWayNo){
+    	  String Rownumber="";
+    	  String Servicestatus=""; 
+    	  functionalcomponents.ClickOperation(properties.getProperty("Gateway_Services_tab"));	
+    	  functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("Service_refresh_btn"), 90);
+    	  functionalcomponents.ClickOperation(properties.getProperty("Service_refresh_btn"));
+    	  functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("Service_refresh_btn"), 90);
+    	  functionalcomponents.WaitTillTime(10000); 
     	  //Adding Persistence service to gateway if not installed to gateway
     	  if (!functionalcomponents.IsElementPresent(properties.getProperty("PersistenceServiceinstalledRow") ))
     		  {	 
@@ -537,14 +513,59 @@ public class EdgeServiceFunctions extends BaseTest {
     	   test.log(Status.PASS, "Persistence service is already installed to gateway:"+GateWayNo);
 		  }
     	   
-    	  
-    	 
-    	  
       }
+      
+  public void EBFServiceInstallationtoGateway(String GateWayNo){
+	  String Rownumber="";
+	  String Servicestatus=""; 
+	  functionalcomponents.ClickOperation(properties.getProperty("Gateway_Services_tab"));	
+	  functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("Service_refresh_btn"), 90);
+	  functionalcomponents.ClickOperation(properties.getProperty("Service_refresh_btn"));
+	  functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("Service_refresh_btn"), 90);
+	  functionalcomponents.WaitTillTime(10000); 
+	  //Adding EBF service to gateway if not installed
+	  if (!functionalcomponents.IsElementPresent(properties.getProperty("EBFServiceinstaledRow") ))
+	 {	 
+	  test.log(Status.INFO, "Add the services to the group by clicking the + button");
+	  functionalcomponents.WaitTillTime(1000);
+	  functionalcomponents.ClickOperation(properties.getProperty("Add_ServicetoGW"));
+	  functionalcomponents.WaitTillTime(2000);
+	  functionalcomponents.ClickOperation(properties.getProperty("services_dropdown"));
+	  functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("EBF_Service"), 50);		  
+	  functionalcomponents.ClickOperation(properties.getProperty("EBF_Service"));
+	  functionalcomponents.WaitTillTime(2000);			  
+	  functionalcomponents.ClickOperation(properties.getProperty("Addservicegroup_savebutton"));
+	  functionalcomponents.WaitTillTime(25000);
+	  for(int i=1; i<40; i++)
+	  {
+	  functionalcomponents.ClickOperation(properties.getProperty("Service_refresh_btn"));
+	  functionalcomponents.WaitTillTime(30000);  
+	  Rownumber=driver.findElement(By.xpath(properties.getProperty("EBFServiceinstaledRow"))).getAttribute("data-sap-ui-rowindex");
+	  Servicestatus=driver.findElement(By.xpath("//td[@id='ps_bundletable-rows-row"+Rownumber+"-col2']//span[@class='sapMLabelTextWrapper']//bdi")).getText();
+	  if(Servicestatus.equalsIgnoreCase("Installed"))
+		  break;
+	  }
+	   if(Servicestatus.equalsIgnoreCase("Installed"))
+		  {
+			  test.log(Status.PASS, "EBF service installed successfully to gateway:"+GateWayNo);
+			  
+		  }
+	   else if(Servicestatus.equalsIgnoreCase("Error")){
+		     failedDescription("EBF service status is Error");
+		   }
+		  else
+		  {
+			  failedDescription("EBF service is not installled");
+		  }
+	}
+   else
+	  {
+	   test.log(Status.PASS, "EBF service is already installed to gateway:"+GateWayNo);
+	  } 
+  }
       
   public void VerifyGatewayStatus_SetEdgeConsolePasswordtoGateway(String EdgeConsolePassword, String GateWayNo)
       {
-	 
 	  test.log(Status.INFO, "Click on Gateway managment tile and serach gateway verify status of gateway");	
 	  functionalcomponents.ClickOperation(properties.getProperty("SAP_logo"));			  
 	  functionalcomponents.WaitTillTime(7000);
@@ -642,5 +663,6 @@ public class EdgeServiceFunctions extends BaseTest {
 		  test.log(Status.PASS, "Backend_Timezone_Offset_Minutes Configuration property already added to gateway level");
 	  }
   }
+  
 }
 

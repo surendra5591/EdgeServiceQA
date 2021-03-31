@@ -18,7 +18,6 @@ import EdgeServiceComponents.EdgeServiceFunctions;
 import EdgeServiceComponents.StreamingEdgeConsolecomponents;
 import UtilityComponent.FunctionalComponents;
 import UtilityComponent.RestAssuredComponents;
-import io.restassured.response.Response;
 
 public class E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolevalidation extends BaseTest  {
 	
@@ -31,14 +30,6 @@ public class E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolev
     Properties properties = FunctionalComponents.getObjectProperties();
     RestAssuredComponents requestassuredcomponents = new RestAssuredComponents();
     String CurrentDateandTime =functionalcomponents.GetCurrentDateandTime();
-    String CapablityName="";
-    String CapablityAlternateID ="";
-    String SensorTypesName="";
-    String SensorTypeAltID = functionalcomponents.GetRandomnumber();
-    String DeviceName="";
-    String DeviceAlternateID="";
-    String SensorName="";
-    String SensorAltID ="";
     String Projectname="";
     String Project_configname="";
     String StreamConfig="";
@@ -61,26 +52,10 @@ public class E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolev
 	String Streamingpassword = functionalcomponents.getdatafromsheet("GlobalTestData", "GlobalEdgeServiceTestData", "Stream_password"); 
 	String InvalidName=functionalcomponents.getdatafromsheet("GlobalTestData", "GlobalEdgeServiceTestData", "InvalidName");
 	String  PropertiesName1 = functionalcomponents.getdatafromsheet("CockPit", "E2E_Edge_TestCases", "PropertiesName1");
-	String  PropertiesName2 = functionalcomponents.getdatafromsheet("CockPit", "E2E_Edge_TestCases", "PropertiesName2");
-	
-     static Response response; 
-     static String  APIData;
-	 String DeviceBaseurl = "";
-	 String SesorTypeBaseURL="";
-	 String CapabiltyBaseURL="";
-	 String SensorBaseURL="";
-	 static String SensornameAPI="";
-	 static String SensorTypeIDAPI="";
-	 static String SensorTypeNameAPI="";
-	 static String DevicenameAPI= "";
-	 static String CapablityIDAPI="";
-	 static String CapablitynameAPI="";
-	 static String CapablityAlternateIDAPI="";
-	 static String PropertiesName1API="";
-	 static String PropertiesName2API="";
-	 static String DeviceIDAPI= "";
-	 
- 
+	String ProductionParameters_Min = functionalcomponents.getdatafromsheet("StreamingService","TC_Custom_Over100", "ProductionParameters_Min");
+	String ProductionParameters_Max = functionalcomponents.getdatafromsheet("StreamingService","TC_Custom_Over100", "ProductionParameters_Max");
+    
+
 	 
 	//EdgeDeginer input
 		String projectdesc=functionalcomponents.getdatafromsheet("EdgeDesigner", "E2E_Edge_TestCases", "Description");
@@ -92,13 +67,9 @@ public class E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolev
 		String Local_enterpriseplugin=functionalcomponents.getdatafromsheet("EdgeDesigner", "E2E_Edge_TestCases", "Local_enterprise_plugin");
 		String Rulename  = functionalcomponents.getdatafromsheet("EdgeDesigner", "E2E_Edge_TestCases", "RuleName");
 		String Ruledesc  = functionalcomponents.getdatafromsheet("EdgeDesigner", "E2E_Edge_TestCases", "Rule_Desc");
-		String Rulecondition  = functionalcomponents.getdatafromsheet("EdgeDesigner", "E2E_Edge_TestCases", "Rule_condition");
+		//String Rulecondition  = functionalcomponents.getdatafromsheet("EdgeDesigner", "E2E_Edge_TestCases", "Rule_condition");
 		String RuleMaxfrequency=  functionalcomponents.getdatafromsheet("EdgeDesigner", "E2E_Edge_TestCases", "RuleMaxoutfrequency");
-		String Rulename1  = functionalcomponents.getdatafromsheet("EdgeDesigner", "E2E_Edge_TestCases", "RuleName1");
-		String Ruledesc1  = functionalcomponents.getdatafromsheet("EdgeDesigner", "E2E_Edge_TestCases", "Rule_Desc1");
-		String Rulecondition1  = functionalcomponents.getdatafromsheet("EdgeDesigner", "E2E_Edge_TestCases", "Rule_condition1");
 		String filteropt  = functionalcomponents.getdatafromsheet("EdgeDesigner", "E2E_Edge_TestCases", "Filter");
-		String filtervalue  = functionalcomponents.getdatafromsheet("EdgeDesigner", "E2E_Edge_TestCases", "Filtervalue");
 		String conditiontype  = functionalcomponents.getdatafromsheet("EdgeDesigner", "E2E_Edge_TestCases", "Condtiontype");
 		String customproject_host=functionalcomponents.getdatafromsheet("EdgeDesigner", "E2E_Edge_TestCases", "Customprojecthost");
 		String customproject_port=functionalcomponents.getdatafromsheet("EdgeDesigner", "E2E_Edge_TestCases", "customprojectport");
@@ -110,8 +81,6 @@ public class E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolev
 		String thresholding_value  = functionalcomponents.getdatafromsheet("EdgeDesigner", "E2E_Edge_TestCases", "Thresholdingvalue");
 		String Actionname  = functionalcomponents.getdatafromsheet("EdgeDesigner", "E2E_Edge_TestCases", "Actionname");
 	    String Action_desc  = functionalcomponents.getdatafromsheet("EdgeDesigner", "E2E_Edge_TestCases", "ActionDescription");
-	    String Actionname1  = functionalcomponents.getdatafromsheet("EdgeDesigner", "E2E_Edge_TestCases", "Actionname1");
-	    String Action_desc1  = functionalcomponents.getdatafromsheet("EdgeDesigner", "E2E_Edge_TestCases", "ActionDescription1");
 	    String Action_type  = functionalcomponents.getdatafromsheet("EdgeDesigner", "E2E_Edge_TestCases", "Action_type");
 	    String protocol_plugin=functionalcomponents.getdatafromsheet("EdgeDesigner", "E2E_Edge_TestCases", "ProtocolPlugin");
 	    String Actionmsg=  functionalcomponents.getdatafromsheet("EdgeDesigner", "E2E_Edge_TestCases", "Action_Message");
@@ -121,11 +90,6 @@ public class E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolev
 	    String Edge_fedility_rollback = functionalcomponents.getdatafromsheet("EdgeDesigner", "E2E_Edge_TestCases", "edge_fedility_rollback");
 	    String enterprise_fedility = functionalcomponents.getdatafromsheet("EdgeDesigner", "E2E_Edge_TestCases", "Enterprise_fedility");
 	    String enterprise_rollback  = functionalcomponents.getdatafromsheet("EdgeDesigner", "E2E_Edge_TestCases", "Enterprise_rollback");
-	    String Edge_Fedilityfreq1  = functionalcomponents.getdatafromsheet("EdgeDesigner", "E2E_Edge_TestCases", "New_edgefedility_freq1");
-	    String Edge_fedility_rollback1 = functionalcomponents.getdatafromsheet("EdgeDesigner", "E2E_Edge_TestCases", "edge_fedility_rollback1");
-	    String enterprise_fedility1 = functionalcomponents.getdatafromsheet("EdgeDesigner", "E2E_Edge_TestCases", "Enterprise_fedility1");
-	    String enterprise_rollback1  = functionalcomponents.getdatafromsheet("EdgeDesigner", "E2E_Edge_TestCases", "Enterprise_rollback1");
-		
 	    //RDS Input
 	    String Ruledatasourcename  = functionalcomponents.getdatafromsheet("EdgeDesigner", "E2E_Edge_TestCases", "RuleDsname");
 	    String Ruledsdesc  = functionalcomponents.getdatafromsheet("EdgeDesigner", "E2E_Edge_TestCases", "RuleDs_description");
@@ -146,78 +110,42 @@ public class E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolev
 	    String Rest_URI_input=functionalcomponents.getdatafromsheet("CockPit", "E2E_Edge_TestCases", "URI_input");
 		String BASIC_AUTH_USERNAME_input=functionalcomponents.getdatafromsheet("CockPit", "E2E_Edge_TestCases", "BASIC_AUTH_USERNAME_input");
 		
+		// one product details
+	   	 String ClientID="sb-27fdca04-3447-41ce-ad30-b89df8ef11f3!b12729|iotae_service_sb!b1";
+		 String ClientSecret="otus78TE14XMiETdR5BfiC40Mpc=";
+		 String requestURL = "https://qa6-aws.authentication.sap.hana.ondemand.com/oauth/token?grant_type=client_credentials";
+		 
+		 String RootURL="";
+		 String APIData="";
+		 String APIValue="";
+		 
+		 String DevicenameAPI="";
+		 String SensornameAPI="";
+		 String SensorTypeNameAPI="";
+		 String CapablitynameAPI="";
+		 
+		 String DeviceIDAPI="";
+		 String SensorTypeIDAPI="";
+		 String CapablityIDAPI="";
+		 String CapablityAlternateIDAPI="";
+		 String PropertiesName1API="";
+		 String BearerToken="";
+		 
+		 
+		
      // Get exists Device, Sensor type, Sensor, Capability for gateway Using Rest Assured API for IOTS 
      @Test
      public void GetIOTDataRespectiveGatewayID() throws Exception
      {
-    	 if(PolicyServiceURL.contains("qa6-aws"))
-    	 {
-    		 String ClientID="sb-27fdca04-3447-41ce-ad30-b89df8ef11f3!b12729|iotae_service_sb!b1";
-    		 String ClientSecret="otus78TE14XMiETdR5BfiC40Mpc=";
-    		 String requestURL = "https://qa6-aws.authentication.sap.hana.ondemand.com/oauth/token?grant_type=client_credentials";
-    		 String BearerToken = requestassuredcomponents.GeneratBearerToken(requestURL, ClientID, ClientSecret);
-    		 String SesorTypeBaseURL = CockpitURL+"/api/v1/sensorTypes";
-    		 String CapabiltyBaseURL = CockpitURL+"/api/v1/capabilities?skip=0&top=1000";
-    		 String Sensortypedata = requestassuredcomponents.GetAPIDatawithBearertokenAuth(SesorTypeBaseURL, BearerToken);
-    		 System.out.println("body data is"+Sensortypedata);
-    		 JSONParser parse = new JSONParser(); 
-    		 JSONArray jsonarr = (JSONArray)parse.parse(Sensortypedata);
-    		 for(int i=0;i<jsonarr.size();)
-    		 {
-    		   JSONObject jsonsensortypeeobj = (JSONObject)jsonarr.get(i);
-    		  // System.out.println("SensorTypeId:"+jsonsensortypeeobj.get("id"));
-    		   if(!(jsonsensortypeeobj.get("id")==""))
-    		   {
-    		   SensorTypeNameAPI=(String) jsonsensortypeeobj.get("name");
-    		   JSONArray jsonarr_Capablity = (JSONArray) jsonsensortypeeobj.get("capabilities");
-    		  // System.out.println(jsonarr_Capablity);
-    			   for(int j=0;j<jsonarr_Capablity.size();j++)
-    			   {
-    				   JSONObject jsonCapablity = (JSONObject)jsonarr_Capablity.get(j);
-    				   CapablityIDAPI=(String) jsonCapablity.get("id");
-    				  // System.out.println(CapablityIDAPI);
-    				   test.log(Status.PASS, "user is able to Get SensortypeName as:"+SensorTypeNameAPI+" and Capablity ID is :"+CapablityIDAPI);
-    			   }
-    			   break;
-    		   }
-    		   else
-    		   {
-    			   test.log(Status.FAIL, "user is not able to Get SensortypeName");
-    		   }
-    		 }
-    		   String Capablitydata=requestassuredcomponents.GetAPIDatawithBearertokenAuth(CapabiltyBaseURL, BearerToken);
-    		   System.out.println("body data is"+Capablitydata);
-    		   JSONParser parse1 = new JSONParser(); 
-    		   JSONArray jsonarr1 = (JSONArray)parse1.parse(Capablitydata);
-    		   //System.out.println(jsonarr1);
-    		   for(int i=0;i<jsonarr1.size();i++)
-    		   {
-    		   JSONObject jsoncapobj = (JSONObject)jsonarr1.get(i);
-    		  // System.out.println(jsoncapobj);
-    		   if(jsoncapobj.get("id").equals(CapablityIDAPI))
-    		   {
-    			   CapablitynameAPI=(String) jsoncapobj.get("name");
-    			   CapablityAlternateIDAPI=(String) jsoncapobj.get("alternateId");
-    			   JSONArray jsoncaparr = (JSONArray)jsoncapobj.get("properties");
-    			  // System.out.println(jsoncaparr);
-    			   for(int j=0;j<jsoncaparr.size();j++)
-    			   {
-    			   JSONObject jsonpropobj = (JSONObject)jsoncaparr.get(j);
-    			   if(j==0)
-    			   PropertiesName1API=(String) jsonpropobj.get("name");
-    			   if(j==1)
-    			   PropertiesName2API=(String) jsonpropobj.get("name");
-    		      }
-    			   //System.out.println(PropertiesName1API+"----"+PropertiesName2API);
-    		   test.log(Status.PASS, "user is able to Get Capablity Name is :"+CapablitynameAPI+" into Cokpit Application with Properties as: "+PropertiesName1API+", "+PropertiesName2API);
-    		   break;
-    		   }
-    	   
-    		  }
-    	 }
+    	
+    	 if(properties.getProperty("Environment").equalsIgnoreCase("ONEproduct"))
+	     {
+    	 BearerToken =requestassuredcomponents.GeneratBearerToken(requestURL, ClientID, ClientSecret);
+    	 GetIOTData();
+	     }
     	 else
     	 {
-    		 GetIOTData();
+    		GetIOTData();
     	 }
      }
     
@@ -415,7 +343,6 @@ public class E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolev
 	  
 	   //Feature  Compute Sensor Data Models	  
 	  String CustomeDataModelName1= "SensorDataModel_"+PropertiesName1API+"_Largest";
-	  String CustomeDataModelName2= "SensorDataModel_"+PropertiesName2API+"_Largest";
 	  test.log(Status.INFO, "click on the sensor model name check box and click on the Compute");
 	  for(int i=0; i<sensormodallist.size();i++)
 	  {
@@ -441,32 +368,10 @@ public class E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolev
 		          failedDescription("user is not able to Compute the sensor model in the project ");
 		      }	
 		  }
-		  else if(sensormodallist.get(i).contains(PropertiesName2API))
-		  {   
-			  functionalcomponents.ClickOperation("(//div[@title='Click to Select'])[2]");
-			  functionalcomponents.ClickOperation(properties.getProperty("Compute_Link"));
-			  functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("CutomeDataModel_Radiobutton"), 90);
-			  functionalcomponents.ClickOperation(properties.getProperty("CutomeDataModel_Radiobutton"));
-			  functionalcomponents.ClearAndSetValue(properties.getProperty("CustomDataModelName_Input"), CustomeDataModelName2);
-			  functionalcomponents.ClickOperation(properties.getProperty("timewindoedropdown"));
-			  functionalcomponents.ClickOperation(properties.getProperty("Minute_timewindow"));
-			  functionalcomponents.ClearAndSetValue(properties.getProperty("timewindow_input"), "1");
-			  functionalcomponents.ClickOperation(properties.getProperty("Formula_dropdown"));
-			  functionalcomponents.ClickOperation(properties.getProperty("Formulainput"));
-			  functionalcomponents.ClickOperation(properties.getProperty("save_button"));
-			  functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("Sensormodel_add"), 90);	
-			  if(functionalcomponents.IsElementPresent(properties.getProperty("Sensormodel_add")))
-			  {
-				  test.log(Status.PASS, "user is able to Cumpute the Sensor data model in the project with custom sensor data model names:"+CustomeDataModelName2);		  }
-			  else
-			  {
-		          failedDescription("user is not able to Compute the sensor model in the project ");
-		      }	
-		  }
 			  
 	  }   
 	  test.log(Status.INFO, "click on sensor data model name and edit it and save successfully");
-	  functionalcomponents.ClickOperation("//a[text()='"+CustomeDataModelName2+"']");			  
+	  functionalcomponents.ClickOperation("//a[text()='"+CustomeDataModelName1+"']");			  
 	  functionalcomponents.ClickOperation(properties.getProperty("EditSensorModel"));			  
 	  functionalcomponents.ClearAndSetValue(properties.getProperty("timewindow_input"), "2");
 	  functionalcomponents.ClickOperation(properties.getProperty("save_button"));
@@ -794,119 +699,7 @@ public class E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolev
 		  failedDescription("user is not able to Delete Action");              		 
 	      }	
 	  }   
-	  // Creation Action for second Properties
-	  test.log(Status.INFO, "Click on the Actions tab to in the project and click on Add + sign to add new action");
-	  functionalcomponents.WaitTillTime(2000);
-	  functionalcomponents.ClickOperation(properties.getProperty("Action_Add"));
-	  functionalcomponents.WaitTillTime(2000);
-	  if(functionalcomponents.IsElementDisplayed(properties.getProperty("Action_name")))
-	  {
-		  test.log(Status.PASS, "user is able to see the Add new Action window successfully");
-	  } else
-	  {
-          failedDescription("user is not able to see the Add new Action window");	              		 
-	  }				  
-	  test.log(Status.INFO, "Enter the Action name and description with special characters");
-	  functionalcomponents.ClickAndSetValue(properties.getProperty("Action_name"),Actionname1);
-	  functionalcomponents.ClickAndSetValue(properties.getProperty("Action_description"),Action_desc1);
-	  if(functionalcomponents.IsElementDisplayed(properties.getProperty("Action_Type_Dropdown")))
-	  {
-		  test.log(Status.PASS, "user is able to add the Action name"+":"+Actionname1+"Action description as"+":"+Action_desc1+"With special characters successfully");
-	  } else
-	  {
-          failedDescription("user is not able to add the Action name and Action Description");	              		 
-	  }		
-	  functionalcomponents.ClickOperation(properties.getProperty("Action_Type_Dropdown"));
-	  functionalcomponents.WaitTillTime(2000);
-	 
-	  if(Action_type.equalsIgnoreCase("Field Message"))
-	  {
-		 
-		  test.log(Status.INFO, "Select Actiontype as Field Message & ActionPlugin as httpprotocol plugin from dropdown button");
-		  functionalcomponents.WaitTillTime(2000);
-		  functionalcomponents.ClickOperation(properties.getProperty("Action_Type_part1")+Action_type+properties.getProperty("Action_Type_part2"));
-		  functionalcomponents.WaitTillTime(2000);
-		  functionalcomponents.ClickOperation(properties.getProperty("Plugin_id_dropdown"));
-		  functionalcomponents.WaitTillTime(2000);
-		  functionalcomponents.ClickOperation(properties.getProperty("Plugin_id_part1")+protocol_plugin+properties.getProperty("Plugin_id_part2"));
-		  functionalcomponents.WaitTillTime(2000);
-		  if(driver.findElement(By.xpath(properties.getProperty("Message"))).isDisplayed())
-		  {
-			  test.log(Status.PASS, "user is able to select the Action type as"+":"+Action_type+"protocol plugin as"+":"+protocol_plugin);
-		  } else
-		  {
-              failedDescription("user is not able to select the Action type as"+":"+Action_type+"protocol plugin as "+":"+protocol_plugin);	              		 
-		  }	
-		  test.log(Status.INFO,"Enter the message and Recipient parameters of the Action");			  
-		  functionalcomponents.ClickAndSetValue(properties.getProperty("Message"),Actionmsg);
-		  functionalcomponents.WaitTillTime(2000);
-		  functionalcomponents.ClickAndSetValue(properties.getProperty("Recipient_Parameters"),Receipient_param);	
-		  functionalcomponents.WaitTillTime(2000);
-		  if(driver.findElement(By.xpath(properties.getProperty("Action_create"))).isDisplayed())
-		  {
-			  test.log(Status.PASS, "user is able to Enter the Message as"+":"+Actionmsg+"and Recipient parameters as"+":"+Receipient_param);
-		  } else
-		  {
-              failedDescription("user is not able to Enter the Message as"+":"+Actionmsg+"and Recipient parameters as"+":"+Receipient_param);	              		 
-		  }	
-		 
-      }
-	  else if(Action_type.equalsIgnoreCase("Sensor Fidelity Change"))
-	  {
-		  test.log(Status.INFO, "Select Actiontype as Sensor fedility Change,sensor model name as MuthuStyp_CAT987_Cap_Battery and Scope_value as Device");
-		  functionalcomponents.WaitTillTime(2000);
-		  functionalcomponents.ClickOperation(properties.getProperty("Action_Type_part1")+Action_type+properties.getProperty("Action_Type_part2"));
-		  functionalcomponents.WaitTillTime(2000);
-		  functionalcomponents.ClickOperation(properties.getProperty("Action_sensormodel_dropdown"));
-		  functionalcomponents.WaitTillTime(2000);
-		  
-		  for(int j=0;j<sensormodallist.size();j++) {
-			  if (sensormodallist.get(j).contains(">>>"+PropertiesName2API)) {
-				  functionalcomponents.ClickOperation("//div[contains(text(),'>>>"+PropertiesName2API+"')]");
-				  functionalcomponents.WaitTillTime(2000);
-				  break;
-			  }
-		  }
-		  functionalcomponents.ClickOperation(properties.getProperty("scope_leve_dropdown"));
-		  functionalcomponents.WaitTillTime(2000);
-		  functionalcomponents.ClickOperation(properties.getProperty("scope_level_part1")+Scope_level+properties.getProperty("scope_level_part2"));
-		  functionalcomponents.WaitTillTime(2000);
-		  if(functionalcomponents.IsElementDisplayed(properties.getProperty("fedility_freqency")))
-		  {
-			  test.log(Status.PASS, "user is able to select the Action type as"+":"+Action_type+"sensor model name and scope_value as"+":"+Scope_level);
-		  } else
-		  {
-              failedDescription("user is able to select the Action type as"+":"+Action_type+"sensor model name and scope_value as"+":"+Scope_level);	              		 
-		  }
-		  test.log(Status.INFO, "Enter the fedility frequency,Fedility Rollback,Enterprise_Fedility and Enterprise_fedility_rollback");
-		  functionalcomponents.ClearAndSetValue(properties.getProperty("fedility_freqency"),Edge_Fedilityfreq1);
-		  functionalcomponents.WaitTillTime(2000);
-		  functionalcomponents.ClearAndSetValue(properties.getProperty("fedility_Rollback"),Edge_fedility_rollback1);
-		  functionalcomponents.WaitTillTime(2000);
-		  functionalcomponents.ClearAndSetValue(properties.getProperty("Enterprise_fedility"),enterprise_fedility1);
-		  functionalcomponents.WaitTillTime(2000);
-		  functionalcomponents.ClearAndSetValue(properties.getProperty("Enterprisefedility_rollback"),enterprise_rollback1);
-		  functionalcomponents.WaitTillTime(2000);
-		  if(functionalcomponents.IsElementDisplayed(properties.getProperty("Action_create")))
-		  {	
-			  test.log(Status.PASS, "user is able to Enter the fedility frequency as"+Edge_Fedilityfreq1+"Fedility Rollback as"+Edge_fedility_rollback1+"Enterprise fedility as"+enterprise_fedility1+"Enterprise fedility rollback as"+enterprise_rollback1);
-		 
-		  } else
-		  {
-              failedDescription("user is not able to Enter the fedility frequency as"+Edge_Fedilityfreq+"Fedility Rollback as"+Edge_fedility_rollback+"Enterprise fedility as"+enterprise_fedility+"Enterprise fedility rollback as"+enterprise_rollback);             		 
-		  }	
-		  
-	  }
-	  test.log(Status.INFO, "Click Create Action button and verify Action is created successfully with Action Name");
-	  functionalcomponents.ClickOperation(properties.getProperty("Action_create"));
-	  functionalcomponents.WaitTillTime(15000);
-	  if(functionalcomponents.IsElementDisplayed(properties.getProperty("Rules")))
-	  {	
-		  test.log(Status.PASS, "Clicked Save Action button and verified Action is created successfully with Action Name as"+":"+Actionname1);
-	  } else
-	  {
-          failedDescription("Clicked Save Action button but Action is not created successfully with Action Name as"+":"+Actionname1);
-      }   
+	  
 	 //creation of rule for latitude sensor model
 	  test.log(Status.INFO, "click on Rules Tab in the project");
 	  functionalcomponents.ClickOperation((properties.getProperty("Project_title_part1")+Projectname+properties.getProperty("Project_title_part2")));
@@ -1003,11 +796,12 @@ public class E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolev
           failedDescription("user is not able to see the Rule conditons window successfully");
  
 	  }
+	  String RuleConditionName=CapablitynameAPI+PropertiesName1API+"Rulecondition";
 	  test.log(Status.INFO, "Enter the rule condition name with special characters");
-	  functionalcomponents.ClickAndSetValue(properties.getProperty("Rulecondition_name"),CapablitynameAPI+PropertiesName1API+Rulecondition);
+	  functionalcomponents.ClickAndSetValue(properties.getProperty("Rulecondition_name"),RuleConditionName);
 	  if(functionalcomponents.IsElementDisplayed(properties.getProperty("Filter_dropdown")))
 	  {
-		  test.log(Status.PASS, "user is able to enter the rule conditon nmae as"+":"+CapablitynameAPI+PropertiesName1API+Rulecondition+"successfully");
+		  test.log(Status.PASS, "user is able to enter the rule conditon nmae as"+":"+CapablitynameAPI+PropertiesName1API+"Rulecondition"+"successfully");
 	  } else
 	  {
           failedDescription("user is not able to add the rule conditon name in the rule condition window");
@@ -1021,10 +815,10 @@ public class E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolev
 	 // functionalcomponents.ClickAndSetValue(properties.getProperty("Filter_scope_value"),filtervalue);
 	  if(functionalcomponents.IsElementDisplayed(properties.getProperty("conditiontype_dropdown")))
 	  {
-		  test.log(Status.PASS, "user is able to select the filter dropdown as"+":"+filteropt+"and scope_value as"+":"+filtervalue);
+		  test.log(Status.PASS, "user is able to select the filter dropdown as"+":"+filteropt);
 	  } else
 	  {
-          failedDescription("user is not able to select the filter dropdown as"+":"+filteropt+"and scope_value as"+":"+filtervalue);
+          failedDescription("user is not able to select the filter dropdown as"+":"+filteropt);
  
 	  }
 	  functionalcomponents.ClickOperation(properties.getProperty("conditiontype_dropdown"));
@@ -1176,14 +970,14 @@ public class E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolev
 	  functionalcomponents.WaitTillTime(20000);
 	  if(functionalcomponents.IsElementDisplayed(properties.getProperty("Rule_condition")))
 	  {
-		  test.log(Status.PASS, "user is able to create the rule condition as"+":"+Rulecondition+"successfully");
+		  test.log(Status.PASS, "user is able to create the rule condition successfully");
 	  } else
 	  {
           failedDescription("user is able to create the rule condion successfully");	              		 
 	  }
 	  //Edit condition and validate Condition with invalid/blank values of mandatory fields
 	  test.log(Status.INFO, "Click on the condition created link and Edit condition and validate Condition with invalid/blank values of mandatory fields");
-	  functionalcomponents.ClickOperation("//a[@title='"+CapablitynameAPI+PropertiesName1API+Rulecondition+"']");
+	  functionalcomponents.ClickOperation("//a[@title='"+RuleConditionName+"']");
 	  functionalcomponents.WaitTillTime(5000);
 	  functionalcomponents.ClickOperation(properties.getProperty("EditConditionButton"));
 	  functionalcomponents.WaitTillTime(5000);
@@ -1246,286 +1040,9 @@ public class E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolev
 	  functionalcomponents.WaitTillTime(3000);
 	  functionalcomponents.ClickOperation(properties.getProperty("save_button"));
 	  functionalcomponents.WaitTillTime(7000);  
-	  //creation of rule2 for longitude sensor model
-	  test.log(Status.INFO, "click on Rules Tab in the project");
-	  functionalcomponents.ClickOperation(properties.getProperty("Project_link_part1")+Projectname+properties.getProperty("Project_link_part2"));
-	  functionalcomponents.WaitTillTime(3000);	
-	  functionalcomponents.ClickOperation(properties.getProperty("Rules"));
-	  functionalcomponents.WaitTillTime(2000);
-	  functionalcomponents.ClickOperation(properties.getProperty("Rules_add"));
-	  functionalcomponents.WaitTillTime(2000);
-	  if(functionalcomponents.IsElementDisplayed(properties.getProperty("Rule_name")))
-	  {
-		  test.log(Status.PASS, "user is able to see the Rule window successfully");
-	  } else
-	  {
-          failedDescription("user is not able to see the Rule window");
-      }
-	  test.log(Status.INFO, "Enter the Rule name and description with special characters ");			  
-	  String RulenameLongtitude=CapablitynameAPI+PropertiesName2API+Rulename1; 
-	  functionalcomponents.ClickAndSetValue(properties.getProperty("Rule_name"),RulenameLongtitude);
-	  functionalcomponents.ClickAndSetValue(properties.getProperty("Rule_Description"),Ruledesc1);
-	  functionalcomponents.WaitTillTime(2000);
-	  functionalcomponents.ClickOperation(properties.getProperty("Rule_enabled_button"));
-	  if(functionalcomponents.IsElementDisplayed(properties.getProperty("Rule_name")))
-	  {
-		  test.log(Status.PASS, "Rule name as"+RulenameLongtitude+":"+ "saved successfully with special characters");
-	  }
-	  else 
-	  {
-		  failedDescription(" Rule name as"+RulenameLongtitude+":"+ "is not saved successfully with special characters");
-  	  }
-	  test.log(Status.INFO, "Click on the create button to create the rule");
-	  functionalcomponents.ClickOperation(properties.getProperty("Rule_Create"));
-	  functionalcomponents.WaitTillTime(15000);
-	  if(functionalcomponents.IsElementDisplayed(properties.getProperty("Rules")))
-	  {
-		  test.log(Status.PASS, "user is able to add the rulename"+RulenameLongtitude+""+"description"+""+Ruledesc1);
-	  } else
-	  {
-          failedDescription("user is not able to add the rulename and description");
- 
-	  }
-	  
-	  //Add the conditions to the rule2
-	  test.log(Status.INFO, "click on Rulename to add the conditions to the rule");		
-	  functionalcomponents.ClickOperation(properties.getProperty("Rules"));
-	  functionalcomponents.WaitTillTime(2000);
-	  functionalcomponents.ClickOperation((properties.getProperty("Rule_link_part1")+RulenameLongtitude+properties.getProperty("Rule_link_part2")));
-	  functionalcomponents.WaitTillTime(2000);
-	  if(functionalcomponents.IsElementDisplayed(properties.getProperty("Rule_condition")))
-	  {
-		  test.log(Status.PASS, "user is able to add the conditions,outputs to the rule");
-	  } else
-	  {
-          failedDescription("user is not able to add any conditions,outputs to the rule");
- 
-	  }
-	  test.log(Status.INFO, "click on the conditions tab to add the condition to the rule");
-	  functionalcomponents.ClickOperation(properties.getProperty("Rule_condition"));
-	  functionalcomponents.WaitTillTime(2000);
-	  functionalcomponents.ClickOperation(properties.getProperty("Rulecondition_add"));
-	  functionalcomponents.WaitTillTime(2000);
-	  if(functionalcomponents.IsElementDisplayed(properties.getProperty("Rulecondition_name")))
-	  {
-		  test.log(Status.PASS, "user is able to see the Rule conditons window successfully");
-	  } else
-	  {
-          failedDescription("user is not able to see the Rule conditons window successfully");
- 
-	  }
-	  test.log(Status.INFO, "Enter the rule condition name with special characters");
-	 
-	  functionalcomponents.ClickAndSetValue(properties.getProperty("Rulecondition_name"),CapablitynameAPI+PropertiesName2API+Rulecondition1);
-	  if(functionalcomponents.IsElementDisplayed(properties.getProperty("Filter_dropdown")))
-	  {
-		  test.log(Status.PASS, "user is able to enter the rule conditon nmae as"+":"+CapablitynameAPI+PropertiesName2API+Rulecondition1+"successfully");
-	  } else
-	  {
-          failedDescription("user is not able to add the rule conditon name in the rule condition window");
- 
-	  }
-	  test.log(Status.INFO, "select the filter from drop down and Enter the scope value in the Rule condition window");
-	  functionalcomponents.ClickOperation(properties.getProperty("Filter_dropdown"));
-	  functionalcomponents.WaitTillTime(2000);			 			  
-	  functionalcomponents.ClickOperation((properties.getProperty("Filter_part1")+filteropt+properties.getProperty("Filter_part2")));
-	  functionalcomponents.WaitTillTime(2000);			 
-	  if(functionalcomponents.IsElementDisplayed(properties.getProperty("conditiontype_dropdown")))
-	  {
-		  test.log(Status.PASS, "user is able to select the filter dropdown as"+":"+filteropt);
-	  } else
-	  {
-          failedDescription("user is not able to select the filter dropdown as"+":"+filteropt);
- 
-	  }
-	  functionalcomponents.ClickOperation(properties.getProperty("conditiontype_dropdown"));
-	  functionalcomponents.WaitTillTime(2000);			  
-	   if(conditiontype.equalsIgnoreCase("External Custom Rule-CCL"))
-	   {
-		  test.log(Status.INFO, "select the condition type as External Custom Rule-CCL and select the sensor model name");
-		  functionalcomponents.ClickOperation((properties.getProperty("conditiontype_part1") +conditiontype+ properties.getProperty("conditiontype_part2")));
-		  functionalcomponents.WaitTillTime(2000);
-		  functionalcomponents.ClickOperation(properties.getProperty("Sensormodelname_Dropdown"));
-		  functionalcomponents.WaitTillTime(2000);
-		  for(int j=0;j<sensormodallist.size(); j++) {
-			  if (sensormodallist.get(j).contains(">>>"+PropertiesName2API)) 
-			    {
-					  functionalcomponents.ClickOperation("(//div[@class='sapMPopoverCont']//li[contains(text(),'>>>"+PropertiesName2API+"')])[2]");
-					  functionalcomponents.WaitTillTime(2000);
-					  break;
-				  }
-		 }
-		  if(functionalcomponents.IsElementDisplayed(properties.getProperty("Condition_Customhost")))
-		  {
-			  test.log(Status.PASS, "user is able to select the Condition type as"+":"+conditiontype+":"+" and sensormodel name");
-		  } else
-		  {
-              failedDescription("user is not able to select the Condition type as"+":"+conditiontype+":"+" and sensormodel name");	              		 
-		  }
-		  test.log(Status.INFO,"Enter the condition_customhost,condition_customport and maximum event frequency");
-		  functionalcomponents.ClickAndSetValue(properties.getProperty("Condition_Customhost"),customproject_host);
-		  functionalcomponents.ClickAndSetValue(properties.getProperty("Condition_customport"),customproject_port);
-		  functionalcomponents.ClearAndSetValue(properties.getProperty("Condtion_maxfrequency"),maximum_eventfrequency1);
-		  if(driver.findElement(By.xpath(properties.getProperty("Rulecondition_Create"))).isDisplayed())
-		  {
-			  test.log(Status.PASS, "user is able to enter the condition_customhost as"+":"+customproject_host+":"+"condition_customport as"+":"+customproject_port+":"+"and Maximum_eventfrequency as"+":"+maximum_eventfrequency1);
-		  } else
-		  {
-              failedDescription("user is not able to enter the condition_customhost as"+":"+customproject_host+":"+"condition_customport as"+":"+customproject_port+":"+"and Maximum_eventfrequency as"+":"+maximum_eventfrequency1);	              		 
-		  }
-	    
-	  }
-	  else if(conditiontype.equalsIgnoreCase("Sensor Watchdog"))
-	  {
-		  test.log(Status.INFO, "select the condition type as Sensor Watchdog under the Rule codition tab");
-		  functionalcomponents.ClickOperation((properties.getProperty("conditiontype_part1") +conditiontype+ properties.getProperty("conditiontype_part2")));
-		  functionalcomponents.WaitTillTime(2000);				  	
-		  functionalcomponents.ClickOperation(properties.getProperty("Sensormodelname_Dropdown"));
-		  for(int j=0;j<sensormodallist.size(); j++) {
-			  if (sensormodallist.get(j).contains(">>>"+PropertiesName2API)) {
-					  functionalcomponents.ClickOperation("(//div[@class='sapMPopoverCont']//li[contains(text(),'>>>"+PropertiesName2API+"')])[2]");
-					  functionalcomponents.WaitTillTime(2000);
-					  break;
-				  }
-			  }
-		  if(driver.findElement(By.xpath(properties.getProperty("Interval_withoutsensor"))).isDisplayed())
-		  {
-			  test.log(Status.PASS, "user is able to select the Condition type as"+":"+conditiontype+":"+" and sensormodel name");
-		  } else
-		  {
-              failedDescription("user is not able to select the Condition type as"+":"+conditiontype+":"+" and sensormodel name");	              		 
-		  }
-		  functionalcomponents.ClickAndSetValue(properties.getProperty("Interval_withoutsensor"),interval_without_sensor);				 
-		  functionalcomponents.ClickAndSetValue(properties.getProperty("Condtion_maxfrequency"),maximum_eventfrequency1);
-		  if (functionalcomponents.IsElementDisplayed(properties.getProperty("Rulecondition_Create")))
-		  {
-			  test.log(Status.PASS, "user is able to Enter the Interval_withoutsensor as"+":"+interval_without_sensor+":"+"and Maximum_eventfrequency as"+":"+maximum_eventfrequency1);
-		  } else
-		  {
-              failedDescription("user is not able to Enter the Interval_withoutsensor as"+":"+interval_without_sensor+":"+"and Maximum_eventfrequency as"+":"+maximum_eventfrequency1);	              		 
-		  }
-	  }
-	  else if(conditiontype.equalsIgnoreCase("Timed State"))
-	  {
-		  test.log(Status.INFO, "select the condition type as Timed State under the Rule codition tab");
-		  functionalcomponents.ClickOperation((properties.getProperty("conditiontype_part1")+conditiontype+properties.getProperty("conditiontype_part2")));
-		  functionalcomponents.WaitTillTime(2000);				 
-		  functionalcomponents.ClickOperation(properties.getProperty("Sensormodelname_Dropdown"));
-		  for(int j=0;j<sensormodallist.size(); j++) {
-			  if (sensormodallist.get(j).contains(">>>"+PropertiesName2API)) {
-					  functionalcomponents.ClickOperation("(//div[@class='sapMPopoverCont']//li[contains(text(),'>>>"+PropertiesName2API+"')])[2]");
-					  functionalcomponents.WaitTillTime(2000);
-					  break;
-				  }
-			  }
-		  if(driver.findElement(By.xpath(properties.getProperty("Target_State_dropdown"))).isDisplayed())
-		  {
-			  test.log(Status.PASS, "user is able to select the Condition type as"+":"+conditiontype+":"+" and sensormodel name");
-		  } else
-		  {
-              failedDescription("user is not able to select the Condition type as"+":"+conditiontype+":"+" and sensormodel name");	              		 
-		  }
-		  test.log(Status.INFO, "select the Target state and enter the Time state");
-		  functionalcomponents.ClickOperation(properties.getProperty("Target_State_dropdown"));
-		  functionalcomponents.WaitTillTime(2000);
-		  functionalcomponents.ClickOperation((properties.getProperty("Target_State_part1")+Targetstate+properties.getProperty("Target_State_part2")));
-		  functionalcomponents.ClickAndSetValue(properties.getProperty("Time_state"),Timein_State);	
-		  functionalcomponents.WaitTillTime(2000);
-		  functionalcomponents.ClickAndSetValue(properties.getProperty("Condtion_maxfrequency"),maximum_eventfrequency1);
-		  if (functionalcomponents.IsElementDisplayed(properties.getProperty("Rulecondition_Create")))
-		  {
-			  test.log(Status.PASS, "user is able to select the Target state as"+":"+Targetstate+":"+"and enter the Time state value as"+":"+Timein_State+":"+"and maximum event frequency as"+":"+maximum_eventfrequency1);
-		  } else
-		  {
-              failedDescription("user is not able to select the Target state as"+":"+Targetstate+":"+"and enter the Time state value as"+":"+Timein_State+":"+"and maximum event frequency as"+":"+maximum_eventfrequency1);	              		 
-		  }
-	  }
-	  else if(conditiontype.equalsIgnoreCase("Value Monitoring"))
-	  {
-		  test.log(Status.INFO, "select the condition type as Value Monitoring under the Rule codition tab");
-		  functionalcomponents.ClickOperation((properties.getProperty("conditiontype_part1")+conditiontype+properties.getProperty("conditiontype_part2")));
-		  functionalcomponents.WaitTillTime(2000);				  	  
-		  functionalcomponents.ClickOperation(properties.getProperty("Sensormodelname_Dropdown"));	
-		  functionalcomponents.WaitTillTime(2000);
-		  for(int j=0;j<sensormodallist.size(); j++) {
-		  if (sensormodallist.get(j).contains(">>>"+PropertiesName2API)) {
-				  functionalcomponents.ClickOperation("//div[contains(text(),'>>>"+PropertiesName2API+"')]");
-				  functionalcomponents.WaitTillTime(2000);
-				  break;
-			  }
-		  }
-		  functionalcomponents.WaitTillTime(2000);
-		  if (functionalcomponents.IsElementDisplayed(properties.getProperty("Operator_dropdown")))
-		  {
-			  test.log(Status.PASS, "user is able to select the Condition type as"+":"+conditiontype+":"+" and sensormodel");
-		  } else
-		  {
-              failedDescription("user is not able to select the Condition type as"+":"+conditiontype+":"+" and sensormodel");	              		 
-		  }
-		  test.log(Status.INFO, "Select the operator and enter the Thresholding_value,Maximum event frequency value ");
-		  functionalcomponents.ClickOperation(properties.getProperty("Operator_dropdown"));
-		  functionalcomponents.WaitTillTime(2000);
-		  functionalcomponents.ClickOperation((properties.getProperty("Operator_part1")+operator+properties.getProperty("Operator_part2")));
-		  functionalcomponents.WaitTillTime(2000);				  			 		 
-		  functionalcomponents.ClickAndSetValue(properties.getProperty("Thresholding_value"),thresholding_value);
-		  functionalcomponents.ClickOperation((properties.getProperty("ConditionMaxeventUnitarrow")));
-		  functionalcomponents.WaitTillTime(2000);
-		  functionalcomponents.ClickOperation((properties.getProperty("ConditionMSunit")));
-		  functionalcomponents.WaitTillTime(2000);
-		  functionalcomponents.ClearAndSetValue(properties.getProperty("Condtion_maxfrequency"),maximum_eventfrequency1);
-		  functionalcomponents.WaitTillTime(2000);	
-		  if (functionalcomponents.IsElementDisplayed(properties.getProperty("Rulecondition_Create")))
-		  {
-			  test.log(Status.PASS, "user is able to select the operator as"+":"+operator+":"+" entered the value as"+":"+thresholding_value+":"+"Maximum event frequency as"+":"+maximum_eventfrequency1);
-		  } else
-		  {
-              failedDescription("user is not able to select the operator as"+":"+operator+":"+" entered the value as"+":"+thresholding_value+":"+"Maximum event frequency as"+":"+maximum_eventfrequency1);	              		 
-		  }
-	  }
-	  test.log(Status.INFO, "Click on the create button to save the Rule condition");
-	  functionalcomponents.ClickOperation(properties.getProperty("Rulecondition_Create"));
-	  functionalcomponents.WaitTillTime(15000);
-	  if(driver.findElement(By.xpath(properties.getProperty("Rule_condition"))).isDisplayed())
-	  {
-		  test.log(Status.PASS, "user is able to create the rule condition as"+":"+Rulecondition1+"successfully");
-	  } else
-	  {
-          failedDescription("user is able to create the rule condion successfully");	              		 
-	  }	 
-	  
-	// Enable Rule
-	  functionalcomponents.ClickOperation(properties.getProperty("EnableRule"));
-	  functionalcomponents.WaitTillTime(15000);
-	  //Create outputs in the Rule2 for longitude
-	  test.log(Status.INFO, "Click on the Output tab in the Rule and add the output to the rule");
-	  functionalcomponents.ClickOperation(properties.getProperty("Outputs"));
-	  functionalcomponents.WaitTillTime(1000);
-	  functionalcomponents.ClickOperation(properties.getProperty("output_Add"));
-	  functionalcomponents.WaitTillTime(1000);
-	  functionalcomponents.ClickOperation(properties.getProperty("Localaction_dropdown"));
-	  functionalcomponents.WaitTillTime(2000);
-	  functionalcomponents.ClickOperation(properties.getProperty("Localaction_part1")+Actionname1+properties.getProperty("Localactio_part2"));
-	  functionalcomponents.WaitTillTime(2000);	
-	  functionalcomponents.ClickOperation(properties.getProperty("Ouput_create"));
-	  functionalcomponents.WaitTillTime(10000);	
-	  if (functionalcomponents.IsElementDisplayed(properties.getProperty("Outputs")))
-	  {
-		  test.log(Status.PASS, "user is able to add the action to the rule as"+Actionname1);
-	  } else
-	  {
-          failedDescription("user is able to add the action to the rule as"+Actionname1);	              		 
-	  }
-	  //click on output link and validate Edit Output
-	  test.log(Status.INFO, "click on output link and validate Edit Output");
-	  functionalcomponents.ClickOperation("//a[@title='"+Actionname1+"']");
-	  functionalcomponents.WaitTillTime(5000);
-	  functionalcomponents.ClickOperation(properties.getProperty("EditOutputButton"));
-	  functionalcomponents.WaitTillTime(3000);
-	  functionalcomponents.ClickOperation(properties.getProperty("save_button"));
-	  functionalcomponents.WaitTillTime(7000); 
 	  functionalcomponents.ClickOperation((properties.getProperty("Project_title_part1")+Projectname+properties.getProperty("Project_title_part2")));
 	  functionalcomponents.WaitTillTime(7000);
-	  //Rule Data source
+	  //Rule Data source creation for the project
 	  test.log(Status.INFO, "Click on the Rule Data source tab in the project header");
 	  functionalcomponents.WaitTillTime(2000);
 	  functionalcomponents.ClickOperation(properties.getProperty("Ruledatasourse_tab"));
@@ -1757,7 +1274,7 @@ public class E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolev
 	  functionalcomponents.WaitTillTime(4000);
 	 //Validate gateway status and set edge console password verify Services status and added successfully to GW 
 	  edgeservicefunctions.VerifyGatewayStatus_SetEdgeConsolePasswordtoGateway(Streamingpassword, GateWayNo);
-	  edgeservicefunctions.InstalledAllCoreServicestoGateway(GateWayNo);
+	  edgeservicefunctions.StreamingServiceInstallationtoGateway(GateWayNo);
 	  edgeservicefunctions.StreamingConfigDeploymenttoGateway(Project_configname, GateWayNo);
 	 
 			 // Accessing sensor model data from db
@@ -1947,53 +1464,6 @@ public class E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolev
 	 {
 		failedDescription("User is not able to select sensor Profile and check Stream Reading Monitor checbox and saved profile successfully");
 	 }				 
-	 test.log(Status.INFO, "Click on the sensor profile to add the RESTPlugin in the rule");
-	 String Sensorprofile1=CapablityAlternateIDAPI+">>>"+PropertiesName2API;
-	 functionalcomponents.ClickOperation((properties.getProperty("sensor_name_part1")+Sensorprofile1+properties.getProperty("sensor_name_part2")));
-	 functionalcomponents.WaitTillTime(4000);
-	 functionalcomponents.scrollToExact(properties.getProperty("Rule_namelink_part1")+Sensorprofile1+properties.getProperty("Rule_namelink_part2"));
-	 functionalcomponents.WaitTillTime(2000);
-	 functionalcomponents.ClickOperation((properties.getProperty("Rule_namelink_part1")+Sensorprofile1+properties.getProperty("Rule_namelink_part2")));
-	 functionalcomponents.WaitTillTime(5000);
-	 functionalcomponents.ClickOperation(properties.getProperty("enterprise_plugin_cancel"));
-	 functionalcomponents.WaitTillTime(1000);
-	 functionalcomponents.ClickOperation(properties.getProperty("EnterprisePlugins"));
-	 functionalcomponents.WaitTillTime(3000);
-	 functionalcomponents.ClickOperation(properties.getProperty("SelectEnterprisePart1")+Plugin_name+properties.getProperty("SelectEnterprisePart2"));
-	 functionalcomponents.WaitTillTime(2000);
-	 test.log(Status.INFO, "Click Save Rule button and verify Rule is created successfully for Sensore Profile");
-	 functionalcomponents.ClickOperation(properties.getProperty("Rule_Save_btn"));
-	 functionalcomponents.WaitTillTime(5000); 
-	 String Rulenamelink1=CapablitynameAPI+PropertiesName2API+Rulename1;
-	 functionalcomponents.scrollToExact(properties.getProperty("Rule_namelink_part1")+Rulenamelink1+properties.getProperty("Rule_namelink_part2"));
-	 functionalcomponents.WaitTillTime(2000);
-	 functionalcomponents.ClickOperation((properties.getProperty("Rule_namelink1_part1")+Rulenamelink1+properties.getProperty("Rule_namelink1_part2")));
-	 functionalcomponents.WaitTillTime(3000);
-	 functionalcomponents.ClickOperation(properties.getProperty("EnterprisePlugins"));
-	 functionalcomponents.WaitTillTime(3000);
-	 functionalcomponents.ClickOperation(properties.getProperty("SelectEnterprisePart1")+Plugin_name+properties.getProperty("SelectEnterprisePart2"));
-	 functionalcomponents.WaitTillTime(3000);
-	 functionalcomponents.ClickOperation(properties.getProperty("Rule_Save_btn"));
-	 functionalcomponents.WaitTillTime(3000);
-	 if(functionalcomponents.IsElementDisplayed(properties.getProperty("Sensorprofilerule_Link")))
-	 {	
-		 test.log(Status.PASS, "user is able to add the RESTPlugin in the rule"+":"+Rulenamelink1);
-	 }
-	 else 
-	 {
-		failedDescription("user is not able to add the RESTplugin");
-	 } 
-	 functionalcomponents.WaitTillTime(2000);
-	 functionalcomponents.ClickOperation(properties.getProperty("SensorProfile_Save_btn"));
-	 functionalcomponents.WaitTillTime(4000);
-	 if(functionalcomponents.IsElementDisplayed(properties.getProperty("Sensorprofilerule_Link")))
-	 {	
-		test.log(Status.PASS, "User is able to select sensor Profile and check Stream Reading Monitor checbox and saved profile successfully");
-	 }
-	 else 
-	 {
-		failedDescription("User is not able to select sensor Profile and check Stream Reading Monitor checbox and saved profile successfully");
-	 }
 	 
 	 StreamingEdgeConsolecomponents streamingcomponents = new StreamingEdgeConsolecomponents();
 	// Creating Sensor Profile
@@ -2369,310 +1839,341 @@ public class E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolev
      streamingcomponents.DeleteAction(ActionName);           
 }
 
-	 
-	 
-	 
- public void GetIOTData() throws Exception {
-	 if(CockpitURL.equalsIgnoreCase("https://dep.canary.cp.iot.sap")) {
-		 DeviceBaseurl = CockpitURL+"/iot/core/api/v1/devices";
-	 }
-	 else
-	 {
-		 DeviceBaseurl = CockpitURL+"/iot/core/api/v1/tenant/"+TenantID+"/devices?skip=0&top=1000000"; 
-	 }
-	  	 
-	 //System.out.println(DeviceBaseurl);
-	  String Devicedata = requestassuredcomponents.GetAPIDatawithBaiscAuth(DeviceBaseurl, Cockpitusername, Cockpitpassword);
-	   JSONParser parse = new JSONParser(); 
-	   JSONArray jsonarr = (JSONArray)parse.parse(Devicedata);
-	   System.out.println(jsonarr);
-	   for(int i=0; i<jsonarr.size();i++)
-	   {
-	       JSONObject jsondeviceobj = (JSONObject)jsonarr.get(i);
-	       // System.out.println("gatewayId:"+jsondeviceobj.get("gatewayId"));
-	       if(jsondeviceobj.get("gatewayId").equals(GateWayNo))
-	      {
-		   DevicenameAPI=(String) jsondeviceobj.get("name");
-		   System.out.println(DevicenameAPI);
-		   JSONArray jsonarr_Sensor = (JSONArray)jsondeviceobj.get("sensors");
-		  // System.out.println(jsonarr_Sensor);
-		   if(jsonarr_Sensor==null) {
-			   break;
-		   }
-		   for(int j=0;j<jsonarr_Sensor.size();j++)
-		     {
-			   JSONObject jsonSensor = (JSONObject)jsonarr_Sensor.get(j);
-			   
-			   SensornameAPI=(String) jsonSensor.get("name");
-			  
-			   if(!SensornameAPI.equalsIgnoreCase("Sensor: 0:0:0:0")) {
-				   SensorTypeIDAPI=(String) jsonSensor.get("sensorTypeId");
-				 //  System.out.println(SensornameAPI+" "+SensorTypeIDAPI);
-				test.log(Status.PASS, "Gateway: "+GateWayNo+" is associate to device: "+DevicenameAPI+" and Sensor Name is :"+SensornameAPI);
-				GetCapablityID();
-				GetCapablityName();
-				break;
-			     }   
-		     }
-		   if(!SensornameAPI.equalsIgnoreCase("Sensor: 0:0:0:0"))
-			     break;	       
-	      }
-	      
-	   }
-	  if(SensornameAPI.equalsIgnoreCase("Sensor: 0:0:0:0")||SensornameAPI.equals("")||PropertiesName1API.equals("")||PropertiesName2API.equals("")) {
-	   test.log(Status.INFO, "Gateway: "+GateWayNo+" is not associate to any device user will create device sensor sensortype capability");   
-	   Create_Capablity_Device_Sensor_SensorType();
-	  }
-	}
-
-	public void GetCapablityID() throws Exception {
-		 if(CockpitURL.equalsIgnoreCase("https://dep.canary.cp.iot.sap")) {
-			 SesorTypeBaseURL = CockpitURL+"/iot/core/api/v1/sensorTypes";
+	 public void GetIOTData() throws Exception {
+			
+		 if(CockpitURL.equalsIgnoreCase("https://iot-device-connectivity-noah-acceptance.cfapps.sap.hana.ondemand.com")) {
+			 RootURL = CockpitURL+"/api/v1/devices?skip=0&top=100000";
 		 }
 		 else
 		 {
-			 SesorTypeBaseURL =CockpitURL+"/iot/core/api/v1/tenant/"+TenantID+"/sensorTypes?skip=0&top=1000000"; 
-		 }
-		
-	    String Sensortypedata =requestassuredcomponents.GetAPIDatawithBaiscAuth(SesorTypeBaseURL, Cockpitusername, Cockpitpassword);
-	   System.out.println("body data is"+Sensortypedata);
-	   JSONParser parse = new JSONParser(); 
-	   JSONArray jsonarr = (JSONArray)parse.parse(Sensortypedata);
-	   for(int i=0;i<jsonarr.size();i++)
-	   {
-	   JSONObject jsonsensortypeeobj = (JSONObject)jsonarr.get(i);
-	 
-	   System.out.println("SensorTypeId:"+jsonsensortypeeobj.get("id"));
-	   if(jsonsensortypeeobj.get("id").equals(SensorTypeIDAPI))
-	   {
-		   SensorTypeNameAPI=(String) jsonsensortypeeobj.get("name");
-		   JSONArray jsonarr_Capablity = (JSONArray) jsonsensortypeeobj.get("capabilities");
-		 //  System.out.println(jsonarr_Capablity);
-		   for(int j=0;j<jsonarr_Capablity.size();j++)
+			 RootURL = CockpitURL+"/iot/core/api/v1/tenant/"+TenantID+"/devices?skip=0&top=1000000"; 
+		 } 	 
+		 if(properties.getProperty("Environment").equalsIgnoreCase("ONEproduct"))
+	     {
+	     	//String BearerToken =requestassuredcomponents.GeneratBearerToken(requestURL, ClientID, ClientSecret);
+	     	APIData =requestassuredcomponents.GetAPIDatawithBearertokenAuth(RootURL, BearerToken);
+	     }
+	     else
+	     {
+	  	   APIData =requestassuredcomponents.GetAPIDatawithBaiscAuth(RootURL, Cockpitusername, Cockpitpassword);
+	     }
+		   JSONParser parse = new JSONParser(); 
+		   JSONArray jsonarr = (JSONArray)parse.parse(APIData);
+		   System.out.println(jsonarr);
+		   for(int i=0; i<jsonarr.size();i++)
 		   {
-			   JSONObject jsonCapablity = (JSONObject)jsonarr_Capablity.get(j);
-			   CapablityIDAPI=(String) jsonCapablity.get("id");
-			   test.log(Status.PASS, "user is able to Get SensortypeName as:"+SensorTypeNameAPI+" and Capablity ID is :"+CapablityIDAPI);
+		       JSONObject jsondeviceobj = (JSONObject)jsonarr.get(i);
+		        System.out.println(jsondeviceobj);
+		       if(jsondeviceobj.get("gatewayId").equals(GateWayNo))
+		      {
+			   DevicenameAPI=(String) jsondeviceobj.get("name");
+			   System.out.println(DevicenameAPI);
+			   JSONArray jsonarr_Sensor = (JSONArray)jsondeviceobj.get("sensors");
+			   System.out.println(jsonarr_Sensor);
+			   if(jsonarr_Sensor==null)
+				   i++;
+			   else if(!(jsonarr_Sensor==null))
+			  {
+			     for(int j=0;j<jsonarr_Sensor.size();j++)
+			     {
+				   JSONObject jsonSensor = (JSONObject)jsonarr_Sensor.get(j);
+				   
+				   SensornameAPI=(String) jsonSensor.get("name");
+				  
+				    if(!SensornameAPI.equalsIgnoreCase("Sensor: 0:0:0:0"))
+				     {
+					   SensorTypeIDAPI=(String) jsonSensor.get("sensorTypeId");
+					   //  System.out.println(SensornameAPI+" "+SensorTypeIDAPI);
+					   test.log(Status.PASS, "Gateway: "+GateWayNo+" is associate to device: "+DevicenameAPI+" and Sensor Name is :"+SensornameAPI);
+					   CapablityIDAPI=GetCapablityID();
+					   GetCapablityName();
+					    break;
+				      }
+					      
+			        }      
+		           }
+		         }
 		   }
-		   break;
-	   }
-	  
-	   }
-}
-	
-public void GetCapablityName() throws Exception {
-	 if(CockpitURL.equalsIgnoreCase("https://dep.canary.cp.iot.sap")) {
-		 CapabiltyBaseURL = CockpitURL+"/iot/core/api/v1/capabilities?skip=0&top=1000";
-	 }
-	 else
-	 {
-		 CapabiltyBaseURL = CockpitURL+"/iot/core/api/v1/tenant/"+TenantID+"/capabilities?skip=0&top=1000000"; 
-	 }	
-	   String Capablitydata =requestassuredcomponents.GetAPIDatawithBaiscAuth(CapabiltyBaseURL, Cockpitusername, Cockpitpassword);
-	   System.out.println("body data is"+Capablitydata);
-	   JSONParser parse = new JSONParser(); 
-	   JSONArray jsonarr = (JSONArray)parse.parse(Capablitydata);
-	   for(int i=0;i<jsonarr.size();i++)
-	   {
-	   JSONObject jsoncapobj = (JSONObject)jsonarr.get(i);
-	 
-	   if(jsoncapobj.get("id").equals(CapablityIDAPI))
-	   {
-		   CapablitynameAPI=(String) jsoncapobj.get("name");
-		   CapablityAlternateIDAPI=(String) jsoncapobj.get("alternateId");
-		   JSONArray jsoncaparr = (JSONArray)jsoncapobj.get("properties");
-		   System.out.println(jsoncaparr);
-		   System.out.println(jsoncaparr.size());
-		   for(int j=0;j<jsoncaparr.size();j++)
+		  if(SensornameAPI.equalsIgnoreCase("Sensor: 0:0:0:0")||SensornameAPI.equals("")||PropertiesName1API.equals("")) {
+		   test.log(Status.INFO, "Gateway: "+GateWayNo+" is not associate to any device user will create device sensor sensortype capability");   
+		   Create_Capablity_SensorType_Device_Sensor();
+		  }
+		}
+
+		public String GetCapablityID() throws Exception {
+			 if(CockpitURL.equalsIgnoreCase("https://iot-device-connectivity-noah-acceptance.cfapps.sap.hana.ondemand.com")) {
+				 RootURL = CockpitURL+"/api/v1/sensorTypes";
+			 }
+			 else
+			 {
+				 RootURL =CockpitURL+"/iot/core/api/v1/tenant/"+TenantID+"/sensorTypes?skip=0&top=1000000"; 
+			 }
+			 if(properties.getProperty("Environment").equalsIgnoreCase("ONEproduct"))
+	         {
+		    	//String BearerToken =requestassuredcomponents.GeneratBearerToken(requestURL, ClientID, ClientSecret);
+		    	APIData =requestassuredcomponents.GetAPIDatawithBearertokenAuth(RootURL, BearerToken);
+	         }
+	         else
+	         {
+	        	 APIData =requestassuredcomponents.GetAPIDatawithBaiscAuth(RootURL, Cockpitusername, Cockpitpassword);
+	         }
+		    
+		    System.out.println("body data is"+APIData);
+		   JSONParser parse = new JSONParser(); 
+		   JSONArray jsonarr = (JSONArray)parse.parse(APIData);
+		   for(int i=0;i<jsonarr.size();i++)
 		   {
-		   JSONObject jsonpropobj = (JSONObject)jsoncaparr.get(j);
-		   if(j==0)
-		   PropertiesName1API=(String) jsonpropobj.get("name");
-		   if(j==1)
-		   PropertiesName2API=(String) jsonpropobj.get("name");
-	      }
+		   JSONObject jsonsensortypeeobj = (JSONObject)jsonarr.get(i);
+		 
+		   System.out.println("SensorTypeId:"+jsonsensortypeeobj.get("id"));
+		   if(jsonsensortypeeobj.get("id").equals(SensorTypeIDAPI))
+		   {
+			   SensorTypeNameAPI=(String) jsonsensortypeeobj.get("name");
+			   JSONArray jsonarr_Capablity = (JSONArray) jsonsensortypeeobj.get("capabilities");
+			 //  System.out.println(jsonarr_Capablity);
+			   for(int j=0;j<jsonarr_Capablity.size();j++)
+			   {
+				   JSONObject jsonCapablity = (JSONObject)jsonarr_Capablity.get(j);
+				   APIValue=(String) jsonCapablity.get("id");
+				   test.log(Status.PASS, "user is able to Get SensortypeName as:"+SensorTypeNameAPI+" and Capablity ID is :"+APIValue);
+			   }
+			   break;
+		   }
+		  
+		   }
+		   return APIValue;
+	}
+		
+	public void GetCapablityName() throws Exception {
+		 if(CockpitURL.equalsIgnoreCase("https://iot-device-connectivity-noah-acceptance.cfapps.sap.hana.ondemand.com")) {
+			 RootURL = CockpitURL+"/api/v1/capabilities?skip=0&top=1000";
+		 }
+		 else
+		 {
+			 RootURL = CockpitURL+"/iot/core/api/v1/tenant/"+TenantID+"/capabilities?skip=0&top=1000000"; 
+		 }
+		 if(properties.getProperty("Environment").equalsIgnoreCase("ONEproduct"))
+	     {
+	    	//String BearerToken =requestassuredcomponents.GeneratBearerToken(requestURL, ClientID, ClientSecret);
+	    	APIData =requestassuredcomponents.GetAPIDatawithBearertokenAuth(RootURL, BearerToken);
+	     }
+	     else
+	     {
+	    	 APIData =requestassuredcomponents.GetAPIDatawithBaiscAuth(RootURL, Cockpitusername, Cockpitpassword);
+	     }
 		   
-	   test.log(Status.PASS, "user is able to Get Capablity Name is :"+CapablitynameAPI+" into Cokpit Application with Properties as: "+PropertiesName1API+", "+PropertiesName2API);
-	   break;
-	   }
-   
+		   System.out.println("body data is"+APIData);
+		   JSONParser parse = new JSONParser(); 
+		   JSONArray jsonarr = (JSONArray)parse.parse(APIData);
+		   for(int i=0;i<jsonarr.size();i++)
+		   {
+		   JSONObject jsoncapobj = (JSONObject)jsonarr.get(i);
+		 
+		   if(jsoncapobj.get("id").equals(APIValue))
+		   {
+			   CapablitynameAPI=(String) jsoncapobj.get("name");
+			   CapablityAlternateIDAPI=(String) jsoncapobj.get("alternateId");
+			   JSONArray jsoncaparr = (JSONArray)jsoncapobj.get("properties");
+			   System.out.println(jsoncaparr);
+			   System.out.println(jsoncaparr.size());
+			   for(int j=0;j<jsoncaparr.size();j++)
+			   {
+			   JSONObject jsonpropobj = (JSONObject)jsoncaparr.get(j);
+			   if(j==0)
+			   PropertiesName1API=(String) jsonpropobj.get("name");  
+		      test.log(Status.PASS, "user is able to Get Capablity Name is :"+CapablitynameAPI+" into Cokpit Application with Properties as: "+PropertiesName1API);
+		      break;
+		      }
+		  }
+		   
+		} 
+	}	   
+	 public void Create_Capablity_SensorType_Device_Sensor() throws Exception {
+		
+		CapablityIDAPI=CreateCapablityIDandCapablityName();
+		System.out.println(CapablityIDAPI);
+		SensorTypeIDAPI=CreateSensortypeIDandSensortypename();
+		System.out.println(SensorTypeIDAPI);
+		DeviceIDAPI=CreateDeviceIdandDevicename();
+		System.out.println(DeviceIDAPI);
+		SensornameAPI=CreateSensor();
+		System.out.println(SensornameAPI);
+
+	 }
+
+	  public String CreateCapablityIDandCapablityName() throws Exception {
+		  String CapablityAlternateID ="Capalt"+CurrentDateandTime;
+		  String CapablityName="Cap"+CurrentDateandTime;
+		  
+		  String Cap_Payload2="{\r\n"+
+		            "\"alternateId\":\""+CapablityAlternateID+"\","+
+			 		"\"name\":\""+CapablityName+"\","+ 
+			 		"  \"properties\": [\r\n" + 
+			 		"    {\r\n" + 
+			 		"      \"dataType\": \"float\",\r\n" + 
+			 		"      \"formatter\": {\r\n" + 
+			 		"        \"dataType\": \"float\",\r\n" + 
+			 		"        \"scale\": 0,\r\n" + 
+			 		"        \"shift\": 0,\r\n" + 
+			 		"        \"swap\": true\r\n" + 
+			 		"      },\r\n" + 
+			 		"      \"name\":\""+PropertiesName1+"\"," + 
+			 		"      \"unitOfMeasure\": \"Degree\"\r\n" + 
+			 		"    }]\r\n" + 
+			 		"}";
+		
+	 	
+		  if(CockpitURL.equalsIgnoreCase("https://iot-device-connectivity-noah-acceptance.cfapps.sap.hana.ondemand.com")) {
+	 	    		 RootURL = CockpitURL+"/api/v1/capabilities";
+	 		 }
+	 	 else
+	 		 {
+	 				 RootURL = CockpitURL+"/iot/core/api/v1/tenant/"+TenantID+"/capabilities"; 
+	 		 }	
+	 	      String capablityid=""; 
+	 	     if(properties.getProperty("Environment").equalsIgnoreCase("ONEproduct"))
+	         {
+		    	//String BearerToken =requestassuredcomponents.GeneratBearerToken(requestURL, ClientID, ClientSecret);
+		    	APIData =requestassuredcomponents.PostAPIdatawithBearertokenAuth(RootURL, BearerToken, Cap_Payload2);
+	         }
+	         else
+	         {
+	      	   APIData =requestassuredcomponents.PostAPIdatawithBasicAuth(RootURL, Cockpitusername, Cockpitpassword, Cap_Payload2);
+	         }
+	 		   JSONParser parse = new JSONParser(); 
+	 		   JSONObject jsoncapobj = (JSONObject) parse.parse(APIData);
+	 		   capablityid=(String) jsoncapobj.get("id");
+	 		   CapablitynameAPI=(String) jsoncapobj.get("name");
+	 		   CapablityAlternateIDAPI=(String) jsoncapobj.get("alternateId");
+	 		   JSONArray jsoncaparr = (JSONArray)jsoncapobj.get("properties");
+	 		   for(int i=0;i<jsoncaparr.size();i++)
+	 		   {
+	 		   JSONObject jsonproparr = (JSONObject)jsoncaparr.get(i);
+	 		   if(i==0)
+	 		   PropertiesName1API=(String) jsonproparr.get("name");
+	 		  test.log(Status.PASS, "User is able to creat Capablitiy successfully as"+CapablitynameAPI+" with Properties"+PropertiesName1API);
+	 		   
+	          }
+			return capablityid;
 	  }
-	   
-	} 
- public void Create_Capablity_Device_Sensor_SensorType() throws Exception {
-	
-	 CapablityAlternateID ="Capalt"+CurrentDateandTime;
-	 CapablityName="Cap"+CurrentDateandTime;
-	 SensorTypesName="Sentyp"+CurrentDateandTime;
-	 DeviceName="Device"+CurrentDateandTime;
-	 DeviceAlternateID="Devicealt"+CurrentDateandTime;
-	 SensorName="Sensor"+CurrentDateandTime;
-	 SensorAltID ="Sensoralt"+CurrentDateandTime;
-	 System.out.println(CapablityAlternateID+" --"+SensorAltID);
-
-	 String Cap_Payload2="{\r\n"+
-	            "\"alternateId\":\""+CapablityAlternateID+"\","+
-		 		"\"name\":\""+CapablityName+"\","+ 
-		 		"  \"properties\": [\r\n" + 
-		 		"    {\r\n" + 
-		 		"      \"dataType\": \"float\",\r\n" + 
-		 		"      \"formatter\": {\r\n" + 
-		 		"        \"dataType\": \"float\",\r\n" + 
-		 		"        \"scale\": 0,\r\n" + 
-		 		"        \"shift\": 0,\r\n" + 
-		 		"        \"swap\": true\r\n" + 
-		 		"      },\r\n" + 
-		 		"      \"name\":\""+PropertiesName1+"\"," + 
-		 		"      \"unitOfMeasure\": \"Degree\"\r\n" + 
-		 		"    },\r\n" +
-		 		" {\r\n" + 
-		 		"			\"dataType\": \"float\",\r\n" + 
-		 		"			\"formatter\": {\r\n" + 
-		 		"				\"dataType\": \"float\",\r\n" + 
-		 		"				\"scale\": 0,\r\n" + 
-		 		"				\"shift\": 0,\r\n" + 
-		 		"				\"swap\": true\r\n" + 
-		 		"			},\r\n" + 
-		 		"			\"name\":\""+PropertiesName2+"\",\r\n" + 
-		 		"			\"unitOfMeasure\": \"Degree\"\r\n" + 
-		 		"		} ]\r\n" + 
-		 		"}";
-	
-	
-	CapablityIDAPI=CreateCapablityIDandCapablityName(Cap_Payload2);
-	System.out.println(CapablityIDAPI);
-	String Sensortypepayload="{\r\n" + 
-			"  \"alternateId\":\""+SensorTypeAltID+"\",\r\n" + 
-			"  \"capabilities\": [\r\n" + 
-			"    {\r\n" + 
-			"      \"id\":\""+CapablityIDAPI+"\",\r\n" + 
-			"      \"type\": \"measure\"\r\n" + 
-			"    }\r\n" + 
-			"  ],\r\n" + 
-			"  \"name\": \""+SensorTypesName+"\"\r\n" + 
-			"}";
-	System.out.println(Sensortypepayload);
-	SensorTypeIDAPI=CreateSensortypeIDandSensortypename(Sensortypepayload);
-	System.out.println(SensorTypeIDAPI);
-	String DevicePayload="{\r\n" + 
-			"  \"customProperties\": [\r\n" + 
-			"    {\r\n" + 
-			"      \"key\": \"string\",\r\n" + 
-			"      \"value\": \"string\"\r\n" + 
-			"    }\r\n" + 
-			"  ],\r\n" + 
-			"  \"gatewayId\": \""+GateWayNo+"\",\r\n" + 
-			"  \"name\": \""+DeviceName+"\"\r\n" + 
-			"}";
-	 System.out.println(DevicePayload);
-	DeviceIDAPI=CreateDeviceIdandDevicename(DevicePayload);
-	System.out.println(DeviceIDAPI);
-	String SensorPayload="{\r\n" + 
-			"  \"alternateId\": \""+SensorAltID+"\",\r\n" + 
-			"  \"deviceId\": \""+DeviceIDAPI+"\",\r\n" + 
-			"  \"name\": \""+SensorName+"\",\r\n" + 
-			"  \"sensorTypeId\": \""+SensorTypeIDAPI+"\"\r\n" + 
-			"}";
-	System.out.println(SensorPayload);
-	SensornameAPI=CreateSensor(SensorPayload);
-	System.out.println(SensornameAPI);
-	
-	SensorTypeNameAPI=SensorTypesName;
-	DevicenameAPI=DeviceName;
-
- }
-
-  public String CreateCapablityIDandCapablityName(String Capablitypayload) throws Exception {	 
- 	
- 	 if(CockpitURL.equalsIgnoreCase("https://dep.canary.cp.iot.sap")) {
- 	    		 CapabiltyBaseURL = CockpitURL+"/iot/core/api/v1/capabilities";
- 		 }
- 	 else
- 		 {
- 				 CapabiltyBaseURL = CockpitURL+"/iot/core/api/v1/tenant/"+TenantID+"/capabilities"; 
- 		 }	
- 	      String capablityid=""; 
- 		   APIData =requestassuredcomponents.PostAPIdatawithBasicAuth(CapabiltyBaseURL, Cockpitusername, Cockpitpassword, Capablitypayload);
- 		   JSONParser parse = new JSONParser(); 
- 		   JSONObject jsoncapobj = (JSONObject) parse.parse(APIData);
- 		   capablityid=(String) jsoncapobj.get("id");
- 		   CapablitynameAPI=(String) jsoncapobj.get("name");
- 		   CapablityAlternateIDAPI=(String) jsoncapobj.get("alternateId");
- 		   JSONArray jsoncaparr = (JSONArray)jsoncapobj.get("properties");
- 		   for(int i=0;i<jsoncaparr.size();i++)
- 		   {
- 		   JSONObject jsonproparr = (JSONObject)jsoncaparr.get(i);
- 		   if(i==0)
- 		   PropertiesName1API=(String) jsonproparr.get("name");
- 		   if(i>0)
- 		   PropertiesName2API=(String) jsonproparr.get("name");
- 	      }
- 		  test.log(Status.PASS, "User is able to creat Capablitiy successfully as"+CapablitynameAPI+" with Properties"+PropertiesName1API+" ,"+PropertiesName2API);
- 		return capablityid;
- 		   
- }
-  
-  public String CreateSensortypeIDandSensortypename(String sensortypepayload) throws Exception {
- 	 if(CockpitURL.equalsIgnoreCase("https://dep.canary.cp.iot.sap")) {
- 		 SesorTypeBaseURL = CockpitURL+"/iot/core/api/v1/sensorTypes";
- 	 }
- 	 else
- 	 {
- 		 SesorTypeBaseURL = CockpitURL+"/iot/core/api/v1/tenant/"+TenantID+"/sensorTypes"; 
- 	 }
- 	 String SensortypeId="";
- 	 APIData =requestassuredcomponents.PostAPIdatawithBasicAuth(SesorTypeBaseURL, Cockpitusername, Cockpitpassword, sensortypepayload);
- 	 JSONParser parse = new JSONParser(); 
- 	 JSONObject jsonSentypobj = (JSONObject) parse.parse(APIData);
- 	 SensortypeId=(String) jsonSentypobj.get("id");
- 	 if(!SensortypeId.equals(""))
- 	 test.log(Status.PASS, "User is able to creat Sensor Type successfully"); 
- 	 else if(SensortypeId.equals(""))
- 		test.log(Status.FAIL, "User is able to creat Sensor Type successfully");
- 	return SensortypeId;
-  }
-  
-  public String CreateDeviceIdandDevicename(String Devicepayload) throws Exception {
- 	 
- 		if(CockpitURL.equalsIgnoreCase("https://dep.canary.cp.iot.sap")) {
- 			DeviceBaseurl = CockpitURL+"/iot/core/api/v1/devices";
- 			 }
- 		 else
- 			 {
- 			 DeviceBaseurl =CockpitURL+"/iot/core/api/v1/tenant/"+TenantID+"/devices"; 
- 			 }	
- 		      String Deviceid=""; 
- 			   APIData =requestassuredcomponents.PostAPIdatawithBasicAuth(DeviceBaseurl, Cockpitusername, Cockpitpassword, Devicepayload);
- 			   JSONParser parse = new JSONParser(); 
- 			   JSONObject jsondevobj = (JSONObject) parse.parse(APIData);
- 			   Deviceid=(String) jsondevobj.get("id");
- 			  if(!Deviceid.equals(""))
- 			  test.log(Status.PASS, "User is able to creat Device successfully");
- 			  else  if(Deviceid.equals(""))
- 				 test.log(Status.FAIL, "User is not able to creat Device successfully");
- 			  return Deviceid;	   
- 	}
-  
-  public String CreateSensor(String Sansorpayload) throws Exception {
- 	 
- 		if(CockpitURL.equalsIgnoreCase("https://dep.canary.cp.iot.sap")) {
- 			SensorBaseURL = CockpitURL+"/iot/core/api/v1/sensors";
- 			 }
- 		 else
- 			 {
- 			 SensorBaseURL = CockpitURL+"/iot/core/api/v1/tenant/"+TenantID+"/sensors"; 
- 			 }	
- 		      String Sensorname=""; 
- 			   APIData =requestassuredcomponents.PostAPIdatawithBasicAuth(SensorBaseURL, Cockpitusername, Cockpitpassword, Sansorpayload);
- 			   JSONParser parse = new JSONParser(); 
- 			   JSONObject jsonsenobj = (JSONObject) parse.parse(APIData);
- 			   Sensorname=(String) jsonsenobj.get("name");
- 			  if(!Sensorname.equals(""))
- 			  test.log(Status.PASS, "User is able to creat Sensor successfully"+Sensorname);
- 			  else if(Sensorname.equals(""))
- 				 test.log(Status.FAIL, "User is able to creat Sensor successfully"+Sensorname);
- 			return Sensorname;
-  }
-  
-  	 
+	  
+	  public String CreateSensortypeIDandSensortypename() throws Exception {
+		  String SensorTypesName="Sentyp"+CurrentDateandTime;
+		  String SensorTypeAltID = functionalcomponents.GetRandomnumber();
+		  String Sensortypepayload="{\r\n" + 
+					"  \"alternateId\":\""+SensorTypeAltID+"\",\r\n" + 
+					"  \"capabilities\": [\r\n" + 
+					"    {\r\n" + 
+					"      \"id\":\""+CapablityIDAPI+"\",\r\n" + 
+					"      \"type\": \"measure\"\r\n" + 
+					"    }\r\n" + 
+					"  ],\r\n" + 
+					"  \"name\": \""+SensorTypesName+"\"\r\n" + 
+					"}"; 
+		  if(CockpitURL.equalsIgnoreCase("https://iot-device-connectivity-noah-acceptance.cfapps.sap.hana.ondemand.com")) {
+	 		 RootURL = CockpitURL+"/api/v1/sensorTypes";
+	 	 }
+	 	 else
+	 	 {
+	 		 RootURL = CockpitURL+"/iot/core/api/v1/tenant/"+TenantID+"/sensorTypes"; 
+	 	 }
+	 	 String SensortypeId="";
+	 	 if(properties.getProperty("Environment").equalsIgnoreCase("ONEproduct"))
+	     {
+	   	 // String BearerToken =requestassuredcomponents.GeneratBearerToken(requestURL, ClientID, ClientSecret);
+	   	  APIData =requestassuredcomponents.PostAPIdatawithBearertokenAuth(RootURL, BearerToken, Sensortypepayload);
+	     }
+	     else
+	     {
+	  	   APIData =requestassuredcomponents.PostAPIdatawithBasicAuth(RootURL, Cockpitusername, Cockpitpassword, Sensortypepayload);
+	     }
+	 	 JSONParser parse = new JSONParser(); 
+	 	 JSONObject jsonSentypobj = (JSONObject) parse.parse(APIData);
+	 	 SensortypeId=(String) jsonSentypobj.get("id");
+	 	 if(!SensortypeId.equals(""))
+	 	 {
+	 	 test.log(Status.PASS, "User is able to creat Sensor Type successfully"); 
+	 	 SensorTypeNameAPI=SensorTypesName;
+	 	 }
+	 	 else if(SensortypeId.equals(""))
+	 		test.log(Status.FAIL, "User is able to creat Sensor Type successfully");
+	 	return SensortypeId;
+	  }
+	  
+	  public String CreateDeviceIdandDevicename() throws Exception {
+		  String DeviceName="Device"+CurrentDateandTime;
+		  String DevicePayload="{\r\n" + 
+					"  \"customProperties\": [\r\n" + 
+					"    {\r\n" + 
+					"      \"key\": \"string\",\r\n" + 
+					"      \"value\": \"string\"\r\n" + 
+					"    }\r\n" + 
+					"  ],\r\n" + 
+					"  \"gatewayId\": \""+GateWayNo+"\",\r\n" + 
+					"  \"name\": \""+DeviceName+"\"\r\n" + 
+					"}"; 
+		  if(CockpitURL.equalsIgnoreCase("https://iot-device-connectivity-noah-acceptance.cfapps.sap.hana.ondemand.com")) {
+	 			RootURL = CockpitURL+"/api/v1/devices";
+	 			 }
+	 		 else
+	 			 {
+	 			 RootURL =CockpitURL+"/iot/core/api/v1/tenant/"+TenantID+"/devices"; 
+	 			 }	
+	 		      String Deviceid=""; 
+	 		      if(properties.getProperty("Environment").equalsIgnoreCase("ONEproduct"))
+	              {
+			    	//String BearerToken =requestassuredcomponents.GeneratBearerToken(requestURL, ClientID, ClientSecret);
+			    	APIData =requestassuredcomponents.PostAPIdatawithBearertokenAuth(RootURL, BearerToken, DevicePayload);
+	              }
+	 		      else {
+	 			   APIData =requestassuredcomponents.PostAPIdatawithBasicAuth(RootURL, Cockpitusername, Cockpitpassword, DevicePayload);
+	 		      }
+	 			   JSONParser parse = new JSONParser(); 
+	 			   JSONObject jsondevobj = (JSONObject) parse.parse(APIData);
+	 			   Deviceid=(String) jsondevobj.get("id");
+	 			  if(!Deviceid.equals(""))
+	 			  test.log(Status.PASS, "User is able to creat Device successfully");
+	 			  else  if(Deviceid.equals(""))
+	 				 test.log(Status.FAIL, "User is not able to creat Device successfully");
+	    		  return Deviceid;	   
+	 	}
+	  
+	  public String CreateSensor() throws Exception {
+		  String SensorName ="Sensor"+CurrentDateandTime;
+		  String SensorAltID="Sensoralt"+CurrentDateandTime;
+		  String SensorPayload="{\r\n" + 
+					"  \"alternateId\": \""+SensorAltID+"\",\r\n" + 
+					"  \"deviceId\": \""+DeviceIDAPI+"\",\r\n" + 
+					"  \"name\": \""+SensorName+"\",\r\n" + 
+					"  \"sensorTypeId\": \""+SensorTypeIDAPI+"\"\r\n" + 
+					"}";
+		    String Sensorname="";
+		    if(CockpitURL.equalsIgnoreCase("https://iot-device-connectivity-noah-acceptance.cfapps.sap.hana.ondemand.com")) {
+	 			RootURL = CockpitURL+"/api/v1/sensors";
+	 			 }
+	 		 else
+	 			 {
+	 			 RootURL = CockpitURL+"/iot/core/api/v1/tenant/"+TenantID+"/sensors"; 
+	 			 }	
+	 		     if(properties.getProperty("Environment").equalsIgnoreCase("ONEproduct"))
+	               {
+	 		    	//String BearerToken =requestassuredcomponents.GeneratBearerToken(requestURL, ClientID, ClientSecret);
+	 		    	APIData =requestassuredcomponents.PostAPIdatawithBearertokenAuth(RootURL, BearerToken, SensorPayload);
+	               }
+	               else
+	               {
+	            	   APIData =requestassuredcomponents.PostAPIdatawithBasicAuth(RootURL, Cockpitusername, Cockpitpassword, SensorPayload);
+	               }
+	 			   JSONParser parse = new JSONParser(); 
+	 			   JSONObject jsonsenobj = (JSONObject) parse.parse(APIData);
+	 			   Sensorname=(String) jsonsenobj.get("name");
+	 			  if(!Sensorname.equals(""))
+	 			  test.log(Status.PASS, "User is able to creat Sensor successfully"+Sensorname);
+	 			  else if(Sensorname.equals(""))
+	 				 test.log(Status.FAIL, "User is able to creat Sensor successfully"+Sensorname);
+	 			return Sensorname;
+	  }
+	  
+	  	 
+	 
 }

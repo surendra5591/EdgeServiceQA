@@ -3,6 +3,7 @@ package EdgeServices;
 import java.util.Properties;
 
 import org.openqa.selenium.By;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.Status;
@@ -32,6 +33,7 @@ public class GlobalRDSCreationAndDelete extends BaseTest{
 	    String Request_body_template  = functionalcomponents.getdatafromsheet("EdgeDesigner", "E2E_Edge_TestCases", "Request_body_Template");
 	    String RDSGetName="";
 	    String RDSPOSTName="";
+	   
 	   
   @Test
   public void CreateRDSwithGetMethod()

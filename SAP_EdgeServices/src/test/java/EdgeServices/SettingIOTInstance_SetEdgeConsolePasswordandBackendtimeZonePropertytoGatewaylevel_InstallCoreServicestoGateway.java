@@ -168,7 +168,9 @@ public class SettingIOTInstance_SetEdgeConsolePasswordandBackendtimeZoneProperty
 		  EdgeServiceFunctions edgeservicefunctions = new  EdgeServiceFunctions();
 		  edgeservicefunctions.VerifyGatewayStatus_SetEdgeConsolePasswordtoGateway(StreamingEdgeConsolepassword, GateWayNo);
 		  edgeservicefunctions.Adding_BackendtimezonepropertytoGateway(GateWayNo);
-		  edgeservicefunctions.InstalledAllCoreServicestoGateway(GateWayNo);
+		  edgeservicefunctions.StreamingServiceInstallationtoGateway(GateWayNo);
+		  edgeservicefunctions.EBFServiceInstallationtoGateway(GateWayNo);
+		  edgeservicefunctions.PersistenceServiceInstallationtoGateway(GateWayNo);
     }
 
 }

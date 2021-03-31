@@ -20,7 +20,6 @@ public class EBFServiceConfigCreationwithFSMandPSM_PlantActivation_ConfigDeployt
 	Properties properties = FunctionalComponents.getObjectProperties();
 	
 	//Prerequisites 1. Gateway should up and online status.
-	// 2. EBF service should be installed to online gateway.
 	// 3. EBF cloud sync service should be connected successfully 
 	// 4. LDAP properties should not be added to gateway level
 	
@@ -44,8 +43,6 @@ public class EBFServiceConfigCreationwithFSMandPSM_PlantActivation_ConfigDeployt
     @Test
   	 public void CreateEBFConfigurationwithFieldsmaintenceBuisnessModule()
   	 {
-  		
-    	 
     	  edgeservicefunctions.LoginPolicyservice_MovetoEdgeServicemanagmentTile(PolicyServiceURL,username,password);
     	  functionalcomponents.waittill_WebElement_getVisible(properties.getProperty("services_button"), 70);
     	  functionalcomponents.ClickOperation(properties.getProperty("services_button"));

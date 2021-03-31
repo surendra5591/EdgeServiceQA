@@ -19,7 +19,7 @@ import UtilityComponent.FunctionalComponents;
 public class CreateGroup_AddingGateway_AddingServices_CombineStreamingConfigs_DeployConfigs extends BaseTest {
 
 	// Prerequisite- 1. Test data changed to Global sheet for IoT and Edge URL
-	// 2. Gateway should be up and online status and All 3 services installed to gateway
+	// 2. Gateway should be up and online status and All 3 services shoud be installed to gateway
 	// 3. Edge Console password property and backend time Zone offset minutes property should be added to gateway
 	// 4. Gateway should not be associated to any group
 

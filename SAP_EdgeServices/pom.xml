@@ -2,10 +2,11 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.GitEdgeServices.automation</groupId>
-	<artifactId>GitEdgeServices</artifactId>
+	<groupId>com.SAP_EdgeServices.automation</groupId>
+	<artifactId>SAP_EdgeServices</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<properties>
+	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
@@ -105,7 +106,7 @@
 		    <groupId>javax.xml.bind</groupId>
 		    <artifactId>jaxb-api</artifactId>
 		    <version>2.3.1</version>
-		</dependency>             
+		</dependency>           
 	</dependencies>
 
 <build>
@@ -114,7 +115,7 @@
     <plugin>
 		<groupId>org.apache.maven.plugins</groupId>
 		<artifactId>maven-compiler-plugin</artifactId>
-		<version>3.5.1</version>
+		 <version>3.5.1</version>
 			<configuration>
                  <executable>${java.home}</executable>
                  <compilerVersion>1.8</compilerVersion>
@@ -122,7 +123,10 @@
 				 <target>1.8</target>
 			</configuration>
 	</plugin>
-	
+	<plugin>
+        <artifactId>maven-failsafe-plugin</artifactId>
+        <version>2.22.2</version>
+      </plugin>
      <plugin>
 		<groupId>org.apache.maven.plugins</groupId>
 		<artifactId>maven-surefire-plugin</artifactId>
@@ -134,7 +138,18 @@
 				</suiteXmlFiles>
 			</configuration>
 	 </plugin>
-		
+	     <plugin> 
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>3.2.0</version>
+                    <configuration>
+                        <archive>
+                            <manifest>
+                                <mainClass>com.kub.App</mainClass>
+                            </manifest>
+                        </archive>
+                    </configuration>
+             </plugin>	
 </plugins>	
 </build>
 		

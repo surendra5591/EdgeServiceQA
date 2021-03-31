@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="classes" name="Failed suite [EdgeServiceTests]" guice-stage="DEVELOPMENT">
+  <test thread-count="2" parallel="classes" name="Test(failed)">
+    <classes>
+      <class name="EdgeServices.GlobalRDSCreationAndDelete">
+        <methods>
+          <include name="CreateRDSwithPostMethod"/>
+          <include name="tearDown"/>
+          <include name="AfterClass"/>
+          <include name="beforeSuite"/>
+          <include name="Edit_Update_Save_DeletePostMethodRDS"/>
+          <include name="beforeMethod"/>
+          <include name="CreateRDSwithGetMethod"/>
+          <include name="Copy_Edit_Update_Save_DeleteGetMethodRDS"/>
+          <include name="AfterSuite"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- EdgeServices.GlobalRDSCreationAndDelete -->
+      <class name="EdgeServices.RestrictPassword_UIMaskingwithAllOutboundconnectortypes">
+        <methods>
+          <include name="tearDown"/>
+          <include name="AfterClass"/>
+          <include name="RestrictPassword_UIMasking_Testcase"/>
+          <include name="beforeSuite"/>
+          <include name="beforeMethod"/>
+          <include name="AfterSuite"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- EdgeServices.RestrictPassword_UIMaskingwithAllOutboundconnectortypes -->
+      <class name="EdgeServices.InboundConnectorTypeslistandOutBoundConnectortypeCreateUpdateandDelete">
+        <methods>
+          <include name="TC02_GlobaloutboundConnectortypeandDeleting"/>
+          <include name="tearDown"/>
+          <include name="AfterClass"/>
+          <include name="beforeSuite"/>
+          <include name="beforeMethod"/>
+          <include name="TC01_ViewList_InboundConnectorstypes"/>
+          <include name="AfterSuite"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- EdgeServices.InboundConnectorTypeslistandOutBoundConnectortypeCreateUpdateandDelete -->
+      <class name="EdgeServices.GLobalActionCreationandDelete">
+        <methods>
+          <include name="tearDown"/>
+          <include name="AfterClass"/>
+          <include name="beforeSuite"/>
+          <include name="beforeMethod"/>
+          <include name="CreateGlobalActionupdateDelete"/>
+          <include name="AfterSuite"/>
+          <include name="beforeClass"/>
+        </methods>
+      </class> <!-- EdgeServices.GLobalActionCreationandDelete -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [EdgeServiceTests] -->

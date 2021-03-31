@@ -104,7 +104,7 @@
           "Host" : "MQTTHOST",
           "Port" : "4040",
           "ClientPassword" : "Test123",
-          "ClientId" : "be46f9c6-05e6-8d5e-988b-26238f90e524",
+          "ClientId" : "8c8f4bc5-1f2f-f02f-bf63-b134113d5684",
           "PublishingTopic" : "Anyvalue",
           "KeyStorePassword" : "Test123",
           "TrustStorePassword" : "Test123"

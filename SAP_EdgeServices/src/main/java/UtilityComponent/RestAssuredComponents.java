@@ -52,6 +52,7 @@ public class RestAssuredComponents extends BaseTest {
 		 RequestSpecification request = RestAssured.given().auth().basic(username, password);
 		 request.header("Content-Type", "application/json");
 		 request.body(Payload);
+		 request.log().all();
 		 Response response =request.post(BaseURL);
 		 int statusCode = response.getStatusCode();
 		 System.out.println(statusCode);
@@ -93,6 +94,7 @@ public class RestAssuredComponents extends BaseTest {
 	    System.out.println(response);
 	   int code =response.getStatusCode();
 	   APIData =response.asString();
+	   System.out.println(code);
 	   if(code==200)
 	   {
 		   test.log(Status.PASS, "Status Code :"+code+" User successfully GET an entity corresponding to the requested");
@@ -154,13 +156,19 @@ public class RestAssuredComponents extends BaseTest {
 		 }
 		 return Responsedata;
 	}
-	 public String GeneratBearerToken(String Requesturl, String ClientID, String ClientSecret) throws ParseException
+	 public String GeneratBearerToken(String Requesturl, String ClientID, String ClientSecret)
 		{
 			String tokenresp = PostAPIdatawithBasicAuth(Requesturl, ClientID, ClientSecret, "");
 			//System.out.println(tokenresp);
 			 JSONParser parse = new JSONParser(); 
-			 JSONObject jsonobj = (JSONObject)parse.parse(tokenresp);
-			 String Accesstoken=(String) jsonobj.get("access_token");
+			 JSONObject jsonobj = null;
+			try {
+				jsonobj = (JSONObject)parse.parse(tokenresp);
+			} catch (ParseException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			 String Accesstoken=(String)jsonobj.get("access_token");
 			 System.out.println(Accesstoken);
 			return Accesstoken;
 		}

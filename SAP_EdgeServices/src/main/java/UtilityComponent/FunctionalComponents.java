@@ -100,7 +100,7 @@ public static Properties getObjectProperties()
 
 	
 	
-	public String ReadFile(String filename,String sheetName,String rowvalue,String colnumvalue) {
+	public String ReadXcelFile(String filename,String sheetName,String rowvalue,String colnumvalue) {
 		 String ReturnCellvalue = "";
 		 File file =new File(System.getProperty("user.dir")+File.separator+"TestData"+File.separator+filename);
 		 try {
@@ -156,19 +156,19 @@ public static Properties getObjectProperties()
 		                if(filename.contains("Spring") && (properties.getProperty("Environment").equalsIgnoreCase("SPRING")))
 		                {	
 		            	//System.out.println("The file name to read is = "+filename);
-		                Datavalue= ReadFile(filename, sheetName,rowvalue,colnumvalue);
+		                Datavalue= ReadXcelFile(filename, sheetName,rowvalue,colnumvalue);
 		                break;
 		                }
 		                else if(filename.contains("OneProduct") && (properties.getProperty("Environment").equalsIgnoreCase("ONEproduct")))
 		                {	
 		                //System.out.println("The file name to read is = "+filename);
-		                Datavalue= ReadFile(filename, sheetName,rowvalue,colnumvalue);
+		                Datavalue= ReadXcelFile(filename, sheetName,rowvalue,colnumvalue);
 		                break;
 		                }
 		                else if(filename.contains("OSGI") && (properties.getProperty("Environment").equalsIgnoreCase("osgi")))
 		                {	
 		                // System.out.println("The file name to read is = "+filename);
-		                Datavalue= ReadFile(filename, sheetName,rowvalue,colnumvalue);
+		                Datavalue= ReadXcelFile(filename, sheetName,rowvalue,colnumvalue);
 		                break;
 		                }  	  
 		             }

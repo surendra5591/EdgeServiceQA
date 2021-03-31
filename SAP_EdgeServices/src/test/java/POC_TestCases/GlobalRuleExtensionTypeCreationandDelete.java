@@ -1,4 +1,4 @@
-package EdgeServices;
+package POC_TestCases;
 
 import java.io.File;
 import java.util.Properties;

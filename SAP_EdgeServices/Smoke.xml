@@ -4,6 +4,10 @@
   <test thread-count="1" name="Test">
     <classes >
       <class name="EdgeServices.SettingIOTInstance_SetEdgeConsolePasswordandBackendtimeZonePropertytoGatewaylevel_InstallCoreServicestoGateway"/>
+      <class name="EdgeServices.E2E_Cockpit_EdgeProject_StreamingConfigDeploy_StreamingEdgeConsolevalidation"/>
+      <class name="EdgeServices.PersistenceServiceConfigurationCreationByDataRetensionandDeployedtoGateway"/> 
+      <class name="EdgeServices.EBFServiceConfigCreationwithFSMandPSM_PlantActivation_ConfigDeploytoGatewaywithPlantID"/>
+       <class name="EdgeServices.CreateGroup_AddingGateway_AddingServices_CombineStreamingConfigs_DeployConfigs"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

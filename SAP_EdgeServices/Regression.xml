@@ -3,8 +3,10 @@
 <suite name="EdgeServiceRegression">
   <test thread-count="1" name="Test">
     <classes >
-      <class name="EdgeServices.CustomServiceCreation_CustomConfigCreation_DeployConfigstoGateway_DeleteServiceandConfig"/>
-       
+      <class name="EdgeServices.CustomPropertyCreation_AddingUserCustomPropertytoGateWay_EditUpdateDeleteProperty"/>
+       <class name="EdgeServices.CustomServiceCreation_CustomConfigCreation_DeployConfigstoGateway_DeleteServiceandConfig"/> 
+       <class name="EdgeServices.UDFTestcases"/>
+       <class name="EdgeServices.RemoveCoreSevicesfromGateway_ReinstallCoreServicestoGateway"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
